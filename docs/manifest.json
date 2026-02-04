@@ -1,0 +1,1831 @@
+{
+  "source_base_path": "/Users/Shared/gabura/git/Fp/src/_docfx",
+  "xrefmap": "xrefmap.yml",
+  "files": [
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Fp.Fs/Fp.Fs.Coordinator.ExecutionSettings.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Fp.Fs/Fp.Fs.Coordinator.ExecutionSettings.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Fp.Fs.Coordinator.ExecutionSettings",
+      "Summary": "<p sourcefile=\"api/Fp.Fs/Fp.Fs.Coordinator.ExecutionSettings.yml\" sourcestartlinenumber=\"1\">Settings for execution.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Fp.Fs/Fp.Fs.Coordinator.ExecutionSource.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Fp.Fs/Fp.Fs.Coordinator.ExecutionSource.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Fp.Fs.Coordinator.ExecutionSource",
+      "Summary": "<p sourcefile=\"api/Fp.Fs/Fp.Fs.Coordinator.ExecutionSource.yml\" sourcestartlinenumber=\"1\">Represents execution config.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Fp.Fs/Fp.Fs.Coordinator.FpInput.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Fp.Fs/Fp.Fs.Coordinator.FpInput.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Fp.Fs.Coordinator.FpInput",
+      "Summary": "<p sourcefile=\"api/Fp.Fs/Fp.Fs.Coordinator.FpInput.yml\" sourcestartlinenumber=\"1\">FP input.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Fp.Fs/Fp.Fs.Coordinator.FpTarget.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Fp.Fs/Fp.Fs.Coordinator.FpTarget.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Fp.Fs.Coordinator.FpTarget",
+      "Summary": "<p sourcefile=\"api/Fp.Fs/Fp.Fs.Coordinator.FpTarget.yml\" sourcestartlinenumber=\"1\">FP target.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Fp.Fs/Fp.Fs.Coordinator.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Fp.Fs/Fp.Fs.Coordinator.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Fp.Fs.Coordinator",
+      "Summary": "<p sourcefile=\"api/Fp.Fs/Fp.Fs.Coordinator.yml\" sourcestartlinenumber=\"1\">Execution manager.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Fp.Fs/Fp.Fs.DelegateFsProcessorFactory.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Fp.Fs/Fp.Fs.DelegateFsProcessorFactory.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Fp.Fs.DelegateFsProcessorFactory",
+      "Summary": "<p sourcefile=\"api/Fp.Fs/Fp.Fs.DelegateFsProcessorFactory.yml\" sourcestartlinenumber=\"1\">Processor descriptor.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Fp.Fs/Fp.Fs.FileSystemSource.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Fp.Fs/Fp.Fs.FileSystemSource.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Fp.Fs.FileSystemSource",
+      "Summary": "<p sourcefile=\"api/Fp.Fs/Fp.Fs.FileSystemSource.yml\" sourcestartlinenumber=\"1\">Object for I/O to some filesystem provider.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Fp.Fs/Fp.Fs.FormatMultiProcessorFsWrapper-1.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Fp.Fs/Fp.Fs.FormatMultiProcessorFsWrapper-1.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Fp.Fs.FormatMultiProcessorFsWrapper<T>",
+      "Summary": "<p sourcefile=\"api/Fp.Fs/Fp.Fs.FormatMultiProcessorFsWrapper-1.yml\" sourcestartlinenumber=\"1\"><xref href=\"Fp.Fs.FsProcessor\" data-throw-if-not-resolved=\"false\"></xref> wrapper for <xref href=\"Fp.FormatMultiProcessor\" data-throw-if-not-resolved=\"false\"></xref>.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Fp.Fs/Fp.Fs.FormatMultiProcessorFsWrapper.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Fp.Fs/Fp.Fs.FormatMultiProcessorFsWrapper.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Fp.Fs.FormatMultiProcessorFsWrapper",
+      "Summary": "<p sourcefile=\"api/Fp.Fs/Fp.Fs.FormatMultiProcessorFsWrapper.yml\" sourcestartlinenumber=\"1\"><xref href=\"Fp.Fs.FsProcessor\" data-throw-if-not-resolved=\"false\"></xref> wrapper for <xref href=\"Fp.FormatMultiProcessor\" data-throw-if-not-resolved=\"false\"></xref>.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Fp.Fs/Fp.Fs.FormatSingleProcessorFsWrapper-1.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Fp.Fs/Fp.Fs.FormatSingleProcessorFsWrapper-1.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Fp.Fs.FormatSingleProcessorFsWrapper<T>",
+      "Summary": "<p sourcefile=\"api/Fp.Fs/Fp.Fs.FormatSingleProcessorFsWrapper-1.yml\" sourcestartlinenumber=\"1\"><xref href=\"Fp.Fs.FsProcessor\" data-throw-if-not-resolved=\"false\"></xref> wrapper for <xref href=\"Fp.FormatSingleProcessor\" data-throw-if-not-resolved=\"false\"></xref>.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Fp.Fs/Fp.Fs.FormatSingleProcessorFsWrapper.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Fp.Fs/Fp.Fs.FormatSingleProcessorFsWrapper.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Fp.Fs.FormatSingleProcessorFsWrapper",
+      "Summary": "<p sourcefile=\"api/Fp.Fs/Fp.Fs.FormatSingleProcessorFsWrapper.yml\" sourcestartlinenumber=\"1\"><xref href=\"Fp.Fs.FsProcessor\" data-throw-if-not-resolved=\"false\"></xref> wrapper for <xref href=\"Fp.FormatSingleProcessor\" data-throw-if-not-resolved=\"false\"></xref>.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Fp.Fs/Fp.Fs.FsFormatMultiProcessor.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Fp.Fs/Fp.Fs.FsFormatMultiProcessor.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Fp.Fs.FsFormatMultiProcessor",
+      "Summary": "<p sourcefile=\"api/Fp.Fs/Fp.Fs.FsFormatMultiProcessor.yml\" sourcestartlinenumber=\"1\">Represents a processor that operates on a single input and generates multiple outputs.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Fp.Fs/Fp.Fs.FsFormatSingleProcessor-1.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Fp.Fs/Fp.Fs.FsFormatSingleProcessor-1.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Fp.Fs.FsFormatSingleProcessor<T>",
+      "Summary": "<p sourcefile=\"api/Fp.Fs/Fp.Fs.FsFormatSingleProcessor-1.yml\" sourcestartlinenumber=\"1\">Represents a processor that operates on a single input and generates multiple outputs.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Fp.Fs/Fp.Fs.FsFormatSingleProcessor.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Fp.Fs/Fp.Fs.FsFormatSingleProcessor.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Fp.Fs.FsFormatSingleProcessor",
+      "Summary": "<p sourcefile=\"api/Fp.Fs/Fp.Fs.FsFormatSingleProcessor.yml\" sourcestartlinenumber=\"1\">Represents a processor that operates on a single input and generates a single output.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Fp.Fs/Fp.Fs.FsProcessor.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Fp.Fs/Fp.Fs.FsProcessor.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Fp.Fs.FsProcessor",
+      "Summary": "<p sourcefile=\"api/Fp.Fs/Fp.Fs.FsProcessor.yml\" sourcestartlinenumber=\"1\">Base type for file processors.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Fp.Fs/Fp.Fs.FsProcessorFactory.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Fp.Fs/Fp.Fs.FsProcessorFactory.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Fp.Fs.FsProcessorFactory",
+      "Summary": "<p sourcefile=\"api/Fp.Fs/Fp.Fs.FsProcessorFactory.yml\" sourcestartlinenumber=\"1\">Processor factory.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Fp.Fs/Fp.Fs.FsProcessorInfoAttribute.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Fp.Fs/Fp.Fs.FsProcessorInfoAttribute.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Fp.Fs.FsProcessorInfoAttribute",
+      "Summary": "<p sourcefile=\"api/Fp.Fs/Fp.Fs.FsProcessorInfoAttribute.yml\" sourcestartlinenumber=\"1\">Processor information attribute.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Fp.Fs/Fp.Fs.FsProcessorSource.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Fp.Fs/Fp.Fs.FsProcessorSource.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Fp.Fs.FsProcessorSource",
+      "Summary": "<p sourcefile=\"api/Fp.Fs/Fp.Fs.FsProcessorSource.yml\" sourcestartlinenumber=\"1\">Processor factory.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Fp.Fs/Fp.Fs.GenericNewFsProcessorFactory-1.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Fp.Fs/Fp.Fs.GenericNewFsProcessorFactory-1.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Fp.Fs.GenericNewFsProcessorFactory<T>",
+      "Summary": "<p sourcefile=\"api/Fp.Fs/Fp.Fs.GenericNewFsProcessorFactory-1.yml\" sourcestartlinenumber=\"1\">Processor descriptor.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Fp.Fs/Fp.Fs.RealFileSystemSource.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Fp.Fs/Fp.Fs.RealFileSystemSource.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Fp.Fs.RealFileSystemSource",
+      "Summary": "<p sourcefile=\"api/Fp.Fs/Fp.Fs.RealFileSystemSource.yml\" sourcestartlinenumber=\"1\">Filesystem provider using System.IO APIs.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Fp.Fs/Fp.Fs.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Fp.Fs/Fp.Fs.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Fp.Fs",
+      "Summary": null
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "api/Fp.Fs/index.md",
+      "output": {
+        ".html": {
+          "relative_path": "api/Fp.Fs/index.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Toc",
+      "source_relative_path": "api/Fp.Fs/toc.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Fp.Fs/toc.html"
+        },
+        ".json": {
+          "relative_path": "api/Fp.Fs/toc.json"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Fp.Platforms.Nitro/Fp.Platforms.Nitro.NitroUtils.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Fp.Platforms.Nitro/Fp.Platforms.Nitro.NitroUtils.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Fp.Platforms.Nitro.NitroUtils",
+      "Summary": "<p sourcefile=\"api/Fp.Platforms.Nitro/Fp.Platforms.Nitro.NitroUtils.yml\" sourcestartlinenumber=\"1\">Nitro utilities (powered by <xref href=\"DSDecmp\" data-throw-if-not-resolved=\"false\"></xref>).</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Fp.Platforms.Nitro/Fp.Platforms.Nitro.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Fp.Platforms.Nitro/Fp.Platforms.Nitro.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Fp.Platforms.Nitro",
+      "Summary": null
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "api/Fp.Platforms.Nitro/index.md",
+      "output": {
+        ".html": {
+          "relative_path": "api/Fp.Platforms.Nitro/index.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Toc",
+      "source_relative_path": "api/Fp.Platforms.Nitro/toc.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Fp.Platforms.Nitro/toc.html"
+        },
+        ".json": {
+          "relative_path": "api/Fp.Platforms.Nitro/toc.json"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Fp.Plus/Fp.Plus.Audio.PcmData.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Fp.Plus/Fp.Plus.Audio.PcmData.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Fp.Plus.Audio.PcmData",
+      "Summary": "<p sourcefile=\"api/Fp.Plus/Fp.Plus.Audio.PcmData.yml\" sourcestartlinenumber=\"1\">PCM audio data.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Fp.Plus/Fp.Plus.Audio.Wave.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Fp.Plus/Fp.Plus.Audio.Wave.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Fp.Plus.Audio.Wave",
+      "Summary": "<p sourcefile=\"api/Fp.Plus/Fp.Plus.Audio.Wave.yml\" sourcestartlinenumber=\"1\">Provides WAVE output support.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Fp.Plus/Fp.Plus.Audio.WaveInfo.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Fp.Plus/Fp.Plus.Audio.WaveInfo.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Fp.Plus.Audio.WaveInfo",
+      "Summary": "<p sourcefile=\"api/Fp.Plus/Fp.Plus.Audio.WaveInfo.yml\" sourcestartlinenumber=\"1\">PCM metadata.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Fp.Plus/Fp.Plus.Audio.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Fp.Plus/Fp.Plus.Audio.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Fp.Plus.Audio",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Fp.Plus/Fp.Plus.Ciphers.Blowfish.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Fp.Plus/Fp.Plus.Ciphers.Blowfish.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Fp.Plus.Ciphers.Blowfish",
+      "Summary": "<p sourcefile=\"api/Fp.Plus/Fp.Plus.Ciphers.Blowfish.yml\" sourcestartlinenumber=\"1\">Blowfish cipher.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Fp.Plus/Fp.Plus.Ciphers.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Fp.Plus/Fp.Plus.Ciphers.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Fp.Plus.Ciphers",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Fp.Plus/Fp.Plus.Images.DxtDecoder.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Fp.Plus/Fp.Plus.Images.DxtDecoder.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Fp.Plus.Images.DxtDecoder",
+      "Summary": "<p sourcefile=\"api/Fp.Plus/Fp.Plus.Images.DxtDecoder.yml\" sourcestartlinenumber=\"1\">DXT1/DXT5 texture decoder.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Fp.Plus/Fp.Plus.Images.EtcDecoder.DecompressionFunctionFlags.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Fp.Plus/Fp.Plus.Images.EtcDecoder.DecompressionFunctionFlags.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Fp.Plus.Images.EtcDecoder.DecompressionFunctionFlags",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Fp.Plus/Fp.Plus.Images.EtcDecoder.EtcMode.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Fp.Plus/Fp.Plus.Images.EtcDecoder.EtcMode.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Fp.Plus.Images.EtcDecoder.EtcMode",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Fp.Plus/Fp.Plus.Images.EtcDecoder.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Fp.Plus/Fp.Plus.Images.EtcDecoder.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Fp.Plus.Images.EtcDecoder",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Fp.Plus/Fp.Plus.Images.Rgba32Data.Options.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Fp.Plus/Fp.Plus.Images.Rgba32Data.Options.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Fp.Plus.Images.Rgba32Data.Options",
+      "Summary": "<p sourcefile=\"api/Fp.Plus/Fp.Plus.Images.Rgba32Data.Options.yml\" sourcestartlinenumber=\"1\">Provides option keys for <xref href=\"Fp.Plus.Images.Rgba32Data\" data-throw-if-not-resolved=\"false\"></xref>.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Fp.Plus/Fp.Plus.Images.Rgba32Data.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Fp.Plus/Fp.Plus.Images.Rgba32Data.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Fp.Plus.Images.Rgba32Data",
+      "Summary": "<p sourcefile=\"api/Fp.Plus/Fp.Plus.Images.Rgba32Data.yml\" sourcestartlinenumber=\"1\">32-bit RGBA data.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Fp.Plus/Fp.Plus.Images.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Fp.Plus/Fp.Plus.Images.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Fp.Plus.Images",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Fp.Plus/Fp.Plus.PlusUtil.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Fp.Plus/Fp.Plus.PlusUtil.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Fp.Plus.PlusUtil",
+      "Summary": "<p sourcefile=\"api/Fp.Plus/Fp.Plus.PlusUtil.yml\" sourcestartlinenumber=\"1\">Utilities.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Fp.Plus/Fp.Plus.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Fp.Plus/Fp.Plus.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Fp.Plus",
+      "Summary": null
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "api/Fp.Plus/index.md",
+      "output": {
+        ".html": {
+          "relative_path": "api/Fp.Plus/index.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Toc",
+      "source_relative_path": "api/Fp.Plus/toc.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Fp.Plus/toc.html"
+        },
+        ".json": {
+          "relative_path": "api/Fp.Plus/toc.json"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Fp/Fp.BitUtil.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Fp/Fp.BitUtil.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Fp.BitUtil",
+      "Summary": "<p sourcefile=\"api/Fp/Fp.BitUtil.yml\" sourcestartlinenumber=\"1\">Bitwise operations.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Fp/Fp.BufferData-1.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Fp/Fp.BufferData-1.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Fp.BufferData<T>",
+      "Summary": "<p sourcefile=\"api/Fp/Fp.BufferData-1.yml\" sourcestartlinenumber=\"1\">Buffer containing unstructured data.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Fp/Fp.BufferData.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Fp/Fp.BufferData.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Fp.BufferData",
+      "Summary": "<p sourcefile=\"api/Fp/Fp.BufferData.yml\" sourcestartlinenumber=\"1\">Buffer containing unstructured data.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Fp/Fp.CipherPaddingMode.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Fp/Fp.CipherPaddingMode.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Fp.CipherPaddingMode",
+      "Summary": "<p sourcefile=\"api/Fp/Fp.CipherPaddingMode.yml\" sourcestartlinenumber=\"1\">Block cipher padding mode.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Fp/Fp.CircleBuffer-1.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Fp/Fp.CircleBuffer-1.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Fp.CircleBuffer<T>",
+      "Summary": "<p sourcefile=\"api/Fp/Fp.CircleBuffer-1.yml\" sourcestartlinenumber=\"1\">Stores circular buffer of elements.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Fp/Fp.ConsoleLog.Config.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Fp/Fp.ConsoleLog.Config.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Fp.ConsoleLog.Config",
+      "Summary": "<p sourcefile=\"api/Fp/Fp.ConsoleLog.Config.yml\" sourcestartlinenumber=\"1\">Stores configuration properties for <xref href=\"Fp.ConsoleLog\" data-throw-if-not-resolved=\"false\"></xref>.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Fp/Fp.ConsoleLog.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Fp/Fp.ConsoleLog.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Fp.ConsoleLog",
+      "Summary": "<p sourcefile=\"api/Fp/Fp.ConsoleLog.yml\" sourcestartlinenumber=\"1\">Provides basic logging to console output.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Fp/Fp.Data.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Fp/Fp.Data.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Fp.Data",
+      "Summary": "<p sourcefile=\"api/Fp/Fp.Data.yml\" sourcestartlinenumber=\"1\">Intermediate-format data container.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Fp/Fp.DataUtil.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Fp/Fp.DataUtil.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Fp.DataUtil",
+      "Summary": "<p sourcefile=\"api/Fp/Fp.DataUtil.yml\" sourcestartlinenumber=\"1\">Utility functions for format conversion.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Fp/Fp.Detector.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Fp/Fp.Detector.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Fp.Detector",
+      "Summary": "<p sourcefile=\"api/Fp/Fp.Detector.yml\" sourcestartlinenumber=\"1\">Represents a detector.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Fp/Fp.Fallback.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Fp/Fp.Fallback.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Fp.Fallback",
+      "Summary": "<p sourcefile=\"api/Fp/Fp.Fallback.yml\" sourcestartlinenumber=\"1\">Represents a fallback detector.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Fp/Fp.FileProcessor.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Fp/Fp.FileProcessor.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Fp.FileProcessor",
+      "Summary": "<p sourcefile=\"api/Fp/Fp.FileProcessor.yml\" sourcestartlinenumber=\"1\">Represents a processor that operates on a single named input.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Fp/Fp.FileProcessorInfo.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Fp/Fp.FileProcessorInfo.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Fp.FileProcessorInfo",
+      "Summary": "<p sourcefile=\"api/Fp/Fp.FileProcessorInfo.yml\" sourcestartlinenumber=\"1\">Processor information.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Fp/Fp.FormatMultiProcessor.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Fp/Fp.FormatMultiProcessor.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Fp.FormatMultiProcessor",
+      "Summary": "<p sourcefile=\"api/Fp/Fp.FormatMultiProcessor.yml\" sourcestartlinenumber=\"1\">Represents a processor that operates on a single input and generates multiple outputs.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Fp/Fp.FormatProcessor.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Fp/Fp.FormatProcessor.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Fp.FormatProcessor",
+      "Summary": "<p sourcefile=\"api/Fp/Fp.FormatProcessor.yml\" sourcestartlinenumber=\"1\">Represents a processor that operates on a single named input stream.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Fp/Fp.FormatSingleProcessor-1.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Fp/Fp.FormatSingleProcessor-1.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Fp.FormatSingleProcessor<T>",
+      "Summary": "<p sourcefile=\"api/Fp/Fp.FormatSingleProcessor-1.yml\" sourcestartlinenumber=\"1\">Represents a processor that operates on a single input and generates multiple outputs.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Fp/Fp.FormatSingleProcessor.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Fp/Fp.FormatSingleProcessor.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Fp.FormatSingleProcessor",
+      "Summary": "<p sourcefile=\"api/Fp/Fp.FormatSingleProcessor.yml\" sourcestartlinenumber=\"1\">Represents a processor that operates on a single input and generates a single output.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Fp/Fp.FpPath.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Fp/Fp.FpPath.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Fp.FpPath",
+      "Summary": "<p sourcefile=\"api/Fp/Fp.FpPath.yml\" sourcestartlinenumber=\"1\">Represents a path element linked to parent nodes.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Fp/Fp.FpUtil.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Fp/Fp.FpUtil.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Fp.FpUtil",
+      "Summary": "<p sourcefile=\"api/Fp/Fp.FpUtil.yml\" sourcestartlinenumber=\"1\">Utility methods.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Fp/Fp.HalfHelper.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Fp/Fp.HalfHelper.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Fp.HalfHelper",
+      "Summary": "<p sourcefile=\"api/Fp/Fp.HalfHelper.yml\" sourcestartlinenumber=\"1\">Helper class for Half conversions and some low level operations.\nThis class is internally used in the Half class.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Fp/Fp.Helpers.AsciiStringHelper.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Fp/Fp.Helpers.AsciiStringHelper.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Fp.Helpers.AsciiStringHelper",
+      "Summary": "<p sourcefile=\"api/Fp/Fp.Helpers.AsciiStringHelper.yml\" sourcestartlinenumber=\"1\">ASCII string helper.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Fp/Fp.Helpers.BaseHelper-1.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Fp/Fp.Helpers.BaseHelper-1.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Fp.Helpers.BaseHelper<T>",
+      "Summary": "<p sourcefile=\"api/Fp/Fp.Helpers.BaseHelper-1.yml\" sourcestartlinenumber=\"1\">Base single-unit unmanaged data helper.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Fp/Fp.Helpers.BaseStringHelper.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Fp/Fp.Helpers.BaseStringHelper.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Fp.Helpers.BaseStringHelper",
+      "Summary": "<p sourcefile=\"api/Fp/Fp.Helpers.BaseStringHelper.yml\" sourcestartlinenumber=\"1\">Base helper type for strings.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Fp/Fp.Helpers.BaseUnmanagedArrayHelper-1.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Fp/Fp.Helpers.BaseUnmanagedArrayHelper-1.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Fp.Helpers.BaseUnmanagedArrayHelper<T>",
+      "Summary": "<p sourcefile=\"api/Fp/Fp.Helpers.BaseUnmanagedArrayHelper-1.yml\" sourcestartlinenumber=\"1\">Base unmanaged array data helper.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Fp/Fp.Helpers.BaseUnmanagedHelper-1.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Fp/Fp.Helpers.BaseUnmanagedHelper-1.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Fp.Helpers.BaseUnmanagedHelper<T>",
+      "Summary": "<p sourcefile=\"api/Fp/Fp.Helpers.BaseUnmanagedHelper-1.yml\" sourcestartlinenumber=\"1\">Base single-unit data helper.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Fp/Fp.Helpers.BaseUnmanagedIntegerArrayHelper-1.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Fp/Fp.Helpers.BaseUnmanagedIntegerArrayHelper-1.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Fp.Helpers.BaseUnmanagedIntegerArrayHelper<T>",
+      "Summary": "<p sourcefile=\"api/Fp/Fp.Helpers.BaseUnmanagedIntegerArrayHelper-1.yml\" sourcestartlinenumber=\"1\">Base unmanaged integer array data helper.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Fp/Fp.Helpers.BaseUnmanagedIntegerHelper-1.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Fp/Fp.Helpers.BaseUnmanagedIntegerHelper-1.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Fp.Helpers.BaseUnmanagedIntegerHelper<T>",
+      "Summary": "<p sourcefile=\"api/Fp/Fp.Helpers.BaseUnmanagedIntegerHelper-1.yml\" sourcestartlinenumber=\"1\">Base unmanaged integer array data helper.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Fp/Fp.Helpers.F16ArrayHelper.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Fp/Fp.Helpers.F16ArrayHelper.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Fp.Helpers.F16ArrayHelper",
+      "Summary": "<p sourcefile=\"api/Fp/Fp.Helpers.F16ArrayHelper.yml\" sourcestartlinenumber=\"1\">Unsigned 16-bit float array helper.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Fp/Fp.Helpers.F16Helper.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Fp/Fp.Helpers.F16Helper.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Fp.Helpers.F16Helper",
+      "Summary": "<p sourcefile=\"api/Fp/Fp.Helpers.F16Helper.yml\" sourcestartlinenumber=\"1\">Unsigned 16-bit float helper.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Fp/Fp.Helpers.Helper.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Fp/Fp.Helpers.Helper.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Fp.Helpers.Helper",
+      "Summary": "<p sourcefile=\"api/Fp/Fp.Helpers.Helper.yml\" sourcestartlinenumber=\"1\">Base data helper.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Fp/Fp.Helpers.OffsetSegment-1.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Fp/Fp.Helpers.OffsetSegment-1.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Fp.Helpers.OffsetSegment<T>",
+      "Summary": "<p sourcefile=\"api/Fp/Fp.Helpers.OffsetSegment-1.yml\" sourcestartlinenumber=\"1\">Represents a segment in a buffer or stream.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Fp/Fp.Helpers.S16ArrayHelper.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Fp/Fp.Helpers.S16ArrayHelper.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Fp.Helpers.S16ArrayHelper",
+      "Summary": "<p sourcefile=\"api/Fp/Fp.Helpers.S16ArrayHelper.yml\" sourcestartlinenumber=\"1\">Signed 16-bit array helper.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Fp/Fp.Helpers.S16Helper.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Fp/Fp.Helpers.S16Helper.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Fp.Helpers.S16Helper",
+      "Summary": "<p sourcefile=\"api/Fp/Fp.Helpers.S16Helper.yml\" sourcestartlinenumber=\"1\">Signed 16-bit helper.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Fp/Fp.Helpers.S32ArrayHelper.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Fp/Fp.Helpers.S32ArrayHelper.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Fp.Helpers.S32ArrayHelper",
+      "Summary": "<p sourcefile=\"api/Fp/Fp.Helpers.S32ArrayHelper.yml\" sourcestartlinenumber=\"1\">Signed 32-bit helper.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Fp/Fp.Helpers.S32Helper.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Fp/Fp.Helpers.S32Helper.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Fp.Helpers.S32Helper",
+      "Summary": "<p sourcefile=\"api/Fp/Fp.Helpers.S32Helper.yml\" sourcestartlinenumber=\"1\">Signed 32-bit helper.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Fp/Fp.Helpers.S64ArrayHelper.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Fp/Fp.Helpers.S64ArrayHelper.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Fp.Helpers.S64ArrayHelper",
+      "Summary": "<p sourcefile=\"api/Fp/Fp.Helpers.S64ArrayHelper.yml\" sourcestartlinenumber=\"1\">Signed 64-bit helper.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Fp/Fp.Helpers.S64Helper.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Fp/Fp.Helpers.S64Helper.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Fp.Helpers.S64Helper",
+      "Summary": "<p sourcefile=\"api/Fp/Fp.Helpers.S64Helper.yml\" sourcestartlinenumber=\"1\">Signed 64-bit helper.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Fp/Fp.Helpers.S8ArrayHelper.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Fp/Fp.Helpers.S8ArrayHelper.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Fp.Helpers.S8ArrayHelper",
+      "Summary": "<p sourcefile=\"api/Fp/Fp.Helpers.S8ArrayHelper.yml\" sourcestartlinenumber=\"1\">Signed 8-bit array helper.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Fp/Fp.Helpers.S8Helper.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Fp/Fp.Helpers.S8Helper.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Fp.Helpers.S8Helper",
+      "Summary": "<p sourcefile=\"api/Fp/Fp.Helpers.S8Helper.yml\" sourcestartlinenumber=\"1\">Signed 8-bit helper.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Fp/Fp.Helpers.StringData.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Fp/Fp.Helpers.StringData.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Fp.Helpers.StringData",
+      "Summary": "<p sourcefile=\"api/Fp/Fp.Helpers.StringData.yml\" sourcestartlinenumber=\"1\">Represents converted string.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Fp/Fp.Helpers.TArrayHelper-1.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Fp/Fp.Helpers.TArrayHelper-1.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Fp.Helpers.TArrayHelper<T>",
+      "Summary": "<p sourcefile=\"api/Fp/Fp.Helpers.TArrayHelper-1.yml\" sourcestartlinenumber=\"1\">Generic helper.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Fp/Fp.Helpers.THelper-1.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Fp/Fp.Helpers.THelper-1.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Fp.Helpers.THelper<T>",
+      "Summary": "<p sourcefile=\"api/Fp/Fp.Helpers.THelper-1.yml\" sourcestartlinenumber=\"1\">Generic helper.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Fp/Fp.Helpers.U16ArrayHelper.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Fp/Fp.Helpers.U16ArrayHelper.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Fp.Helpers.U16ArrayHelper",
+      "Summary": "<p sourcefile=\"api/Fp/Fp.Helpers.U16ArrayHelper.yml\" sourcestartlinenumber=\"1\">Unsigned 16-bit helper.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Fp/Fp.Helpers.U16Helper.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Fp/Fp.Helpers.U16Helper.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Fp.Helpers.U16Helper",
+      "Summary": "<p sourcefile=\"api/Fp/Fp.Helpers.U16Helper.yml\" sourcestartlinenumber=\"1\">Unsigned 16-bit helper.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Fp/Fp.Helpers.U32ArrayHelper.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Fp/Fp.Helpers.U32ArrayHelper.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Fp.Helpers.U32ArrayHelper",
+      "Summary": "<p sourcefile=\"api/Fp/Fp.Helpers.U32ArrayHelper.yml\" sourcestartlinenumber=\"1\">Unsigned 32-bit helper.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Fp/Fp.Helpers.U32Helper.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Fp/Fp.Helpers.U32Helper.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Fp.Helpers.U32Helper",
+      "Summary": "<p sourcefile=\"api/Fp/Fp.Helpers.U32Helper.yml\" sourcestartlinenumber=\"1\">Unsigned 32-bit helper.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Fp/Fp.Helpers.U64ArrayHelper.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Fp/Fp.Helpers.U64ArrayHelper.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Fp.Helpers.U64ArrayHelper",
+      "Summary": "<p sourcefile=\"api/Fp/Fp.Helpers.U64ArrayHelper.yml\" sourcestartlinenumber=\"1\">Unsigned 64-bit helper.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Fp/Fp.Helpers.U64Helper.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Fp/Fp.Helpers.U64Helper.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Fp.Helpers.U64Helper",
+      "Summary": "<p sourcefile=\"api/Fp/Fp.Helpers.U64Helper.yml\" sourcestartlinenumber=\"1\">Unsigned 64-bit helper.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Fp/Fp.Helpers.U8ArrayHelper.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Fp/Fp.Helpers.U8ArrayHelper.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Fp.Helpers.U8ArrayHelper",
+      "Summary": "<p sourcefile=\"api/Fp/Fp.Helpers.U8ArrayHelper.yml\" sourcestartlinenumber=\"1\">Unsigned 8-bit helper.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Fp/Fp.Helpers.U8Helper.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Fp/Fp.Helpers.U8Helper.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Fp.Helpers.U8Helper",
+      "Summary": "<p sourcefile=\"api/Fp/Fp.Helpers.U8Helper.yml\" sourcestartlinenumber=\"1\">Unsigned 8-bit helper.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Fp/Fp.Helpers.Utf16StringHelper.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Fp/Fp.Helpers.Utf16StringHelper.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Fp.Helpers.Utf16StringHelper",
+      "Summary": "<p sourcefile=\"api/Fp/Fp.Helpers.Utf16StringHelper.yml\" sourcestartlinenumber=\"1\">UTF-16 string helper.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Fp/Fp.Helpers.Utf8StringHelper.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Fp/Fp.Helpers.Utf8StringHelper.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Fp.Helpers.Utf8StringHelper",
+      "Summary": "<p sourcefile=\"api/Fp/Fp.Helpers.Utf8StringHelper.yml\" sourcestartlinenumber=\"1\">UTF-8 string helper.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Fp/Fp.Helpers.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Fp/Fp.Helpers.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Fp.Helpers",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Fp/Fp.HexPrint.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Fp/Fp.HexPrint.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Fp.HexPrint",
+      "Summary": "<p sourcefile=\"api/Fp/Fp.HexPrint.yml\" sourcestartlinenumber=\"1\">Prints hex text with color codes for labelled sections.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Fp/Fp.IChunkWriter.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Fp/Fp.IChunkWriter.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Fp.IChunkWriter",
+      "Summary": "<p sourcefile=\"api/Fp/Fp.IChunkWriter.yml\" sourcestartlinenumber=\"1\">Receives log chunks.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Fp/Fp.ILogWriter.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Fp/Fp.ILogWriter.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Fp.ILogWriter",
+      "Summary": "<p sourcefile=\"api/Fp/Fp.ILogWriter.yml\" sourcestartlinenumber=\"1\">Receives logs.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Fp/Fp.LogLevel.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Fp/Fp.LogLevel.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Fp.LogLevel",
+      "Summary": "<p sourcefile=\"api/Fp/Fp.LogLevel.yml\" sourcestartlinenumber=\"1\">Log level.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Fp/Fp.MStream.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Fp/Fp.MStream.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Fp.MStream",
+      "Summary": "<p sourcefile=\"api/Fp/Fp.MStream.yml\" sourcestartlinenumber=\"1\">Stream from <xref href=\"System.Memory%601\" data-throw-if-not-resolved=\"false\"></xref> of bytes.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Fp/Fp.MemAnnotation.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Fp/Fp.MemAnnotation.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Fp.MemAnnotation",
+      "Summary": "<p sourcefile=\"api/Fp/Fp.MemAnnotation.yml\" sourcestartlinenumber=\"1\">Represents a memory annotation.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Fp/Fp.MetaData.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Fp/Fp.MetaData.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Fp.MetaData",
+      "Summary": "<p sourcefile=\"api/Fp/Fp.MetaData.yml\" sourcestartlinenumber=\"1\">Represents general metadata.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Fp/Fp.MultiBufferStream.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Fp/Fp.MultiBufferStream.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Fp.MultiBufferStream",
+      "Summary": "<p sourcefile=\"api/Fp/Fp.MultiBufferStream.yml\" sourcestartlinenumber=\"1\">Adds multiple buffers for reducing reads to underlying stream.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Fp/Fp.NullLog.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Fp/Fp.NullLog.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Fp.NullLog",
+      "Summary": "<p sourcefile=\"api/Fp/Fp.NullLog.yml\" sourcestartlinenumber=\"1\">Provides dummy log receiver.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Fp/Fp.One-1.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Fp/Fp.One-1.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Fp.One<T>",
+      "Summary": "<p sourcefile=\"api/Fp/Fp.One-1.yml\" sourcestartlinenumber=\"1\">Manage singleton instances of new() types.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Fp/Fp.One.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Fp/Fp.One.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Fp.One",
+      "Summary": "<p sourcefile=\"api/Fp/Fp.One.yml\" sourcestartlinenumber=\"1\">Manage singleton instances of new() types.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Fp/Fp.PStream.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Fp/Fp.PStream.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Fp.PStream",
+      "Summary": "<p sourcefile=\"api/Fp/Fp.PStream.yml\" sourcestartlinenumber=\"1\">Stream from pointer.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Fp/Fp.ProcessResult.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Fp/Fp.ProcessResult.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Fp.ProcessResult",
+      "Summary": "<p sourcefile=\"api/Fp/Fp.ProcessResult.yml\" sourcestartlinenumber=\"1\">Result of processing.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Fp/Fp.Processor.TransformDelegate-1.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Fp/Fp.Processor.TransformDelegate-1.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Fp.Processor.TransformDelegate<T>",
+      "Summary": "<p sourcefile=\"api/Fp/Fp.Processor.TransformDelegate-1.yml\" sourcestartlinenumber=\"1\">Transform delegate.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Fp/Fp.Processor.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Fp/Fp.Processor.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Fp.Processor",
+      "Summary": "<p sourcefile=\"api/Fp/Fp.Processor.yml\" sourcestartlinenumber=\"1\">Base type for processors.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Fp/Fp.ProcessorConfiguration.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Fp/Fp.ProcessorConfiguration.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Fp.ProcessorConfiguration",
+      "Summary": "<p sourcefile=\"api/Fp/Fp.ProcessorConfiguration.yml\" sourcestartlinenumber=\"1\">Configuration for batch-processing fs with processors.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Fp/Fp.RasterIndexContext.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Fp/Fp.RasterIndexContext.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Fp.RasterIndexContext",
+      "Summary": "<p sourcefile=\"api/Fp/Fp.RasterIndexContext.yml\" sourcestartlinenumber=\"1\">Row-major raster position helper.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Fp/Fp.ReadContext-1.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Fp/Fp.ReadContext-1.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Fp.ReadContext<T>",
+      "Summary": "<p sourcefile=\"api/Fp/Fp.ReadContext-1.yml\" sourcestartlinenumber=\"1\">Represents a reading context over a <xref href=\"System.ReadOnlySpan%601\" data-throw-if-not-resolved=\"false\"></xref>.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Fp/Fp.ReadWriteContextByteExtensions.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Fp/Fp.ReadWriteContextByteExtensions.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Fp.ReadWriteContextByteExtensions",
+      "Summary": "<p sourcefile=\"api/Fp/Fp.ReadWriteContextByteExtensions.yml\" sourcestartlinenumber=\"1\">Provides extensions for <xref href=\"Fp.ReadContext%601\" data-throw-if-not-resolved=\"false\"></xref> and <xref href=\"Fp.WriteContext%601\" data-throw-if-not-resolved=\"false\"></xref> of byte.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Fp/Fp.SStream.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Fp/Fp.SStream.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Fp.SStream",
+      "Summary": "<p sourcefile=\"api/Fp/Fp.SStream.yml\" sourcestartlinenumber=\"1\">Stream that acts as a limited-range proxy for another stream.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Fp/Fp.SequenceBehaviour.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Fp/Fp.SequenceBehaviour.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Fp.SequenceBehaviour",
+      "Summary": "<p sourcefile=\"api/Fp/Fp.SequenceBehaviour.yml\" sourcestartlinenumber=\"1\">Behaviour of sequence.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Fp/Fp.StringBuilderLog.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Fp/Fp.StringBuilderLog.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Fp.StringBuilderLog",
+      "Summary": "<p sourcefile=\"api/Fp/Fp.StringBuilderLog.yml\" sourcestartlinenumber=\"1\">Provides basic logging to <xref href=\"Fp.StringBuilderLog.StringBuilder\" data-throw-if-not-resolved=\"false\"></xref>.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Fp/Fp.StringData.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Fp/Fp.StringData.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Fp.StringData",
+      "Summary": "<p sourcefile=\"api/Fp/Fp.StringData.yml\" sourcestartlinenumber=\"1\">Represents general text data.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Fp/Fp.Unknown-1.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Fp/Fp.Unknown-1.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Fp.Unknown<T>",
+      "Summary": "<p sourcefile=\"api/Fp/Fp.Unknown-1.yml\" sourcestartlinenumber=\"1\">Marks unknown mapping with <xref href=\"System.NotSupportedException\" data-throw-if-not-resolved=\"false\"></xref>.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Fp/Fp.Unknown-2.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Fp/Fp.Unknown-2.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Fp.Unknown<T, TOut>",
+      "Summary": "<p sourcefile=\"api/Fp/Fp.Unknown-2.yml\" sourcestartlinenumber=\"1\">Marks unknown mapping with <xref href=\"System.NotSupportedException\" data-throw-if-not-resolved=\"false\"></xref>.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Fp/Fp.WriteContext-1.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Fp/Fp.WriteContext-1.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Fp.WriteContext<T>",
+      "Summary": "<p sourcefile=\"api/Fp/Fp.WriteContext-1.yml\" sourcestartlinenumber=\"1\">Represents a reading/writing context over a <xref href=\"System.Span%601\" data-throw-if-not-resolved=\"false\"></xref>.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Fp/Fp.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Fp/Fp.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Fp",
+      "Summary": null
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "api/Fp/index.md",
+      "output": {
+        ".html": {
+          "relative_path": "api/Fp/index.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Toc",
+      "source_relative_path": "api/Fp/toc.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Fp/toc.html"
+        },
+        ".json": {
+          "relative_path": "api/Fp/toc.json"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "api/index.md",
+      "output": {
+        ".html": {
+          "relative_path": "api/index.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "articles/intro.md",
+      "output": {
+        ".html": {
+          "relative_path": "articles/intro.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Toc",
+      "source_relative_path": "articles/toc.yml",
+      "output": {
+        ".html": {
+          "relative_path": "articles/toc.html"
+        },
+        ".json": {
+          "relative_path": "articles/toc.json"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "favicon.ico",
+      "output": {
+        "resource": {
+          "relative_path": "favicon.ico"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "icon.png",
+      "output": {
+        "resource": {
+          "relative_path": "icon.png"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "index.md",
+      "output": {
+        ".html": {
+          "relative_path": "index.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Toc",
+      "source_relative_path": "toc.yml",
+      "output": {
+        ".html": {
+          "relative_path": "toc.html"
+        },
+        ".json": {
+          "relative_path": "toc.json"
+        }
+      },
+      "version": ""
+    }
+  ],
+  "groups": [
+    {
+      "xrefmap": "xrefmap.yml"
+    }
+  ]
+}

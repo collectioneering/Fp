@@ -1,0 +1,1866 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+      <title>Class FsFormatSingleProcessor </title>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="title" content="Class FsFormatSingleProcessor ">
+      
+      <meta name="description" content="Represents a processor that operates on a single input and generates a single output.">
+      <link rel="icon" href="../../favicon.ico">
+      <link rel="stylesheet" href="../../public/docfx.min.css">
+      <link rel="stylesheet" href="../../public/main.css">
+      <meta name="docfx:navrel" content="../../toc.html">
+      <meta name="docfx:tocrel" content="toc.html">
+      
+      
+      
+      
+      <meta name="docfx:docurl" content="https://github.com/collectioneering/Fp/new/main/apiSpec/new?filename=Fp_Fs_FsFormatSingleProcessor.md&amp;value=---%0Auid%3A%20Fp.Fs.FsFormatSingleProcessor%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">
+      <meta name="loc:inThisArticle" content="In this article">
+      <meta name="loc:searchResultsCount" content="{count} results for &quot;{query}&quot;">
+      <meta name="loc:searchNoResults" content="No results for &quot;{query}&quot;">
+      <meta name="loc:tocFilter" content="Filter by title">
+      <meta name="loc:nextArticle" content="Next">
+      <meta name="loc:prevArticle" content="Previous">
+      <meta name="loc:themeLight" content="Light">
+      <meta name="loc:themeDark" content="Dark">
+      <meta name="loc:themeAuto" content="Auto">
+      <meta name="loc:changeTheme" content="Change theme">
+      <meta name="loc:copy" content="Copy">
+      <meta name="loc:downloadPdf" content="Download PDF">
+
+      <script type="module" src="./../../public/docfx.min.js"></script>
+
+      <script>
+        const theme = localStorage.getItem('theme') || 'auto'
+        document.documentElement.setAttribute('data-bs-theme', theme === 'auto' ? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light') : theme)
+      </script>
+
+  </head>
+
+  <body class="tex2jax_ignore" data-layout="" data-yaml-mime="ManagedReference">
+    <header class="bg-body border-bottom">
+      <nav id="autocollapse" class="navbar navbar-expand-md" role="navigation">
+        <div class="container-xxl flex-nowrap">
+          <a class="navbar-brand" href="../../index.html">
+            <img id="logo" class="svg" src="../../icon.png" alt="">
+            
+          </a>
+          <button class="btn btn-lg d-md-none border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navpanel" aria-controls="navpanel" aria-expanded="false" aria-label="Toggle navigation">
+            <i class="bi bi-three-dots"></i>
+          </button>
+          <div class="collapse navbar-collapse" id="navpanel">
+            <div id="navbar">
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main class="container-xxl">
+      <div class="toc-offcanvas">
+        <div class="offcanvas-md offcanvas-start" tabindex="-1" id="tocOffcanvas" aria-labelledby="tocOffcanvasLabel">
+          <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="tocOffcanvasLabel">Table of Contents</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" data-bs-target="#tocOffcanvas" aria-label="Close"></button>
+          </div>
+          <div class="offcanvas-body">
+            <nav class="toc" id="toc"></nav>
+          </div>
+        </div>
+      </div>
+
+      <div class="content">
+        <div class="actionbar">
+          <button class="btn btn-lg border-0 d-md-none" type="button" data-bs-toggle="offcanvas" data-bs-target="#tocOffcanvas" aria-controls="tocOffcanvas" aria-expanded="false" aria-label="Show table of contents">
+            <i class="bi bi-list"></i>
+          </button>
+
+          <nav id="breadcrumb"></nav>
+        </div>
+
+        <article data-uid="Fp.Fs.FsFormatSingleProcessor">
+
+
+
+  <h1 id="Fp_Fs_FsFormatSingleProcessor" data-uid="Fp.Fs.FsFormatSingleProcessor" class="text-break">
+Class FsFormatSingleProcessor  <a class="header-action link-secondary" title="View source" href="https://github.com/collectioneering/Fp/blob/main/src/Fp.Fs/FsFormatSingleProcessor.cs/#L6"><i class="bi bi-code-slash"></i></a>
+  </h1>
+
+  <div class="facts text-secondary">
+    <dl><dt>Namespace</dt><dd><a class="xref" href="Fp.html">Fp</a>.<a class="xref" href="Fp.Fs.html">Fs</a></dd></dl>
+  <dl><dt>Assembly</dt><dd>Fp.Fs.dll</dd></dl>
+  </div>
+
+  <div class="markdown summary"><p>Represents a processor that operates on a single input and generates a single output.</p>
+</div>
+  <div class="markdown conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public class FsFormatSingleProcessor : FormatSingleProcessor, IDisposable</code></pre>
+  </div>
+
+
+
+
+  <dl class="typelist inheritance">
+    <dt>Inheritance</dt>
+    <dd>
+      <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a></div>
+      <div><a class="xref" href="../Fp/Fp.Processor.html">Processor</a></div>
+      <div><a class="xref" href="../Fp/Fp.FileProcessor.html">FileProcessor</a></div>
+      <div><a class="xref" href="../Fp/Fp.FormatProcessor.html">FormatProcessor</a></div>
+      <div><a class="xref" href="../Fp/Fp.FormatSingleProcessor.html">FormatSingleProcessor</a></div>
+      <div><span class="xref">FsFormatSingleProcessor</span></div>
+    </dd>
+  </dl>
+
+  <dl class="typelist implements">
+    <dt>Implements</dt>
+    <dd>
+      <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.idisposable">IDisposable</a></div>
+    </dd>
+  </dl>
+
+
+  <dl class="typelist inheritedMembers">
+    <dt>Inherited Members</dt>
+    <dd>
+    <div>
+      <a class="xref" href="../Fp/Fp.FormatSingleProcessor.html#Fp_FormatSingleProcessor_TryProcess__1_System_IO_Stream_System_String_Fp_Data__Fp_ProcessorConfiguration_">FormatSingleProcessor.TryProcess&lt;T&gt;(Stream, string, out Data, ProcessorConfiguration)</a>
+    </div>
+    <div>
+      <a class="xref" href="../Fp/Fp.FormatSingleProcessor.html#Fp_FormatSingleProcessor_TryProcess_System_IO_Stream_System_String_Fp_Data__Fp_ProcessorConfiguration_">FormatSingleProcessor.TryProcess(Stream, string, out Data, ProcessorConfiguration)</a>
+    </div>
+    <div>
+      <a class="xref" href="../Fp/Fp.FormatSingleProcessor.html#Fp_FormatSingleProcessor_TryProcess__1_System_ReadOnlyMemory_System_Byte__System_String_Fp_Data__Fp_ProcessorConfiguration_">FormatSingleProcessor.TryProcess&lt;T&gt;(ReadOnlyMemory&lt;byte&gt;, string, out Data, ProcessorConfiguration)</a>
+    </div>
+    <div>
+      <a class="xref" href="../Fp/Fp.FormatSingleProcessor.html#Fp_FormatSingleProcessor_TryProcess_System_ReadOnlyMemory_System_Byte__System_String_Fp_Data__Fp_ProcessorConfiguration_">FormatSingleProcessor.TryProcess(ReadOnlyMemory&lt;byte&gt;, string, out Data, ProcessorConfiguration)</a>
+    </div>
+    <div>
+      <a class="xref" href="../Fp/Fp.FormatSingleProcessor.html#Fp_FormatSingleProcessor_TryProcess__1_Fp_BufferData_System_Byte__System_String_Fp_Data__Fp_ProcessorConfiguration_">FormatSingleProcessor.TryProcess&lt;T&gt;(BufferData&lt;byte&gt;, string, out Data, ProcessorConfiguration)</a>
+    </div>
+    <div>
+      <a class="xref" href="../Fp/Fp.FormatSingleProcessor.html#Fp_FormatSingleProcessor_TryProcess_Fp_BufferData_System_Byte__System_String_Fp_Data__Fp_ProcessorConfiguration_">FormatSingleProcessor.TryProcess(BufferData&lt;byte&gt;, string, out Data, ProcessorConfiguration)</a>
+    </div>
+    <div>
+      <a class="xref" href="../Fp/Fp.FormatSingleProcessor.html#Fp_FormatSingleProcessor_TryProcess__1_Fp_BufferData_System_Byte__Fp_Data__Fp_ProcessorConfiguration_">FormatSingleProcessor.TryProcess&lt;T&gt;(BufferData&lt;byte&gt;, out Data, ProcessorConfiguration)</a>
+    </div>
+    <div>
+      <a class="xref" href="../Fp/Fp.FormatSingleProcessor.html#Fp_FormatSingleProcessor_TryProcess_Fp_BufferData_System_Byte__Fp_Data__Fp_ProcessorConfiguration_">FormatSingleProcessor.TryProcess(BufferData&lt;byte&gt;, out Data, ProcessorConfiguration)</a>
+    </div>
+    <div>
+      <a class="xref" href="../Fp/Fp.FormatSingleProcessor.html#Fp_FormatSingleProcessor_TryProcess_Fp_Data__">FormatSingleProcessor.TryProcess(out Data)</a>
+    </div>
+    <div>
+      <a class="xref" href="../Fp/Fp.FormatProcessor.html#Fp_FormatProcessor_Prepare_System_IO_Stream_System_String_Fp_ProcessorConfiguration_">FormatProcessor.Prepare(Stream, string, ProcessorConfiguration)</a>
+    </div>
+    <div>
+      <a class="xref" href="../Fp/Fp.FormatProcessor.html#Fp_FormatProcessor_Prepare_System_ReadOnlyMemory_System_Byte__System_String_Fp_ProcessorConfiguration_">FormatProcessor.Prepare(ReadOnlyMemory&lt;byte&gt;, string, ProcessorConfiguration)</a>
+    </div>
+    <div>
+      <a class="xref" href="../Fp/Fp.FormatProcessor.html#Fp_FormatProcessor_Prepare_Fp_BufferData_System_Byte__System_String_Fp_ProcessorConfiguration_">FormatProcessor.Prepare(BufferData&lt;byte&gt;, string, ProcessorConfiguration)</a>
+    </div>
+    <div>
+      <a class="xref" href="../Fp/Fp.FormatProcessor.html#Fp_FormatProcessor_Prepare_Fp_BufferData_System_Byte__Fp_ProcessorConfiguration_">FormatProcessor.Prepare(BufferData&lt;byte&gt;, ProcessorConfiguration)</a>
+    </div>
+    <div>
+      <a class="xref" href="../Fp/Fp.FileProcessor.html#Fp_FileProcessor_InputFile">FileProcessor.InputFile</a>
+    </div>
+    <div>
+      <a class="xref" href="../Fp/Fp.FileProcessor.html#Fp_FileProcessor_Name">FileProcessor.Name</a>
+    </div>
+    <div>
+      <a class="xref" href="../Fp/Fp.FileProcessor.html#Fp_FileProcessor_NameNoExt">FileProcessor.NameNoExt</a>
+    </div>
+    <div>
+      <a class="xref" href="../Fp/Fp.FileProcessor.html#Fp_FileProcessor_NamePath">FileProcessor.NamePath</a>
+    </div>
+    <div>
+      <a class="xref" href="../Fp/Fp.FileProcessor.html#Fp_FileProcessor_NamePathNoExt">FileProcessor.NamePathNoExt</a>
+    </div>
+    <div>
+      <a class="xref" href="../Fp/Fp.FileProcessor.html#Fp_FileProcessor_SelectedExtension">FileProcessor.SelectedExtension</a>
+    </div>
+    <div>
+      <a class="xref" href="../Fp/Fp.FileProcessor.html#Fp_FileProcessor_Info">FileProcessor.Info</a>
+    </div>
+    <div>
+      <a class="xref" href="../Fp/Fp.FileProcessor.html#Fp_FileProcessor_Prepare_System_String_Fp_ProcessorConfiguration_">FileProcessor.Prepare(string, ProcessorConfiguration)</a>
+    </div>
+    <div>
+      <a class="xref" href="../Fp/Fp.FileProcessor.html#Fp_FileProcessor_AcceptFile_System_String_">FileProcessor.AcceptFile(string)</a>
+    </div>
+    <div>
+      <a class="xref" href="../Fp/Fp.FileProcessor.html#Fp_FileProcessor_ValidateExtension_System_String_System_String__">FileProcessor.ValidateExtension(string, out string)</a>
+    </div>
+    <div>
+      <a class="xref" href="../Fp/Fp.Processor.html#Fp_Processor_Buffer_Fp_FpPath_System_ReadOnlyMemory_System_Byte__">Processor.Buffer(FpPath, ReadOnlyMemory&lt;byte&gt;)</a>
+    </div>
+    <div>
+      <a class="xref" href="../Fp/Fp.Processor.html#Fp_Processor_Buffer_System_String_System_ReadOnlyMemory_System_Byte__">Processor.Buffer(string, ReadOnlyMemory&lt;byte&gt;)</a>
+    </div>
+    <div>
+      <a class="xref" href="../Fp/Fp.Processor.html#Fp_Processor_Meta_Fp_FpPath_System_Object_">Processor.Meta(FpPath, object)</a>
+    </div>
+    <div>
+      <a class="xref" href="../Fp/Fp.Processor.html#Fp_Processor_Meta_System_String_System_Object_">Processor.Meta(string, object)</a>
+    </div>
+    <div>
+      <a class="xref" href="../Fp/Fp.Processor.html#Fp_Processor_ApplyAnd_System_Span_System_Byte__System_Byte_">Processor.ApplyAnd(Span&lt;byte&gt;, byte)</a>
+    </div>
+    <div>
+      <a class="xref" href="../Fp/Fp.Processor.html#Fp_Processor_ApplyAnd_System_Span_System_Byte__System_ReadOnlySpan_System_Byte__Fp_SequenceBehaviour_">Processor.ApplyAnd(Span&lt;byte&gt;, ReadOnlySpan&lt;byte&gt;, SequenceBehaviour)</a>
+    </div>
+    <div>
+      <a class="xref" href="../Fp/Fp.Processor.html#Fp_Processor_ApplyAndAdvSimd_System_Span_System_Byte__System_Byte_">Processor.ApplyAndAdvSimd(Span&lt;byte&gt;, byte)</a>
+    </div>
+    <div>
+      <a class="xref" href="../Fp/Fp.Processor.html#Fp_Processor_ApplyAndSse2_System_Span_System_Byte__System_Byte_">Processor.ApplyAndSse2(Span&lt;byte&gt;, byte)</a>
+    </div>
+    <div>
+      <a class="xref" href="../Fp/Fp.Processor.html#Fp_Processor_ApplyAndAvx2_System_Span_System_Byte__System_Byte_">Processor.ApplyAndAvx2(Span&lt;byte&gt;, byte)</a>
+    </div>
+    <div>
+      <a class="xref" href="../Fp/Fp.Processor.html#Fp_Processor_ApplyAndVectorized_System_Span_System_Byte__System_Byte_">Processor.ApplyAndVectorized(Span&lt;byte&gt;, byte)</a>
+    </div>
+    <div>
+      <a class="xref" href="../Fp/Fp.Processor.html#Fp_Processor_ApplyAndVectorized_System_Span_System_Byte__System_ReadOnlySpan_System_Byte__Fp_SequenceBehaviour_">Processor.ApplyAndVectorized(Span&lt;byte&gt;, ReadOnlySpan&lt;byte&gt;, SequenceBehaviour)</a>
+    </div>
+    <div>
+      <a class="xref" href="../Fp/Fp.Processor.html#Fp_Processor_ApplyAndFallback_System_Span_System_Byte__System_Byte_">Processor.ApplyAndFallback(Span&lt;byte&gt;, byte)</a>
+    </div>
+    <div>
+      <a class="xref" href="../Fp/Fp.Processor.html#Fp_Processor_ApplyAndFallback_System_Span_System_Byte__System_ReadOnlySpan_System_Byte__Fp_SequenceBehaviour_">Processor.ApplyAndFallback(Span&lt;byte&gt;, ReadOnlySpan&lt;byte&gt;, SequenceBehaviour)</a>
+    </div>
+    <div>
+      <a class="xref" href="../Fp/Fp.Processor.html#Fp_Processor_GetAlignmentStart_System_ReadOnlySpan_System_Byte__System_Int32_">Processor.GetAlignmentStart(ReadOnlySpan&lt;byte&gt;, int)</a>
+    </div>
+    <div>
+      <a class="xref" href="../Fp/Fp.Processor.html#Fp_Processor_ContainsAtLeastOneAligned_System_ReadOnlySpan_System_Byte__System_Int32_">Processor.ContainsAtLeastOneAligned(ReadOnlySpan&lt;byte&gt;, int)</a>
+    </div>
+    <div>
+      <a class="xref" href="../Fp/Fp.Processor.html#Fp_Processor_ApplyTransform__1_System_Span___0__Fp_Processor_TransformDelegate___0__">Processor.ApplyTransform&lt;T&gt;(Span&lt;T&gt;, Processor.TransformDelegate&lt;T&gt;)</a>
+    </div>
+    <div>
+      <a class="xref" href="../Fp/Fp.Processor.html#Fp_Processor_ApplyOr_System_Span_System_Byte__System_Byte_">Processor.ApplyOr(Span&lt;byte&gt;, byte)</a>
+    </div>
+    <div>
+      <a class="xref" href="../Fp/Fp.Processor.html#Fp_Processor_ApplyOr_System_Span_System_Byte__System_ReadOnlySpan_System_Byte__Fp_SequenceBehaviour_">Processor.ApplyOr(Span&lt;byte&gt;, ReadOnlySpan&lt;byte&gt;, SequenceBehaviour)</a>
+    </div>
+    <div>
+      <a class="xref" href="../Fp/Fp.Processor.html#Fp_Processor_ApplyOrAdvSimd_System_Span_System_Byte__System_Byte_">Processor.ApplyOrAdvSimd(Span&lt;byte&gt;, byte)</a>
+    </div>
+    <div>
+      <a class="xref" href="../Fp/Fp.Processor.html#Fp_Processor_ApplyOrSse2_System_Span_System_Byte__System_Byte_">Processor.ApplyOrSse2(Span&lt;byte&gt;, byte)</a>
+    </div>
+    <div>
+      <a class="xref" href="../Fp/Fp.Processor.html#Fp_Processor_ApplyOrAvx2_System_Span_System_Byte__System_Byte_">Processor.ApplyOrAvx2(Span&lt;byte&gt;, byte)</a>
+    </div>
+    <div>
+      <a class="xref" href="../Fp/Fp.Processor.html#Fp_Processor_ApplyOrVectorized_System_Span_System_Byte__System_Byte_">Processor.ApplyOrVectorized(Span&lt;byte&gt;, byte)</a>
+    </div>
+    <div>
+      <a class="xref" href="../Fp/Fp.Processor.html#Fp_Processor_ApplyOrVectorized_System_Span_System_Byte__System_ReadOnlySpan_System_Byte__Fp_SequenceBehaviour_">Processor.ApplyOrVectorized(Span&lt;byte&gt;, ReadOnlySpan&lt;byte&gt;, SequenceBehaviour)</a>
+    </div>
+    <div>
+      <a class="xref" href="../Fp/Fp.Processor.html#Fp_Processor_ApplyOrFallback_System_Span_System_Byte__System_Byte_">Processor.ApplyOrFallback(Span&lt;byte&gt;, byte)</a>
+    </div>
+    <div>
+      <a class="xref" href="../Fp/Fp.Processor.html#Fp_Processor_ApplyOrFallback_System_Span_System_Byte__System_ReadOnlySpan_System_Byte__Fp_SequenceBehaviour_">Processor.ApplyOrFallback(Span&lt;byte&gt;, ReadOnlySpan&lt;byte&gt;, SequenceBehaviour)</a>
+    </div>
+    <div>
+      <a class="xref" href="../Fp/Fp.Processor.html#Fp_Processor_ApplyXor_System_Span_System_Byte__System_Byte_">Processor.ApplyXor(Span&lt;byte&gt;, byte)</a>
+    </div>
+    <div>
+      <a class="xref" href="../Fp/Fp.Processor.html#Fp_Processor_ApplyXor_System_Span_System_Byte__System_ReadOnlySpan_System_Byte__Fp_SequenceBehaviour_">Processor.ApplyXor(Span&lt;byte&gt;, ReadOnlySpan&lt;byte&gt;, SequenceBehaviour)</a>
+    </div>
+    <div>
+      <a class="xref" href="../Fp/Fp.Processor.html#Fp_Processor_ApplyXorAdvSimd_System_Span_System_Byte__System_Byte_">Processor.ApplyXorAdvSimd(Span&lt;byte&gt;, byte)</a>
+    </div>
+    <div>
+      <a class="xref" href="../Fp/Fp.Processor.html#Fp_Processor_ApplyXorSse2_System_Span_System_Byte__System_Byte_">Processor.ApplyXorSse2(Span&lt;byte&gt;, byte)</a>
+    </div>
+    <div>
+      <a class="xref" href="../Fp/Fp.Processor.html#Fp_Processor_ApplyXorAvx2_System_Span_System_Byte__System_Byte_">Processor.ApplyXorAvx2(Span&lt;byte&gt;, byte)</a>
+    </div>
+    <div>
+      <a class="xref" href="../Fp/Fp.Processor.html#Fp_Processor_ApplyXorVectorized_System_Span_System_Byte__System_Byte_">Processor.ApplyXorVectorized(Span&lt;byte&gt;, byte)</a>
+    </div>
+    <div>
+      <a class="xref" href="../Fp/Fp.Processor.html#Fp_Processor_ApplyXorVectorized_System_Span_System_Byte__System_ReadOnlySpan_System_Byte__Fp_SequenceBehaviour_">Processor.ApplyXorVectorized(Span&lt;byte&gt;, ReadOnlySpan&lt;byte&gt;, SequenceBehaviour)</a>
+    </div>
+    <div>
+      <a class="xref" href="../Fp/Fp.Processor.html#Fp_Processor_ApplyXorFallback_System_Span_System_Byte__System_Byte_">Processor.ApplyXorFallback(Span&lt;byte&gt;, byte)</a>
+    </div>
+    <div>
+      <a class="xref" href="../Fp/Fp.Processor.html#Fp_Processor_ApplyXorFallback_System_Span_System_Byte__System_ReadOnlySpan_System_Byte__Fp_SequenceBehaviour_">Processor.ApplyXorFallback(Span&lt;byte&gt;, ReadOnlySpan&lt;byte&gt;, SequenceBehaviour)</a>
+    </div>
+    <div>
+      <a class="xref" href="../Fp/Fp.Processor.html#Fp_Processor_GetPaddedLength_System_Int32_Fp_CipherPaddingMode_System_Int32_">Processor.GetPaddedLength(int, CipherPaddingMode, int)</a>
+    </div>
+    <div>
+      <a class="xref" href="../Fp/Fp.Processor.html#Fp_Processor_GetDepaddedLength_System_Span_System_Byte__Fp_CipherPaddingMode_System_Boolean_">Processor.GetDepaddedLength(Span&lt;byte&gt;, CipherPaddingMode, bool)</a>
+    </div>
+    <div>
+      <a class="xref" href="../Fp/Fp.Processor.html#Fp_Processor_DecodeHex_System_ReadOnlySpan_System_Char__System_Boolean_">Processor.DecodeHex(ReadOnlySpan&lt;char&gt;, bool)</a>
+    </div>
+    <div>
+      <a class="xref" href="../Fp/Fp.Processor.html#Fp_Processor_DecodeHex_System_ReadOnlySpan_System_Char__System_Span_System_Byte__System_Boolean_">Processor.DecodeHex(ReadOnlySpan&lt;char&gt;, Span&lt;byte&gt;, bool)</a>
+    </div>
+    <div>
+      <a class="xref" href="../Fp/Fp.Processor.html#Fp_Processor_GetHexByteCount_System_ReadOnlySpan_System_Char__System_Int32__">Processor.GetHexByteCount(ReadOnlySpan&lt;char&gt;, out int)</a>
+    </div>
+    <div>
+      <a class="xref" href="../Fp/Fp.Processor.html#Fp_Processor_Instance">Processor.Instance</a>
+    </div>
+    <div>
+      <a class="xref" href="../Fp/Fp.Processor.html#Fp_Processor_PlatformSupportBackSlash">Processor.PlatformSupportBackSlash</a>
+    </div>
+    <div>
+      <a class="xref" href="../Fp/Fp.Processor.html#Fp_Processor_Configuration">Processor.Configuration</a>
+    </div>
+    <div>
+      <a class="xref" href="../Fp/Fp.Processor.html#Fp_Processor_SupportBackSlash">Processor.SupportBackSlash</a>
+    </div>
+    <div>
+      <a class="xref" href="../Fp/Fp.Processor.html#Fp_Processor_Args">Processor.Args</a>
+    </div>
+    <div>
+      <a class="xref" href="../Fp/Fp.Processor.html#Fp_Processor_LogWriter">Processor.LogWriter</a>
+    </div>
+    <div>
+      <a class="xref" href="../Fp/Fp.Processor.html#Fp_Processor_Preload">Processor.Preload</a>
+    </div>
+    <div>
+      <a class="xref" href="../Fp/Fp.Processor.html#Fp_Processor_InputStream">Processor.InputStream</a>
+    </div>
+    <div>
+      <a class="xref" href="../Fp/Fp.Processor.html#Fp_Processor_InputLength">Processor.InputLength</a>
+    </div>
+    <div>
+      <a class="xref" href="../Fp/Fp.Processor.html#Fp_Processor_OutputStream">Processor.OutputStream</a>
+    </div>
+    <div>
+      <a class="xref" href="../Fp/Fp.Processor.html#Fp_Processor_LittleEndian">Processor.LittleEndian</a>
+    </div>
+    <div>
+      <a class="xref" href="../Fp/Fp.Processor.html#Fp_Processor_EndiannessSwap">Processor.EndiannessSwap</a>
+    </div>
+    <div>
+      <a class="xref" href="../Fp/Fp.Processor.html#Fp_Processor_OptKeys">Processor.OptKeys</a>
+    </div>
+    <div>
+      <a class="xref" href="../Fp/Fp.Processor.html#Fp_Processor_Flags">Processor.Flags</a>
+    </div>
+    <div>
+      <a class="xref" href="../Fp/Fp.Processor.html#Fp_Processor_Opts">Processor.Opts</a>
+    </div>
+    <div>
+      <a class="xref" href="../Fp/Fp.Processor.html#Fp_Processor_PosArgs">Processor.PosArgs</a>
+    </div>
+    <div>
+      <a class="xref" href="../Fp/Fp.Processor.html#Fp_Processor_Initialize__1_System_String___">Processor.Initialize&lt;T&gt;(string[])</a>
+    </div>
+    <div>
+      <a class="xref" href="../Fp/Fp.Processor.html#Fp_Processor_Initialize__1_Fp_ProcessorConfiguration_">Processor.Initialize&lt;T&gt;(ProcessorConfiguration)</a>
+    </div>
+    <div>
+      <a class="xref" href="../Fp/Fp.Processor.html#Fp_Processor_Prepare_Fp_ProcessorConfiguration_">Processor.Prepare(ProcessorConfiguration)</a>
+    </div>
+    <div>
+      <a class="xref" href="../Fp/Fp.Processor.html#Fp_Processor_SetupArgs">Processor.SetupArgs()</a>
+    </div>
+    <div>
+      <a class="xref" href="../Fp/Fp.Processor.html#Fp_Processor_LogInfo_System_String_">Processor.LogInfo(string)</a>
+    </div>
+    <div>
+      <a class="xref" href="../Fp/Fp.Processor.html#Fp_Processor_LogWarn_System_String_">Processor.LogWarn(string)</a>
+    </div>
+    <div>
+      <a class="xref" href="../Fp/Fp.Processor.html#Fp_Processor_LogFail_System_String_">Processor.LogFail(string)</a>
+    </div>
+    <div>
+      <a class="xref" href="../Fp/Fp.Processor.html#Fp_Processor_LogChunk_System_String_System_Boolean_">Processor.LogChunk(string, bool)</a>
+    </div>
+    <div>
+      <a class="xref" href="../Fp/Fp.Processor.html#Fp_Processor_Region_System_Int64_System_Nullable_System_Int64__">Processor.Region(long, long?)</a>
+    </div>
+    <div>
+      <a class="xref" href="../Fp/Fp.Processor.html#Fp_Processor_Cleanup_System_Boolean_">Processor.Cleanup(bool)</a>
+    </div>
+    <div>
+      <a class="xref" href="../Fp/Fp.Processor.html#Fp_Processor_Dispose_System_Boolean_">Processor.Dispose(bool)</a>
+    </div>
+    <div>
+      <a class="xref" href="../Fp/Fp.Processor.html#Fp_Processor_Dispose">Processor.Dispose()</a>
+    </div>
+    <div>
+      <a class="xref" href="../Fp/Fp.Processor.html#Fp_Processor_Debug">Processor.Debug</a>
+    </div>
+    <div>
+      <a class="xref" href="../Fp/Fp.Processor.html#Fp_Processor_Nop">Processor.Nop</a>
+    </div>
+    <div>
+      <a class="xref" href="../Fp/Fp.Processor.html#Fp_Processor_MemAnnotations">Processor.MemAnnotations</a>
+    </div>
+    <div>
+      <a class="xref" href="../Fp/Fp.Processor.html#Fp_Processor_MemClear">Processor.MemClear()</a>
+    </div>
+    <div>
+      <a class="xref" href="../Fp/Fp.Processor.html#Fp_Processor_MemLabel_System_ReadOnlyMemory_System_Byte__System_Int32_System_Int32_System_String_System_Nullable_System_ConsoleColor__">Processor.MemLabel(ReadOnlyMemory&lt;byte&gt;, int, int, string, ConsoleColor?)</a>
+    </div>
+    <div>
+      <a class="xref" href="../Fp/Fp.Processor.html#Fp_Processor_MemLabel_System_ReadOnlyMemory_System_Byte__System_ReadOnlySpan_System_Byte__System_String_System_Nullable_System_ConsoleColor__">Processor.MemLabel(ReadOnlyMemory&lt;byte&gt;, ReadOnlySpan&lt;byte&gt;, string, ConsoleColor?)</a>
+    </div>
+    <div>
+      <a class="xref" href="../Fp/Fp.Processor.html#Fp_Processor_MemPrint_System_ReadOnlyMemory_System_Byte__System_Boolean_System_Boolean_System_Nullable_System_Int32__">Processor.MemPrint(ReadOnlyMemory&lt;byte&gt;, bool, bool, int?)</a>
+    </div>
+    <div>
+      <a class="xref" href="../Fp/Fp.Processor.html#Fp_Processor_Nothing">Processor.Nothing</a>
+    </div>
+    <div>
+      <a class="xref" href="../Fp/Fp.Processor.html#Fp_Processor_UnsupportedVersion_System_Int64_">Processor.UnsupportedVersion(long)</a>
+    </div>
+    <div>
+      <a class="xref" href="../Fp/Fp.Processor.html#Fp_Processor_UnsupportedVersion_System_UInt64_">Processor.UnsupportedVersion(ulong)</a>
+    </div>
+    <div>
+      <a class="xref" href="../Fp/Fp.Processor.html#Fp_Processor_UnsupportedExtension_System_String_">Processor.UnsupportedExtension(string)</a>
+    </div>
+    <div>
+      <a class="xref" href="../Fp/Fp.Processor.html#Fp_Processor_buf">Processor.buf</a>
+    </div>
+    <div>
+      <a class="xref" href="../Fp/Fp.Processor.html#Fp_Processor_i1">Processor.i1</a>
+    </div>
+    <div>
+      <a class="xref" href="../Fp/Fp.Processor.html#Fp_Processor_i1a">Processor.i1a</a>
+    </div>
+    <div>
+      <a class="xref" href="../Fp/Fp.Processor.html#Fp_Processor_u1">Processor.u1</a>
+    </div>
+    <div>
+      <a class="xref" href="../Fp/Fp.Processor.html#Fp_Processor_u1a">Processor.u1a</a>
+    </div>
+    <div>
+      <a class="xref" href="../Fp/Fp.Processor.html#Fp_Processor_i2l">Processor.i2l</a>
+    </div>
+    <div>
+      <a class="xref" href="../Fp/Fp.Processor.html#Fp_Processor_i2la">Processor.i2la</a>
+    </div>
+    <div>
+      <a class="xref" href="../Fp/Fp.Processor.html#Fp_Processor_i4l">Processor.i4l</a>
+    </div>
+    <div>
+      <a class="xref" href="../Fp/Fp.Processor.html#Fp_Processor_i4la">Processor.i4la</a>
+    </div>
+    <div>
+      <a class="xref" href="../Fp/Fp.Processor.html#Fp_Processor_i8l">Processor.i8l</a>
+    </div>
+    <div>
+      <a class="xref" href="../Fp/Fp.Processor.html#Fp_Processor_i8la">Processor.i8la</a>
+    </div>
+    <div>
+      <a class="xref" href="../Fp/Fp.Processor.html#Fp_Processor_u2l">Processor.u2l</a>
+    </div>
+    <div>
+      <a class="xref" href="../Fp/Fp.Processor.html#Fp_Processor_u2la">Processor.u2la</a>
+    </div>
+    <div>
+      <a class="xref" href="../Fp/Fp.Processor.html#Fp_Processor_u4l">Processor.u4l</a>
+    </div>
+    <div>
+      <a class="xref" href="../Fp/Fp.Processor.html#Fp_Processor_u4la">Processor.u4la</a>
+    </div>
+    <div>
+      <a class="xref" href="../Fp/Fp.Processor.html#Fp_Processor_u8l">Processor.u8l</a>
+    </div>
+    <div>
+      <a class="xref" href="../Fp/Fp.Processor.html#Fp_Processor_u8la">Processor.u8la</a>
+    </div>
+    <div>
+      <a class="xref" href="../Fp/Fp.Processor.html#Fp_Processor_i2b">Processor.i2b</a>
+    </div>
+    <div>
+      <a class="xref" href="../Fp/Fp.Processor.html#Fp_Processor_i2ba">Processor.i2ba</a>
+    </div>
+    <div>
+      <a class="xref" href="../Fp/Fp.Processor.html#Fp_Processor_i4b">Processor.i4b</a>
+    </div>
+    <div>
+      <a class="xref" href="../Fp/Fp.Processor.html#Fp_Processor_i4ba">Processor.i4ba</a>
+    </div>
+    <div>
+      <a class="xref" href="../Fp/Fp.Processor.html#Fp_Processor_i8b">Processor.i8b</a>
+    </div>
+    <div>
+      <a class="xref" href="../Fp/Fp.Processor.html#Fp_Processor_i8ba">Processor.i8ba</a>
+    </div>
+    <div>
+      <a class="xref" href="../Fp/Fp.Processor.html#Fp_Processor_u2b">Processor.u2b</a>
+    </div>
+    <div>
+      <a class="xref" href="../Fp/Fp.Processor.html#Fp_Processor_u2ba">Processor.u2ba</a>
+    </div>
+    <div>
+      <a class="xref" href="../Fp/Fp.Processor.html#Fp_Processor_u4b">Processor.u4b</a>
+    </div>
+    <div>
+      <a class="xref" href="../Fp/Fp.Processor.html#Fp_Processor_u4ba">Processor.u4ba</a>
+    </div>
+    <div>
+      <a class="xref" href="../Fp/Fp.Processor.html#Fp_Processor_u8b">Processor.u8b</a>
+    </div>
+    <div>
+      <a class="xref" href="../Fp/Fp.Processor.html#Fp_Processor_u8ba">Processor.u8ba</a>
+    </div>
+    <div>
+      <a class="xref" href="../Fp/Fp.Processor.html#Fp_Processor_f2">Processor.f2</a>
+    </div>
+    <div>
+      <a class="xref" href="../Fp/Fp.Processor.html#Fp_Processor_f2a">Processor.f2a</a>
+    </div>
+    <div>
+      <a class="xref" href="../Fp/Fp.Processor.html#Fp_Processor_f4">Processor.f4</a>
+    </div>
+    <div>
+      <a class="xref" href="../Fp/Fp.Processor.html#Fp_Processor_f4a">Processor.f4a</a>
+    </div>
+    <div>
+      <a class="xref" href="../Fp/Fp.Processor.html#Fp_Processor_f8">Processor.f8</a>
+    </div>
+    <div>
+      <a class="xref" href="../Fp/Fp.Processor.html#Fp_Processor_f8a">Processor.f8a</a>
+    </div>
+    <div>
+      <a class="xref" href="../Fp/Fp.Processor.html#Fp_Processor_ascii">Processor.ascii</a>
+    </div>
+    <div>
+      <a class="xref" href="../Fp/Fp.Processor.html#Fp_Processor_utf8">Processor.utf8</a>
+    </div>
+    <div>
+      <a class="xref" href="../Fp/Fp.Processor.html#Fp_Processor_utf16">Processor.utf16</a>
+    </div>
+    <div>
+      <a class="xref" href="../Fp/Fp.Processor.html#Fp_Processor_GetEndTerminatedIndexArray__1___0_____0__">Processor.GetEndTerminatedIndexArray&lt;T&gt;(T[], out T)</a>
+    </div>
+    <div>
+      <a class="xref" href="../Fp/Fp.Processor.html#Fp_Processor_GetEndTerminatedIndexArray__1_System_ReadOnlyMemory___0____0__">Processor.GetEndTerminatedIndexArray&lt;T&gt;(ReadOnlyMemory&lt;T&gt;, out T)</a>
+    </div>
+    <div>
+      <a class="xref" href="../Fp/Fp.Processor.html#Fp_Processor_GetEndTerminatedIndexArray__1_System_ReadOnlySpan___0____0__">Processor.GetEndTerminatedIndexArray&lt;T&gt;(ReadOnlySpan&lt;T&gt;, out T)</a>
+    </div>
+    <div>
+      <a class="xref" href="../Fp/Fp.Processor.html#Fp_Processor_GetEndTerminatedIndexArray__2___0___System_Func___0___1____1__">Processor.GetEndTerminatedIndexArray&lt;T, TElement&gt;(T[], Func&lt;T, TElement&gt;, out TElement)</a>
+    </div>
+    <div>
+      <a class="xref" href="../Fp/Fp.Processor.html#Fp_Processor_GetEndTerminatedIndexArray__2_System_ReadOnlyMemory___0__System_Func___0___1____1__">Processor.GetEndTerminatedIndexArray&lt;T, TElement&gt;(ReadOnlyMemory&lt;T&gt;, Func&lt;T, TElement&gt;, out TElement)</a>
+    </div>
+    <div>
+      <a class="xref" href="../Fp/Fp.Processor.html#Fp_Processor_GetEndTerminatedIndexArray__2_System_ReadOnlySpan___0__System_Func___0___1____1__">Processor.GetEndTerminatedIndexArray&lt;T, TElement&gt;(ReadOnlySpan&lt;T&gt;, Func&lt;T, TElement&gt;, out TElement)</a>
+    </div>
+    <div>
+      <a class="xref" href="../Fp/Fp.Processor.html#Fp_Processor_GetEndTerminatedIndexArray__1_System_Collections_Generic_IEnumerable___0____0__">Processor.GetEndTerminatedIndexArray&lt;T&gt;(IEnumerable&lt;T&gt;, out T)</a>
+    </div>
+    <div>
+      <a class="xref" href="../Fp/Fp.Processor.html#Fp_Processor_GetEndTerminatedIndexArray__2_System_Collections_Generic_IEnumerable___0__System_Func___0___1____1__">Processor.GetEndTerminatedIndexArray&lt;T, TElement&gt;(IEnumerable&lt;T&gt;, Func&lt;T, TElement&gt;, out TElement)</a>
+    </div>
+    <div>
+      <a class="xref" href="../Fp/Fp.Processor.html#Fp_Processor_Execute_System_Boolean_System_String_System_String_">Processor.Execute(bool, string, string)</a>
+    </div>
+    <div>
+      <a class="xref" href="../Fp/Fp.Processor.html#Fp_Processor_UseStream_System_IO_Stream_">Processor.UseStream(Stream)</a>
+    </div>
+    <div>
+      <a class="xref" href="../Fp/Fp.Processor.html#Fp_Processor_CloseFile_System_Boolean_System_IO_Stream_">Processor.CloseFile(bool, Stream)</a>
+    </div>
+    <div>
+      <a class="xref" href="../Fp/Fp.Processor.html#Fp_Processor_CloseFile_System_IO_Stream_">Processor.CloseFile(Stream)</a>
+    </div>
+    <div>
+      <a class="xref" href="../Fp/Fp.Processor.html#Fp_Processor_UseOutputStream_System_IO_Stream_">Processor.UseOutputStream(Stream)</a>
+    </div>
+    <div>
+      <a class="xref" href="../Fp/Fp.Processor.html#Fp_Processor_CloseOutputFile_System_Boolean_System_IO_Stream_">Processor.CloseOutputFile(bool, Stream)</a>
+    </div>
+    <div>
+      <a class="xref" href="../Fp/Fp.Processor.html#Fp_Processor_CloseOutputFile_System_IO_Stream_">Processor.CloseOutputFile(Stream)</a>
+    </div>
+    <div>
+      <a class="xref" href="../Fp/Fp.Processor.html#Fp_Processor_MakeNative_System_String_">Processor.MakeNative(string)</a>
+    </div>
+    <div>
+      <a class="xref" href="../Fp/Fp.Processor.html#Fp_Processor_Join_System_String___">Processor.Join(params string[])</a>
+    </div>
+    <div>
+      <a class="xref" href="../Fp/Fp.Processor.html#Fp_Processor_Join_System_Boolean_System_String___">Processor.Join(bool, params string[])</a>
+    </div>
+    <div>
+      <a class="xref" href="../Fp/Fp.Processor.html#Fp_Processor_PathHasExtension_System_String_System_String___">Processor.PathHasExtension(string, params string[])</a>
+    </div>
+    <div>
+      <a class="xref" href="../Fp/Fp.Processor.html#Fp_Processor_HasMagic_System_ReadOnlySpan_System_Byte__System_ReadOnlySpan_System_Byte__System_Int32_">Processor.HasMagic(ReadOnlySpan&lt;byte&gt;, ReadOnlySpan&lt;byte&gt;, int)</a>
+    </div>
+    <div>
+      <a class="xref" href="../Fp/Fp.Processor.html#Fp_Processor_HasMagic_System_ReadOnlySpan_System_Byte__System_Byte___System_Int32_">Processor.HasMagic(ReadOnlySpan&lt;byte&gt;, byte[], int)</a>
+    </div>
+    <div>
+      <a class="xref" href="../Fp/Fp.Processor.html#Fp_Processor_HasMagic_System_ReadOnlySpan_System_Byte__System_String_System_Int32_">Processor.HasMagic(ReadOnlySpan&lt;byte&gt;, string, int)</a>
+    </div>
+    <div>
+      <a class="xref" href="../Fp/Fp.Processor.html#Fp_Processor_HasMagic_System_IO_Stream_System_ReadOnlySpan_System_Byte__System_Int64_">Processor.HasMagic(Stream, ReadOnlySpan&lt;byte&gt;, long)</a>
+    </div>
+    <div>
+      <a class="xref" href="../Fp/Fp.Processor.html#Fp_Processor_HasMagic_System_IO_Stream_System_String_System_Int64_">Processor.HasMagic(Stream, string, long)</a>
+    </div>
+    <div>
+      <a class="xref" href="../Fp/Fp.Processor.html#Fp_Processor_HasMagic_System_ReadOnlySpan_System_Byte__System_Int64_">Processor.HasMagic(ReadOnlySpan&lt;byte&gt;, long)</a>
+    </div>
+    <div>
+      <a class="xref" href="../Fp/Fp.Processor.html#Fp_Processor_HasMagic_System_Byte___System_Int64_">Processor.HasMagic(byte[], long)</a>
+    </div>
+    <div>
+      <a class="xref" href="../Fp/Fp.Processor.html#Fp_Processor_HasMagic_System_String_System_Int64_">Processor.HasMagic(string, long)</a>
+    </div>
+    <div>
+      <a class="xref" href="../Fp/Fp.Processor.html#Fp_Processor_GetReadingStream_System_IO_Stream_">Processor.GetReadingStream(Stream)</a>
+    </div>
+    <div>
+      <a class="xref" href="../Fp/Fp.Processor.html#Fp_Processor_GetSeekableStream_System_IO_Stream_">Processor.GetSeekableStream(Stream)</a>
+    </div>
+    <div>
+      <a class="xref" href="../Fp/Fp.Processor.html#Fp_Processor_Skip_System_Int64_System_IO_Stream_">Processor.Skip(long, Stream)</a>
+    </div>
+    <div>
+      <a class="xref" href="../Fp/Fp.Processor.html#Fp_Processor_Skip_System_Int64_">Processor.Skip(long)</a>
+    </div>
+    <div>
+      <a class="xref" href="../Fp/Fp.Processor.html#Fp_Processor_Read_System_IO_Stream_System_Span_System_Byte___System_Boolean_System_Boolean_">Processor.Read(Stream, ref Span&lt;byte&gt;, bool, bool)</a>
+    </div>
+    <div>
+      <a class="xref" href="../Fp/Fp.Processor.html#Fp_Processor_Read_System_IO_Stream_System_Int32_System_Span_System_Byte___System_Boolean_System_Boolean_">Processor.Read(Stream, int, out Span&lt;byte&gt;, bool, bool)</a>
+    </div>
+    <div>
+      <a class="xref" href="../Fp/Fp.Processor.html#Fp_Processor_TryRead_System_IO_Stream_System_Int32_System_Span_System_Byte___System_Boolean_">Processor.TryRead(Stream, int, out Span&lt;byte&gt;, bool)</a>
+    </div>
+    <div>
+      <a class="xref" href="../Fp/Fp.Processor.html#Fp_Processor_Read_System_IO_Stream_System_Span_System_Byte__System_Boolean_">Processor.Read(Stream, Span&lt;byte&gt;, bool)</a>
+    </div>
+    <div>
+      <a class="xref" href="../Fp/Fp.Processor.html#Fp_Processor_TryRead_System_IO_Stream_System_Span_System_Byte__System_Int32__">Processor.TryRead(Stream, Span&lt;byte&gt;, out int)</a>
+    </div>
+    <div>
+      <a class="xref" href="../Fp/Fp.Processor.html#Fp_Processor_Read_System_Span_System_Byte___System_Boolean_System_Boolean_">Processor.Read(ref Span&lt;byte&gt;, bool, bool)</a>
+    </div>
+    <div>
+      <a class="xref" href="../Fp/Fp.Processor.html#Fp_Processor_Read_System_Int32_System_Span_System_Byte___System_Boolean_System_Boolean_">Processor.Read(int, out Span&lt;byte&gt;, bool, bool)</a>
+    </div>
+    <div>
+      <a class="xref" href="../Fp/Fp.Processor.html#Fp_Processor_TryRead_System_Int32_System_Span_System_Byte___System_Boolean_">Processor.TryRead(int, out Span&lt;byte&gt;, bool)</a>
+    </div>
+    <div>
+      <a class="xref" href="../Fp/Fp.Processor.html#Fp_Processor_Read_System_Span_System_Byte__System_Boolean_">Processor.Read(Span&lt;byte&gt;, bool)</a>
+    </div>
+    <div>
+      <a class="xref" href="../Fp/Fp.Processor.html#Fp_Processor_TryRead_System_Span_System_Byte__System_Int32__">Processor.TryRead(Span&lt;byte&gt;, out int)</a>
+    </div>
+    <div>
+      <a class="xref" href="../Fp/Fp.Processor.html#Fp_Processor_Read_System_IO_Stream_System_Int64_System_Span_System_Byte___System_Boolean_System_Boolean_">Processor.Read(Stream, long, ref Span&lt;byte&gt;, bool, bool)</a>
+    </div>
+    <div>
+      <a class="xref" href="../Fp/Fp.Processor.html#Fp_Processor_Read_System_IO_Stream_System_Int64_System_Int32_System_Span_System_Byte___System_Boolean_System_Boolean_">Processor.Read(Stream, long, int, out Span&lt;byte&gt;, bool, bool)</a>
+    </div>
+    <div>
+      <a class="xref" href="../Fp/Fp.Processor.html#Fp_Processor_TryRead_System_IO_Stream_System_Int64_System_Int32_System_Span_System_Byte___System_Boolean_">Processor.TryRead(Stream, long, int, out Span&lt;byte&gt;, bool)</a>
+    </div>
+    <div>
+      <a class="xref" href="../Fp/Fp.Processor.html#Fp_Processor_Read_System_IO_Stream_System_Int64_System_Span_System_Byte__System_Boolean_">Processor.Read(Stream, long, Span&lt;byte&gt;, bool)</a>
+    </div>
+    <div>
+      <a class="xref" href="../Fp/Fp.Processor.html#Fp_Processor_TryRead_System_IO_Stream_System_Int64_System_Span_System_Byte__System_Int32__">Processor.TryRead(Stream, long, Span&lt;byte&gt;, out int)</a>
+    </div>
+    <div>
+      <a class="xref" href="../Fp/Fp.Processor.html#Fp_Processor_Read_System_Int64_System_Span_System_Byte___System_Boolean_System_Boolean_">Processor.Read(long, ref Span&lt;byte&gt;, bool, bool)</a>
+    </div>
+    <div>
+      <a class="xref" href="../Fp/Fp.Processor.html#Fp_Processor_Read_System_Int64_System_Int32_System_Span_System_Byte___System_Boolean_System_Boolean_">Processor.Read(long, int, out Span&lt;byte&gt;, bool, bool)</a>
+    </div>
+    <div>
+      <a class="xref" href="../Fp/Fp.Processor.html#Fp_Processor_TryRead_System_Int64_System_Int32_System_Span_System_Byte___System_Boolean_">Processor.TryRead(long, int, out Span&lt;byte&gt;, bool)</a>
+    </div>
+    <div>
+      <a class="xref" href="../Fp/Fp.Processor.html#Fp_Processor_Read_System_Int64_System_Span_System_Byte__System_Boolean_">Processor.Read(long, Span&lt;byte&gt;, bool)</a>
+    </div>
+    <div>
+      <a class="xref" href="../Fp/Fp.Processor.html#Fp_Processor_TryRead_System_Int64_System_Span_System_Byte__System_Int32__">Processor.TryRead(long, Span&lt;byte&gt;, out int)</a>
+    </div>
+    <div>
+      <a class="xref" href="../Fp/Fp.Processor.html#Fp_Processor_Read_System_IO_Stream_System_Byte___System_Int32_System_Int32_System_Boolean_">Processor.Read(Stream, byte[], int, int, bool)</a>
+    </div>
+    <div>
+      <a class="xref" href="../Fp/Fp.Processor.html#Fp_Processor_Read_System_IO_Stream_System_Byte___System_Boolean_">Processor.Read(Stream, byte[], bool)</a>
+    </div>
+    <div>
+      <a class="xref" href="../Fp/Fp.Processor.html#Fp_Processor_Read_System_Byte___System_Int32_System_Int32_System_Boolean_">Processor.Read(byte[], int, int, bool)</a>
+    </div>
+    <div>
+      <a class="xref" href="../Fp/Fp.Processor.html#Fp_Processor_Read_System_Byte___System_Boolean_">Processor.Read(byte[], bool)</a>
+    </div>
+    <div>
+      <a class="xref" href="../Fp/Fp.Processor.html#Fp_Processor_Read_System_IO_Stream_System_Int64_System_Byte___System_Int32_System_Int32_System_Boolean_">Processor.Read(Stream, long, byte[], int, int, bool)</a>
+    </div>
+    <div>
+      <a class="xref" href="../Fp/Fp.Processor.html#Fp_Processor_Read_System_IO_Stream_System_Int64_System_Byte___System_Boolean_">Processor.Read(Stream, long, byte[], bool)</a>
+    </div>
+    <div>
+      <a class="xref" href="../Fp/Fp.Processor.html#Fp_Processor_Read_System_Int64_System_Byte___System_Int32_System_Int32_System_Boolean_">Processor.Read(long, byte[], int, int, bool)</a>
+    </div>
+    <div>
+      <a class="xref" href="../Fp/Fp.Processor.html#Fp_Processor_Read_System_Int64_System_Byte___System_Boolean_">Processor.Read(long, byte[], bool)</a>
+    </div>
+    <div>
+      <a class="xref" href="../Fp/Fp.Processor.html#Fp_Processor_GetArray_System_IO_Stream_System_Boolean_">Processor.GetArray(Stream, bool)</a>
+    </div>
+    <div>
+      <a class="xref" href="../Fp/Fp.Processor.html#Fp_Processor_Load">Processor.Load()</a>
+    </div>
+    <div>
+      <a class="xref" href="../Fp/Fp.Processor.html#Fp_Processor_GetArray_System_Boolean_">Processor.GetArray(bool)</a>
+    </div>
+    <div>
+      <a class="xref" href="../Fp/Fp.Processor.html#Fp_Processor_GetArray_System_Int32_System_Int32_System_IO_Stream_System_Boolean_">Processor.GetArray(int, int, Stream, bool)</a>
+    </div>
+    <div>
+      <a class="xref" href="../Fp/Fp.Processor.html#Fp_Processor_GetArray_System_Int32_System_Int32_System_Boolean_">Processor.GetArray(int, int, bool)</a>
+    </div>
+    <div>
+      <a class="xref" href="../Fp/Fp.Processor.html#Fp_Processor_Dump_System_IO_Stream_System_Int32_">Processor.Dump(Stream, int)</a>
+    </div>
+    <div>
+      <a class="xref" href="../Fp/Fp.Processor.html#Fp_Processor_Dump_System_Int32_">Processor.Dump(int)</a>
+    </div>
+    <div>
+      <a class="xref" href="../Fp/Fp.Processor.html#Fp_Processor_GetMemory_System_IO_Stream_">Processor.GetMemory(Stream)</a>
+    </div>
+    <div>
+      <a class="xref" href="../Fp/Fp.Processor.html#Fp_Processor_GetMemory">Processor.GetMemory()</a>
+    </div>
+    <div>
+      <a class="xref" href="../Fp/Fp.Processor.html#Fp_Processor_GetMemory_System_Int64_System_Int32_System_IO_Stream_">Processor.GetMemory(long, int, Stream)</a>
+    </div>
+    <div>
+      <a class="xref" href="../Fp/Fp.Processor.html#Fp_Processor_GetMemory_System_Int64_System_Int32_">Processor.GetMemory(long, int)</a>
+    </div>
+    <div>
+      <a class="xref" href="../Fp/Fp.Processor.html#Fp_Processor_EnsureFile_System_Memory_System_Byte___System_Boolean__System_Func_System_IO_Stream__System_Func_System_IO_Stream_System_Memory_System_Byte___">Processor.EnsureFile(ref Memory&lt;byte&gt;, ref bool, Func&lt;Stream&gt;, Func&lt;Stream, Memory&lt;byte&gt;&gt;)</a>
+    </div>
+    <div>
+      <a class="xref" href="../Fp/Fp.Processor.html#Fp_Processor_Match_System_Int64_System_Int64_System_ReadOnlyMemory_System_Byte__System_Int32_System_Int32_System_Int32_">Processor.Match(long, long, ReadOnlyMemory&lt;byte&gt;, int, int, int)</a>
+    </div>
+    <div>
+      <a class="xref" href="../Fp/Fp.Processor.html#Fp_Processor_Match_System_Int64_System_ReadOnlyMemory_System_Byte__System_Int32_System_Int32_System_Int32_">Processor.Match(long, ReadOnlyMemory&lt;byte&gt;, int, int, int)</a>
+    </div>
+    <div>
+      <a class="xref" href="../Fp/Fp.Processor.html#Fp_Processor_Match_System_ReadOnlyMemory_System_Byte__System_Int32_System_Int32_System_Int32_">Processor.Match(ReadOnlyMemory&lt;byte&gt;, int, int, int)</a>
+    </div>
+    <div>
+      <a class="xref" href="../Fp/Fp.Processor.html#Fp_Processor_Match_System_Int64_System_Int64_System_Byte___System_Int32_">Processor.Match(long, long, byte[], int)</a>
+    </div>
+    <div>
+      <a class="xref" href="../Fp/Fp.Processor.html#Fp_Processor_Match_System_Int64_System_ReadOnlyMemory_System_Byte__System_Int32_">Processor.Match(long, ReadOnlyMemory&lt;byte&gt;, int)</a>
+    </div>
+    <div>
+      <a class="xref" href="../Fp/Fp.Processor.html#Fp_Processor_Match_System_ReadOnlyMemory_System_Byte__System_Int32_">Processor.Match(ReadOnlyMemory&lt;byte&gt;, int)</a>
+    </div>
+    <div>
+      <a class="xref" href="../Fp/Fp.Processor.html#Fp_Processor_Match_System_Int64_System_Int64_System_String_System_Int32_">Processor.Match(long, long, string, int)</a>
+    </div>
+    <div>
+      <a class="xref" href="../Fp/Fp.Processor.html#Fp_Processor_Match_System_Int64_System_String_System_Int32_">Processor.Match(long, string, int)</a>
+    </div>
+    <div>
+      <a class="xref" href="../Fp/Fp.Processor.html#Fp_Processor_Match_System_String_System_Int32_">Processor.Match(string, int)</a>
+    </div>
+    <div>
+      <a class="xref" href="../Fp/Fp.Processor.html#Fp_Processor_MatchFirst_System_Int64_System_Int64_System_ReadOnlyMemory_System_Byte__System_Int32_System_Int32_System_Int32_">Processor.MatchFirst(long, long, ReadOnlyMemory&lt;byte&gt;, int, int, int)</a>
+    </div>
+    <div>
+      <a class="xref" href="../Fp/Fp.Processor.html#Fp_Processor_MatchFirst_System_Int64_System_ReadOnlyMemory_System_Byte__System_Int32_System_Int32_System_Int32_">Processor.MatchFirst(long, ReadOnlyMemory&lt;byte&gt;, int, int, int)</a>
+    </div>
+    <div>
+      <a class="xref" href="../Fp/Fp.Processor.html#Fp_Processor_MatchFirst_System_ReadOnlyMemory_System_Byte__System_Int32_System_Int32_System_Int32_">Processor.MatchFirst(ReadOnlyMemory&lt;byte&gt;, int, int, int)</a>
+    </div>
+    <div>
+      <a class="xref" href="../Fp/Fp.Processor.html#Fp_Processor_MatchFirst_System_Int64_System_Int64_System_ReadOnlyMemory_System_Byte__System_Int32_">Processor.MatchFirst(long, long, ReadOnlyMemory&lt;byte&gt;, int)</a>
+    </div>
+    <div>
+      <a class="xref" href="../Fp/Fp.Processor.html#Fp_Processor_MatchFirst_System_Int64_System_ReadOnlyMemory_System_Byte__System_Int32_">Processor.MatchFirst(long, ReadOnlyMemory&lt;byte&gt;, int)</a>
+    </div>
+    <div>
+      <a class="xref" href="../Fp/Fp.Processor.html#Fp_Processor_MatchFirst_System_ReadOnlyMemory_System_Byte__System_Int32_">Processor.MatchFirst(ReadOnlyMemory&lt;byte&gt;, int)</a>
+    </div>
+    <div>
+      <a class="xref" href="../Fp/Fp.Processor.html#Fp_Processor_MatchFirst_System_Int64_System_Int64_System_String_System_Int32_">Processor.MatchFirst(long, long, string, int)</a>
+    </div>
+    <div>
+      <a class="xref" href="../Fp/Fp.Processor.html#Fp_Processor_MatchFirst_System_Int64_System_String_System_Int32_">Processor.MatchFirst(long, string, int)</a>
+    </div>
+    <div>
+      <a class="xref" href="../Fp/Fp.Processor.html#Fp_Processor_MatchFirst_System_String_System_Int32_">Processor.MatchFirst(string, int)</a>
+    </div>
+    <div>
+      <a class="xref" href="../Fp/Fp.Processor.html#Fp_Processor_MatchLast_System_Int64_System_Int64_System_ReadOnlyMemory_System_Byte__System_Int32_System_Int32_System_Int32_">Processor.MatchLast(long, long, ReadOnlyMemory&lt;byte&gt;, int, int, int)</a>
+    </div>
+    <div>
+      <a class="xref" href="../Fp/Fp.Processor.html#Fp_Processor_MatchLast_System_Int64_System_ReadOnlyMemory_System_Byte__System_Int32_System_Int32_System_Int32_">Processor.MatchLast(long, ReadOnlyMemory&lt;byte&gt;, int, int, int)</a>
+    </div>
+    <div>
+      <a class="xref" href="../Fp/Fp.Processor.html#Fp_Processor_MatchLast_System_ReadOnlyMemory_System_Byte__System_Int32_System_Int32_System_Int32_">Processor.MatchLast(ReadOnlyMemory&lt;byte&gt;, int, int, int)</a>
+    </div>
+    <div>
+      <a class="xref" href="../Fp/Fp.Processor.html#Fp_Processor_MatchLast_System_Int64_System_Int64_System_ReadOnlyMemory_System_Byte__System_Int32_">Processor.MatchLast(long, long, ReadOnlyMemory&lt;byte&gt;, int)</a>
+    </div>
+    <div>
+      <a class="xref" href="../Fp/Fp.Processor.html#Fp_Processor_MatchLast_System_Int64_System_ReadOnlyMemory_System_Byte__System_Int32_">Processor.MatchLast(long, ReadOnlyMemory&lt;byte&gt;, int)</a>
+    </div>
+    <div>
+      <a class="xref" href="../Fp/Fp.Processor.html#Fp_Processor_MatchLast_System_ReadOnlyMemory_System_Byte__System_Int32_">Processor.MatchLast(ReadOnlyMemory&lt;byte&gt;, int)</a>
+    </div>
+    <div>
+      <a class="xref" href="../Fp/Fp.Processor.html#Fp_Processor_MatchLast_System_Int64_System_Int64_System_String_System_Int32_">Processor.MatchLast(long, long, string, int)</a>
+    </div>
+    <div>
+      <a class="xref" href="../Fp/Fp.Processor.html#Fp_Processor_MatchLast_System_Int64_System_String_System_Int32_">Processor.MatchLast(long, string, int)</a>
+    </div>
+    <div>
+      <a class="xref" href="../Fp/Fp.Processor.html#Fp_Processor_MatchLast_System_String_System_Int32_">Processor.MatchLast(string, int)</a>
+    </div>
+    <div>
+      <a class="xref" href="../Fp/Fp.Processor.html#Fp_Processor_Match_System_ReadOnlyMemory_System_Byte__System_Int32_System_Int32_System_ReadOnlyMemory_System_Byte__System_Int32_System_Int32_System_Int32_">Processor.Match(ReadOnlyMemory&lt;byte&gt;, int, int, ReadOnlyMemory&lt;byte&gt;, int, int, int)</a>
+    </div>
+    <div>
+      <a class="xref" href="../Fp/Fp.Processor.html#Fp_Processor_Match_System_ReadOnlySpan_System_Byte__System_Int32_System_Int32_System_ReadOnlySpan_System_Byte__System_Int32_">Processor.Match(ReadOnlySpan&lt;byte&gt;, int, int, ReadOnlySpan&lt;byte&gt;, int)</a>
+    </div>
+    <div>
+      <a class="xref" href="../Fp/Fp.Processor.html#Fp_Processor_Match_System_ReadOnlyMemory_System_Byte__System_Int32_System_ReadOnlyMemory_System_Byte__System_Int32_System_Int32_">Processor.Match(ReadOnlyMemory&lt;byte&gt;, int, ReadOnlyMemory&lt;byte&gt;, int, int)</a>
+    </div>
+    <div>
+      <a class="xref" href="../Fp/Fp.Processor.html#Fp_Processor_Match_System_ReadOnlyMemory_System_Byte__System_ReadOnlyMemory_System_Byte__System_Int32_System_Int32_">Processor.Match(ReadOnlyMemory&lt;byte&gt;, ReadOnlyMemory&lt;byte&gt;, int, int)</a>
+    </div>
+    <div>
+      <a class="xref" href="../Fp/Fp.Processor.html#Fp_Processor_Match_System_ReadOnlyMemory_System_Byte__System_Int32_System_Int32_System_ReadOnlyMemory_System_Byte__">Processor.Match(ReadOnlyMemory&lt;byte&gt;, int, int, ReadOnlyMemory&lt;byte&gt;)</a>
+    </div>
+    <div>
+      <a class="xref" href="../Fp/Fp.Processor.html#Fp_Processor_Match_System_ReadOnlyMemory_System_Byte__System_Int32_System_ReadOnlyMemory_System_Byte__">Processor.Match(ReadOnlyMemory&lt;byte&gt;, int, ReadOnlyMemory&lt;byte&gt;)</a>
+    </div>
+    <div>
+      <a class="xref" href="../Fp/Fp.Processor.html#Fp_Processor_Match_System_ReadOnlyMemory_System_Byte__System_ReadOnlyMemory_System_Byte__">Processor.Match(ReadOnlyMemory&lt;byte&gt;, ReadOnlyMemory&lt;byte&gt;)</a>
+    </div>
+    <div>
+      <a class="xref" href="../Fp/Fp.Processor.html#Fp_Processor_Match_System_ReadOnlyMemory_System_Byte__System_Int32_System_Int32_System_String_">Processor.Match(ReadOnlyMemory&lt;byte&gt;, int, int, string)</a>
+    </div>
+    <div>
+      <a class="xref" href="../Fp/Fp.Processor.html#Fp_Processor_Match_System_ReadOnlyMemory_System_Byte__System_Int32_System_String_">Processor.Match(ReadOnlyMemory&lt;byte&gt;, int, string)</a>
+    </div>
+    <div>
+      <a class="xref" href="../Fp/Fp.Processor.html#Fp_Processor_Match_System_ReadOnlyMemory_System_Byte__System_String_">Processor.Match(ReadOnlyMemory&lt;byte&gt;, string)</a>
+    </div>
+    <div>
+      <a class="xref" href="../Fp/Fp.Processor.html#Fp_Processor_MatchFirst_System_ReadOnlyMemory_System_Byte__System_Int32_System_Int32_System_ReadOnlyMemory_System_Byte__System_Int32_System_Int32_">Processor.MatchFirst(ReadOnlyMemory&lt;byte&gt;, int, int, ReadOnlyMemory&lt;byte&gt;, int, int)</a>
+    </div>
+    <div>
+      <a class="xref" href="../Fp/Fp.Processor.html#Fp_Processor_MatchFirst_System_ReadOnlyMemory_System_Byte__System_Int32_System_ReadOnlyMemory_System_Byte__System_Int32_System_Int32_">Processor.MatchFirst(ReadOnlyMemory&lt;byte&gt;, int, ReadOnlyMemory&lt;byte&gt;, int, int)</a>
+    </div>
+    <div>
+      <a class="xref" href="../Fp/Fp.Processor.html#Fp_Processor_MatchFirst_System_ReadOnlyMemory_System_Byte__System_ReadOnlyMemory_System_Byte__System_Int32_System_Int32_">Processor.MatchFirst(ReadOnlyMemory&lt;byte&gt;, ReadOnlyMemory&lt;byte&gt;, int, int)</a>
+    </div>
+    <div>
+      <a class="xref" href="../Fp/Fp.Processor.html#Fp_Processor_MatchFirst_System_ReadOnlyMemory_System_Byte__System_Int32_System_Int32_System_ReadOnlyMemory_System_Byte__">Processor.MatchFirst(ReadOnlyMemory&lt;byte&gt;, int, int, ReadOnlyMemory&lt;byte&gt;)</a>
+    </div>
+    <div>
+      <a class="xref" href="../Fp/Fp.Processor.html#Fp_Processor_MatchFirst_System_ReadOnlyMemory_System_Byte__System_Int32_System_ReadOnlyMemory_System_Byte__">Processor.MatchFirst(ReadOnlyMemory&lt;byte&gt;, int, ReadOnlyMemory&lt;byte&gt;)</a>
+    </div>
+    <div>
+      <a class="xref" href="../Fp/Fp.Processor.html#Fp_Processor_MatchFirst_System_ReadOnlyMemory_System_Byte__System_ReadOnlyMemory_System_Byte__">Processor.MatchFirst(ReadOnlyMemory&lt;byte&gt;, ReadOnlyMemory&lt;byte&gt;)</a>
+    </div>
+    <div>
+      <a class="xref" href="../Fp/Fp.Processor.html#Fp_Processor_MatchFirst_System_ReadOnlyMemory_System_Byte__System_Int32_System_Int32_System_String_">Processor.MatchFirst(ReadOnlyMemory&lt;byte&gt;, int, int, string)</a>
+    </div>
+    <div>
+      <a class="xref" href="../Fp/Fp.Processor.html#Fp_Processor_MatchFirst_System_ReadOnlyMemory_System_Byte__System_Int32_System_String_">Processor.MatchFirst(ReadOnlyMemory&lt;byte&gt;, int, string)</a>
+    </div>
+    <div>
+      <a class="xref" href="../Fp/Fp.Processor.html#Fp_Processor_MatchFirst_System_ReadOnlyMemory_System_Byte__System_String_">Processor.MatchFirst(ReadOnlyMemory&lt;byte&gt;, string)</a>
+    </div>
+    <div>
+      <a class="xref" href="../Fp/Fp.Processor.html#Fp_Processor_MatchLast_System_ReadOnlyMemory_System_Byte__System_Int32_System_Int32_System_ReadOnlyMemory_System_Byte__System_Int32_System_Int32_">Processor.MatchLast(ReadOnlyMemory&lt;byte&gt;, int, int, ReadOnlyMemory&lt;byte&gt;, int, int)</a>
+    </div>
+    <div>
+      <a class="xref" href="../Fp/Fp.Processor.html#Fp_Processor_MatchLast_System_ReadOnlyMemory_System_Byte__System_Int32_System_ReadOnlyMemory_System_Byte__System_Int32_System_Int32_">Processor.MatchLast(ReadOnlyMemory&lt;byte&gt;, int, ReadOnlyMemory&lt;byte&gt;, int, int)</a>
+    </div>
+    <div>
+      <a class="xref" href="../Fp/Fp.Processor.html#Fp_Processor_MatchLast_System_ReadOnlyMemory_System_Byte__System_ReadOnlyMemory_System_Byte__System_Int32_System_Int32_">Processor.MatchLast(ReadOnlyMemory&lt;byte&gt;, ReadOnlyMemory&lt;byte&gt;, int, int)</a>
+    </div>
+    <div>
+      <a class="xref" href="../Fp/Fp.Processor.html#Fp_Processor_MatchLast_System_ReadOnlyMemory_System_Byte__System_Int32_System_Int32_System_ReadOnlyMemory_System_Byte__">Processor.MatchLast(ReadOnlyMemory&lt;byte&gt;, int, int, ReadOnlyMemory&lt;byte&gt;)</a>
+    </div>
+    <div>
+      <a class="xref" href="../Fp/Fp.Processor.html#Fp_Processor_MatchLast_System_ReadOnlyMemory_System_Byte__System_Int32_System_ReadOnlyMemory_System_Byte__">Processor.MatchLast(ReadOnlyMemory&lt;byte&gt;, int, ReadOnlyMemory&lt;byte&gt;)</a>
+    </div>
+    <div>
+      <a class="xref" href="../Fp/Fp.Processor.html#Fp_Processor_MatchLast_System_ReadOnlyMemory_System_Byte__System_ReadOnlyMemory_System_Byte__">Processor.MatchLast(ReadOnlyMemory&lt;byte&gt;, ReadOnlyMemory&lt;byte&gt;)</a>
+    </div>
+    <div>
+      <a class="xref" href="../Fp/Fp.Processor.html#Fp_Processor_MatchLast_System_ReadOnlyMemory_System_Byte__System_Int32_System_Int32_System_String_">Processor.MatchLast(ReadOnlyMemory&lt;byte&gt;, int, int, string)</a>
+    </div>
+    <div>
+      <a class="xref" href="../Fp/Fp.Processor.html#Fp_Processor_MatchLast_System_ReadOnlyMemory_System_Byte__System_Int32_System_String_">Processor.MatchLast(ReadOnlyMemory&lt;byte&gt;, int, string)</a>
+    </div>
+    <div>
+      <a class="xref" href="../Fp/Fp.Processor.html#Fp_Processor_MatchLast_System_ReadOnlyMemory_System_Byte__System_String_">Processor.MatchLast(ReadOnlyMemory&lt;byte&gt;, string)</a>
+    </div>
+    <div>
+      <a class="xref" href="../Fp/Fp.Processor.html#Fp_Processor_Match_System_IO_Stream_System_Int64_System_Int64_System_ReadOnlyMemory_System_Byte__System_Int32_System_Int32_System_Int32_System_Int32_">Processor.Match(Stream, long, long, ReadOnlyMemory&lt;byte&gt;, int, int, int, int)</a>
+    </div>
+    <div>
+      <a class="xref" href="../Fp/Fp.Processor.html#Fp_Processor_Match_System_IO_Stream_System_Int64_System_Int64_System_ReadOnlySpan_System_Byte__System_Int32_System_Int32_">Processor.Match(Stream, long, long, ReadOnlySpan&lt;byte&gt;, int, int)</a>
+    </div>
+    <div>
+      <a class="xref" href="../Fp/Fp.Processor.html#Fp_Processor_Match_System_IO_Stream_System_Int64_System_ReadOnlyMemory_System_Byte__System_Int32_System_Int32_System_Int32_">Processor.Match(Stream, long, ReadOnlyMemory&lt;byte&gt;, int, int, int)</a>
+    </div>
+    <div>
+      <a class="xref" href="../Fp/Fp.Processor.html#Fp_Processor_Match_System_IO_Stream_System_ReadOnlyMemory_System_Byte__System_Int32_System_Int32_System_Int32_">Processor.Match(Stream, ReadOnlyMemory&lt;byte&gt;, int, int, int)</a>
+    </div>
+    <div>
+      <a class="xref" href="../Fp/Fp.Processor.html#Fp_Processor_Match_System_IO_Stream_System_Int64_System_Int64_System_ReadOnlyMemory_System_Byte__System_Int32_">Processor.Match(Stream, long, long, ReadOnlyMemory&lt;byte&gt;, int)</a>
+    </div>
+    <div>
+      <a class="xref" href="../Fp/Fp.Processor.html#Fp_Processor_Match_System_IO_Stream_System_Int64_System_ReadOnlyMemory_System_Byte__System_Int32_">Processor.Match(Stream, long, ReadOnlyMemory&lt;byte&gt;, int)</a>
+    </div>
+    <div>
+      <a class="xref" href="../Fp/Fp.Processor.html#Fp_Processor_Match_System_IO_Stream_System_ReadOnlyMemory_System_Byte__System_Int32_">Processor.Match(Stream, ReadOnlyMemory&lt;byte&gt;, int)</a>
+    </div>
+    <div>
+      <a class="xref" href="../Fp/Fp.Processor.html#Fp_Processor_Match_System_IO_Stream_System_Int64_System_Int64_System_String_System_Int32_">Processor.Match(Stream, long, long, string, int)</a>
+    </div>
+    <div>
+      <a class="xref" href="../Fp/Fp.Processor.html#Fp_Processor_Match_System_IO_Stream_System_Int64_System_String_System_Int32_">Processor.Match(Stream, long, string, int)</a>
+    </div>
+    <div>
+      <a class="xref" href="../Fp/Fp.Processor.html#Fp_Processor_Match_System_IO_Stream_System_String_System_Int32_">Processor.Match(Stream, string, int)</a>
+    </div>
+    <div>
+      <a class="xref" href="../Fp/Fp.Processor.html#Fp_Processor_MatchFirst_System_IO_Stream_System_Int64_System_Int64_System_ReadOnlyMemory_System_Byte__System_Int32_System_Int32_System_Int32_">Processor.MatchFirst(Stream, long, long, ReadOnlyMemory&lt;byte&gt;, int, int, int)</a>
+    </div>
+    <div>
+      <a class="xref" href="../Fp/Fp.Processor.html#Fp_Processor_MatchFirst_System_IO_Stream_System_Int64_System_ReadOnlyMemory_System_Byte__System_Int32_System_Int32_System_Int32_">Processor.MatchFirst(Stream, long, ReadOnlyMemory&lt;byte&gt;, int, int, int)</a>
+    </div>
+    <div>
+      <a class="xref" href="../Fp/Fp.Processor.html#Fp_Processor_MatchFirst_System_IO_Stream_System_ReadOnlyMemory_System_Byte__System_Int32_System_Int32_System_Int32_">Processor.MatchFirst(Stream, ReadOnlyMemory&lt;byte&gt;, int, int, int)</a>
+    </div>
+    <div>
+      <a class="xref" href="../Fp/Fp.Processor.html#Fp_Processor_MatchFirst_System_IO_Stream_System_Int64_System_Int64_System_ReadOnlyMemory_System_Byte__System_Int32_">Processor.MatchFirst(Stream, long, long, ReadOnlyMemory&lt;byte&gt;, int)</a>
+    </div>
+    <div>
+      <a class="xref" href="../Fp/Fp.Processor.html#Fp_Processor_MatchFirst_System_IO_Stream_System_Int64_System_ReadOnlyMemory_System_Byte__System_Int32_">Processor.MatchFirst(Stream, long, ReadOnlyMemory&lt;byte&gt;, int)</a>
+    </div>
+    <div>
+      <a class="xref" href="../Fp/Fp.Processor.html#Fp_Processor_MatchFirst_System_IO_Stream_System_ReadOnlyMemory_System_Byte__System_Int32_">Processor.MatchFirst(Stream, ReadOnlyMemory&lt;byte&gt;, int)</a>
+    </div>
+    <div>
+      <a class="xref" href="../Fp/Fp.Processor.html#Fp_Processor_MatchFirst_System_IO_Stream_System_Int64_System_Int64_System_String_System_Int32_">Processor.MatchFirst(Stream, long, long, string, int)</a>
+    </div>
+    <div>
+      <a class="xref" href="../Fp/Fp.Processor.html#Fp_Processor_MatchFirst_System_IO_Stream_System_Int64_System_String_System_Int32_">Processor.MatchFirst(Stream, long, string, int)</a>
+    </div>
+    <div>
+      <a class="xref" href="../Fp/Fp.Processor.html#Fp_Processor_MatchFirst_System_IO_Stream_System_String_System_Int32_">Processor.MatchFirst(Stream, string, int)</a>
+    </div>
+    <div>
+      <a class="xref" href="../Fp/Fp.Processor.html#Fp_Processor_MatchLast_System_IO_Stream_System_Int64_System_Int64_System_ReadOnlyMemory_System_Byte__System_Int32_System_Int32_System_Int32_">Processor.MatchLast(Stream, long, long, ReadOnlyMemory&lt;byte&gt;, int, int, int)</a>
+    </div>
+    <div>
+      <a class="xref" href="../Fp/Fp.Processor.html#Fp_Processor_MatchLast_System_IO_Stream_System_Int64_System_ReadOnlyMemory_System_Byte__System_Int32_System_Int32_System_Int32_">Processor.MatchLast(Stream, long, ReadOnlyMemory&lt;byte&gt;, int, int, int)</a>
+    </div>
+    <div>
+      <a class="xref" href="../Fp/Fp.Processor.html#Fp_Processor_MatchLast_System_IO_Stream_System_ReadOnlyMemory_System_Byte__System_Int32_System_Int32_System_Int32_">Processor.MatchLast(Stream, ReadOnlyMemory&lt;byte&gt;, int, int, int)</a>
+    </div>
+    <div>
+      <a class="xref" href="../Fp/Fp.Processor.html#Fp_Processor_MatchLast_System_IO_Stream_System_Int64_System_Int64_System_ReadOnlyMemory_System_Byte__System_Int32_">Processor.MatchLast(Stream, long, long, ReadOnlyMemory&lt;byte&gt;, int)</a>
+    </div>
+    <div>
+      <a class="xref" href="../Fp/Fp.Processor.html#Fp_Processor_MatchLast_System_IO_Stream_System_Int64_System_ReadOnlyMemory_System_Byte__System_Int32_">Processor.MatchLast(Stream, long, ReadOnlyMemory&lt;byte&gt;, int)</a>
+    </div>
+    <div>
+      <a class="xref" href="../Fp/Fp.Processor.html#Fp_Processor_MatchLast_System_IO_Stream_System_ReadOnlyMemory_System_Byte__System_Int32_">Processor.MatchLast(Stream, ReadOnlyMemory&lt;byte&gt;, int)</a>
+    </div>
+    <div>
+      <a class="xref" href="../Fp/Fp.Processor.html#Fp_Processor_MatchLast_System_IO_Stream_System_Int64_System_Int64_System_String_System_Int32_">Processor.MatchLast(Stream, long, long, string, int)</a>
+    </div>
+    <div>
+      <a class="xref" href="../Fp/Fp.Processor.html#Fp_Processor_MatchLast_System_IO_Stream_System_Int64_System_String_System_Int32_">Processor.MatchLast(Stream, long, string, int)</a>
+    </div>
+    <div>
+      <a class="xref" href="../Fp/Fp.Processor.html#Fp_Processor_MatchLast_System_IO_Stream_System_String_System_Int32_">Processor.MatchLast(Stream, string, int)</a>
+    </div>
+    <div>
+      <a class="xref" href="../Fp/Fp.Processor.html#Fp_Processor_OutputAll_System_IO_Stream_System_IO_Stream_">Processor.OutputAll(Stream, Stream)</a>
+    </div>
+    <div>
+      <a class="xref" href="../Fp/Fp.Processor.html#Fp_Processor_Output_System_IO_Stream_System_Int64_System_IO_Stream_System_Boolean_System_Int32_">Processor.Output(Stream, long, Stream, bool, int)</a>
+    </div>
+    <div>
+      <a class="xref" href="../Fp/Fp.Processor.html#Fp_Processor_Output_System_IO_Stream_System_Int64_System_Int64_System_IO_Stream_System_Boolean_System_Int32_">Processor.Output(Stream, long, long, Stream, bool, int)</a>
+    </div>
+    <div>
+      <a class="xref" href="../Fp/Fp.Processor.html#Fp_Processor_Output_System_Boolean_System_Int32_">Processor.Output(bool, int)</a>
+    </div>
+    <div>
+      <a class="xref" href="../Fp/Fp.Processor.html#Fp_Processor_Output_System_Int64_System_Boolean_System_Int32_">Processor.Output(long, bool, int)</a>
+    </div>
+    <div>
+      <a class="xref" href="../Fp/Fp.Processor.html#Fp_Processor_Output_System_Int64_System_Int64_System_Boolean_System_Int32_">Processor.Output(long, long, bool, int)</a>
+    </div>
+    <div>
+      <a class="xref" href="../Fp/Fp.Processor.html#Fp_Processor_Write_System_IO_Stream_System_Int64_System_Byte___">Processor.Write(Stream, long, byte[])</a>
+    </div>
+    <div>
+      <a class="xref" href="../Fp/Fp.Processor.html#Fp_Processor_Write_System_IO_Stream_System_Int64_System_Byte___System_Int32_System_Int32_">Processor.Write(Stream, long, byte[], int, int)</a>
+    </div>
+    <div>
+      <a class="xref" href="../Fp/Fp.Processor.html#Fp_Processor_Write_System_IO_Stream_System_Byte___">Processor.Write(Stream, byte[])</a>
+    </div>
+    <div>
+      <a class="xref" href="../Fp/Fp.Processor.html#Fp_Processor_Write_System_IO_Stream_System_Byte___System_Int32_System_Int32_">Processor.Write(Stream, byte[], int, int)</a>
+    </div>
+    <div>
+      <a class="xref" href="../Fp/Fp.Processor.html#Fp_Processor_OutputAll_System_Byte___System_IO_Stream_">Processor.OutputAll(byte[], Stream)</a>
+    </div>
+    <div>
+      <a class="xref" href="../Fp/Fp.Processor.html#Fp_Processor_Output_System_Byte___System_Int32_System_Int32_System_IO_Stream_">Processor.Output(byte[], int, int, Stream)</a>
+    </div>
+    <div>
+      <a class="xref" href="../Fp/Fp.Processor.html#Fp_Processor_Write_System_IO_Stream_System_Int64_System_ReadOnlySpan_System_Byte__">Processor.Write(Stream, long, ReadOnlySpan&lt;byte&gt;)</a>
+    </div>
+    <div>
+      <a class="xref" href="../Fp/Fp.Processor.html#Fp_Processor_Write_System_IO_Stream_System_ReadOnlySpan_System_Byte__">Processor.Write(Stream, ReadOnlySpan&lt;byte&gt;)</a>
+    </div>
+    <div>
+      <a class="xref" href="../Fp/Fp.Processor.html#Fp_Processor_OutputAll_System_ReadOnlySpan_System_Byte__">Processor.OutputAll(ReadOnlySpan&lt;byte&gt;)</a>
+    </div>
+    <div>
+      <a class="xref" href="../Fp/Fp.Processor.html#Fp_Processor_ReadS8_System_IO_Stream_">Processor.ReadS8(Stream)</a>
+    </div>
+    <div>
+      <a class="xref" href="../Fp/Fp.Processor.html#Fp_Processor_ReadS8_System_Int64_System_IO_Stream_">Processor.ReadS8(long, Stream)</a>
+    </div>
+    <div>
+      <a class="xref" href="../Fp/Fp.Processor.html#Fp_Processor_GetS8_System_ReadOnlySpan_System_Byte__System_Int32_">Processor.GetS8(ReadOnlySpan&lt;byte&gt;, int)</a>
+    </div>
+    <div>
+      <a class="xref" href="../Fp/Fp.Processor.html#Fp_Processor_SetS8_System_Span_System_Byte__System_SByte_System_Int32_">Processor.SetS8(Span&lt;byte&gt;, sbyte, int)</a>
+    </div>
+    <div>
+      <a class="xref" href="../Fp/Fp.Processor.html#Fp_Processor_ReadU8_System_IO_Stream_">Processor.ReadU8(Stream)</a>
+    </div>
+    <div>
+      <a class="xref" href="../Fp/Fp.Processor.html#Fp_Processor_ReadU8_System_Int64_System_IO_Stream_">Processor.ReadU8(long, Stream)</a>
+    </div>
+    <div>
+      <a class="xref" href="../Fp/Fp.Processor.html#Fp_Processor_GetU8_System_ReadOnlySpan_System_Byte__System_Int32_">Processor.GetU8(ReadOnlySpan&lt;byte&gt;, int)</a>
+    </div>
+    <div>
+      <a class="xref" href="../Fp/Fp.Processor.html#Fp_Processor_SetU8_System_Span_System_Byte__System_Byte_System_Int32_">Processor.SetU8(Span&lt;byte&gt;, byte, int)</a>
+    </div>
+    <div>
+      <a class="xref" href="../Fp/Fp.Processor.html#Fp_Processor_GetS16_System_ReadOnlySpan_System_Byte__System_Boolean_System_Int32_">Processor.GetS16(ReadOnlySpan&lt;byte&gt;, bool, int)</a>
+    </div>
+    <div>
+      <a class="xref" href="../Fp/Fp.Processor.html#Fp_Processor_SetS16_System_Span_System_Byte__System_Int16_System_Boolean_System_Int32_">Processor.SetS16(Span&lt;byte&gt;, short, bool, int)</a>
+    </div>
+    <div>
+      <a class="xref" href="../Fp/Fp.Processor.html#Fp_Processor_GetU16_System_ReadOnlySpan_System_Byte__System_Boolean_System_Int32_">Processor.GetU16(ReadOnlySpan&lt;byte&gt;, bool, int)</a>
+    </div>
+    <div>
+      <a class="xref" href="../Fp/Fp.Processor.html#Fp_Processor_SetU16_System_Span_System_Byte__System_UInt16_System_Boolean_System_Int32_">Processor.SetU16(Span&lt;byte&gt;, ushort, bool, int)</a>
+    </div>
+    <div>
+      <a class="xref" href="../Fp/Fp.Processor.html#Fp_Processor_GetS32_System_ReadOnlySpan_System_Byte__System_Boolean_System_Int32_">Processor.GetS32(ReadOnlySpan&lt;byte&gt;, bool, int)</a>
+    </div>
+    <div>
+      <a class="xref" href="../Fp/Fp.Processor.html#Fp_Processor_SetS32_System_Span_System_Byte__System_Int32_System_Boolean_System_Int32_">Processor.SetS32(Span&lt;byte&gt;, int, bool, int)</a>
+    </div>
+    <div>
+      <a class="xref" href="../Fp/Fp.Processor.html#Fp_Processor_GetU32_System_ReadOnlySpan_System_Byte__System_Boolean_System_Int32_">Processor.GetU32(ReadOnlySpan&lt;byte&gt;, bool, int)</a>
+    </div>
+    <div>
+      <a class="xref" href="../Fp/Fp.Processor.html#Fp_Processor_SetU32_System_Span_System_Byte__System_UInt32_System_Boolean_System_Int32_">Processor.SetU32(Span&lt;byte&gt;, uint, bool, int)</a>
+    </div>
+    <div>
+      <a class="xref" href="../Fp/Fp.Processor.html#Fp_Processor_GetS64_System_ReadOnlySpan_System_Byte__System_Boolean_System_Int32_">Processor.GetS64(ReadOnlySpan&lt;byte&gt;, bool, int)</a>
+    </div>
+    <div>
+      <a class="xref" href="../Fp/Fp.Processor.html#Fp_Processor_SetS64_System_Span_System_Byte__System_Int64_System_Boolean_System_Int32_">Processor.SetS64(Span&lt;byte&gt;, long, bool, int)</a>
+    </div>
+    <div>
+      <a class="xref" href="../Fp/Fp.Processor.html#Fp_Processor_GetU64_System_ReadOnlySpan_System_Byte__System_Boolean_System_Int32_">Processor.GetU64(ReadOnlySpan&lt;byte&gt;, bool, int)</a>
+    </div>
+    <div>
+      <a class="xref" href="../Fp/Fp.Processor.html#Fp_Processor_SetU64_System_Span_System_Byte__System_UInt64_System_Boolean_System_Int32_">Processor.SetU64(Span&lt;byte&gt;, ulong, bool, int)</a>
+    </div>
+    <div>
+      <a class="xref" href="../Fp/Fp.Processor.html#Fp_Processor_ConvertS16Array_System_Span_System_Int16__System_Boolean_">Processor.ConvertS16Array(Span&lt;short&gt;, bool)</a>
+    </div>
+    <div>
+      <a class="xref" href="../Fp/Fp.Processor.html#Fp_Processor_ConvertS16Array_System_Span_System_Byte__System_Boolean_">Processor.ConvertS16Array(Span&lt;byte&gt;, bool)</a>
+    </div>
+    <div>
+      <a class="xref" href="../Fp/Fp.Processor.html#Fp_Processor_ConvertU16Array_System_Span_System_UInt16__System_Boolean_">Processor.ConvertU16Array(Span&lt;ushort&gt;, bool)</a>
+    </div>
+    <div>
+      <a class="xref" href="../Fp/Fp.Processor.html#Fp_Processor_ConvertU16Array_System_Span_System_Byte__System_Boolean_">Processor.ConvertU16Array(Span&lt;byte&gt;, bool)</a>
+    </div>
+    <div>
+      <a class="xref" href="../Fp/Fp.Processor.html#Fp_Processor_ConvertS32Array_System_Span_System_Int32__System_Boolean_">Processor.ConvertS32Array(Span&lt;int&gt;, bool)</a>
+    </div>
+    <div>
+      <a class="xref" href="../Fp/Fp.Processor.html#Fp_Processor_ConvertS32Array_System_Span_System_Byte__System_Boolean_">Processor.ConvertS32Array(Span&lt;byte&gt;, bool)</a>
+    </div>
+    <div>
+      <a class="xref" href="../Fp/Fp.Processor.html#Fp_Processor_ConvertU32Array_System_Span_System_UInt32__System_Boolean_">Processor.ConvertU32Array(Span&lt;uint&gt;, bool)</a>
+    </div>
+    <div>
+      <a class="xref" href="../Fp/Fp.Processor.html#Fp_Processor_ConvertU32Array_System_Span_System_Byte__System_Boolean_">Processor.ConvertU32Array(Span&lt;byte&gt;, bool)</a>
+    </div>
+    <div>
+      <a class="xref" href="../Fp/Fp.Processor.html#Fp_Processor_ConvertS64Array_System_Span_System_Int64__System_Boolean_">Processor.ConvertS64Array(Span&lt;long&gt;, bool)</a>
+    </div>
+    <div>
+      <a class="xref" href="../Fp/Fp.Processor.html#Fp_Processor_ConvertS64Array_System_Span_System_Byte__System_Boolean_">Processor.ConvertS64Array(Span&lt;byte&gt;, bool)</a>
+    </div>
+    <div>
+      <a class="xref" href="../Fp/Fp.Processor.html#Fp_Processor_ConvertU64Array_System_Span_System_UInt64__System_Boolean_">Processor.ConvertU64Array(Span&lt;ulong&gt;, bool)</a>
+    </div>
+    <div>
+      <a class="xref" href="../Fp/Fp.Processor.html#Fp_Processor_ConvertU64Array_System_Span_System_Byte__System_Boolean_">Processor.ConvertU64Array(Span&lt;byte&gt;, bool)</a>
+    </div>
+    <div>
+      <a class="xref" href="../Fp/Fp.Processor.html#Fp_Processor_ReadS16_System_IO_Stream_">Processor.ReadS16(Stream)</a>
+    </div>
+    <div>
+      <a class="xref" href="../Fp/Fp.Processor.html#Fp_Processor_ReadS16_System_Int64_System_IO_Stream_">Processor.ReadS16(long, Stream)</a>
+    </div>
+    <div>
+      <a class="xref" href="../Fp/Fp.Processor.html#Fp_Processor_GetS16_System_ReadOnlySpan_System_Byte__System_Int32_">Processor.GetS16(ReadOnlySpan&lt;byte&gt;, int)</a>
+    </div>
+    <div>
+      <a class="xref" href="../Fp/Fp.Processor.html#Fp_Processor_SetS16_System_Span_System_Byte__System_Int16_System_Int32_">Processor.SetS16(Span&lt;byte&gt;, short, int)</a>
+    </div>
+    <div>
+      <a class="xref" href="../Fp/Fp.Processor.html#Fp_Processor_ReadU16_System_IO_Stream_">Processor.ReadU16(Stream)</a>
+    </div>
+    <div>
+      <a class="xref" href="../Fp/Fp.Processor.html#Fp_Processor_ReadU16_System_Int64_System_IO_Stream_">Processor.ReadU16(long, Stream)</a>
+    </div>
+    <div>
+      <a class="xref" href="../Fp/Fp.Processor.html#Fp_Processor_GetU16_System_ReadOnlySpan_System_Byte__System_Int32_">Processor.GetU16(ReadOnlySpan&lt;byte&gt;, int)</a>
+    </div>
+    <div>
+      <a class="xref" href="../Fp/Fp.Processor.html#Fp_Processor_SetU16_System_Span_System_Byte__System_UInt16_System_Int32_">Processor.SetU16(Span&lt;byte&gt;, ushort, int)</a>
+    </div>
+    <div>
+      <a class="xref" href="../Fp/Fp.Processor.html#Fp_Processor_ReadS32_System_IO_Stream_">Processor.ReadS32(Stream)</a>
+    </div>
+    <div>
+      <a class="xref" href="../Fp/Fp.Processor.html#Fp_Processor_ReadS32_System_Int64_System_IO_Stream_">Processor.ReadS32(long, Stream)</a>
+    </div>
+    <div>
+      <a class="xref" href="../Fp/Fp.Processor.html#Fp_Processor_GetS32_System_ReadOnlySpan_System_Byte__System_Int32_">Processor.GetS32(ReadOnlySpan&lt;byte&gt;, int)</a>
+    </div>
+    <div>
+      <a class="xref" href="../Fp/Fp.Processor.html#Fp_Processor_SetS32_System_Span_System_Byte__System_Int32_System_Int32_">Processor.SetS32(Span&lt;byte&gt;, int, int)</a>
+    </div>
+    <div>
+      <a class="xref" href="../Fp/Fp.Processor.html#Fp_Processor_ReadU32_System_IO_Stream_">Processor.ReadU32(Stream)</a>
+    </div>
+    <div>
+      <a class="xref" href="../Fp/Fp.Processor.html#Fp_Processor_ReadU32_System_Int64_System_IO_Stream_">Processor.ReadU32(long, Stream)</a>
+    </div>
+    <div>
+      <a class="xref" href="../Fp/Fp.Processor.html#Fp_Processor_GetU32_System_ReadOnlySpan_System_Byte__System_Int32_">Processor.GetU32(ReadOnlySpan&lt;byte&gt;, int)</a>
+    </div>
+    <div>
+      <a class="xref" href="../Fp/Fp.Processor.html#Fp_Processor_SetU32_System_Span_System_Byte__System_UInt32_System_Int32_">Processor.SetU32(Span&lt;byte&gt;, uint, int)</a>
+    </div>
+    <div>
+      <a class="xref" href="../Fp/Fp.Processor.html#Fp_Processor_ReadS64_System_IO_Stream_">Processor.ReadS64(Stream)</a>
+    </div>
+    <div>
+      <a class="xref" href="../Fp/Fp.Processor.html#Fp_Processor_ReadS64_System_Int64_System_IO_Stream_">Processor.ReadS64(long, Stream)</a>
+    </div>
+    <div>
+      <a class="xref" href="../Fp/Fp.Processor.html#Fp_Processor_GetS64_System_ReadOnlySpan_System_Byte__System_Int32_">Processor.GetS64(ReadOnlySpan&lt;byte&gt;, int)</a>
+    </div>
+    <div>
+      <a class="xref" href="../Fp/Fp.Processor.html#Fp_Processor_SetS64_System_Span_System_Byte__System_Int64_System_Int32_">Processor.SetS64(Span&lt;byte&gt;, long, int)</a>
+    </div>
+    <div>
+      <a class="xref" href="../Fp/Fp.Processor.html#Fp_Processor_ReadU64_System_IO_Stream_">Processor.ReadU64(Stream)</a>
+    </div>
+    <div>
+      <a class="xref" href="../Fp/Fp.Processor.html#Fp_Processor_ReadU64_System_Int64_System_IO_Stream_">Processor.ReadU64(long, Stream)</a>
+    </div>
+    <div>
+      <a class="xref" href="../Fp/Fp.Processor.html#Fp_Processor_GetU64_System_ReadOnlySpan_System_Byte__System_Int32_">Processor.GetU64(ReadOnlySpan&lt;byte&gt;, int)</a>
+    </div>
+    <div>
+      <a class="xref" href="../Fp/Fp.Processor.html#Fp_Processor_SetU64_System_Span_System_Byte__System_UInt64_System_Int32_">Processor.SetU64(Span&lt;byte&gt;, ulong, int)</a>
+    </div>
+    <div>
+      <a class="xref" href="../Fp/Fp.Processor.html#Fp_Processor_ConvertS16Array_System_Span_System_Int16__">Processor.ConvertS16Array(Span&lt;short&gt;)</a>
+    </div>
+    <div>
+      <a class="xref" href="../Fp/Fp.Processor.html#Fp_Processor_ConvertS16Array_System_Span_System_Byte__">Processor.ConvertS16Array(Span&lt;byte&gt;)</a>
+    </div>
+    <div>
+      <a class="xref" href="../Fp/Fp.Processor.html#Fp_Processor_ConvertU16Array_System_Span_System_UInt16__">Processor.ConvertU16Array(Span&lt;ushort&gt;)</a>
+    </div>
+    <div>
+      <a class="xref" href="../Fp/Fp.Processor.html#Fp_Processor_ConvertU16Array_System_Span_System_Byte__">Processor.ConvertU16Array(Span&lt;byte&gt;)</a>
+    </div>
+    <div>
+      <a class="xref" href="../Fp/Fp.Processor.html#Fp_Processor_ConvertS32Array_System_Span_System_Int32__">Processor.ConvertS32Array(Span&lt;int&gt;)</a>
+    </div>
+    <div>
+      <a class="xref" href="../Fp/Fp.Processor.html#Fp_Processor_ConvertS32Array_System_Span_System_Byte__">Processor.ConvertS32Array(Span&lt;byte&gt;)</a>
+    </div>
+    <div>
+      <a class="xref" href="../Fp/Fp.Processor.html#Fp_Processor_ConvertU32Array_System_Span_System_UInt32__">Processor.ConvertU32Array(Span&lt;uint&gt;)</a>
+    </div>
+    <div>
+      <a class="xref" href="../Fp/Fp.Processor.html#Fp_Processor_ConvertU32Array_System_Span_System_Byte__">Processor.ConvertU32Array(Span&lt;byte&gt;)</a>
+    </div>
+    <div>
+      <a class="xref" href="../Fp/Fp.Processor.html#Fp_Processor_ConvertS64Array_System_Span_System_Int64__">Processor.ConvertS64Array(Span&lt;long&gt;)</a>
+    </div>
+    <div>
+      <a class="xref" href="../Fp/Fp.Processor.html#Fp_Processor_ConvertS64Array_System_Span_System_Byte__">Processor.ConvertS64Array(Span&lt;byte&gt;)</a>
+    </div>
+    <div>
+      <a class="xref" href="../Fp/Fp.Processor.html#Fp_Processor_ConvertU64Array_System_Span_System_UInt64__">Processor.ConvertU64Array(Span&lt;ulong&gt;)</a>
+    </div>
+    <div>
+      <a class="xref" href="../Fp/Fp.Processor.html#Fp_Processor_ConvertU64Array_System_Span_System_Byte__">Processor.ConvertU64Array(Span&lt;byte&gt;)</a>
+    </div>
+    <div>
+      <a class="xref" href="../Fp/Fp.Processor.html#Fp_Processor_ReadHalf_System_IO_Stream_">Processor.ReadHalf(Stream)</a>
+    </div>
+    <div>
+      <a class="xref" href="../Fp/Fp.Processor.html#Fp_Processor_ReadHalf_System_Int64_System_IO_Stream_">Processor.ReadHalf(long, Stream)</a>
+    </div>
+    <div>
+      <a class="xref" href="../Fp/Fp.Processor.html#Fp_Processor_GetHalf_System_ReadOnlySpan_System_Byte__System_Int32_">Processor.GetHalf(ReadOnlySpan&lt;byte&gt;, int)</a>
+    </div>
+    <div>
+      <a class="xref" href="../Fp/Fp.Processor.html#Fp_Processor_SetHalf_System_Span_System_Byte__System_Single_System_Int32_">Processor.SetHalf(Span&lt;byte&gt;, float, int)</a>
+    </div>
+    <div>
+      <a class="xref" href="../Fp/Fp.Processor.html#Fp_Processor_ReadSingle_System_IO_Stream_">Processor.ReadSingle(Stream)</a>
+    </div>
+    <div>
+      <a class="xref" href="../Fp/Fp.Processor.html#Fp_Processor_ReadSingle_System_Int64_System_IO_Stream_">Processor.ReadSingle(long, Stream)</a>
+    </div>
+    <div>
+      <a class="xref" href="../Fp/Fp.Processor.html#Fp_Processor_GetSingle_System_ReadOnlySpan_System_Byte__System_Int32_">Processor.GetSingle(ReadOnlySpan&lt;byte&gt;, int)</a>
+    </div>
+    <div>
+      <a class="xref" href="../Fp/Fp.Processor.html#Fp_Processor_SetSingle_System_Span_System_Byte__System_Single_System_Int32_">Processor.SetSingle(Span&lt;byte&gt;, float, int)</a>
+    </div>
+    <div>
+      <a class="xref" href="../Fp/Fp.Processor.html#Fp_Processor_ReadDouble_System_IO_Stream_">Processor.ReadDouble(Stream)</a>
+    </div>
+    <div>
+      <a class="xref" href="../Fp/Fp.Processor.html#Fp_Processor_ReadDouble_System_Int64_System_IO_Stream_">Processor.ReadDouble(long, Stream)</a>
+    </div>
+    <div>
+      <a class="xref" href="../Fp/Fp.Processor.html#Fp_Processor_GetDouble_System_ReadOnlySpan_System_Byte__System_Int32_">Processor.GetDouble(ReadOnlySpan&lt;byte&gt;, int)</a>
+    </div>
+    <div>
+      <a class="xref" href="../Fp/Fp.Processor.html#Fp_Processor_SetDouble_System_Span_System_Byte__System_Double_System_Int32_">Processor.SetDouble(Span&lt;byte&gt;, double, int)</a>
+    </div>
+    <div>
+      <a class="xref" href="../Fp/Fp.Processor.html#Fp_Processor_ReadS8Array_System_Span_System_SByte__System_IO_Stream_">Processor.ReadS8Array(Span&lt;sbyte&gt;, Stream)</a>
+    </div>
+    <div>
+      <a class="xref" href="../Fp/Fp.Processor.html#Fp_Processor_ReadS8Array_System_Span_System_SByte__System_Int64_System_IO_Stream_">Processor.ReadS8Array(Span&lt;sbyte&gt;, long, Stream)</a>
+    </div>
+    <div>
+      <a class="xref" href="../Fp/Fp.Processor.html#Fp_Processor_ReadS8Array_System_Span_System_Byte__System_IO_Stream_">Processor.ReadS8Array(Span&lt;byte&gt;, Stream)</a>
+    </div>
+    <div>
+      <a class="xref" href="../Fp/Fp.Processor.html#Fp_Processor_ReadS8Array_System_Span_System_Byte__System_Int64_System_IO_Stream_">Processor.ReadS8Array(Span&lt;byte&gt;, long, Stream)</a>
+    </div>
+    <div>
+      <a class="xref" href="../Fp/Fp.Processor.html#Fp_Processor_ReadS8Array_System_Int32_System_IO_Stream_">Processor.ReadS8Array(int, Stream)</a>
+    </div>
+    <div>
+      <a class="xref" href="../Fp/Fp.Processor.html#Fp_Processor_ReadS8Array_System_Int64_System_Int32_System_IO_Stream_">Processor.ReadS8Array(long, int, Stream)</a>
+    </div>
+    <div>
+      <a class="xref" href="../Fp/Fp.Processor.html#Fp_Processor_ReadU8Array_System_Span_System_Byte__System_IO_Stream_">Processor.ReadU8Array(Span&lt;byte&gt;, Stream)</a>
+    </div>
+    <div>
+      <a class="xref" href="../Fp/Fp.Processor.html#Fp_Processor_ReadU8Array_System_Span_System_Byte__System_Int64_System_IO_Stream_">Processor.ReadU8Array(Span&lt;byte&gt;, long, Stream)</a>
+    </div>
+    <div>
+      <a class="xref" href="../Fp/Fp.Processor.html#Fp_Processor_ReadU8Array_System_Int32_System_IO_Stream_">Processor.ReadU8Array(int, Stream)</a>
+    </div>
+    <div>
+      <a class="xref" href="../Fp/Fp.Processor.html#Fp_Processor_ReadU8Array_System_Int64_System_Int32_System_IO_Stream_">Processor.ReadU8Array(long, int, Stream)</a>
+    </div>
+    <div>
+      <a class="xref" href="../Fp/Fp.Processor.html#Fp_Processor_ReadS16Array_System_Span_System_Int16__System_IO_Stream_">Processor.ReadS16Array(Span&lt;short&gt;, Stream)</a>
+    </div>
+    <div>
+      <a class="xref" href="../Fp/Fp.Processor.html#Fp_Processor_ReadS16Array_System_Span_System_Int16__System_Int64_System_IO_Stream_">Processor.ReadS16Array(Span&lt;short&gt;, long, Stream)</a>
+    </div>
+    <div>
+      <a class="xref" href="../Fp/Fp.Processor.html#Fp_Processor_ReadS16Array_System_Span_System_Byte__System_IO_Stream_">Processor.ReadS16Array(Span&lt;byte&gt;, Stream)</a>
+    </div>
+    <div>
+      <a class="xref" href="../Fp/Fp.Processor.html#Fp_Processor_ReadS16Array_System_Span_System_Byte__System_Int64_System_IO_Stream_">Processor.ReadS16Array(Span&lt;byte&gt;, long, Stream)</a>
+    </div>
+    <div>
+      <a class="xref" href="../Fp/Fp.Processor.html#Fp_Processor_ReadS16Array_System_Int32_System_IO_Stream_">Processor.ReadS16Array(int, Stream)</a>
+    </div>
+    <div>
+      <a class="xref" href="../Fp/Fp.Processor.html#Fp_Processor_ReadS16Array_System_Int64_System_Int32_System_IO_Stream_">Processor.ReadS16Array(long, int, Stream)</a>
+    </div>
+    <div>
+      <a class="xref" href="../Fp/Fp.Processor.html#Fp_Processor_ReadU16Array_System_Span_System_UInt16__System_IO_Stream_">Processor.ReadU16Array(Span&lt;ushort&gt;, Stream)</a>
+    </div>
+    <div>
+      <a class="xref" href="../Fp/Fp.Processor.html#Fp_Processor_ReadU16Array_System_Span_System_UInt16__System_Int64_System_IO_Stream_">Processor.ReadU16Array(Span&lt;ushort&gt;, long, Stream)</a>
+    </div>
+    <div>
+      <a class="xref" href="../Fp/Fp.Processor.html#Fp_Processor_ReadU16Array_System_Span_System_Byte__System_IO_Stream_">Processor.ReadU16Array(Span&lt;byte&gt;, Stream)</a>
+    </div>
+    <div>
+      <a class="xref" href="../Fp/Fp.Processor.html#Fp_Processor_ReadU16Array_System_Span_System_Byte__System_Int64_System_IO_Stream_">Processor.ReadU16Array(Span&lt;byte&gt;, long, Stream)</a>
+    </div>
+    <div>
+      <a class="xref" href="../Fp/Fp.Processor.html#Fp_Processor_ReadU16Array_System_Int32_System_IO_Stream_">Processor.ReadU16Array(int, Stream)</a>
+    </div>
+    <div>
+      <a class="xref" href="../Fp/Fp.Processor.html#Fp_Processor_ReadU16Array_System_Int64_System_Int32_System_IO_Stream_">Processor.ReadU16Array(long, int, Stream)</a>
+    </div>
+    <div>
+      <a class="xref" href="../Fp/Fp.Processor.html#Fp_Processor_ReadS32Array_System_Span_System_Int32__System_IO_Stream_">Processor.ReadS32Array(Span&lt;int&gt;, Stream)</a>
+    </div>
+    <div>
+      <a class="xref" href="../Fp/Fp.Processor.html#Fp_Processor_ReadS32Array_System_Span_System_Int32__System_Int64_System_IO_Stream_">Processor.ReadS32Array(Span&lt;int&gt;, long, Stream)</a>
+    </div>
+    <div>
+      <a class="xref" href="../Fp/Fp.Processor.html#Fp_Processor_ReadS32Array_System_Span_System_Byte__System_IO_Stream_">Processor.ReadS32Array(Span&lt;byte&gt;, Stream)</a>
+    </div>
+    <div>
+      <a class="xref" href="../Fp/Fp.Processor.html#Fp_Processor_ReadS32Array_System_Span_System_Byte__System_Int64_System_IO_Stream_">Processor.ReadS32Array(Span&lt;byte&gt;, long, Stream)</a>
+    </div>
+    <div>
+      <a class="xref" href="../Fp/Fp.Processor.html#Fp_Processor_ReadS32Array_System_Int32_System_IO_Stream_">Processor.ReadS32Array(int, Stream)</a>
+    </div>
+    <div>
+      <a class="xref" href="../Fp/Fp.Processor.html#Fp_Processor_ReadS32Array_System_Int64_System_Int32_System_IO_Stream_">Processor.ReadS32Array(long, int, Stream)</a>
+    </div>
+    <div>
+      <a class="xref" href="../Fp/Fp.Processor.html#Fp_Processor_ReadU32Array_System_Span_System_UInt32__System_IO_Stream_">Processor.ReadU32Array(Span&lt;uint&gt;, Stream)</a>
+    </div>
+    <div>
+      <a class="xref" href="../Fp/Fp.Processor.html#Fp_Processor_ReadU32Array_System_Span_System_UInt32__System_Int64_System_IO_Stream_">Processor.ReadU32Array(Span&lt;uint&gt;, long, Stream)</a>
+    </div>
+    <div>
+      <a class="xref" href="../Fp/Fp.Processor.html#Fp_Processor_ReadU32Array_System_Span_System_Byte__System_IO_Stream_">Processor.ReadU32Array(Span&lt;byte&gt;, Stream)</a>
+    </div>
+    <div>
+      <a class="xref" href="../Fp/Fp.Processor.html#Fp_Processor_ReadU32Array_System_Span_System_Byte__System_Int64_System_IO_Stream_">Processor.ReadU32Array(Span&lt;byte&gt;, long, Stream)</a>
+    </div>
+    <div>
+      <a class="xref" href="../Fp/Fp.Processor.html#Fp_Processor_ReadU32Array_System_Int32_System_IO_Stream_">Processor.ReadU32Array(int, Stream)</a>
+    </div>
+    <div>
+      <a class="xref" href="../Fp/Fp.Processor.html#Fp_Processor_ReadU32Array_System_Int64_System_Int32_System_IO_Stream_">Processor.ReadU32Array(long, int, Stream)</a>
+    </div>
+    <div>
+      <a class="xref" href="../Fp/Fp.Processor.html#Fp_Processor_ReadS64Array_System_Span_System_Int64__System_IO_Stream_">Processor.ReadS64Array(Span&lt;long&gt;, Stream)</a>
+    </div>
+    <div>
+      <a class="xref" href="../Fp/Fp.Processor.html#Fp_Processor_ReadS64Array_System_Span_System_Int64__System_Int64_System_IO_Stream_">Processor.ReadS64Array(Span&lt;long&gt;, long, Stream)</a>
+    </div>
+    <div>
+      <a class="xref" href="../Fp/Fp.Processor.html#Fp_Processor_ReadS64Array_System_Span_System_Byte__System_IO_Stream_">Processor.ReadS64Array(Span&lt;byte&gt;, Stream)</a>
+    </div>
+    <div>
+      <a class="xref" href="../Fp/Fp.Processor.html#Fp_Processor_ReadS64Array_System_Span_System_Byte__System_Int64_System_IO_Stream_">Processor.ReadS64Array(Span&lt;byte&gt;, long, Stream)</a>
+    </div>
+    <div>
+      <a class="xref" href="../Fp/Fp.Processor.html#Fp_Processor_ReadS64Array_System_Int32_System_IO_Stream_">Processor.ReadS64Array(int, Stream)</a>
+    </div>
+    <div>
+      <a class="xref" href="../Fp/Fp.Processor.html#Fp_Processor_ReadS64Array_System_Int64_System_Int32_System_IO_Stream_">Processor.ReadS64Array(long, int, Stream)</a>
+    </div>
+    <div>
+      <a class="xref" href="../Fp/Fp.Processor.html#Fp_Processor_ReadU64Array_System_Span_System_UInt64__System_IO_Stream_">Processor.ReadU64Array(Span&lt;ulong&gt;, Stream)</a>
+    </div>
+    <div>
+      <a class="xref" href="../Fp/Fp.Processor.html#Fp_Processor_ReadU64Array_System_Span_System_UInt64__System_Int64_System_IO_Stream_">Processor.ReadU64Array(Span&lt;ulong&gt;, long, Stream)</a>
+    </div>
+    <div>
+      <a class="xref" href="../Fp/Fp.Processor.html#Fp_Processor_ReadU64Array_System_Span_System_Byte__System_IO_Stream_">Processor.ReadU64Array(Span&lt;byte&gt;, Stream)</a>
+    </div>
+    <div>
+      <a class="xref" href="../Fp/Fp.Processor.html#Fp_Processor_ReadU64Array_System_Span_System_Byte__System_Int64_System_IO_Stream_">Processor.ReadU64Array(Span&lt;byte&gt;, long, Stream)</a>
+    </div>
+    <div>
+      <a class="xref" href="../Fp/Fp.Processor.html#Fp_Processor_ReadU64Array_System_Int32_System_IO_Stream_">Processor.ReadU64Array(int, Stream)</a>
+    </div>
+    <div>
+      <a class="xref" href="../Fp/Fp.Processor.html#Fp_Processor_ReadU64Array_System_Int64_System_Int32_System_IO_Stream_">Processor.ReadU64Array(long, int, Stream)</a>
+    </div>
+    <div>
+      <a class="xref" href="../Fp/Fp.Processor.html#Fp_Processor_ConvertHalfArrayToFloat_System_ReadOnlySpan_System_Byte__System_Span_System_Single__">Processor.ConvertHalfArrayToFloat(ReadOnlySpan&lt;byte&gt;, Span&lt;float&gt;)</a>
+    </div>
+    <div>
+      <a class="xref" href="../Fp/Fp.Processor.html#Fp_Processor_ConvertFloatArrayToHalf_System_ReadOnlySpan_System_Single__System_Span_System_Byte__">Processor.ConvertFloatArrayToHalf(ReadOnlySpan&lt;float&gt;, Span&lt;byte&gt;)</a>
+    </div>
+    <div>
+      <a class="xref" href="../Fp/Fp.Processor.html#Fp_Processor_ReadHalfArray_System_Span_System_Single__System_IO_Stream_">Processor.ReadHalfArray(Span&lt;float&gt;, Stream)</a>
+    </div>
+    <div>
+      <a class="xref" href="../Fp/Fp.Processor.html#Fp_Processor_ReadHalfArray_System_Span_System_Single__System_Int64_System_IO_Stream_">Processor.ReadHalfArray(Span&lt;float&gt;, long, Stream)</a>
+    </div>
+    <div>
+      <a class="xref" href="../Fp/Fp.Processor.html#Fp_Processor_ReadHalfArray_System_Int32_System_IO_Stream_">Processor.ReadHalfArray(int, Stream)</a>
+    </div>
+    <div>
+      <a class="xref" href="../Fp/Fp.Processor.html#Fp_Processor_ReadHalfArray_System_Int64_System_Int32_System_IO_Stream_">Processor.ReadHalfArray(long, int, Stream)</a>
+    </div>
+    <div>
+      <a class="xref" href="../Fp/Fp.Processor.html#Fp_Processor_ReadSingleArray_System_Span_System_Single__System_IO_Stream_">Processor.ReadSingleArray(Span&lt;float&gt;, Stream)</a>
+    </div>
+    <div>
+      <a class="xref" href="../Fp/Fp.Processor.html#Fp_Processor_ReadSingleArray_System_Span_System_Single__System_Int64_System_IO_Stream_">Processor.ReadSingleArray(Span&lt;float&gt;, long, Stream)</a>
+    </div>
+    <div>
+      <a class="xref" href="../Fp/Fp.Processor.html#Fp_Processor_ReadSingleArray_System_Int32_System_IO_Stream_">Processor.ReadSingleArray(int, Stream)</a>
+    </div>
+    <div>
+      <a class="xref" href="../Fp/Fp.Processor.html#Fp_Processor_ReadSingleArray_System_Int64_System_Int32_System_IO_Stream_">Processor.ReadSingleArray(long, int, Stream)</a>
+    </div>
+    <div>
+      <a class="xref" href="../Fp/Fp.Processor.html#Fp_Processor_ReadDoubleArray_System_Span_System_Double__System_IO_Stream_">Processor.ReadDoubleArray(Span&lt;double&gt;, Stream)</a>
+    </div>
+    <div>
+      <a class="xref" href="../Fp/Fp.Processor.html#Fp_Processor_ReadDoubleArray_System_Span_System_Double__System_Int64_System_IO_Stream_">Processor.ReadDoubleArray(Span&lt;double&gt;, long, Stream)</a>
+    </div>
+    <div>
+      <a class="xref" href="../Fp/Fp.Processor.html#Fp_Processor_ReadDoubleArray_System_Int32_System_IO_Stream_">Processor.ReadDoubleArray(int, Stream)</a>
+    </div>
+    <div>
+      <a class="xref" href="../Fp/Fp.Processor.html#Fp_Processor_ReadDoubleArray_System_Int64_System_Int32_System_IO_Stream_">Processor.ReadDoubleArray(long, int, Stream)</a>
+    </div>
+    <div>
+      <a class="xref" href="../Fp/Fp.Processor.html#Fp_Processor_GetBytes_System_SByte_System_Span_System_Byte__System_Int32_">Processor.GetBytes(sbyte, Span&lt;byte&gt;, int)</a>
+    </div>
+    <div>
+      <a class="xref" href="../Fp/Fp.Processor.html#Fp_Processor_GetBytes_System_Byte_System_Span_System_Byte__System_Int32_">Processor.GetBytes(byte, Span&lt;byte&gt;, int)</a>
+    </div>
+    <div>
+      <a class="xref" href="../Fp/Fp.Processor.html#Fp_Processor_GetBytes_System_SByte_System_Byte___System_Int32_">Processor.GetBytes(sbyte, byte[], int)</a>
+    </div>
+    <div>
+      <a class="xref" href="../Fp/Fp.Processor.html#Fp_Processor_GetBytes_System_Byte_System_Byte___System_Int32_">Processor.GetBytes(byte, byte[], int)</a>
+    </div>
+    <div>
+      <a class="xref" href="../Fp/Fp.Processor.html#Fp_Processor_WriteS8_System_SByte_System_IO_Stream_System_Nullable_System_Int64__">Processor.WriteS8(sbyte, Stream, long?)</a>
+    </div>
+    <div>
+      <a class="xref" href="../Fp/Fp.Processor.html#Fp_Processor_WriteU8_System_Byte_System_IO_Stream_System_Nullable_System_Int64__">Processor.WriteU8(byte, Stream, long?)</a>
+    </div>
+    <div>
+      <a class="xref" href="../Fp/Fp.Processor.html#Fp_Processor_GetBytes_System_Int16_System_Span_System_Byte__System_Int32_">Processor.GetBytes(short, Span&lt;byte&gt;, int)</a>
+    </div>
+    <div>
+      <a class="xref" href="../Fp/Fp.Processor.html#Fp_Processor_GetBytes_System_UInt16_System_Span_System_Byte__System_Int32_">Processor.GetBytes(ushort, Span&lt;byte&gt;, int)</a>
+    </div>
+    <div>
+      <a class="xref" href="../Fp/Fp.Processor.html#Fp_Processor_GetBytes_System_Int16_System_Byte___System_Int32_">Processor.GetBytes(short, byte[], int)</a>
+    </div>
+    <div>
+      <a class="xref" href="../Fp/Fp.Processor.html#Fp_Processor_GetBytes_System_UInt16_System_Byte___System_Int32_">Processor.GetBytes(ushort, byte[], int)</a>
+    </div>
+    <div>
+      <a class="xref" href="../Fp/Fp.Processor.html#Fp_Processor_WriteS16_System_Int16_System_IO_Stream_System_Nullable_System_Int64__">Processor.WriteS16(short, Stream, long?)</a>
+    </div>
+    <div>
+      <a class="xref" href="../Fp/Fp.Processor.html#Fp_Processor_WriteU16_System_UInt16_System_IO_Stream_System_Nullable_System_Int64__">Processor.WriteU16(ushort, Stream, long?)</a>
+    </div>
+    <div>
+      <a class="xref" href="../Fp/Fp.Processor.html#Fp_Processor_GetBytes_System_Int32_System_Span_System_Byte__System_Int32_">Processor.GetBytes(int, Span&lt;byte&gt;, int)</a>
+    </div>
+    <div>
+      <a class="xref" href="../Fp/Fp.Processor.html#Fp_Processor_GetBytes_System_UInt32_System_Span_System_Byte__System_Int32_">Processor.GetBytes(uint, Span&lt;byte&gt;, int)</a>
+    </div>
+    <div>
+      <a class="xref" href="../Fp/Fp.Processor.html#Fp_Processor_GetBytes_System_Int32_System_Byte___System_Int32_">Processor.GetBytes(int, byte[], int)</a>
+    </div>
+    <div>
+      <a class="xref" href="../Fp/Fp.Processor.html#Fp_Processor_GetBytes_System_UInt32_System_Byte___System_Int32_">Processor.GetBytes(uint, byte[], int)</a>
+    </div>
+    <div>
+      <a class="xref" href="../Fp/Fp.Processor.html#Fp_Processor_WriteS32_System_Int32_System_IO_Stream_System_Nullable_System_Int64__">Processor.WriteS32(int, Stream, long?)</a>
+    </div>
+    <div>
+      <a class="xref" href="../Fp/Fp.Processor.html#Fp_Processor_WriteU32_System_UInt32_System_IO_Stream_System_Nullable_System_Int64__">Processor.WriteU32(uint, Stream, long?)</a>
+    </div>
+    <div>
+      <a class="xref" href="../Fp/Fp.Processor.html#Fp_Processor_GetBytes_System_Int64_System_Span_System_Byte__System_Int32_">Processor.GetBytes(long, Span&lt;byte&gt;, int)</a>
+    </div>
+    <div>
+      <a class="xref" href="../Fp/Fp.Processor.html#Fp_Processor_GetBytes_System_UInt64_System_Span_System_Byte__System_Int32_">Processor.GetBytes(ulong, Span&lt;byte&gt;, int)</a>
+    </div>
+    <div>
+      <a class="xref" href="../Fp/Fp.Processor.html#Fp_Processor_GetBytes_System_Int64_System_Byte___System_Int32_">Processor.GetBytes(long, byte[], int)</a>
+    </div>
+    <div>
+      <a class="xref" href="../Fp/Fp.Processor.html#Fp_Processor_GetBytes_System_UInt64_System_Byte___System_Int32_">Processor.GetBytes(ulong, byte[], int)</a>
+    </div>
+    <div>
+      <a class="xref" href="../Fp/Fp.Processor.html#Fp_Processor_WriteS64_System_Int64_System_IO_Stream_System_Nullable_System_Int64__">Processor.WriteS64(long, Stream, long?)</a>
+    </div>
+    <div>
+      <a class="xref" href="../Fp/Fp.Processor.html#Fp_Processor_WriteU64_System_UInt64_System_IO_Stream_System_Nullable_System_Int64__">Processor.WriteU64(ulong, Stream, long?)</a>
+    </div>
+    <div>
+      <a class="xref" href="../Fp/Fp.Processor.html#Fp_Processor_GetBytesHalf_System_UInt16_System_Span_System_Byte__System_Int32_">Processor.GetBytesHalf(ushort, Span&lt;byte&gt;, int)</a>
+    </div>
+    <div>
+      <a class="xref" href="../Fp/Fp.Processor.html#Fp_Processor_GetBytesHalf_System_Single_System_Span_System_Byte__System_Int32_">Processor.GetBytesHalf(float, Span&lt;byte&gt;, int)</a>
+    </div>
+    <div>
+      <a class="xref" href="../Fp/Fp.Processor.html#Fp_Processor_GetBytesHalf_System_UInt16_System_Byte___System_Int32_">Processor.GetBytesHalf(ushort, byte[], int)</a>
+    </div>
+    <div>
+      <a class="xref" href="../Fp/Fp.Processor.html#Fp_Processor_GetBytesHalf_System_Single_System_Byte___System_Int32_">Processor.GetBytesHalf(float, byte[], int)</a>
+    </div>
+    <div>
+      <a class="xref" href="../Fp/Fp.Processor.html#Fp_Processor_WriteHalf_System_UInt16_System_IO_Stream_System_Nullable_System_Int64__">Processor.WriteHalf(ushort, Stream, long?)</a>
+    </div>
+    <div>
+      <a class="xref" href="../Fp/Fp.Processor.html#Fp_Processor_WriteHalf_System_Single_System_IO_Stream_System_Nullable_System_Int64__">Processor.WriteHalf(float, Stream, long?)</a>
+    </div>
+    <div>
+      <a class="xref" href="../Fp/Fp.Processor.html#Fp_Processor_GetBytes_System_Single_System_Span_System_Byte__System_Int32_">Processor.GetBytes(float, Span&lt;byte&gt;, int)</a>
+    </div>
+    <div>
+      <a class="xref" href="../Fp/Fp.Processor.html#Fp_Processor_GetBytes_System_Single_System_Byte___System_Int32_">Processor.GetBytes(float, byte[], int)</a>
+    </div>
+    <div>
+      <a class="xref" href="../Fp/Fp.Processor.html#Fp_Processor_WriteSingle_System_Single_System_IO_Stream_System_Nullable_System_Int64__">Processor.WriteSingle(float, Stream, long?)</a>
+    </div>
+    <div>
+      <a class="xref" href="../Fp/Fp.Processor.html#Fp_Processor_GetBytes_System_Double_System_Span_System_Byte__System_Int32_">Processor.GetBytes(double, Span&lt;byte&gt;, int)</a>
+    </div>
+    <div>
+      <a class="xref" href="../Fp/Fp.Processor.html#Fp_Processor_GetBytes_System_Double_System_Byte___System_Int32_">Processor.GetBytes(double, byte[], int)</a>
+    </div>
+    <div>
+      <a class="xref" href="../Fp/Fp.Processor.html#Fp_Processor_WriteDouble_System_Double_System_IO_Stream_System_Nullable_System_Int64__">Processor.WriteDouble(double, Stream, long?)</a>
+    </div>
+    <div>
+      <a class="xref" href="../Fp/Fp.Processor.html#Fp_Processor_GetS16Array_System_ReadOnlySpan_System_Byte__">Processor.GetS16Array(ReadOnlySpan&lt;byte&gt;)</a>
+    </div>
+    <div>
+      <a class="xref" href="../Fp/Fp.Processor.html#Fp_Processor_SetS16Array_System_Span_System_Byte__System_Int16___">Processor.SetS16Array(Span&lt;byte&gt;, short[])</a>
+    </div>
+    <div>
+      <a class="xref" href="../Fp/Fp.Processor.html#Fp_Processor_GetS32Array_System_ReadOnlySpan_System_Byte__">Processor.GetS32Array(ReadOnlySpan&lt;byte&gt;)</a>
+    </div>
+    <div>
+      <a class="xref" href="../Fp/Fp.Processor.html#Fp_Processor_SetS32Array_System_Span_System_Byte__System_Int32___">Processor.SetS32Array(Span&lt;byte&gt;, int[])</a>
+    </div>
+    <div>
+      <a class="xref" href="../Fp/Fp.Processor.html#Fp_Processor_GetS64Array_System_ReadOnlySpan_System_Byte__">Processor.GetS64Array(ReadOnlySpan&lt;byte&gt;)</a>
+    </div>
+    <div>
+      <a class="xref" href="../Fp/Fp.Processor.html#Fp_Processor_SetS64Array_System_Span_System_Byte__System_Int64___">Processor.SetS64Array(Span&lt;byte&gt;, long[])</a>
+    </div>
+    <div>
+      <a class="xref" href="../Fp/Fp.Processor.html#Fp_Processor_GetU16Array_System_ReadOnlySpan_System_Byte__">Processor.GetU16Array(ReadOnlySpan&lt;byte&gt;)</a>
+    </div>
+    <div>
+      <a class="xref" href="../Fp/Fp.Processor.html#Fp_Processor_SetU16Array_System_Span_System_Byte__System_UInt16___">Processor.SetU16Array(Span&lt;byte&gt;, ushort[])</a>
+    </div>
+    <div>
+      <a class="xref" href="../Fp/Fp.Processor.html#Fp_Processor_GetU32Array_System_ReadOnlySpan_System_Byte__">Processor.GetU32Array(ReadOnlySpan&lt;byte&gt;)</a>
+    </div>
+    <div>
+      <a class="xref" href="../Fp/Fp.Processor.html#Fp_Processor_SetU32Array_System_Span_System_Byte__System_UInt32___">Processor.SetU32Array(Span&lt;byte&gt;, uint[])</a>
+    </div>
+    <div>
+      <a class="xref" href="../Fp/Fp.Processor.html#Fp_Processor_GetU64Array_System_ReadOnlySpan_System_Byte__">Processor.GetU64Array(ReadOnlySpan&lt;byte&gt;)</a>
+    </div>
+    <div>
+      <a class="xref" href="../Fp/Fp.Processor.html#Fp_Processor_SetU64Array_System_Span_System_Byte__System_UInt64___">Processor.SetU64Array(Span&lt;byte&gt;, ulong[])</a>
+    </div>
+    <div>
+      <a class="xref" href="../Fp/Fp.Processor.html#Fp_Processor_SetS8Array_System_Span_System_Byte__System_ReadOnlySpan_System_SByte__">Processor.SetS8Array(Span&lt;byte&gt;, ReadOnlySpan&lt;sbyte&gt;)</a>
+    </div>
+    <div>
+      <a class="xref" href="../Fp/Fp.Processor.html#Fp_Processor_SetU8Array_System_Span_System_Byte__System_ReadOnlySpan_System_Byte__">Processor.SetU8Array(Span&lt;byte&gt;, ReadOnlySpan&lt;byte&gt;)</a>
+    </div>
+    <div>
+      <a class="xref" href="../Fp/Fp.Processor.html#Fp_Processor_GetS16Array_System_ReadOnlySpan_System_Byte__System_Boolean_">Processor.GetS16Array(ReadOnlySpan&lt;byte&gt;, bool)</a>
+    </div>
+    <div>
+      <a class="xref" href="../Fp/Fp.Processor.html#Fp_Processor_SetS16Array_System_Span_System_Byte__System_ReadOnlySpan_System_Int16__System_Boolean_">Processor.SetS16Array(Span&lt;byte&gt;, ReadOnlySpan&lt;short&gt;, bool)</a>
+    </div>
+    <div>
+      <a class="xref" href="../Fp/Fp.Processor.html#Fp_Processor_GetS32Array_System_ReadOnlySpan_System_Byte__System_Boolean_">Processor.GetS32Array(ReadOnlySpan&lt;byte&gt;, bool)</a>
+    </div>
+    <div>
+      <a class="xref" href="../Fp/Fp.Processor.html#Fp_Processor_SetS32Array_System_Span_System_Byte__System_ReadOnlySpan_System_Int32__System_Boolean_">Processor.SetS32Array(Span&lt;byte&gt;, ReadOnlySpan&lt;int&gt;, bool)</a>
+    </div>
+    <div>
+      <a class="xref" href="../Fp/Fp.Processor.html#Fp_Processor_GetS64Array_System_ReadOnlySpan_System_Byte__System_Boolean_">Processor.GetS64Array(ReadOnlySpan&lt;byte&gt;, bool)</a>
+    </div>
+    <div>
+      <a class="xref" href="../Fp/Fp.Processor.html#Fp_Processor_SetS64Array_System_Span_System_Byte__System_ReadOnlySpan_System_Int64__System_Boolean_">Processor.SetS64Array(Span&lt;byte&gt;, ReadOnlySpan&lt;long&gt;, bool)</a>
+    </div>
+    <div>
+      <a class="xref" href="../Fp/Fp.Processor.html#Fp_Processor_GetU16Array_System_ReadOnlySpan_System_Byte__System_Boolean_">Processor.GetU16Array(ReadOnlySpan&lt;byte&gt;, bool)</a>
+    </div>
+    <div>
+      <a class="xref" href="../Fp/Fp.Processor.html#Fp_Processor_SetU16Array_System_Span_System_Byte__System_ReadOnlySpan_System_UInt16__System_Boolean_">Processor.SetU16Array(Span&lt;byte&gt;, ReadOnlySpan&lt;ushort&gt;, bool)</a>
+    </div>
+    <div>
+      <a class="xref" href="../Fp/Fp.Processor.html#Fp_Processor_GetU32Array_System_ReadOnlySpan_System_Byte__System_Boolean_">Processor.GetU32Array(ReadOnlySpan&lt;byte&gt;, bool)</a>
+    </div>
+    <div>
+      <a class="xref" href="../Fp/Fp.Processor.html#Fp_Processor_SetU32Array_System_Span_System_Byte__System_ReadOnlySpan_System_UInt32__System_Boolean_">Processor.SetU32Array(Span&lt;byte&gt;, ReadOnlySpan&lt;uint&gt;, bool)</a>
+    </div>
+    <div>
+      <a class="xref" href="../Fp/Fp.Processor.html#Fp_Processor_GetU64Array_System_ReadOnlySpan_System_Byte__System_Boolean_">Processor.GetU64Array(ReadOnlySpan&lt;byte&gt;, bool)</a>
+    </div>
+    <div>
+      <a class="xref" href="../Fp/Fp.Processor.html#Fp_Processor_SetU64Array_System_Span_System_Byte__System_ReadOnlySpan_System_UInt64__System_Boolean_">Processor.SetU64Array(Span&lt;byte&gt;, ReadOnlySpan&lt;ulong&gt;, bool)</a>
+    </div>
+    <div>
+      <a class="xref" href="../Fp/Fp.Processor.html#Fp_Processor_GetTArray__1_System_Span_System_Byte__">Processor.GetTArray&lt;T&gt;(Span&lt;byte&gt;)</a>
+    </div>
+    <div>
+      <a class="xref" href="../Fp/Fp.Processor.html#Fp_Processor_GetTArray__1_System_ReadOnlySpan_System_Byte__">Processor.GetTArray&lt;T&gt;(ReadOnlySpan&lt;byte&gt;)</a>
+    </div>
+    <div>
+      <a class="xref" href="../Fp/Fp.Processor.html#Fp_Processor_SetTArray__1_System_Span_System_Byte__System_ReadOnlySpan___0__">Processor.SetTArray&lt;T&gt;(Span&lt;byte&gt;, ReadOnlySpan&lt;T&gt;)</a>
+    </div>
+    <div>
+      <a class="xref" href="../Fp/Fp.Processor.html#Fp_Processor_Ascii_System_String_System_Byte___">Processor.Ascii(string, byte[])</a>
+    </div>
+    <div>
+      <a class="xref" href="../Fp/Fp.Processor.html#Fp_Processor_ReadUtf8String_System_IO_Stream_System_Int32__System_Int32__System_Int32_System_Boolean_">Processor.ReadUtf8String(Stream, out int, out int, int, bool)</a>
+    </div>
+    <div>
+      <a class="xref" href="../Fp/Fp.Processor.html#Fp_Processor_ReadUtf8StringFromOffset_System_IO_Stream_System_Int64_System_Int32__System_Int32__System_Int32_System_Boolean_">Processor.ReadUtf8StringFromOffset(Stream, long, out int, out int, int, bool)</a>
+    </div>
+    <div>
+      <a class="xref" href="../Fp/Fp.Processor.html#Fp_Processor_ReadUtf8String_System_Int32__System_Int32__System_Int32_System_Boolean_">Processor.ReadUtf8String(out int, out int, int, bool)</a>
+    </div>
+    <div>
+      <a class="xref" href="../Fp/Fp.Processor.html#Fp_Processor_ReadUtf8StringFromOffset_System_Int64_System_Int32__System_Int32__System_Int32_System_Boolean_">Processor.ReadUtf8StringFromOffset(long, out int, out int, int, bool)</a>
+    </div>
+    <div>
+      <a class="xref" href="../Fp/Fp.Processor.html#Fp_Processor_ReadUtf8String_System_ReadOnlySpan_System_Byte__System_Int32__System_Int32__System_Int32_">Processor.ReadUtf8String(ReadOnlySpan&lt;byte&gt;, out int, out int, int)</a>
+    </div>
+    <div>
+      <a class="xref" href="../Fp/Fp.Processor.html#Fp_Processor_ReadUtf16String_System_IO_Stream_System_Int32__System_Int32__System_Int32_System_Boolean_">Processor.ReadUtf16String(Stream, out int, out int, int, bool)</a>
+    </div>
+    <div>
+      <a class="xref" href="../Fp/Fp.Processor.html#Fp_Processor_ReadUtf16StringFromOffset_System_IO_Stream_System_Int64_System_Int32__System_Int32__System_Int32_System_Boolean_">Processor.ReadUtf16StringFromOffset(Stream, long, out int, out int, int, bool)</a>
+    </div>
+    <div>
+      <a class="xref" href="../Fp/Fp.Processor.html#Fp_Processor_ReadUtf16String_System_Int32__System_Int32__System_Int32_System_Boolean_">Processor.ReadUtf16String(out int, out int, int, bool)</a>
+    </div>
+    <div>
+      <a class="xref" href="../Fp/Fp.Processor.html#Fp_Processor_ReadUtf16StringFromOffset_System_Int64_System_Int32__System_Int32__System_Int32_System_Boolean_">Processor.ReadUtf16StringFromOffset(long, out int, out int, int, bool)</a>
+    </div>
+    <div>
+      <a class="xref" href="../Fp/Fp.Processor.html#Fp_Processor_ReadUtf16String_System_ReadOnlySpan_System_Byte__System_Int32__System_Int32__System_Int32_">Processor.ReadUtf16String(ReadOnlySpan&lt;byte&gt;, out int, out int, int)</a>
+    </div>
+    <div>
+      <a class="xref" href="../Fp/Fp.Processor.html#Fp_Processor_GetUtf8Length_System_String_System_Boolean_">Processor.GetUtf8Length(string, bool)</a>
+    </div>
+    <div>
+      <a class="xref" href="../Fp/Fp.Processor.html#Fp_Processor_WriteUtf8String_System_String_System_Boolean_System_IO_Stream_System_Nullable_System_Int64__">Processor.WriteUtf8String(string, bool, Stream, long?)</a>
+    </div>
+    <div>
+      <a class="xref" href="../Fp/Fp.Processor.html#Fp_Processor_GetUtf16Length_System_String_System_Boolean_System_Boolean_">Processor.GetUtf16Length(string, bool, bool)</a>
+    </div>
+    <div>
+      <a class="xref" href="../Fp/Fp.Processor.html#Fp_Processor_WriteUtf16String_System_String_System_Boolean_System_Boolean_System_Boolean_System_IO_Stream_System_Nullable_System_Int64__">Processor.WriteUtf16String(string, bool, bool, bool, Stream, long?)</a>
+    </div>
+    <div>
+      <a class="xref" href="../Fp/Fp.Processor.html#Fp_Processor_Text_Fp_FpPath_System_String_">Processor.Text(FpPath, string)</a>
+    </div>
+    <div>
+      <a class="xref" href="../Fp/Fp.Processor.html#Fp_Processor_Text_System_String_System_String_">Processor.Text(string, string)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)">object.Equals(object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)">object.Equals(object, object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.gethashcode">object.GetHashCode()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.gettype">object.GetType()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone">object.MemberwiseClone()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.referenceequals">object.ReferenceEquals(object, object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.tostring">object.ToString()</a>
+    </div>
+  </dd></dl>
+
+
+
+
+
+
+  <h2 class="section" id="methods">Methods
+</h2>
+
+
+  <a id="Fp_Fs_FsFormatSingleProcessor_Run_" data-uid="Fp.Fs.FsFormatSingleProcessor.Run*"></a>
+
+  <h3 id="Fp_Fs_FsFormatSingleProcessor_Run__1_System_Collections_Generic_IList_System_String__Fp_FileProcessorInfo_" data-uid="Fp.Fs.FsFormatSingleProcessor.Run``1(System.Collections.Generic.IList{System.String},Fp.FileProcessorInfo)">
+  Run&lt;T&gt;(IList&lt;string&gt;?, FileProcessorInfo?)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/collectioneering/Fp/blob/main/src/Fp.Fs/FsFormatSingleProcessor.cs/#L14"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Processes using segmented function.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static void Run&lt;T&gt;(IList&lt;string&gt;? args, FileProcessorInfo? info = null) where T : FormatSingleProcessor, new()</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>args</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.ilist-1">IList</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a>&gt;</dt>
+    <dd><p>Arguments. If null, only register processor.</p>
+</dd>
+    <dt><code>info</code> <a class="xref" href="../Fp/Fp.FileProcessorInfo.html">FileProcessorInfo</a></dt>
+    <dd><p>Processor info.</p>
+</dd>
+  </dl>
+
+
+  <h4 class="section">Type Parameters</h4>
+  <dl class="parameters">
+    <dt><code>T</code></dt>
+    <dd><p>Processor type.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <a id="Fp_Fs_FsFormatSingleProcessor_Run_" data-uid="Fp.Fs.FsFormatSingleProcessor.Run*"></a>
+
+  <h3 id="Fp_Fs_FsFormatSingleProcessor_Run__1_System_Collections_Generic_IList_System_String__System_String_System_String_System_String___" data-uid="Fp.Fs.FsFormatSingleProcessor.Run``1(System.Collections.Generic.IList{System.String},System.String,System.String,System.String[])">
+  Run&lt;T&gt;(IList&lt;string&gt;?, string, string, params string?[])
+  <a class="header-action link-secondary" title="View source" href="https://github.com/collectioneering/Fp/blob/main/src/Fp.Fs/FsFormatSingleProcessor.cs/#L25"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Processes using segmented function.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static void Run&lt;T&gt;(IList&lt;string&gt;? args, string name, string description, params string?[] extensions) where T : FormatSingleProcessor, new()</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>args</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.ilist-1">IList</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a>&gt;</dt>
+    <dd><p>Arguments. If null, only register processor.</p>
+</dd>
+    <dt><code>name</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd><p>Processor name.</p>
+</dd>
+    <dt><code>description</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd><p>Processor description.</p>
+</dd>
+    <dt><code>extensions</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a>[]</dt>
+    <dd><p>Processor extensions.</p>
+</dd>
+  </dl>
+
+
+  <h4 class="section">Type Parameters</h4>
+  <dl class="parameters">
+    <dt><code>T</code></dt>
+    <dd><p>Processor type.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+</article>
+
+        <div class="contribution d-print-none">
+          <a href="https://github.com/collectioneering/Fp/blob/main/src/Fp.Fs/FsFormatSingleProcessor.cs/#L6" class="edit-link">Edit this page</a>
+        </div>
+
+
+      </div>
+
+      <div class="affix">
+        <nav id="affix"></nav>
+      </div>
+    </main>
+
+
+    <footer class="border-top text-secondary">
+      <div class="container-xxl">
+        <div class="flex-fill">
+          <span>Made with <a href="https://dotnet.github.io/docfx">docfx</a></span>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

@@ -1,0 +1,761 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+      <title>Class Coordinator </title>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="title" content="Class Coordinator ">
+      
+      <meta name="description" content="Execution manager.">
+      <link rel="icon" href="../../favicon.ico">
+      <link rel="stylesheet" href="../../public/docfx.min.css">
+      <link rel="stylesheet" href="../../public/main.css">
+      <meta name="docfx:navrel" content="../../toc.html">
+      <meta name="docfx:tocrel" content="toc.html">
+      
+      
+      
+      
+      <meta name="docfx:docurl" content="https://github.com/collectioneering/Fp/new/main/apiSpec/new?filename=Fp_Fs_Coordinator.md&amp;value=---%0Auid%3A%20Fp.Fs.Coordinator%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">
+      <meta name="loc:inThisArticle" content="In this article">
+      <meta name="loc:searchResultsCount" content="{count} results for &quot;{query}&quot;">
+      <meta name="loc:searchNoResults" content="No results for &quot;{query}&quot;">
+      <meta name="loc:tocFilter" content="Filter by title">
+      <meta name="loc:nextArticle" content="Next">
+      <meta name="loc:prevArticle" content="Previous">
+      <meta name="loc:themeLight" content="Light">
+      <meta name="loc:themeDark" content="Dark">
+      <meta name="loc:themeAuto" content="Auto">
+      <meta name="loc:changeTheme" content="Change theme">
+      <meta name="loc:copy" content="Copy">
+      <meta name="loc:downloadPdf" content="Download PDF">
+
+      <script type="module" src="./../../public/docfx.min.js"></script>
+
+      <script>
+        const theme = localStorage.getItem('theme') || 'auto'
+        document.documentElement.setAttribute('data-bs-theme', theme === 'auto' ? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light') : theme)
+      </script>
+
+  </head>
+
+  <body class="tex2jax_ignore" data-layout="" data-yaml-mime="ManagedReference">
+    <header class="bg-body border-bottom">
+      <nav id="autocollapse" class="navbar navbar-expand-md" role="navigation">
+        <div class="container-xxl flex-nowrap">
+          <a class="navbar-brand" href="../../index.html">
+            <img id="logo" class="svg" src="../../icon.png" alt="">
+            
+          </a>
+          <button class="btn btn-lg d-md-none border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navpanel" aria-controls="navpanel" aria-expanded="false" aria-label="Toggle navigation">
+            <i class="bi bi-three-dots"></i>
+          </button>
+          <div class="collapse navbar-collapse" id="navpanel">
+            <div id="navbar">
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main class="container-xxl">
+      <div class="toc-offcanvas">
+        <div class="offcanvas-md offcanvas-start" tabindex="-1" id="tocOffcanvas" aria-labelledby="tocOffcanvasLabel">
+          <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="tocOffcanvasLabel">Table of Contents</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" data-bs-target="#tocOffcanvas" aria-label="Close"></button>
+          </div>
+          <div class="offcanvas-body">
+            <nav class="toc" id="toc"></nav>
+          </div>
+        </div>
+      </div>
+
+      <div class="content">
+        <div class="actionbar">
+          <button class="btn btn-lg border-0 d-md-none" type="button" data-bs-toggle="offcanvas" data-bs-target="#tocOffcanvas" aria-controls="tocOffcanvas" aria-expanded="false" aria-label="Show table of contents">
+            <i class="bi bi-list"></i>
+          </button>
+
+          <nav id="breadcrumb"></nav>
+        </div>
+
+        <article data-uid="Fp.Fs.Coordinator">
+
+
+
+  <h1 id="Fp_Fs_Coordinator" data-uid="Fp.Fs.Coordinator" class="text-break">
+Class Coordinator  <a class="header-action link-secondary" title="View source" href="https://github.com/collectioneering/Fp/blob/main/src/Fp.Fs/Coordinator.cs/#L14"><i class="bi bi-code-slash"></i></a>
+  </h1>
+
+  <div class="facts text-secondary">
+    <dl><dt>Namespace</dt><dd><a class="xref" href="Fp.html">Fp</a>.<a class="xref" href="Fp.Fs.html">Fs</a></dd></dl>
+  <dl><dt>Assembly</dt><dd>Fp.Fs.dll</dd></dl>
+  </div>
+
+  <div class="markdown summary"><p>Execution manager.</p>
+</div>
+  <div class="markdown conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static class Coordinator</code></pre>
+  </div>
+
+
+
+
+  <dl class="typelist inheritance">
+    <dt>Inheritance</dt>
+    <dd>
+      <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a></div>
+      <div><span class="xref">Coordinator</span></div>
+    </dd>
+  </dl>
+
+
+
+  <dl class="typelist inheritedMembers">
+    <dt>Inherited Members</dt>
+    <dd>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)">object.Equals(object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)">object.Equals(object, object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.gethashcode">object.GetHashCode()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.gettype">object.GetType()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone">object.MemberwiseClone()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.referenceequals">object.ReferenceEquals(object, object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.tostring">object.ToString()</a>
+    </div>
+  </dd></dl>
+
+
+
+
+
+
+  <h2 class="section" id="fields">Fields
+</h2>
+
+
+
+  <h3 id="Fp_Fs_Coordinator_DefaultOutputFolderName" data-uid="Fp.Fs.Coordinator.DefaultOutputFolderName">
+  DefaultOutputFolderName
+  <a class="header-action link-secondary" title="View source" href="https://github.com/collectioneering/Fp/blob/main/src/Fp.Fs/Coordinator.cs/#L21"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Default output folder name.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public const string DefaultOutputFolderName = &quot;fp_output&quot;</code></pre>
+  </div>
+
+
+
+
+  <h4 class="section">Field Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+  <h2 class="section" id="properties">Properties
+</h2>
+
+
+  <a id="Fp_Fs_Coordinator_DefaultCurrentExecutableName_" data-uid="Fp.Fs.Coordinator.DefaultCurrentExecutableName*"></a>
+
+  <h3 id="Fp_Fs_Coordinator_DefaultCurrentExecutableName" data-uid="Fp.Fs.Coordinator.DefaultCurrentExecutableName">
+  DefaultCurrentExecutableName
+  <a class="header-action link-secondary" title="View source" href="https://github.com/collectioneering/Fp/blob/main/src/Fp.Fs/Coordinator.cs/#L30"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Default name for current executable (argv[0] or generic name).</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static string DefaultCurrentExecutableName { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <h2 class="section" id="methods">Methods
+</h2>
+
+
+  <a id="Fp_Fs_Coordinator_CliGetConfiguration_" data-uid="Fp.Fs.Coordinator.CliGetConfiguration*"></a>
+
+  <h3 id="Fp_Fs_Coordinator_CliGetConfiguration_System_Collections_Generic_IList_System_String__System_Collections_Generic_IReadOnlyList_System_String__Fp_ILogWriter_System_Boolean_Fp_ProcessorConfiguration__Fp_Fs_Coordinator_ExecutionSettings__System_Collections_Generic_List_Fp_Fs_Coordinator_FpInput___" data-uid="Fp.Fs.Coordinator.CliGetConfiguration(System.Collections.Generic.IList{System.String},System.Collections.Generic.IReadOnlyList{System.String},Fp.ILogWriter,System.Boolean,Fp.ProcessorConfiguration@,Fp.Fs.Coordinator.ExecutionSettings@,System.Collections.Generic.List{Fp.Fs.Coordinator.FpInput}@)">
+  CliGetConfiguration(IList&lt;string&gt;, IReadOnlyList&lt;string&gt;, ILogWriter?, bool, out ProcessorConfiguration?, out ExecutionSettings?, out List&lt;FpInput&gt;)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/collectioneering/Fp/blob/main/src/Fp.Fs/Coordinator.cs/#L65"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Gets processor configuration from cli.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static bool CliGetConfiguration(IList&lt;string&gt; exeName, IReadOnlyList&lt;string&gt; args, ILogWriter? logWriter, bool enableParallel, out ProcessorConfiguration? configuration, out Coordinator.ExecutionSettings? executionSettings, out List&lt;Coordinator.FpInput&gt; inputs)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>exeName</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.ilist-1">IList</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a>&gt;</dt>
+    <dd><p>Executable name.</p>
+</dd>
+    <dt><code>args</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.ireadonlylist-1">IReadOnlyList</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a>&gt;</dt>
+    <dd><p>Command-line arguments.</p>
+</dd>
+    <dt><code>logWriter</code> <a class="xref" href="../Fp/Fp.ILogWriter.html">ILogWriter</a></dt>
+    <dd><p>Log receiver for errors.</p>
+</dd>
+    <dt><code>enableParallel</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd><p>If true, enable async options.</p>
+</dd>
+    <dt><code>configuration</code> <a class="xref" href="../Fp/Fp.ProcessorConfiguration.html">ProcessorConfiguration</a></dt>
+    <dd><p>Generated configuration.</p>
+</dd>
+    <dt><code>executionSettings</code> <a class="xref" href="Fp.Fs.Coordinator.html">Coordinator</a>.<a class="xref" href="Fp.Fs.Coordinator.ExecutionSettings.html">ExecutionSettings</a></dt>
+    <dd><p>Generated execution settings.</p>
+</dd>
+    <dt><code>inputs</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1">List</a>&lt;<a class="xref" href="Fp.Fs.Coordinator.html">Coordinator</a>.<a class="xref" href="Fp.Fs.Coordinator.FpInput.html">FpInput</a>&gt;</dt>
+    <dd><p>Generated input sources.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd><p>True if parsing succeeded.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Fp_Fs_Coordinator_CliRunFilesystem_" data-uid="Fp.Fs.Coordinator.CliRunFilesystem*"></a>
+
+  <h3 id="Fp_Fs_Coordinator_CliRunFilesystem_System_String___System_Collections_Generic_IList_System_String__Fp_ILogWriter_Fp_Fs_FileSystemSource_Fp_Fs_FsProcessorFactory___" data-uid="Fp.Fs.Coordinator.CliRunFilesystem(System.String[],System.Collections.Generic.IList{System.String},Fp.ILogWriter,Fp.Fs.FileSystemSource,Fp.Fs.FsProcessorFactory[])">
+  CliRunFilesystem(string[], IList&lt;string&gt;?, ILogWriter?, FileSystemSource?, params FsProcessorFactory[])
+  <a class="header-action link-secondary" title="View source" href="https://github.com/collectioneering/Fp/blob/main/src/Fp.Fs/Coordinator.cs/#L235"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Processes filesystem tree using command-line argument inputs.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static void CliRunFilesystem(string[] args, IList&lt;string&gt;? exeName, ILogWriter? logWriter, FileSystemSource? fileSystem, params FsProcessorFactory[] processorFactories)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>args</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a>[]</dt>
+    <dd><p>Command-line arguments.</p>
+</dd>
+    <dt><code>exeName</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.ilist-1">IList</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a>&gt;</dt>
+    <dd><p>Executable name.</p>
+</dd>
+    <dt><code>logWriter</code> <a class="xref" href="../Fp/Fp.ILogWriter.html">ILogWriter</a></dt>
+    <dd><p>Log output target.</p>
+</dd>
+    <dt><code>fileSystem</code> <a class="xref" href="Fp.Fs.FileSystemSource.html">FileSystemSource</a></dt>
+    <dd><p>Filesystem to read from.</p>
+</dd>
+    <dt><code>processorFactories</code> <a class="xref" href="Fp.Fs.FsProcessorFactory.html">FsProcessorFactory</a>[]</dt>
+    <dd><p>Functions that create new processor instances.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+  <h4 class="section">Exceptions</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.argumentexception">ArgumentException</a></dt>
+    <dd><p>Thrown if an invalid number of arguments is provided.</p>
+</dd>
+  </dl>
+
+
+
+  <a id="Fp_Fs_Coordinator_CliRunFilesystemAsync_" data-uid="Fp.Fs.Coordinator.CliRunFilesystemAsync*"></a>
+
+  <h3 id="Fp_Fs_Coordinator_CliRunFilesystemAsync_System_String___System_Collections_Generic_IList_System_String__Fp_ILogWriter_Fp_Fs_FileSystemSource_Fp_Fs_FsProcessorFactory___" data-uid="Fp.Fs.Coordinator.CliRunFilesystemAsync(System.String[],System.Collections.Generic.IList{System.String},Fp.ILogWriter,Fp.Fs.FileSystemSource,Fp.Fs.FsProcessorFactory[])">
+  CliRunFilesystemAsync(string[], IList&lt;string&gt;?, ILogWriter?, FileSystemSource?, params FsProcessorFactory[])
+  <a class="header-action link-secondary" title="View source" href="https://github.com/collectioneering/Fp/blob/main/src/Fp.Fs/Coordinator.cs/#L277"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Processes filesystem tree using command-line argument inputs.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static Task CliRunFilesystemAsync(string[] args, IList&lt;string&gt;? exeName, ILogWriter? logWriter, FileSystemSource? fileSystem, params FsProcessorFactory[] processorFactories)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>args</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a>[]</dt>
+    <dd><p>Command-line arguments.</p>
+</dd>
+    <dt><code>exeName</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.ilist-1">IList</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a>&gt;</dt>
+    <dd><p>Executable name.</p>
+</dd>
+    <dt><code>logWriter</code> <a class="xref" href="../Fp/Fp.ILogWriter.html">ILogWriter</a></dt>
+    <dd><p>Log output target.</p>
+</dd>
+    <dt><code>fileSystem</code> <a class="xref" href="Fp.Fs.FileSystemSource.html">FileSystemSource</a></dt>
+    <dd><p>Filesystem to read from.</p>
+</dd>
+    <dt><code>processorFactories</code> <a class="xref" href="Fp.Fs.FsProcessorFactory.html">FsProcessorFactory</a>[]</dt>
+    <dd><p>Functions that create new processor instances.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.tasks.task">Task</a></dt>
+    <dd><p>A task that will execute recursively.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <h4 class="section">Exceptions</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.argumentexception">ArgumentException</a></dt>
+    <dd><p>Thrown if an invalid number of arguments is provided.</p>
+</dd>
+  </dl>
+
+
+
+  <a id="Fp_Fs_Coordinator_CliRunFilesystemAsync_" data-uid="Fp.Fs.Coordinator.CliRunFilesystemAsync*"></a>
+
+  <h3 id="Fp_Fs_Coordinator_CliRunFilesystemAsync__1_System_String___System_Collections_Generic_IList_System_String__Fp_ILogWriter_Fp_Fs_FileSystemSource_" data-uid="Fp.Fs.Coordinator.CliRunFilesystemAsync``1(System.String[],System.Collections.Generic.IList{System.String},Fp.ILogWriter,Fp.Fs.FileSystemSource)">
+  CliRunFilesystemAsync&lt;T&gt;(string[], IList&lt;string&gt;?, ILogWriter?, FileSystemSource?)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/collectioneering/Fp/blob/main/src/Fp.Fs/Coordinator.cs/#L263"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Processes filesystem tree using command-line argument inputs.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static Task CliRunFilesystemAsync&lt;T&gt;(string[] args, IList&lt;string&gt;? exeName = null, ILogWriter? logWriter = null, FileSystemSource? fileSystem = null) where T : FsProcessor, new()</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>args</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a>[]</dt>
+    <dd><p>Command-line arguments.</p>
+</dd>
+    <dt><code>exeName</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.ilist-1">IList</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a>&gt;</dt>
+    <dd><p>Executable name.</p>
+</dd>
+    <dt><code>logWriter</code> <a class="xref" href="../Fp/Fp.ILogWriter.html">ILogWriter</a></dt>
+    <dd><p>Log output target.</p>
+</dd>
+    <dt><code>fileSystem</code> <a class="xref" href="Fp.Fs.FileSystemSource.html">FileSystemSource</a></dt>
+    <dd><p>Filesystem to read from.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.tasks.task">Task</a></dt>
+    <dd><p>A task that will execute recursively.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Type Parameters</h4>
+  <dl class="parameters">
+    <dt><code>T</code></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+  <h4 class="section">Exceptions</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.argumentexception">ArgumentException</a></dt>
+    <dd><p>Thrown if an invalid number of arguments is provided.</p>
+</dd>
+  </dl>
+
+
+
+  <a id="Fp_Fs_Coordinator_CliRunFilesystem_" data-uid="Fp.Fs.Coordinator.CliRunFilesystem*"></a>
+
+  <h3 id="Fp_Fs_Coordinator_CliRunFilesystem__1_System_String___System_Collections_Generic_IList_System_String__Fp_ILogWriter_Fp_Fs_FileSystemSource_" data-uid="Fp.Fs.Coordinator.CliRunFilesystem``1(System.String[],System.Collections.Generic.IList{System.String},Fp.ILogWriter,Fp.Fs.FileSystemSource)">
+  CliRunFilesystem&lt;T&gt;(string[], IList&lt;string&gt;?, ILogWriter?, FileSystemSource?)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/collectioneering/Fp/blob/main/src/Fp.Fs/Coordinator.cs/#L221"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Processes filesystem tree using command-line argument inputs.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static void CliRunFilesystem&lt;T&gt;(string[] args, IList&lt;string&gt;? exeName = null, ILogWriter? logWriter = null, FileSystemSource? fileSystem = null) where T : FsProcessor, new()</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>args</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a>[]</dt>
+    <dd><p>Command-line argument.s.</p>
+</dd>
+    <dt><code>exeName</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.ilist-1">IList</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a>&gt;</dt>
+    <dd><p>Executable name.</p>
+</dd>
+    <dt><code>logWriter</code> <a class="xref" href="../Fp/Fp.ILogWriter.html">ILogWriter</a></dt>
+    <dd><p>Log output target.</p>
+</dd>
+    <dt><code>fileSystem</code> <a class="xref" href="Fp.Fs.FileSystemSource.html">FileSystemSource</a></dt>
+    <dd><p>Filesystem to read from.</p>
+</dd>
+  </dl>
+
+
+  <h4 class="section">Type Parameters</h4>
+  <dl class="parameters">
+    <dt><code>T</code></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+  <h4 class="section">Exceptions</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.argumentexception">ArgumentException</a></dt>
+    <dd><p>Thrown if an invalid number of arguments is provided.</p>
+</dd>
+  </dl>
+
+
+
+  <a id="Fp_Fs_Coordinator_GuessExe_" data-uid="Fp.Fs.Coordinator.GuessExe*"></a>
+
+  <h3 id="Fp_Fs_Coordinator_GuessExe_System_Collections_Generic_IList_System_String__System_Boolean_" data-uid="Fp.Fs.Coordinator.GuessExe(System.Collections.Generic.IList{System.String},System.Boolean)">
+  GuessExe(IList&lt;string&gt;?, bool)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/collectioneering/Fp/blob/main/src/Fp.Fs/Coordinator.cs/#L307"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Guesses executable string (might be multiple components) based on args.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static IList&lt;string&gt; GuessExe(IList&lt;string&gt;? args, bool prependDotNetIfDll = true)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>args</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.ilist-1">IList</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a>&gt;</dt>
+    <dd><p>Arguments to check.</p>
+</dd>
+    <dt><code>prependDotNetIfDll</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd><p>If the first element ends in .dll, prepend dotnet as an element.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.ilist-1">IList</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a>&gt;</dt>
+    <dd><p>Executable command sequence.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+  <h4 class="section" id="Fp_Fs_Coordinator_GuessExe_System_Collections_Generic_IList_System_String__System_Boolean__remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><p>Just matches up the tail and sends the rest, fallback on argv[0].</p>
+</div>
+
+
+
+
+  <a id="Fp_Fs_Coordinator_Recurse_" data-uid="Fp.Fs.Coordinator.Recurse*"></a>
+
+  <h3 id="Fp_Fs_Coordinator_Recurse_System_Collections_Generic_IReadOnlyList_Fp_Fs_Coordinator_FpInput__Fp_Fs_Coordinator_ExecutionSource_Fp_Fs_FsProcessorFactory___" data-uid="Fp.Fs.Coordinator.Recurse(System.Collections.Generic.IReadOnlyList{Fp.Fs.Coordinator.FpInput},Fp.Fs.Coordinator.ExecutionSource,Fp.Fs.FsProcessorFactory[])">
+  Recurse(IReadOnlyList&lt;FpInput&gt;, ExecutionSource, params FsProcessorFactory[])
+  <a class="header-action link-secondary" title="View source" href="https://github.com/collectioneering/Fp/blob/main/src/Fp.Fs/Coordinator.cs/#L356"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Processes filesystem tree.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static void Recurse(IReadOnlyList&lt;Coordinator.FpInput&gt; inputs, Coordinator.ExecutionSource src, params FsProcessorFactory[] processorFactories)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>inputs</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.ireadonlylist-1">IReadOnlyList</a>&lt;<a class="xref" href="Fp.Fs.Coordinator.html">Coordinator</a>.<a class="xref" href="Fp.Fs.Coordinator.FpInput.html">FpInput</a>&gt;</dt>
+    <dd><p>Input sources.</p>
+</dd>
+    <dt><code>src</code> <a class="xref" href="Fp.Fs.Coordinator.html">Coordinator</a>.<a class="xref" href="Fp.Fs.Coordinator.ExecutionSource.html">ExecutionSource</a></dt>
+    <dd><p>Execution source.</p>
+</dd>
+    <dt><code>processorFactories</code> <a class="xref" href="Fp.Fs.FsProcessorFactory.html">FsProcessorFactory</a>[]</dt>
+    <dd><p>Functions that create new processor instances.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+  <h4 class="section">Exceptions</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.argumentexception">ArgumentException</a></dt>
+    <dd><p>Thrown if <code class="paramref">processorFactories</code> is empty or <code class="paramref">src</code>.<a class="xref" href="Fp.Fs.Coordinator.ExecutionSource.html#Fp_Fs_Coordinator_ExecutionSource_Exec">Exec</a>.<a class="xref" href="Fp.Fs.Coordinator.ExecutionSettings.html#Fp_Fs_Coordinator_ExecutionSettings_Parallel">Parallel</a> is less than 1.</p>
+</dd>
+  </dl>
+
+
+
+  <a id="Fp_Fs_Coordinator_RecurseAsync_" data-uid="Fp.Fs.Coordinator.RecurseAsync*"></a>
+
+  <h3 id="Fp_Fs_Coordinator_RecurseAsync_System_Collections_Generic_IReadOnlyList_Fp_Fs_Coordinator_FpInput__Fp_Fs_Coordinator_ExecutionSource_Fp_Fs_FsProcessorFactory___" data-uid="Fp.Fs.Coordinator.RecurseAsync(System.Collections.Generic.IReadOnlyList{Fp.Fs.Coordinator.FpInput},Fp.Fs.Coordinator.ExecutionSource,Fp.Fs.FsProcessorFactory[])">
+  RecurseAsync(IReadOnlyList&lt;FpInput&gt;, ExecutionSource, params FsProcessorFactory[])
+  <a class="header-action link-secondary" title="View source" href="https://github.com/collectioneering/Fp/blob/main/src/Fp.Fs/Coordinator.cs/#L327"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Processes filesystem tree asynchronously.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static Task RecurseAsync(IReadOnlyList&lt;Coordinator.FpInput&gt; inputs, Coordinator.ExecutionSource src, params FsProcessorFactory[] processorFactories)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>inputs</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.ireadonlylist-1">IReadOnlyList</a>&lt;<a class="xref" href="Fp.Fs.Coordinator.html">Coordinator</a>.<a class="xref" href="Fp.Fs.Coordinator.FpInput.html">FpInput</a>&gt;</dt>
+    <dd><p>Input sources.</p>
+</dd>
+    <dt><code>src</code> <a class="xref" href="Fp.Fs.Coordinator.html">Coordinator</a>.<a class="xref" href="Fp.Fs.Coordinator.ExecutionSource.html">ExecutionSource</a></dt>
+    <dd><p>Execution source.</p>
+</dd>
+    <dt><code>processorFactories</code> <a class="xref" href="Fp.Fs.FsProcessorFactory.html">FsProcessorFactory</a>[]</dt>
+    <dd><p>Functions that create new processor instances.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.tasks.task">Task</a></dt>
+    <dd><p>Task that will execute recursively.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <h4 class="section">Exceptions</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.argumentexception">ArgumentException</a></dt>
+    <dd><p>Thrown if <code class="paramref">processorFactories</code> is empty or <code class="paramref">src</code>.<a class="xref" href="Fp.Fs.Coordinator.ExecutionSource.html#Fp_Fs_Coordinator_ExecutionSource_Exec">Exec</a>.<a class="xref" href="Fp.Fs.Coordinator.ExecutionSettings.html#Fp_Fs_Coordinator_ExecutionSettings_Parallel">Parallel</a> is less than 1.</p>
+</dd>
+  </dl>
+
+
+
+  <a id="Fp_Fs_Coordinator_Run_" data-uid="Fp.Fs.Coordinator.Run*"></a>
+
+  <h3 id="Fp_Fs_Coordinator_Run_Fp_Fs_FsProcessor_Fp_Fs_Coordinator_FpTarget_Fp_Fs_Coordinator_ExecutionSource_System_Int32_" data-uid="Fp.Fs.Coordinator.Run(Fp.Fs.FsProcessor,Fp.Fs.Coordinator.FpTarget,Fp.Fs.Coordinator.ExecutionSource,System.Int32)">
+  Run(FsProcessor, FpTarget, ExecutionSource, int)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/collectioneering/Fp/blob/main/src/Fp.Fs/Coordinator.cs/#L384"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Operates on a file.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static ProcessResult Run(FsProcessor processor, Coordinator.FpTarget source, Coordinator.ExecutionSource src, int workerId)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>processor</code> <a class="xref" href="Fp.Fs.FsProcessor.html">FsProcessor</a></dt>
+    <dd><p>Processor to operate with.</p>
+</dd>
+    <dt><code>source</code> <a class="xref" href="Fp.Fs.Coordinator.html">Coordinator</a>.<a class="xref" href="Fp.Fs.Coordinator.FpTarget.html">FpTarget</a></dt>
+    <dd><p>Source info.</p>
+</dd>
+    <dt><code>src</code> <a class="xref" href="Fp.Fs.Coordinator.html">Coordinator</a>.<a class="xref" href="Fp.Fs.Coordinator.ExecutionSource.html">ExecutionSource</a></dt>
+    <dd><p>Execution source.</p>
+</dd>
+    <dt><code>workerId</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd><p>Worker ID.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="../Fp/Fp.ProcessResult.html">ProcessResult</a></dt>
+    <dd><p>Processing result.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Fp_Fs_Coordinator_RunSegmented_" data-uid="Fp.Fs.Coordinator.RunSegmented*"></a>
+
+  <h3 id="Fp_Fs_Coordinator_RunSegmented_Fp_Fs_FsProcessor_System_ValueTuple_System_String_System_String__Fp_Fs_Coordinator_ExecutionSource_System_Int32_" data-uid="Fp.Fs.Coordinator.RunSegmented(Fp.Fs.FsProcessor,System.ValueTuple{System.String,System.String},Fp.Fs.Coordinator.ExecutionSource,System.Int32)">
+  RunSegmented(FsProcessor, (string inputRoot, string file), ExecutionSource, int)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/collectioneering/Fp/blob/main/src/Fp.Fs/Coordinator.cs/#L426"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Operate on a file using segmented operation.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static IEnumerable&lt;Data&gt; RunSegmented(FsProcessor processor, (string inputRoot, string file) input, Coordinator.ExecutionSource src, int workerId)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>processor</code> <a class="xref" href="Fp.Fs.FsProcessor.html">FsProcessor</a></dt>
+    <dd><p>Processor to operate with.</p>
+</dd>
+    <dt><code>input</code> (<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.valuetuple-system.string,system.string-.inputroot">inputRoot</a>, <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.valuetuple-system.string,system.string-.file">file</a>)</dt>
+    <dd><p>Source info.</p>
+</dd>
+    <dt><code>src</code> <a class="xref" href="Fp.Fs.Coordinator.html">Coordinator</a>.<a class="xref" href="Fp.Fs.Coordinator.ExecutionSource.html">ExecutionSource</a></dt>
+    <dd><p>Execution source.</p>
+</dd>
+    <dt><code>workerId</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd><p>Worker ID.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1">IEnumerable</a>&lt;<a class="xref" href="../Fp/Fp.Data.html">Data</a>&gt;</dt>
+    <dd><p>Processing results.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+</article>
+
+        <div class="contribution d-print-none">
+          <a href="https://github.com/collectioneering/Fp/blob/main/src/Fp.Fs/Coordinator.cs/#L14" class="edit-link">Edit this page</a>
+        </div>
+
+
+      </div>
+
+      <div class="affix">
+        <nav id="affix"></nav>
+      </div>
+    </main>
+
+
+    <footer class="border-top text-secondary">
+      <div class="container-xxl">
+        <div class="flex-fill">
+          <span>Made with <a href="https://dotnet.github.io/docfx">docfx</a></span>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

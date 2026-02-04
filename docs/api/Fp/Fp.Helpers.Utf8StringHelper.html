@@ -1,0 +1,533 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+      <title>Class Utf8StringHelper </title>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="title" content="Class Utf8StringHelper ">
+      
+      <meta name="description" content="UTF-8 string helper.">
+      <link rel="icon" href="../../favicon.ico">
+      <link rel="stylesheet" href="../../public/docfx.min.css">
+      <link rel="stylesheet" href="../../public/main.css">
+      <meta name="docfx:navrel" content="../../toc.html">
+      <meta name="docfx:tocrel" content="toc.html">
+      
+      
+      
+      
+      <meta name="docfx:docurl" content="https://github.com/collectioneering/Fp/new/main/apiSpec/new?filename=Fp_Helpers_Utf8StringHelper.md&amp;value=---%0Auid%3A%20Fp.Helpers.Utf8StringHelper%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">
+      <meta name="loc:inThisArticle" content="In this article">
+      <meta name="loc:searchResultsCount" content="{count} results for &quot;{query}&quot;">
+      <meta name="loc:searchNoResults" content="No results for &quot;{query}&quot;">
+      <meta name="loc:tocFilter" content="Filter by title">
+      <meta name="loc:nextArticle" content="Next">
+      <meta name="loc:prevArticle" content="Previous">
+      <meta name="loc:themeLight" content="Light">
+      <meta name="loc:themeDark" content="Dark">
+      <meta name="loc:themeAuto" content="Auto">
+      <meta name="loc:changeTheme" content="Change theme">
+      <meta name="loc:copy" content="Copy">
+      <meta name="loc:downloadPdf" content="Download PDF">
+
+      <script type="module" src="./../../public/docfx.min.js"></script>
+
+      <script>
+        const theme = localStorage.getItem('theme') || 'auto'
+        document.documentElement.setAttribute('data-bs-theme', theme === 'auto' ? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light') : theme)
+      </script>
+
+  </head>
+
+  <body class="tex2jax_ignore" data-layout="" data-yaml-mime="ManagedReference">
+    <header class="bg-body border-bottom">
+      <nav id="autocollapse" class="navbar navbar-expand-md" role="navigation">
+        <div class="container-xxl flex-nowrap">
+          <a class="navbar-brand" href="../../index.html">
+            <img id="logo" class="svg" src="../../icon.png" alt="">
+            
+          </a>
+          <button class="btn btn-lg d-md-none border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navpanel" aria-controls="navpanel" aria-expanded="false" aria-label="Toggle navigation">
+            <i class="bi bi-three-dots"></i>
+          </button>
+          <div class="collapse navbar-collapse" id="navpanel">
+            <div id="navbar">
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main class="container-xxl">
+      <div class="toc-offcanvas">
+        <div class="offcanvas-md offcanvas-start" tabindex="-1" id="tocOffcanvas" aria-labelledby="tocOffcanvasLabel">
+          <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="tocOffcanvasLabel">Table of Contents</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" data-bs-target="#tocOffcanvas" aria-label="Close"></button>
+          </div>
+          <div class="offcanvas-body">
+            <nav class="toc" id="toc"></nav>
+          </div>
+        </div>
+      </div>
+
+      <div class="content">
+        <div class="actionbar">
+          <button class="btn btn-lg border-0 d-md-none" type="button" data-bs-toggle="offcanvas" data-bs-target="#tocOffcanvas" aria-controls="tocOffcanvas" aria-expanded="false" aria-label="Show table of contents">
+            <i class="bi bi-list"></i>
+          </button>
+
+          <nav id="breadcrumb"></nav>
+        </div>
+
+        <article data-uid="Fp.Helpers.Utf8StringHelper">
+
+
+
+  <h1 id="Fp_Helpers_Utf8StringHelper" data-uid="Fp.Helpers.Utf8StringHelper" class="text-break">
+Class Utf8StringHelper  <a class="header-action link-secondary" title="View source" href="https://github.com/collectioneering/Fp/blob/main/src/Fp/Helpers/StringHelpers.cs/#L232"><i class="bi bi-code-slash"></i></a>
+  </h1>
+
+  <div class="facts text-secondary">
+    <dl><dt>Namespace</dt><dd><a class="xref" href="Fp.html">Fp</a>.<a class="xref" href="Fp.Helpers.html">Helpers</a></dd></dl>
+  <dl><dt>Assembly</dt><dd>Fp.dll</dd></dl>
+  </div>
+
+  <div class="markdown summary"><p>UTF-8 string helper.</p>
+</div>
+  <div class="markdown conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public record Utf8StringHelper : BaseStringHelper, IEquatable&lt;Helper&gt;, IEquatable&lt;BaseStringHelper&gt;, IEquatable&lt;Utf8StringHelper&gt;</code></pre>
+  </div>
+
+
+
+
+  <dl class="typelist inheritance">
+    <dt>Inheritance</dt>
+    <dd>
+      <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a></div>
+      <div><a class="xref" href="Fp.Helpers.Helper.html">Helper</a></div>
+      <div><a class="xref" href="Fp.Helpers.BaseStringHelper.html">BaseStringHelper</a></div>
+      <div><span class="xref">Utf8StringHelper</span></div>
+    </dd>
+  </dl>
+
+  <dl class="typelist implements">
+    <dt>Implements</dt>
+    <dd>
+      <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.iequatable-1">IEquatable</a>&lt;<a class="xref" href="Fp.Helpers.Helper.html">Helper</a>&gt;</div>
+      <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.iequatable-1">IEquatable</a>&lt;<a class="xref" href="Fp.Helpers.BaseStringHelper.html">BaseStringHelper</a>&gt;</div>
+      <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.iequatable-1">IEquatable</a>&lt;<a class="xref" href="Fp.Helpers.Utf8StringHelper.html">Utf8StringHelper</a>&gt;</div>
+    </dd>
+  </dl>
+
+
+  <dl class="typelist inheritedMembers">
+    <dt>Inherited Members</dt>
+    <dd>
+    <div>
+      <a class="xref" href="Fp.Helpers.BaseStringHelper.html#Fp_Helpers_BaseStringHelper_Item_System_Byte___System_Int32_System_Int32_">BaseStringHelper.this[byte[], int, int]</a>
+    </div>
+    <div>
+      <a class="xref" href="Fp.Helpers.BaseStringHelper.html#Fp_Helpers_BaseStringHelper_Item_System_Byte___System_Int32_">BaseStringHelper.this[byte[], int]</a>
+    </div>
+    <div>
+      <a class="xref" href="Fp.Helpers.BaseStringHelper.html#Fp_Helpers_BaseStringHelper_Item_System_Byte___">BaseStringHelper.this[byte[]]</a>
+    </div>
+    <div>
+      <a class="xref" href="Fp.Helpers.BaseStringHelper.html#Fp_Helpers_BaseStringHelper_Item_System_Memory_System_Byte__System_Int32_System_Int32_">BaseStringHelper.this[Memory&lt;byte&gt;, int, int]</a>
+    </div>
+    <div>
+      <a class="xref" href="Fp.Helpers.BaseStringHelper.html#Fp_Helpers_BaseStringHelper_Item_System_Memory_System_Byte__System_Int32_">BaseStringHelper.this[Memory&lt;byte&gt;, int]</a>
+    </div>
+    <div>
+      <a class="xref" href="Fp.Helpers.BaseStringHelper.html#Fp_Helpers_BaseStringHelper_Item_System_Memory_System_Byte__">BaseStringHelper.this[Memory&lt;byte&gt;]</a>
+    </div>
+    <div>
+      <a class="xref" href="Fp.Helpers.BaseStringHelper.html#Fp_Helpers_BaseStringHelper_Item_System_Span_System_Byte__System_Int32_System_Int32_">BaseStringHelper.this[Span&lt;byte&gt;, int, int]</a>
+    </div>
+    <div>
+      <a class="xref" href="Fp.Helpers.BaseStringHelper.html#Fp_Helpers_BaseStringHelper_Item_System_Span_System_Byte__System_Int32_">BaseStringHelper.this[Span&lt;byte&gt;, int]</a>
+    </div>
+    <div>
+      <a class="xref" href="Fp.Helpers.BaseStringHelper.html#Fp_Helpers_BaseStringHelper_Item_System_ReadOnlyMemory_System_Byte__System_Int32_System_Int32_">BaseStringHelper.this[ReadOnlyMemory&lt;byte&gt;, int, int]</a>
+    </div>
+    <div>
+      <a class="xref" href="Fp.Helpers.BaseStringHelper.html#Fp_Helpers_BaseStringHelper_Item_System_ReadOnlyMemory_System_Byte__System_Int32_">BaseStringHelper.this[ReadOnlyMemory&lt;byte&gt;, int]</a>
+    </div>
+    <div>
+      <a class="xref" href="Fp.Helpers.BaseStringHelper.html#Fp_Helpers_BaseStringHelper_Item_System_ReadOnlySpan_System_Byte__System_Int32_">BaseStringHelper.this[ReadOnlySpan&lt;byte&gt;, int]</a>
+    </div>
+    <div>
+      <a class="xref" href="Fp.Helpers.BaseStringHelper.html#Fp_Helpers_BaseStringHelper_Item_System_ReadOnlySpan_System_Byte__">BaseStringHelper.this[ReadOnlySpan&lt;byte&gt;]</a>
+    </div>
+    <div>
+      <a class="xref" href="Fp.Helpers.BaseStringHelper.html#Fp_Helpers_BaseStringHelper_Item_System_Int64_System_Int32_">BaseStringHelper.this[long, int]</a>
+    </div>
+    <div>
+      <a class="xref" href="Fp.Helpers.BaseStringHelper.html#Fp_Helpers_BaseStringHelper_Item_System_Int64_">BaseStringHelper.this[long]</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)">object.Equals(object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)">object.Equals(object, object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.gethashcode">object.GetHashCode()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.gettype">object.GetType()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone">object.MemberwiseClone()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.referenceequals">object.ReferenceEquals(object, object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.tostring">object.ToString()</a>
+    </div>
+  </dd></dl>
+
+  <dl class="typelist extensionMethods">
+    <dt>Extension Methods</dt>
+    <dd>
+  <div>
+      <a class="xref" href="Fp.FpUtil.html#Fp_FpUtil____System_Object_System_String_System_String_System_Int32_">FpUtil.__(object, string, string, int)</a>
+  </div>
+  </dd></dl>
+
+
+
+
+
+  <h2 class="section" id="constructors">Constructors
+</h2>
+
+
+  <a id="Fp_Helpers_Utf8StringHelper__ctor_" data-uid="Fp.Helpers.Utf8StringHelper.#ctor*"></a>
+
+  <h3 id="Fp_Helpers_Utf8StringHelper__ctor_Fp_Processor_" data-uid="Fp.Helpers.Utf8StringHelper.#ctor(Fp.Processor)">
+  Utf8StringHelper(Processor)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/collectioneering/Fp/blob/main/src/Fp/Helpers/StringHelpers.cs/#L232"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>UTF-8 string helper.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Utf8StringHelper(Processor Parent)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>Parent</code> <a class="xref" href="Fp.Processor.html">Processor</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <h2 class="section" id="properties">Properties
+</h2>
+
+
+  <a id="Fp_Helpers_Utf8StringHelper_InputStream_" data-uid="Fp.Helpers.Utf8StringHelper.InputStream*"></a>
+
+  <h3 id="Fp_Helpers_Utf8StringHelper_InputStream" data-uid="Fp.Helpers.Utf8StringHelper.InputStream">
+  InputStream
+  <a class="header-action link-secondary" title="View source" href="https://github.com/collectioneering/Fp/blob/main/src/Fp/Helpers/StringHelpers.cs/#L235"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Current input stream.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override Stream InputStream { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.io.stream">Stream</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="Fp_Helpers_Utf8StringHelper_Item_" data-uid="Fp.Helpers.Utf8StringHelper.Item*"></a>
+
+  <h3 id="Fp_Helpers_Utf8StringHelper_Item_System_Int64_System_IO_Stream_" data-uid="Fp.Helpers.Utf8StringHelper.Item(System.Int64,System.IO.Stream)">
+  this[long, Stream]
+  <a class="header-action link-secondary" title="View source" href="https://github.com/collectioneering/Fp/blob/main/src/Fp/Helpers/StringHelpers.cs/#L260"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Writes data.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override StringData this[long offset, Stream stream] { get; set; }</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>offset</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int64">long</a></dt>
+    <dd><p>Offset (no seeking if -1).</p>
+</dd>
+    <dt><code>stream</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.io.stream">Stream</a></dt>
+    <dd><p>Data source.</p>
+</dd>
+  </dl>
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Fp.Helpers.StringData.html">StringData</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="Fp_Helpers_Utf8StringHelper_Item_" data-uid="Fp.Helpers.Utf8StringHelper.Item*"></a>
+
+  <h3 id="Fp_Helpers_Utf8StringHelper_Item_System_Int64_System_IO_Stream_System_Int32_" data-uid="Fp.Helpers.Utf8StringHelper.Item(System.Int64,System.IO.Stream,System.Int32)">
+  this[long, Stream, int]
+  <a class="header-action link-secondary" title="View source" href="https://github.com/collectioneering/Fp/blob/main/src/Fp/Helpers/StringHelpers.cs/#L253"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Reads data.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override StringData this[long offset, Stream stream, int maxBytes] { get; }</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>offset</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int64">long</a></dt>
+    <dd><p>Offset (no seeking if -1).</p>
+</dd>
+    <dt><code>stream</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.io.stream">Stream</a></dt>
+    <dd><p>Data source.</p>
+</dd>
+    <dt><code>maxBytes</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd><p>Maximum bytes to read.</p>
+</dd>
+  </dl>
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Fp.Helpers.StringData.html">StringData</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="Fp_Helpers_Utf8StringHelper_Item_" data-uid="Fp.Helpers.Utf8StringHelper.Item*"></a>
+
+  <h3 id="Fp_Helpers_Utf8StringHelper_Item_System_ReadOnlySpan_System_Byte__System_Int32_System_Int32_" data-uid="Fp.Helpers.Utf8StringHelper.Item(System.ReadOnlySpan{System.Byte},System.Int32,System.Int32)">
+  this[ReadOnlySpan&lt;byte&gt;, int, int]
+  <a class="header-action link-secondary" title="View source" href="https://github.com/collectioneering/Fp/blob/main/src/Fp/Helpers/StringHelpers.cs/#L248"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Reads data.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override StringData this[ReadOnlySpan&lt;byte&gt; source, int offset, int maxBytes] { get; }</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>source</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.readonlyspan-1">ReadOnlySpan</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.byte">byte</a>&gt;</dt>
+    <dd><p>Data source.</p>
+</dd>
+    <dt><code>offset</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd><p>Offset.</p>
+</dd>
+    <dt><code>maxBytes</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd><p>Maximum bytes to read.</p>
+</dd>
+  </dl>
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Fp.Helpers.StringData.html">StringData</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="Fp_Helpers_Utf8StringHelper_Item_" data-uid="Fp.Helpers.Utf8StringHelper.Item*"></a>
+
+  <h3 id="Fp_Helpers_Utf8StringHelper_Item_System_Span_System_Byte__" data-uid="Fp.Helpers.Utf8StringHelper.Item(System.Span{System.Byte})">
+  this[Span&lt;byte&gt;]
+  <a class="header-action link-secondary" title="View source" href="https://github.com/collectioneering/Fp/blob/main/src/Fp/Helpers/StringHelpers.cs/#L241"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Reads/writes data.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override StringData this[Span&lt;byte&gt; source] { get; set; }</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>source</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.span-1">Span</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.byte">byte</a>&gt;</dt>
+    <dd><p>Data source.</p>
+</dd>
+  </dl>
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Fp.Helpers.StringData.html">StringData</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="Fp_Helpers_Utf8StringHelper_OutputStream_" data-uid="Fp.Helpers.Utf8StringHelper.OutputStream*"></a>
+
+  <h3 id="Fp_Helpers_Utf8StringHelper_OutputStream" data-uid="Fp.Helpers.Utf8StringHelper.OutputStream">
+  OutputStream
+  <a class="header-action link-secondary" title="View source" href="https://github.com/collectioneering/Fp/blob/main/src/Fp/Helpers/StringHelpers.cs/#L238"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Current output stream.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override Stream OutputStream { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.io.stream">Stream</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="Fp_Helpers_Utf8StringHelper_Parent_" data-uid="Fp.Helpers.Utf8StringHelper.Parent*"></a>
+
+  <h3 id="Fp_Helpers_Utf8StringHelper_Parent" data-uid="Fp.Helpers.Utf8StringHelper.Parent">
+  Parent
+  <a class="header-action link-secondary" title="View source" href="https://github.com/collectioneering/Fp/blob/main/src/Fp/Helpers/StringHelpers.cs/#L232"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Processor Parent { get; init; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Fp.Processor.html">Processor</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+</article>
+
+        <div class="contribution d-print-none">
+          <a href="https://github.com/collectioneering/Fp/blob/main/src/Fp/Helpers/StringHelpers.cs/#L232" class="edit-link">Edit this page</a>
+        </div>
+
+
+      </div>
+
+      <div class="affix">
+        <nav id="affix"></nav>
+      </div>
+    </main>
+
+
+    <footer class="border-top text-secondary">
+      <div class="container-xxl">
+        <div class="flex-fill">
+          <span>Made with <a href="https://dotnet.github.io/docfx">docfx</a></span>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

@@ -1,0 +1,1769 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+      <title>Class BaseUnmanagedIntegerArrayHelper&lt;T&gt; </title>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="title" content="Class BaseUnmanagedIntegerArrayHelper&lt;T&gt; ">
+      
+      <meta name="description" content="Base unmanaged integer array data helper.">
+      <link rel="icon" href="../../favicon.ico">
+      <link rel="stylesheet" href="../../public/docfx.min.css">
+      <link rel="stylesheet" href="../../public/main.css">
+      <meta name="docfx:navrel" content="../../toc.html">
+      <meta name="docfx:tocrel" content="toc.html">
+      
+      
+      
+      
+      <meta name="docfx:docurl" content="https://github.com/collectioneering/Fp/new/main/apiSpec/new?filename=Fp_Helpers_BaseUnmanagedIntegerArrayHelper_1.md&amp;value=---%0Auid%3A%20Fp.Helpers.BaseUnmanagedIntegerArrayHelper%601%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">
+      <meta name="loc:inThisArticle" content="In this article">
+      <meta name="loc:searchResultsCount" content="{count} results for &quot;{query}&quot;">
+      <meta name="loc:searchNoResults" content="No results for &quot;{query}&quot;">
+      <meta name="loc:tocFilter" content="Filter by title">
+      <meta name="loc:nextArticle" content="Next">
+      <meta name="loc:prevArticle" content="Previous">
+      <meta name="loc:themeLight" content="Light">
+      <meta name="loc:themeDark" content="Dark">
+      <meta name="loc:themeAuto" content="Auto">
+      <meta name="loc:changeTheme" content="Change theme">
+      <meta name="loc:copy" content="Copy">
+      <meta name="loc:downloadPdf" content="Download PDF">
+
+      <script type="module" src="./../../public/docfx.min.js"></script>
+
+      <script>
+        const theme = localStorage.getItem('theme') || 'auto'
+        document.documentElement.setAttribute('data-bs-theme', theme === 'auto' ? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light') : theme)
+      </script>
+
+  </head>
+
+  <body class="tex2jax_ignore" data-layout="" data-yaml-mime="ManagedReference">
+    <header class="bg-body border-bottom">
+      <nav id="autocollapse" class="navbar navbar-expand-md" role="navigation">
+        <div class="container-xxl flex-nowrap">
+          <a class="navbar-brand" href="../../index.html">
+            <img id="logo" class="svg" src="../../icon.png" alt="">
+            
+          </a>
+          <button class="btn btn-lg d-md-none border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navpanel" aria-controls="navpanel" aria-expanded="false" aria-label="Toggle navigation">
+            <i class="bi bi-three-dots"></i>
+          </button>
+          <div class="collapse navbar-collapse" id="navpanel">
+            <div id="navbar">
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main class="container-xxl">
+      <div class="toc-offcanvas">
+        <div class="offcanvas-md offcanvas-start" tabindex="-1" id="tocOffcanvas" aria-labelledby="tocOffcanvasLabel">
+          <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="tocOffcanvasLabel">Table of Contents</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" data-bs-target="#tocOffcanvas" aria-label="Close"></button>
+          </div>
+          <div class="offcanvas-body">
+            <nav class="toc" id="toc"></nav>
+          </div>
+        </div>
+      </div>
+
+      <div class="content">
+        <div class="actionbar">
+          <button class="btn btn-lg border-0 d-md-none" type="button" data-bs-toggle="offcanvas" data-bs-target="#tocOffcanvas" aria-controls="tocOffcanvas" aria-expanded="false" aria-label="Show table of contents">
+            <i class="bi bi-list"></i>
+          </button>
+
+          <nav id="breadcrumb"></nav>
+        </div>
+
+        <article data-uid="Fp.Helpers.BaseUnmanagedIntegerArrayHelper`1">
+
+
+
+  <h1 id="Fp_Helpers_BaseUnmanagedIntegerArrayHelper_1" data-uid="Fp.Helpers.BaseUnmanagedIntegerArrayHelper`1" class="text-break">
+Class BaseUnmanagedIntegerArrayHelper&lt;T&gt;  <a class="header-action link-secondary" title="View source" href="https://github.com/collectioneering/Fp/blob/main/src/Fp/Helpers/BaseUnmanagedIntegerArrayHelper.IndexArray.cs/#L6"><i class="bi bi-code-slash"></i></a>
+  </h1>
+
+  <div class="facts text-secondary">
+    <dl><dt>Namespace</dt><dd><a class="xref" href="Fp.html">Fp</a>.<a class="xref" href="Fp.Helpers.html">Helpers</a></dd></dl>
+  <dl><dt>Assembly</dt><dd>Fp.dll</dd></dl>
+  </div>
+
+  <div class="markdown summary"><p>Base unmanaged integer array data helper.</p>
+</div>
+  <div class="markdown conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public abstract record BaseUnmanagedIntegerArrayHelper&lt;T&gt; : BaseUnmanagedArrayHelper&lt;T&gt;, IEquatable&lt;Helper&gt;, IEquatable&lt;BaseUnmanagedArrayHelper&lt;T&gt;&gt;, IEquatable&lt;BaseUnmanagedIntegerArrayHelper&lt;T&gt;&gt; where T : unmanaged, INumber&lt;T&gt;</code></pre>
+  </div>
+
+
+
+  <h4 class="section">Type Parameters</h4>
+  <dl class="parameters">
+    <dt><code>T</code></dt>
+    <dd><p>Element type.</p>
+</dd>
+  </dl>
+
+  <dl class="typelist inheritance">
+    <dt>Inheritance</dt>
+    <dd>
+      <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a></div>
+      <div><a class="xref" href="Fp.Helpers.Helper.html">Helper</a></div>
+      <div><a class="xref" href="Fp.Helpers.BaseUnmanagedArrayHelper-1.html">BaseUnmanagedArrayHelper</a>&lt;T&gt;</div>
+      <div><span class="xref">BaseUnmanagedIntegerArrayHelper&lt;T&gt;</span></div>
+    </dd>
+  </dl>
+
+  <dl class="typelist implements">
+    <dt>Implements</dt>
+    <dd>
+      <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.iequatable-1">IEquatable</a>&lt;<a class="xref" href="Fp.Helpers.Helper.html">Helper</a>&gt;</div>
+      <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.iequatable-1">IEquatable</a>&lt;<a class="xref" href="Fp.Helpers.BaseUnmanagedArrayHelper-1.html">BaseUnmanagedArrayHelper</a>&lt;T&gt;&gt;</div>
+      <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.iequatable-1">IEquatable</a>&lt;<a class="xref" href="Fp.Helpers.BaseUnmanagedIntegerArrayHelper-1.html">BaseUnmanagedIntegerArrayHelper</a>&lt;T&gt;&gt;</div>
+    </dd>
+  </dl>
+
+  <dl class="typelist derived">
+    <dt>Derived</dt>
+    <dd>
+      <div><a class="xref" href="Fp.Helpers.S16ArrayHelper.html">S16ArrayHelper</a></div>
+      <div><a class="xref" href="Fp.Helpers.S32ArrayHelper.html">S32ArrayHelper</a></div>
+      <div><a class="xref" href="Fp.Helpers.S64ArrayHelper.html">S64ArrayHelper</a></div>
+      <div><a class="xref" href="Fp.Helpers.S8ArrayHelper.html">S8ArrayHelper</a></div>
+      <div><a class="xref" href="Fp.Helpers.U16ArrayHelper.html">U16ArrayHelper</a></div>
+      <div><a class="xref" href="Fp.Helpers.U32ArrayHelper.html">U32ArrayHelper</a></div>
+      <div><a class="xref" href="Fp.Helpers.U64ArrayHelper.html">U64ArrayHelper</a></div>
+      <div><a class="xref" href="Fp.Helpers.U8ArrayHelper.html">U8ArrayHelper</a></div>
+    </dd>
+  </dl>
+
+  <dl class="typelist inheritedMembers">
+    <dt>Inherited Members</dt>
+    <dd>
+    <div>
+      <a class="xref" href="Fp.Helpers.BaseUnmanagedArrayHelper-1.html#Fp_Helpers_BaseUnmanagedArrayHelper_1_ElementSize">BaseUnmanagedArrayHelper&lt;T&gt;.ElementSize</a>
+    </div>
+    <div>
+      <a class="xref" href="Fp.Helpers.BaseUnmanagedArrayHelper-1.html#Fp_Helpers_BaseUnmanagedArrayHelper_1_Item_System_Byte___System_Int32_System_Int32_">BaseUnmanagedArrayHelper&lt;T&gt;.this[byte[], int, int]</a>
+    </div>
+    <div>
+      <a class="xref" href="Fp.Helpers.BaseUnmanagedArrayHelper-1.html#Fp_Helpers_BaseUnmanagedArrayHelper_1_Item_System_Byte___System_Int32_">BaseUnmanagedArrayHelper&lt;T&gt;.this[byte[], int]</a>
+    </div>
+    <div>
+      <a class="xref" href="Fp.Helpers.BaseUnmanagedArrayHelper-1.html#Fp_Helpers_BaseUnmanagedArrayHelper_1_Item_System_Memory_System_Byte__System_Int32_System_Int32_">BaseUnmanagedArrayHelper&lt;T&gt;.this[Memory&lt;byte&gt;, int, int]</a>
+    </div>
+    <div>
+      <a class="xref" href="Fp.Helpers.BaseUnmanagedArrayHelper-1.html#Fp_Helpers_BaseUnmanagedArrayHelper_1_Item_System_Memory_System_Byte__System_Int32_">BaseUnmanagedArrayHelper&lt;T&gt;.this[Memory&lt;byte&gt;, int]</a>
+    </div>
+    <div>
+      <a class="xref" href="Fp.Helpers.BaseUnmanagedArrayHelper-1.html#Fp_Helpers_BaseUnmanagedArrayHelper_1_Item_System_Span_System_Byte__System_Int32_System_Int32_">BaseUnmanagedArrayHelper&lt;T&gt;.this[Span&lt;byte&gt;, int, int]</a>
+    </div>
+    <div>
+      <a class="xref" href="Fp.Helpers.BaseUnmanagedArrayHelper-1.html#Fp_Helpers_BaseUnmanagedArrayHelper_1_Item_System_ReadOnlyMemory_System_Byte__System_Int32_System_Int32_">BaseUnmanagedArrayHelper&lt;T&gt;.this[ReadOnlyMemory&lt;byte&gt;, int, int]</a>
+    </div>
+    <div>
+      <a class="xref" href="Fp.Helpers.BaseUnmanagedArrayHelper-1.html#Fp_Helpers_BaseUnmanagedArrayHelper_1_Item_System_ReadOnlySpan_System_Byte__">BaseUnmanagedArrayHelper&lt;T&gt;.this[ReadOnlySpan&lt;byte&gt;]</a>
+    </div>
+    <div>
+      <a class="xref" href="Fp.Helpers.BaseUnmanagedArrayHelper-1.html#Fp_Helpers_BaseUnmanagedArrayHelper_1_Item_System_Int64_System_Int32_">BaseUnmanagedArrayHelper&lt;T&gt;.this[long, int]</a>
+    </div>
+    <div>
+      <a class="xref" href="Fp.Helpers.BaseUnmanagedArrayHelper-1.html#Fp_Helpers_BaseUnmanagedArrayHelper_1_Item_System_Int64_">BaseUnmanagedArrayHelper&lt;T&gt;.this[long]</a>
+    </div>
+    <div>
+      <a class="xref" href="Fp.Helpers.BaseUnmanagedArrayHelper-1.html#Fp_Helpers_BaseUnmanagedArrayHelper_1_Item_System_Byte___">BaseUnmanagedArrayHelper&lt;T&gt;.this[byte[]]</a>
+    </div>
+    <div>
+      <a class="xref" href="Fp.Helpers.BaseUnmanagedArrayHelper-1.html#Fp_Helpers_BaseUnmanagedArrayHelper_1_Item_System_Memory_System_Byte__">BaseUnmanagedArrayHelper&lt;T&gt;.this[Memory&lt;byte&gt;]</a>
+    </div>
+    <div>
+      <a class="xref" href="Fp.Helpers.BaseUnmanagedArrayHelper-1.html#Fp_Helpers_BaseUnmanagedArrayHelper_1_Item_System_Span_System_Byte__System_Int32_">BaseUnmanagedArrayHelper&lt;T&gt;.this[Span&lt;byte&gt;, int]</a>
+    </div>
+    <div>
+      <a class="xref" href="Fp.Helpers.BaseUnmanagedArrayHelper-1.html#Fp_Helpers_BaseUnmanagedArrayHelper_1_Item_System_Span_System_Byte__">BaseUnmanagedArrayHelper&lt;T&gt;.this[Span&lt;byte&gt;]</a>
+    </div>
+    <div>
+      <a class="xref" href="Fp.Helpers.BaseUnmanagedArrayHelper-1.html#Fp_Helpers_BaseUnmanagedArrayHelper_1_Item_System_ReadOnlySpan_System_Byte__System_Int32_System_Int32_">BaseUnmanagedArrayHelper&lt;T&gt;.this[ReadOnlySpan&lt;byte&gt;, int, int]</a>
+    </div>
+    <div>
+      <a class="xref" href="Fp.Helpers.BaseUnmanagedArrayHelper-1.html#Fp_Helpers_BaseUnmanagedArrayHelper_1_Item_System_Int64_System_Int32_System_IO_Stream_">BaseUnmanagedArrayHelper&lt;T&gt;.this[long, int, Stream]</a>
+    </div>
+    <div>
+      <a class="xref" href="Fp.Helpers.BaseUnmanagedArrayHelper-1.html#Fp_Helpers_BaseUnmanagedArrayHelper_1_Item_System_Int64_System_IO_Stream_">BaseUnmanagedArrayHelper&lt;T&gt;.this[long, Stream]</a>
+    </div>
+    <div>
+      <a class="xref" href="Fp.Helpers.Helper.html#Fp_Helpers_Helper_InputStream">Helper.InputStream</a>
+    </div>
+    <div>
+      <a class="xref" href="Fp.Helpers.Helper.html#Fp_Helpers_Helper_OutputStream">Helper.OutputStream</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)">object.Equals(object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)">object.Equals(object, object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.gethashcode">object.GetHashCode()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.gettype">object.GetType()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone">object.MemberwiseClone()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.referenceequals">object.ReferenceEquals(object, object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.tostring">object.ToString()</a>
+    </div>
+  </dd></dl>
+
+  <dl class="typelist extensionMethods">
+    <dt>Extension Methods</dt>
+    <dd>
+  <div>
+      <a class="xref" href="Fp.FpUtil.html#Fp_FpUtil____System_Object_System_String_System_String_System_Int32_">FpUtil.__(object, string, string, int)</a>
+  </div>
+  </dd></dl>
+
+
+
+
+
+  <h2 class="section" id="methods">Methods
+</h2>
+
+
+  <a id="Fp_Helpers_BaseUnmanagedIntegerArrayHelper_1_GetEndTerminatedIndexArray_" data-uid="Fp.Helpers.BaseUnmanagedIntegerArrayHelper`1.GetEndTerminatedIndexArray*"></a>
+
+  <h3 id="Fp_Helpers_BaseUnmanagedIntegerArrayHelper_1_GetEndTerminatedIndexArray_System_Byte___System_Int32_System_Int32__0__" data-uid="Fp.Helpers.BaseUnmanagedIntegerArrayHelper`1.GetEndTerminatedIndexArray(System.Byte[],System.Int32,System.Int32,`0@)">
+  GetEndTerminatedIndexArray(byte[], int, int, out T)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/collectioneering/Fp/blob/main/src/Fp/Helpers/BaseUnmanagedIntegerArrayHelper.EndTerminatedIndexArray.cs/#L17"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Gets an end-terminated index array from the specified buffer.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public OffsetSegment&lt;T&gt;[] GetEndTerminatedIndexArray(byte[] source, int offset, int count, out T end)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>source</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.byte">byte</a>[]</dt>
+    <dd><p>Source buffer.</p>
+</dd>
+    <dt><code>offset</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd><p>Byte offset in buffer.</p>
+</dd>
+    <dt><code>count</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd><p>Number of entries in buffer.</p>
+</dd>
+    <dt><code>end</code> <span class="xref">T</span></dt>
+    <dd><p>End position (the first position beyond the bounds of the target region the array refers to).</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Fp.Helpers.OffsetSegment-1.html">OffsetSegment</a>&lt;T&gt;[]</dt>
+    <dd><p>Segments.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <h4 class="section">Exceptions</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.io.invaliddataexception">InvalidDataException</a></dt>
+    <dd><p>Thrown for an invalid index value (each successive element must compare greater than or equal to the previous element).</p>
+</dd>
+  </dl>
+
+
+
+  <a id="Fp_Helpers_BaseUnmanagedIntegerArrayHelper_1_GetEndTerminatedIndexArray_" data-uid="Fp.Helpers.BaseUnmanagedIntegerArrayHelper`1.GetEndTerminatedIndexArray*"></a>
+
+  <h3 id="Fp_Helpers_BaseUnmanagedIntegerArrayHelper_1_GetEndTerminatedIndexArray_System_Int64_System_Int32_System_IO_Stream__0__" data-uid="Fp.Helpers.BaseUnmanagedIntegerArrayHelper`1.GetEndTerminatedIndexArray(System.Int64,System.Int32,System.IO.Stream,`0@)">
+  GetEndTerminatedIndexArray(long, int, Stream, out T)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/collectioneering/Fp/blob/main/src/Fp/Helpers/BaseUnmanagedIntegerArrayHelper.EndTerminatedIndexArray.cs/#L225"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Gets an end-terminated index array from a stream.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public OffsetSegment&lt;T&gt;[] GetEndTerminatedIndexArray(long offset, int count, Stream stream, out T end)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>offset</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int64">long</a></dt>
+    <dd><p>Byte offset in stream.</p>
+</dd>
+    <dt><code>count</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd><p>Number of entries in stream.</p>
+</dd>
+    <dt><code>stream</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.io.stream">Stream</a></dt>
+    <dd><p>Source stream.</p>
+</dd>
+    <dt><code>end</code> <span class="xref">T</span></dt>
+    <dd><p>End position (the first position beyond the bounds of the target region the array refers to).</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Fp.Helpers.OffsetSegment-1.html">OffsetSegment</a>&lt;T&gt;[]</dt>
+    <dd><p>Segments.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <h4 class="section">Exceptions</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.io.invaliddataexception">InvalidDataException</a></dt>
+    <dd><p>Thrown for an invalid index value (each successive element must compare greater than or equal to the previous element).</p>
+</dd>
+  </dl>
+
+
+
+  <a id="Fp_Helpers_BaseUnmanagedIntegerArrayHelper_1_GetEndTerminatedIndexArray_" data-uid="Fp.Helpers.BaseUnmanagedIntegerArrayHelper`1.GetEndTerminatedIndexArray*"></a>
+
+  <h3 id="Fp_Helpers_BaseUnmanagedIntegerArrayHelper_1_GetEndTerminatedIndexArray_System_Int64_System_Int32__0__" data-uid="Fp.Helpers.BaseUnmanagedIntegerArrayHelper`1.GetEndTerminatedIndexArray(System.Int64,System.Int32,`0@)">
+  GetEndTerminatedIndexArray(long, int, out T)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/collectioneering/Fp/blob/main/src/Fp/Helpers/BaseUnmanagedIntegerArrayHelper.EndTerminatedIndexArray.cs/#L191"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Gets an end-terminated index array from <a class="xref" href="Fp.Helpers.Helper.html#Fp_Helpers_Helper_InputStream">InputStream</a>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public OffsetSegment&lt;T&gt;[] GetEndTerminatedIndexArray(long offset, int count, out T end)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>offset</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int64">long</a></dt>
+    <dd><p>Byte offset in stream.</p>
+</dd>
+    <dt><code>count</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd><p>Number of entries in stream.</p>
+</dd>
+    <dt><code>end</code> <span class="xref">T</span></dt>
+    <dd><p>End position (the first position beyond the bounds of the target region the array refers to).</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Fp.Helpers.OffsetSegment-1.html">OffsetSegment</a>&lt;T&gt;[]</dt>
+    <dd><p>Segments.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <h4 class="section">Exceptions</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.io.invaliddataexception">InvalidDataException</a></dt>
+    <dd><p>Thrown for an invalid index value (each successive element must compare greater than or equal to the previous element).</p>
+</dd>
+  </dl>
+
+
+
+  <a id="Fp_Helpers_BaseUnmanagedIntegerArrayHelper_1_GetEndTerminatedIndexArray_" data-uid="Fp.Helpers.BaseUnmanagedIntegerArrayHelper`1.GetEndTerminatedIndexArray*"></a>
+
+  <h3 id="Fp_Helpers_BaseUnmanagedIntegerArrayHelper_1_GetEndTerminatedIndexArray_System_Memory_System_Byte__System_Int32_System_Int32__0__" data-uid="Fp.Helpers.BaseUnmanagedIntegerArrayHelper`1.GetEndTerminatedIndexArray(System.Memory{System.Byte},System.Int32,System.Int32,`0@)">
+  GetEndTerminatedIndexArray(Memory&lt;byte&gt;, int, int, out T)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/collectioneering/Fp/blob/main/src/Fp/Helpers/BaseUnmanagedIntegerArrayHelper.EndTerminatedIndexArray.cs/#L52"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Gets an end-terminated index array from the specified buffer.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public OffsetSegment&lt;T&gt;[] GetEndTerminatedIndexArray(Memory&lt;byte&gt; source, int offset, int count, out T end)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>source</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.memory-1">Memory</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.byte">byte</a>&gt;</dt>
+    <dd><p>Source buffer.</p>
+</dd>
+    <dt><code>offset</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd><p>Byte offset in buffer.</p>
+</dd>
+    <dt><code>count</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd><p>Number of entries in buffer.</p>
+</dd>
+    <dt><code>end</code> <span class="xref">T</span></dt>
+    <dd><p>End position (the first position beyond the bounds of the target region the array refers to).</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Fp.Helpers.OffsetSegment-1.html">OffsetSegment</a>&lt;T&gt;[]</dt>
+    <dd><p>Segments.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <h4 class="section">Exceptions</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.io.invaliddataexception">InvalidDataException</a></dt>
+    <dd><p>Thrown for an invalid index value (each successive element must compare greater than or equal to the previous element).</p>
+</dd>
+  </dl>
+
+
+
+  <a id="Fp_Helpers_BaseUnmanagedIntegerArrayHelper_1_GetEndTerminatedIndexArray_" data-uid="Fp.Helpers.BaseUnmanagedIntegerArrayHelper`1.GetEndTerminatedIndexArray*"></a>
+
+  <h3 id="Fp_Helpers_BaseUnmanagedIntegerArrayHelper_1_GetEndTerminatedIndexArray_System_ReadOnlyMemory_System_Byte__System_Int32_System_Int32__0__" data-uid="Fp.Helpers.BaseUnmanagedIntegerArrayHelper`1.GetEndTerminatedIndexArray(System.ReadOnlyMemory{System.Byte},System.Int32,System.Int32,`0@)">
+  GetEndTerminatedIndexArray(ReadOnlyMemory&lt;byte&gt;, int, int, out T)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/collectioneering/Fp/blob/main/src/Fp/Helpers/BaseUnmanagedIntegerArrayHelper.EndTerminatedIndexArray.cs/#L122"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Gets an end-terminated index array from the specified buffer.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public OffsetSegment&lt;T&gt;[] GetEndTerminatedIndexArray(ReadOnlyMemory&lt;byte&gt; source, int offset, int count, out T end)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>source</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.readonlymemory-1">ReadOnlyMemory</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.byte">byte</a>&gt;</dt>
+    <dd><p>Source buffer.</p>
+</dd>
+    <dt><code>offset</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd><p>Byte offset in buffer.</p>
+</dd>
+    <dt><code>count</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd><p>Number of entries in buffer.</p>
+</dd>
+    <dt><code>end</code> <span class="xref">T</span></dt>
+    <dd><p>End position (the first position beyond the bounds of the target region the array refers to).</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Fp.Helpers.OffsetSegment-1.html">OffsetSegment</a>&lt;T&gt;[]</dt>
+    <dd><p>Segments.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <h4 class="section">Exceptions</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.io.invaliddataexception">InvalidDataException</a></dt>
+    <dd><p>Thrown for an invalid index value (each successive element must compare greater than or equal to the previous element).</p>
+</dd>
+  </dl>
+
+
+
+  <a id="Fp_Helpers_BaseUnmanagedIntegerArrayHelper_1_GetEndTerminatedIndexArray_" data-uid="Fp.Helpers.BaseUnmanagedIntegerArrayHelper`1.GetEndTerminatedIndexArray*"></a>
+
+  <h3 id="Fp_Helpers_BaseUnmanagedIntegerArrayHelper_1_GetEndTerminatedIndexArray_System_ReadOnlySpan_System_Byte__System_Int32_System_Int32__0__" data-uid="Fp.Helpers.BaseUnmanagedIntegerArrayHelper`1.GetEndTerminatedIndexArray(System.ReadOnlySpan{System.Byte},System.Int32,System.Int32,`0@)">
+  GetEndTerminatedIndexArray(ReadOnlySpan&lt;byte&gt;, int, int, out T)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/collectioneering/Fp/blob/main/src/Fp/Helpers/BaseUnmanagedIntegerArrayHelper.EndTerminatedIndexArray.cs/#L157"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Gets an end-terminated index array from the specified buffer.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public OffsetSegment&lt;T&gt;[] GetEndTerminatedIndexArray(ReadOnlySpan&lt;byte&gt; source, int offset, int count, out T end)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>source</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.readonlyspan-1">ReadOnlySpan</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.byte">byte</a>&gt;</dt>
+    <dd><p>Source buffer.</p>
+</dd>
+    <dt><code>offset</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd><p>Byte offset in buffer.</p>
+</dd>
+    <dt><code>count</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd><p>Number of entries in buffer.</p>
+</dd>
+    <dt><code>end</code> <span class="xref">T</span></dt>
+    <dd><p>End position (the first position beyond the bounds of the target region the array refers to).</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Fp.Helpers.OffsetSegment-1.html">OffsetSegment</a>&lt;T&gt;[]</dt>
+    <dd><p>Segments.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <h4 class="section">Exceptions</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.io.invaliddataexception">InvalidDataException</a></dt>
+    <dd><p>Thrown for an invalid index value (each successive element must compare greater than or equal to the previous element).</p>
+</dd>
+  </dl>
+
+
+
+  <a id="Fp_Helpers_BaseUnmanagedIntegerArrayHelper_1_GetEndTerminatedIndexArray_" data-uid="Fp.Helpers.BaseUnmanagedIntegerArrayHelper`1.GetEndTerminatedIndexArray*"></a>
+
+  <h3 id="Fp_Helpers_BaseUnmanagedIntegerArrayHelper_1_GetEndTerminatedIndexArray_System_Span_System_Byte__System_Int32_System_Int32__0__" data-uid="Fp.Helpers.BaseUnmanagedIntegerArrayHelper`1.GetEndTerminatedIndexArray(System.Span{System.Byte},System.Int32,System.Int32,`0@)">
+  GetEndTerminatedIndexArray(Span&lt;byte&gt;, int, int, out T)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/collectioneering/Fp/blob/main/src/Fp/Helpers/BaseUnmanagedIntegerArrayHelper.EndTerminatedIndexArray.cs/#L87"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Gets an end-terminated index array from the specified buffer.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public OffsetSegment&lt;T&gt;[] GetEndTerminatedIndexArray(Span&lt;byte&gt; source, int offset, int count, out T end)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>source</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.span-1">Span</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.byte">byte</a>&gt;</dt>
+    <dd><p>Source buffer.</p>
+</dd>
+    <dt><code>offset</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd><p>Byte offset in buffer.</p>
+</dd>
+    <dt><code>count</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd><p>Number of entries in buffer.</p>
+</dd>
+    <dt><code>end</code> <span class="xref">T</span></dt>
+    <dd><p>End position (the first position beyond the bounds of the target region the array refers to).</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Fp.Helpers.OffsetSegment-1.html">OffsetSegment</a>&lt;T&gt;[]</dt>
+    <dd><p>Segments.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <h4 class="section">Exceptions</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.io.invaliddataexception">InvalidDataException</a></dt>
+    <dd><p>Thrown for an invalid index value (each successive element must compare greater than or equal to the previous element).</p>
+</dd>
+  </dl>
+
+
+
+  <a id="Fp_Helpers_BaseUnmanagedIntegerArrayHelper_1_GetEndTerminatedIndexArray_" data-uid="Fp.Helpers.BaseUnmanagedIntegerArrayHelper`1.GetEndTerminatedIndexArray*"></a>
+
+  <h3 id="Fp_Helpers_BaseUnmanagedIntegerArrayHelper_1_GetEndTerminatedIndexArray__1_System_Byte___System_Int32_System_Int32_System_Func__0___0____0__" data-uid="Fp.Helpers.BaseUnmanagedIntegerArrayHelper`1.GetEndTerminatedIndexArray``1(System.Byte[],System.Int32,System.Int32,System.Func{`0,``0},``0@)">
+  GetEndTerminatedIndexArray&lt;TElement&gt;(byte[], int, int, Func&lt;T, TElement&gt;, out TElement)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/collectioneering/Fp/blob/main/src/Fp/Helpers/BaseUnmanagedIntegerArrayHelper.EndTerminatedIndexArray.cs/#L33"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Gets an end-terminated index array from the specified buffer.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public OffsetSegment&lt;TElement&gt;[] GetEndTerminatedIndexArray&lt;TElement&gt;(byte[] source, int offset, int count, Func&lt;T, TElement&gt; transform, out TElement end) where TElement : INumber&lt;TElement&gt;</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>source</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.byte">byte</a>[]</dt>
+    <dd><p>Source buffer.</p>
+</dd>
+    <dt><code>offset</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd><p>Byte offset in buffer.</p>
+</dd>
+    <dt><code>count</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd><p>Number of entries in buffer.</p>
+</dd>
+    <dt><code>transform</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.func-2">Func</a>&lt;T, TElement&gt;</dt>
+    <dd><p>Transform to apply to input values to get final indices.</p>
+</dd>
+    <dt><code>end</code> <span class="xref">TElement</span></dt>
+    <dd><p>End position (the first position beyond the bounds of the target region the array refers to).</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Fp.Helpers.OffsetSegment-1.html">OffsetSegment</a>&lt;TElement&gt;[]</dt>
+    <dd><p>Segments.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Type Parameters</h4>
+  <dl class="parameters">
+    <dt><code>TElement</code></dt>
+    <dd><p>Output index type.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+  <h4 class="section">Exceptions</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.io.invaliddataexception">InvalidDataException</a></dt>
+    <dd><p>Thrown for an invalid index value (each successive element must compare greater than or equal to the previous element).</p>
+</dd>
+  </dl>
+
+
+
+  <a id="Fp_Helpers_BaseUnmanagedIntegerArrayHelper_1_GetEndTerminatedIndexArray_" data-uid="Fp.Helpers.BaseUnmanagedIntegerArrayHelper`1.GetEndTerminatedIndexArray*"></a>
+
+  <h3 id="Fp_Helpers_BaseUnmanagedIntegerArrayHelper_1_GetEndTerminatedIndexArray__1_System_Int64_System_Int32_System_Func__0___0____0__" data-uid="Fp.Helpers.BaseUnmanagedIntegerArrayHelper`1.GetEndTerminatedIndexArray``1(System.Int64,System.Int32,System.Func{`0,``0},``0@)">
+  GetEndTerminatedIndexArray&lt;TElement&gt;(long, int, Func&lt;T, TElement&gt;, out TElement)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/collectioneering/Fp/blob/main/src/Fp/Helpers/BaseUnmanagedIntegerArrayHelper.EndTerminatedIndexArray.cs/#L206"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Gets an end-terminated index array from <a class="xref" href="Fp.Helpers.Helper.html#Fp_Helpers_Helper_InputStream">InputStream</a>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public OffsetSegment&lt;TElement&gt;[] GetEndTerminatedIndexArray&lt;TElement&gt;(long offset, int count, Func&lt;T, TElement&gt; transform, out TElement end) where TElement : INumber&lt;TElement&gt;</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>offset</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int64">long</a></dt>
+    <dd><p>Byte offset in stream.</p>
+</dd>
+    <dt><code>count</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd><p>Number of entries in stream.</p>
+</dd>
+    <dt><code>transform</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.func-2">Func</a>&lt;T, TElement&gt;</dt>
+    <dd><p>Transform to apply to input values to get final indices.</p>
+</dd>
+    <dt><code>end</code> <span class="xref">TElement</span></dt>
+    <dd><p>End position (the first position beyond the bounds of the target region the array refers to).</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Fp.Helpers.OffsetSegment-1.html">OffsetSegment</a>&lt;TElement&gt;[]</dt>
+    <dd><p>Segments.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Type Parameters</h4>
+  <dl class="parameters">
+    <dt><code>TElement</code></dt>
+    <dd><p>Output index type.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+  <h4 class="section">Exceptions</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.io.invaliddataexception">InvalidDataException</a></dt>
+    <dd><p>Thrown for an invalid index value (each successive element must compare greater than or equal to the previous element).</p>
+</dd>
+  </dl>
+
+
+
+  <a id="Fp_Helpers_BaseUnmanagedIntegerArrayHelper_1_GetEndTerminatedIndexArray_" data-uid="Fp.Helpers.BaseUnmanagedIntegerArrayHelper`1.GetEndTerminatedIndexArray*"></a>
+
+  <h3 id="Fp_Helpers_BaseUnmanagedIntegerArrayHelper_1_GetEndTerminatedIndexArray__1_System_Int64_System_Int32_System_IO_Stream_System_Func__0___0____0__" data-uid="Fp.Helpers.BaseUnmanagedIntegerArrayHelper`1.GetEndTerminatedIndexArray``1(System.Int64,System.Int32,System.IO.Stream,System.Func{`0,``0},``0@)">
+  GetEndTerminatedIndexArray&lt;TElement&gt;(long, int, Stream, Func&lt;T, TElement&gt;, out TElement)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/collectioneering/Fp/blob/main/src/Fp/Helpers/BaseUnmanagedIntegerArrayHelper.EndTerminatedIndexArray.cs/#L241"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Gets an end-terminated index array from a stream.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public OffsetSegment&lt;TElement&gt;[] GetEndTerminatedIndexArray&lt;TElement&gt;(long offset, int count, Stream stream, Func&lt;T, TElement&gt; transform, out TElement end) where TElement : INumber&lt;TElement&gt;</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>offset</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int64">long</a></dt>
+    <dd><p>Byte offset in stream.</p>
+</dd>
+    <dt><code>count</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd><p>Number of entries in stream.</p>
+</dd>
+    <dt><code>stream</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.io.stream">Stream</a></dt>
+    <dd><p>Source stream.</p>
+</dd>
+    <dt><code>transform</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.func-2">Func</a>&lt;T, TElement&gt;</dt>
+    <dd><p>Transform to apply to input values to get final indices.</p>
+</dd>
+    <dt><code>end</code> <span class="xref">TElement</span></dt>
+    <dd><p>End position (the first position beyond the bounds of the target region the array refers to).</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Fp.Helpers.OffsetSegment-1.html">OffsetSegment</a>&lt;TElement&gt;[]</dt>
+    <dd><p>Segments.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Type Parameters</h4>
+  <dl class="parameters">
+    <dt><code>TElement</code></dt>
+    <dd><p>Output index type.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+  <h4 class="section">Exceptions</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.io.invaliddataexception">InvalidDataException</a></dt>
+    <dd><p>Thrown for an invalid index value (each successive element must compare greater than or equal to the previous element).</p>
+</dd>
+  </dl>
+
+
+
+  <a id="Fp_Helpers_BaseUnmanagedIntegerArrayHelper_1_GetEndTerminatedIndexArray_" data-uid="Fp.Helpers.BaseUnmanagedIntegerArrayHelper`1.GetEndTerminatedIndexArray*"></a>
+
+  <h3 id="Fp_Helpers_BaseUnmanagedIntegerArrayHelper_1_GetEndTerminatedIndexArray__1_System_Memory_System_Byte__System_Int32_System_Int32_System_Func__0___0____0__" data-uid="Fp.Helpers.BaseUnmanagedIntegerArrayHelper`1.GetEndTerminatedIndexArray``1(System.Memory{System.Byte},System.Int32,System.Int32,System.Func{`0,``0},``0@)">
+  GetEndTerminatedIndexArray&lt;TElement&gt;(Memory&lt;byte&gt;, int, int, Func&lt;T, TElement&gt;, out TElement)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/collectioneering/Fp/blob/main/src/Fp/Helpers/BaseUnmanagedIntegerArrayHelper.EndTerminatedIndexArray.cs/#L68"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Gets an end-terminated index array from the specified buffer.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public OffsetSegment&lt;TElement&gt;[] GetEndTerminatedIndexArray&lt;TElement&gt;(Memory&lt;byte&gt; source, int offset, int count, Func&lt;T, TElement&gt; transform, out TElement end) where TElement : INumber&lt;TElement&gt;</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>source</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.memory-1">Memory</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.byte">byte</a>&gt;</dt>
+    <dd><p>Source buffer.</p>
+</dd>
+    <dt><code>offset</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd><p>Byte offset in buffer.</p>
+</dd>
+    <dt><code>count</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd><p>Number of entries in buffer.</p>
+</dd>
+    <dt><code>transform</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.func-2">Func</a>&lt;T, TElement&gt;</dt>
+    <dd><p>Transform to apply to input values to get final indices.</p>
+</dd>
+    <dt><code>end</code> <span class="xref">TElement</span></dt>
+    <dd><p>End position (the first position beyond the bounds of the target region the array refers to).</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Fp.Helpers.OffsetSegment-1.html">OffsetSegment</a>&lt;TElement&gt;[]</dt>
+    <dd><p>Segments.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Type Parameters</h4>
+  <dl class="parameters">
+    <dt><code>TElement</code></dt>
+    <dd><p>Output index type.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+  <h4 class="section">Exceptions</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.io.invaliddataexception">InvalidDataException</a></dt>
+    <dd><p>Thrown for an invalid index value (each successive element must compare greater than or equal to the previous element).</p>
+</dd>
+  </dl>
+
+
+
+  <a id="Fp_Helpers_BaseUnmanagedIntegerArrayHelper_1_GetEndTerminatedIndexArray_" data-uid="Fp.Helpers.BaseUnmanagedIntegerArrayHelper`1.GetEndTerminatedIndexArray*"></a>
+
+  <h3 id="Fp_Helpers_BaseUnmanagedIntegerArrayHelper_1_GetEndTerminatedIndexArray__1_System_ReadOnlyMemory_System_Byte__System_Int32_System_Int32_System_Func__0___0____0__" data-uid="Fp.Helpers.BaseUnmanagedIntegerArrayHelper`1.GetEndTerminatedIndexArray``1(System.ReadOnlyMemory{System.Byte},System.Int32,System.Int32,System.Func{`0,``0},``0@)">
+  GetEndTerminatedIndexArray&lt;TElement&gt;(ReadOnlyMemory&lt;byte&gt;, int, int, Func&lt;T, TElement&gt;, out TElement)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/collectioneering/Fp/blob/main/src/Fp/Helpers/BaseUnmanagedIntegerArrayHelper.EndTerminatedIndexArray.cs/#L138"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Gets an end-terminated index array from the specified buffer.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public OffsetSegment&lt;TElement&gt;[] GetEndTerminatedIndexArray&lt;TElement&gt;(ReadOnlyMemory&lt;byte&gt; source, int offset, int count, Func&lt;T, TElement&gt; transform, out TElement end) where TElement : INumber&lt;TElement&gt;</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>source</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.readonlymemory-1">ReadOnlyMemory</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.byte">byte</a>&gt;</dt>
+    <dd><p>Source buffer.</p>
+</dd>
+    <dt><code>offset</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd><p>Byte offset in buffer.</p>
+</dd>
+    <dt><code>count</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd><p>Number of entries in buffer.</p>
+</dd>
+    <dt><code>transform</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.func-2">Func</a>&lt;T, TElement&gt;</dt>
+    <dd><p>Transform to apply to input values to get final indices.</p>
+</dd>
+    <dt><code>end</code> <span class="xref">TElement</span></dt>
+    <dd><p>End position (the first position beyond the bounds of the target region the array refers to).</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Fp.Helpers.OffsetSegment-1.html">OffsetSegment</a>&lt;TElement&gt;[]</dt>
+    <dd><p>Segments.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Type Parameters</h4>
+  <dl class="parameters">
+    <dt><code>TElement</code></dt>
+    <dd><p>Output index type.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+  <h4 class="section">Exceptions</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.io.invaliddataexception">InvalidDataException</a></dt>
+    <dd><p>Thrown for an invalid index value (each successive element must compare greater than or equal to the previous element).</p>
+</dd>
+  </dl>
+
+
+
+  <a id="Fp_Helpers_BaseUnmanagedIntegerArrayHelper_1_GetEndTerminatedIndexArray_" data-uid="Fp.Helpers.BaseUnmanagedIntegerArrayHelper`1.GetEndTerminatedIndexArray*"></a>
+
+  <h3 id="Fp_Helpers_BaseUnmanagedIntegerArrayHelper_1_GetEndTerminatedIndexArray__1_System_ReadOnlySpan_System_Byte__System_Int32_System_Int32_System_Func__0___0____0__" data-uid="Fp.Helpers.BaseUnmanagedIntegerArrayHelper`1.GetEndTerminatedIndexArray``1(System.ReadOnlySpan{System.Byte},System.Int32,System.Int32,System.Func{`0,``0},``0@)">
+  GetEndTerminatedIndexArray&lt;TElement&gt;(ReadOnlySpan&lt;byte&gt;, int, int, Func&lt;T, TElement&gt;, out TElement)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/collectioneering/Fp/blob/main/src/Fp/Helpers/BaseUnmanagedIntegerArrayHelper.EndTerminatedIndexArray.cs/#L173"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Gets an end-terminated index array from the specified buffer.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public OffsetSegment&lt;TElement&gt;[] GetEndTerminatedIndexArray&lt;TElement&gt;(ReadOnlySpan&lt;byte&gt; source, int offset, int count, Func&lt;T, TElement&gt; transform, out TElement end) where TElement : INumber&lt;TElement&gt;</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>source</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.readonlyspan-1">ReadOnlySpan</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.byte">byte</a>&gt;</dt>
+    <dd><p>Source buffer.</p>
+</dd>
+    <dt><code>offset</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd><p>Byte offset in buffer.</p>
+</dd>
+    <dt><code>count</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd><p>Number of entries in buffer.</p>
+</dd>
+    <dt><code>transform</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.func-2">Func</a>&lt;T, TElement&gt;</dt>
+    <dd><p>Transform to apply to input values to get final indices.</p>
+</dd>
+    <dt><code>end</code> <span class="xref">TElement</span></dt>
+    <dd><p>End position (the first position beyond the bounds of the target region the array refers to).</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Fp.Helpers.OffsetSegment-1.html">OffsetSegment</a>&lt;TElement&gt;[]</dt>
+    <dd><p>Segments.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Type Parameters</h4>
+  <dl class="parameters">
+    <dt><code>TElement</code></dt>
+    <dd><p>Output index type.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+  <h4 class="section">Exceptions</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.io.invaliddataexception">InvalidDataException</a></dt>
+    <dd><p>Thrown for an invalid index value (each successive element must compare greater than or equal to the previous element).</p>
+</dd>
+  </dl>
+
+
+
+  <a id="Fp_Helpers_BaseUnmanagedIntegerArrayHelper_1_GetEndTerminatedIndexArray_" data-uid="Fp.Helpers.BaseUnmanagedIntegerArrayHelper`1.GetEndTerminatedIndexArray*"></a>
+
+  <h3 id="Fp_Helpers_BaseUnmanagedIntegerArrayHelper_1_GetEndTerminatedIndexArray__1_System_Span_System_Byte__System_Int32_System_Int32_System_Func__0___0____0__" data-uid="Fp.Helpers.BaseUnmanagedIntegerArrayHelper`1.GetEndTerminatedIndexArray``1(System.Span{System.Byte},System.Int32,System.Int32,System.Func{`0,``0},``0@)">
+  GetEndTerminatedIndexArray&lt;TElement&gt;(Span&lt;byte&gt;, int, int, Func&lt;T, TElement&gt;, out TElement)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/collectioneering/Fp/blob/main/src/Fp/Helpers/BaseUnmanagedIntegerArrayHelper.EndTerminatedIndexArray.cs/#L103"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Gets an end-terminated index array from the specified buffer.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public OffsetSegment&lt;TElement&gt;[] GetEndTerminatedIndexArray&lt;TElement&gt;(Span&lt;byte&gt; source, int offset, int count, Func&lt;T, TElement&gt; transform, out TElement end) where TElement : INumber&lt;TElement&gt;</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>source</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.span-1">Span</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.byte">byte</a>&gt;</dt>
+    <dd><p>Source buffer.</p>
+</dd>
+    <dt><code>offset</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd><p>Byte offset in buffer.</p>
+</dd>
+    <dt><code>count</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd><p>Number of entries in buffer.</p>
+</dd>
+    <dt><code>transform</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.func-2">Func</a>&lt;T, TElement&gt;</dt>
+    <dd><p>Transform to apply to input values to get final indices.</p>
+</dd>
+    <dt><code>end</code> <span class="xref">TElement</span></dt>
+    <dd><p>End position (the first position beyond the bounds of the target region the array refers to).</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Fp.Helpers.OffsetSegment-1.html">OffsetSegment</a>&lt;TElement&gt;[]</dt>
+    <dd><p>Segments.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Type Parameters</h4>
+  <dl class="parameters">
+    <dt><code>TElement</code></dt>
+    <dd><p>Output index type.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+  <h4 class="section">Exceptions</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.io.invaliddataexception">InvalidDataException</a></dt>
+    <dd><p>Thrown for an invalid index value (each successive element must compare greater than or equal to the previous element).</p>
+</dd>
+  </dl>
+
+
+
+  <a id="Fp_Helpers_BaseUnmanagedIntegerArrayHelper_1_GetIndexArray_" data-uid="Fp.Helpers.BaseUnmanagedIntegerArrayHelper`1.GetIndexArray*"></a>
+
+  <h3 id="Fp_Helpers_BaseUnmanagedIntegerArrayHelper_1_GetIndexArray_System_Byte___System_Int32_System_Int32_" data-uid="Fp.Helpers.BaseUnmanagedIntegerArrayHelper`1.GetIndexArray(System.Byte[],System.Int32,System.Int32)">
+  GetIndexArray(byte[], int, int)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/collectioneering/Fp/blob/main/src/Fp/Helpers/BaseUnmanagedIntegerArrayHelper.IndexArray.cs/#L15"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Gets an index array from the specified buffer.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public ReadOnlySpan&lt;T&gt; GetIndexArray(byte[] source, int offset, int count)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>source</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.byte">byte</a>[]</dt>
+    <dd><p>Source buffer.</p>
+</dd>
+    <dt><code>offset</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd><p>Byte offset in buffer.</p>
+</dd>
+    <dt><code>count</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd><p>Number of indices in buffer.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.readonlyspan-1">ReadOnlySpan</a>&lt;T&gt;</dt>
+    <dd><p>Indices.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Fp_Helpers_BaseUnmanagedIntegerArrayHelper_1_GetIndexArray_" data-uid="Fp.Helpers.BaseUnmanagedIntegerArrayHelper`1.GetIndexArray*"></a>
+
+  <h3 id="Fp_Helpers_BaseUnmanagedIntegerArrayHelper_1_GetIndexArray_System_Int64_System_Int32_" data-uid="Fp.Helpers.BaseUnmanagedIntegerArrayHelper`1.GetIndexArray(System.Int64,System.Int32)">
+  GetIndexArray(long, int)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/collectioneering/Fp/blob/main/src/Fp/Helpers/BaseUnmanagedIntegerArrayHelper.IndexArray.cs/#L144"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Gets an index array from <a class="xref" href="Fp.Helpers.Helper.html#Fp_Helpers_Helper_InputStream">InputStream</a>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public T[] GetIndexArray(long offset, int count)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>offset</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int64">long</a></dt>
+    <dd><p>Byte offset in stream.</p>
+</dd>
+    <dt><code>count</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd><p>Number of indices in stream.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt>T[]</dt>
+    <dd><p>Indices.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Fp_Helpers_BaseUnmanagedIntegerArrayHelper_1_GetIndexArray_" data-uid="Fp.Helpers.BaseUnmanagedIntegerArrayHelper`1.GetIndexArray*"></a>
+
+  <h3 id="Fp_Helpers_BaseUnmanagedIntegerArrayHelper_1_GetIndexArray_System_Int64_System_Int32_System_IO_Stream_" data-uid="Fp.Helpers.BaseUnmanagedIntegerArrayHelper`1.GetIndexArray(System.Int64,System.Int32,System.IO.Stream)">
+  GetIndexArray(long, int, Stream)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/collectioneering/Fp/blob/main/src/Fp/Helpers/BaseUnmanagedIntegerArrayHelper.IndexArray.cs/#L169"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Gets an index array from a stream.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public T[] GetIndexArray(long offset, int count, Stream stream)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>offset</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int64">long</a></dt>
+    <dd><p>Byte offset in stream.</p>
+</dd>
+    <dt><code>count</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd><p>Number of indices in stream.</p>
+</dd>
+    <dt><code>stream</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.io.stream">Stream</a></dt>
+    <dd><p>Source stream.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt>T[]</dt>
+    <dd><p>Indices.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Fp_Helpers_BaseUnmanagedIntegerArrayHelper_1_GetIndexArray_" data-uid="Fp.Helpers.BaseUnmanagedIntegerArrayHelper`1.GetIndexArray*"></a>
+
+  <h3 id="Fp_Helpers_BaseUnmanagedIntegerArrayHelper_1_GetIndexArray_System_Memory_System_Byte__System_Int32_System_Int32_" data-uid="Fp.Helpers.BaseUnmanagedIntegerArrayHelper`1.GetIndexArray(System.Memory{System.Byte},System.Int32,System.Int32)">
+  GetIndexArray(Memory&lt;byte&gt;, int, int)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/collectioneering/Fp/blob/main/src/Fp/Helpers/BaseUnmanagedIntegerArrayHelper.IndexArray.cs/#L41"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Gets an index array from the specified buffer.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public ReadOnlySpan&lt;T&gt; GetIndexArray(Memory&lt;byte&gt; source, int offset, int count)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>source</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.memory-1">Memory</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.byte">byte</a>&gt;</dt>
+    <dd><p>Source buffer.</p>
+</dd>
+    <dt><code>offset</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd><p>Byte offset in buffer.</p>
+</dd>
+    <dt><code>count</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd><p>Number of indices in buffer.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.readonlyspan-1">ReadOnlySpan</a>&lt;T&gt;</dt>
+    <dd><p>Indices.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Fp_Helpers_BaseUnmanagedIntegerArrayHelper_1_GetIndexArray_" data-uid="Fp.Helpers.BaseUnmanagedIntegerArrayHelper`1.GetIndexArray*"></a>
+
+  <h3 id="Fp_Helpers_BaseUnmanagedIntegerArrayHelper_1_GetIndexArray_System_ReadOnlyMemory_System_Byte__System_Int32_System_Int32_" data-uid="Fp.Helpers.BaseUnmanagedIntegerArrayHelper`1.GetIndexArray(System.ReadOnlyMemory{System.Byte},System.Int32,System.Int32)">
+  GetIndexArray(ReadOnlyMemory&lt;byte&gt;, int, int)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/collectioneering/Fp/blob/main/src/Fp/Helpers/BaseUnmanagedIntegerArrayHelper.IndexArray.cs/#L93"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Gets an index array from the specified buffer.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public ReadOnlySpan&lt;T&gt; GetIndexArray(ReadOnlyMemory&lt;byte&gt; source, int offset, int count)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>source</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.readonlymemory-1">ReadOnlyMemory</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.byte">byte</a>&gt;</dt>
+    <dd><p>Source buffer.</p>
+</dd>
+    <dt><code>offset</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd><p>Byte offset in buffer.</p>
+</dd>
+    <dt><code>count</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd><p>Number of indices in buffer.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.readonlyspan-1">ReadOnlySpan</a>&lt;T&gt;</dt>
+    <dd><p>Indices.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Fp_Helpers_BaseUnmanagedIntegerArrayHelper_1_GetIndexArray_" data-uid="Fp.Helpers.BaseUnmanagedIntegerArrayHelper`1.GetIndexArray*"></a>
+
+  <h3 id="Fp_Helpers_BaseUnmanagedIntegerArrayHelper_1_GetIndexArray_System_ReadOnlySpan_System_Byte__System_Int32_System_Int32_" data-uid="Fp.Helpers.BaseUnmanagedIntegerArrayHelper`1.GetIndexArray(System.ReadOnlySpan{System.Byte},System.Int32,System.Int32)">
+  GetIndexArray(ReadOnlySpan&lt;byte&gt;, int, int)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/collectioneering/Fp/blob/main/src/Fp/Helpers/BaseUnmanagedIntegerArrayHelper.IndexArray.cs/#L119"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Gets an index array from the specified buffer.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public ReadOnlySpan&lt;T&gt; GetIndexArray(ReadOnlySpan&lt;byte&gt; source, int offset, int count)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>source</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.readonlyspan-1">ReadOnlySpan</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.byte">byte</a>&gt;</dt>
+    <dd><p>Source buffer.</p>
+</dd>
+    <dt><code>offset</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd><p>Byte offset in buffer.</p>
+</dd>
+    <dt><code>count</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd><p>Number of indices in buffer.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.readonlyspan-1">ReadOnlySpan</a>&lt;T&gt;</dt>
+    <dd><p>Indices.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Fp_Helpers_BaseUnmanagedIntegerArrayHelper_1_GetIndexArray_" data-uid="Fp.Helpers.BaseUnmanagedIntegerArrayHelper`1.GetIndexArray*"></a>
+
+  <h3 id="Fp_Helpers_BaseUnmanagedIntegerArrayHelper_1_GetIndexArray_System_Span_System_Byte__System_Int32_System_Int32_" data-uid="Fp.Helpers.BaseUnmanagedIntegerArrayHelper`1.GetIndexArray(System.Span{System.Byte},System.Int32,System.Int32)">
+  GetIndexArray(Span&lt;byte&gt;, int, int)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/collectioneering/Fp/blob/main/src/Fp/Helpers/BaseUnmanagedIntegerArrayHelper.IndexArray.cs/#L67"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Gets an index array from the specified buffer.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public ReadOnlySpan&lt;T&gt; GetIndexArray(Span&lt;byte&gt; source, int offset, int count)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>source</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.span-1">Span</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.byte">byte</a>&gt;</dt>
+    <dd><p>Source buffer.</p>
+</dd>
+    <dt><code>offset</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd><p>Byte offset in buffer.</p>
+</dd>
+    <dt><code>count</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd><p>Number of indices in buffer.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.readonlyspan-1">ReadOnlySpan</a>&lt;T&gt;</dt>
+    <dd><p>Indices.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Fp_Helpers_BaseUnmanagedIntegerArrayHelper_1_GetIndexArray_" data-uid="Fp.Helpers.BaseUnmanagedIntegerArrayHelper`1.GetIndexArray*"></a>
+
+  <h3 id="Fp_Helpers_BaseUnmanagedIntegerArrayHelper_1_GetIndexArray__1_System_Byte___System_Int32_System_Int32_System_Func__0___0__" data-uid="Fp.Helpers.BaseUnmanagedIntegerArrayHelper`1.GetIndexArray``1(System.Byte[],System.Int32,System.Int32,System.Func{`0,``0})">
+  GetIndexArray&lt;TElement&gt;(byte[], int, int, Func&lt;T, TElement&gt;)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/collectioneering/Fp/blob/main/src/Fp/Helpers/BaseUnmanagedIntegerArrayHelper.IndexArray.cs/#L29"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Gets an index array from the specified buffer.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public TElement[] GetIndexArray&lt;TElement&gt;(byte[] source, int offset, int count, Func&lt;T, TElement&gt; transform)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>source</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.byte">byte</a>[]</dt>
+    <dd><p>Source buffer.</p>
+</dd>
+    <dt><code>offset</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd><p>Byte offset in buffer.</p>
+</dd>
+    <dt><code>count</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd><p>Number of indices in buffer.</p>
+</dd>
+    <dt><code>transform</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.func-2">Func</a>&lt;T, TElement&gt;</dt>
+    <dd><p>Transform to apply to input values to get final indices.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt>TElement[]</dt>
+    <dd><p>Indices.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Type Parameters</h4>
+  <dl class="parameters">
+    <dt><code>TElement</code></dt>
+    <dd><p>Output index type.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <a id="Fp_Helpers_BaseUnmanagedIntegerArrayHelper_1_GetIndexArray_" data-uid="Fp.Helpers.BaseUnmanagedIntegerArrayHelper`1.GetIndexArray*"></a>
+
+  <h3 id="Fp_Helpers_BaseUnmanagedIntegerArrayHelper_1_GetIndexArray__1_System_Int64_System_Int32_System_Func__0___0__" data-uid="Fp.Helpers.BaseUnmanagedIntegerArrayHelper`1.GetIndexArray``1(System.Int64,System.Int32,System.Func{`0,``0})">
+  GetIndexArray&lt;TElement&gt;(long, int, Func&lt;T, TElement&gt;)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/collectioneering/Fp/blob/main/src/Fp/Helpers/BaseUnmanagedIntegerArrayHelper.IndexArray.cs/#L157"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Gets an index array from <a class="xref" href="Fp.Helpers.Helper.html#Fp_Helpers_Helper_InputStream">InputStream</a>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public TElement[] GetIndexArray&lt;TElement&gt;(long offset, int count, Func&lt;T, TElement&gt; transform)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>offset</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int64">long</a></dt>
+    <dd><p>Byte offset in stream.</p>
+</dd>
+    <dt><code>count</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd><p>Number of indices in stream.</p>
+</dd>
+    <dt><code>transform</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.func-2">Func</a>&lt;T, TElement&gt;</dt>
+    <dd><p>Transform to apply to input values to get final indices.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt>TElement[]</dt>
+    <dd><p>Indices.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Type Parameters</h4>
+  <dl class="parameters">
+    <dt><code>TElement</code></dt>
+    <dd><p>Output index type.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <a id="Fp_Helpers_BaseUnmanagedIntegerArrayHelper_1_GetIndexArray_" data-uid="Fp.Helpers.BaseUnmanagedIntegerArrayHelper`1.GetIndexArray*"></a>
+
+  <h3 id="Fp_Helpers_BaseUnmanagedIntegerArrayHelper_1_GetIndexArray__1_System_Int64_System_Int32_System_IO_Stream_System_Func__0___0__" data-uid="Fp.Helpers.BaseUnmanagedIntegerArrayHelper`1.GetIndexArray``1(System.Int64,System.Int32,System.IO.Stream,System.Func{`0,``0})">
+  GetIndexArray&lt;TElement&gt;(long, int, Stream, Func&lt;T, TElement&gt;)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/collectioneering/Fp/blob/main/src/Fp/Helpers/BaseUnmanagedIntegerArrayHelper.IndexArray.cs/#L183"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Gets an index array from a stream.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public TElement[] GetIndexArray&lt;TElement&gt;(long offset, int count, Stream stream, Func&lt;T, TElement&gt; transform)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>offset</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int64">long</a></dt>
+    <dd><p>Byte offset in stream.</p>
+</dd>
+    <dt><code>count</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd><p>Number of indices in stream.</p>
+</dd>
+    <dt><code>stream</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.io.stream">Stream</a></dt>
+    <dd><p>Source stream.</p>
+</dd>
+    <dt><code>transform</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.func-2">Func</a>&lt;T, TElement&gt;</dt>
+    <dd><p>Transform to apply to input values to get final indices.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt>TElement[]</dt>
+    <dd><p>Indices.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Type Parameters</h4>
+  <dl class="parameters">
+    <dt><code>TElement</code></dt>
+    <dd><p>Output index type.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <a id="Fp_Helpers_BaseUnmanagedIntegerArrayHelper_1_GetIndexArray_" data-uid="Fp.Helpers.BaseUnmanagedIntegerArrayHelper`1.GetIndexArray*"></a>
+
+  <h3 id="Fp_Helpers_BaseUnmanagedIntegerArrayHelper_1_GetIndexArray__1_System_Memory_System_Byte__System_Int32_System_Int32_System_Func__0___0__" data-uid="Fp.Helpers.BaseUnmanagedIntegerArrayHelper`1.GetIndexArray``1(System.Memory{System.Byte},System.Int32,System.Int32,System.Func{`0,``0})">
+  GetIndexArray&lt;TElement&gt;(Memory&lt;byte&gt;, int, int, Func&lt;T, TElement&gt;)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/collectioneering/Fp/blob/main/src/Fp/Helpers/BaseUnmanagedIntegerArrayHelper.IndexArray.cs/#L55"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Gets an index array from the specified buffer.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public TElement[] GetIndexArray&lt;TElement&gt;(Memory&lt;byte&gt; source, int offset, int count, Func&lt;T, TElement&gt; transform)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>source</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.memory-1">Memory</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.byte">byte</a>&gt;</dt>
+    <dd><p>Source buffer.</p>
+</dd>
+    <dt><code>offset</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd><p>Byte offset in buffer.</p>
+</dd>
+    <dt><code>count</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd><p>Number of indices in buffer.</p>
+</dd>
+    <dt><code>transform</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.func-2">Func</a>&lt;T, TElement&gt;</dt>
+    <dd><p>Transform to apply to input values to get final indices.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt>TElement[]</dt>
+    <dd><p>Indices.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Type Parameters</h4>
+  <dl class="parameters">
+    <dt><code>TElement</code></dt>
+    <dd><p>Output index type.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <a id="Fp_Helpers_BaseUnmanagedIntegerArrayHelper_1_GetIndexArray_" data-uid="Fp.Helpers.BaseUnmanagedIntegerArrayHelper`1.GetIndexArray*"></a>
+
+  <h3 id="Fp_Helpers_BaseUnmanagedIntegerArrayHelper_1_GetIndexArray__1_System_ReadOnlyMemory_System_Byte__System_Int32_System_Int32_System_Func__0___0__" data-uid="Fp.Helpers.BaseUnmanagedIntegerArrayHelper`1.GetIndexArray``1(System.ReadOnlyMemory{System.Byte},System.Int32,System.Int32,System.Func{`0,``0})">
+  GetIndexArray&lt;TElement&gt;(ReadOnlyMemory&lt;byte&gt;, int, int, Func&lt;T, TElement&gt;)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/collectioneering/Fp/blob/main/src/Fp/Helpers/BaseUnmanagedIntegerArrayHelper.IndexArray.cs/#L107"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Gets an index array from the specified buffer.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public TElement[] GetIndexArray&lt;TElement&gt;(ReadOnlyMemory&lt;byte&gt; source, int offset, int count, Func&lt;T, TElement&gt; transform)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>source</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.readonlymemory-1">ReadOnlyMemory</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.byte">byte</a>&gt;</dt>
+    <dd><p>Source buffer.</p>
+</dd>
+    <dt><code>offset</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd><p>Byte offset in buffer.</p>
+</dd>
+    <dt><code>count</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd><p>Number of indices in buffer.</p>
+</dd>
+    <dt><code>transform</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.func-2">Func</a>&lt;T, TElement&gt;</dt>
+    <dd><p>Transform to apply to input values to get final indices.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt>TElement[]</dt>
+    <dd><p>Indices.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Type Parameters</h4>
+  <dl class="parameters">
+    <dt><code>TElement</code></dt>
+    <dd><p>Output index type.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <a id="Fp_Helpers_BaseUnmanagedIntegerArrayHelper_1_GetIndexArray_" data-uid="Fp.Helpers.BaseUnmanagedIntegerArrayHelper`1.GetIndexArray*"></a>
+
+  <h3 id="Fp_Helpers_BaseUnmanagedIntegerArrayHelper_1_GetIndexArray__1_System_ReadOnlySpan_System_Byte__System_Int32_System_Int32_System_Func__0___0__" data-uid="Fp.Helpers.BaseUnmanagedIntegerArrayHelper`1.GetIndexArray``1(System.ReadOnlySpan{System.Byte},System.Int32,System.Int32,System.Func{`0,``0})">
+  GetIndexArray&lt;TElement&gt;(ReadOnlySpan&lt;byte&gt;, int, int, Func&lt;T, TElement&gt;)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/collectioneering/Fp/blob/main/src/Fp/Helpers/BaseUnmanagedIntegerArrayHelper.IndexArray.cs/#L133"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Gets an index array from the specified buffer.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public TElement[] GetIndexArray&lt;TElement&gt;(ReadOnlySpan&lt;byte&gt; source, int offset, int count, Func&lt;T, TElement&gt; transform)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>source</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.readonlyspan-1">ReadOnlySpan</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.byte">byte</a>&gt;</dt>
+    <dd><p>Source buffer.</p>
+</dd>
+    <dt><code>offset</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd><p>Byte offset in buffer.</p>
+</dd>
+    <dt><code>count</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd><p>Number of indices in buffer.</p>
+</dd>
+    <dt><code>transform</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.func-2">Func</a>&lt;T, TElement&gt;</dt>
+    <dd><p>Transform to apply to input values to get final indices.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt>TElement[]</dt>
+    <dd><p>Indices.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Type Parameters</h4>
+  <dl class="parameters">
+    <dt><code>TElement</code></dt>
+    <dd><p>Output index type.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <a id="Fp_Helpers_BaseUnmanagedIntegerArrayHelper_1_GetIndexArray_" data-uid="Fp.Helpers.BaseUnmanagedIntegerArrayHelper`1.GetIndexArray*"></a>
+
+  <h3 id="Fp_Helpers_BaseUnmanagedIntegerArrayHelper_1_GetIndexArray__1_System_Span_System_Byte__System_Int32_System_Int32_System_Func__0___0__" data-uid="Fp.Helpers.BaseUnmanagedIntegerArrayHelper`1.GetIndexArray``1(System.Span{System.Byte},System.Int32,System.Int32,System.Func{`0,``0})">
+  GetIndexArray&lt;TElement&gt;(Span&lt;byte&gt;, int, int, Func&lt;T, TElement&gt;)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/collectioneering/Fp/blob/main/src/Fp/Helpers/BaseUnmanagedIntegerArrayHelper.IndexArray.cs/#L81"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Gets an index array from the specified buffer.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public TElement[] GetIndexArray&lt;TElement&gt;(Span&lt;byte&gt; source, int offset, int count, Func&lt;T, TElement&gt; transform)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>source</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.span-1">Span</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.byte">byte</a>&gt;</dt>
+    <dd><p>Source buffer.</p>
+</dd>
+    <dt><code>offset</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd><p>Byte offset in buffer.</p>
+</dd>
+    <dt><code>count</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd><p>Number of indices in buffer.</p>
+</dd>
+    <dt><code>transform</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.func-2">Func</a>&lt;T, TElement&gt;</dt>
+    <dd><p>Transform to apply to input values to get final indices.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt>TElement[]</dt>
+    <dd><p>Indices.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Type Parameters</h4>
+  <dl class="parameters">
+    <dt><code>TElement</code></dt>
+    <dd><p>Output index type.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+</article>
+
+        <div class="contribution d-print-none">
+          <a href="https://github.com/collectioneering/Fp/blob/main/src/Fp/Helpers/BaseUnmanagedIntegerArrayHelper.IndexArray.cs/#L6" class="edit-link">Edit this page</a>
+        </div>
+
+
+      </div>
+
+      <div class="affix">
+        <nav id="affix"></nav>
+      </div>
+    </main>
+
+
+    <footer class="border-top text-secondary">
+      <div class="container-xxl">
+        <div class="flex-fill">
+          <span>Made with <a href="https://dotnet.github.io/docfx">docfx</a></span>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

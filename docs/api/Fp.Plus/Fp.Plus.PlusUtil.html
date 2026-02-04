@@ -1,0 +1,2708 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+      <title>Class PlusUtil </title>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="title" content="Class PlusUtil ">
+      
+      <meta name="description" content="Utilities.">
+      <link rel="icon" href="../../favicon.ico">
+      <link rel="stylesheet" href="../../public/docfx.min.css">
+      <link rel="stylesheet" href="../../public/main.css">
+      <meta name="docfx:navrel" content="../../toc.html">
+      <meta name="docfx:tocrel" content="toc.html">
+      
+      
+      
+      
+      <meta name="docfx:docurl" content="https://github.com/collectioneering/Fp/new/main/apiSpec/new?filename=Fp_Plus_PlusUtil.md&amp;value=---%0Auid%3A%20Fp.Plus.PlusUtil%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">
+      <meta name="loc:inThisArticle" content="In this article">
+      <meta name="loc:searchResultsCount" content="{count} results for &quot;{query}&quot;">
+      <meta name="loc:searchNoResults" content="No results for &quot;{query}&quot;">
+      <meta name="loc:tocFilter" content="Filter by title">
+      <meta name="loc:nextArticle" content="Next">
+      <meta name="loc:prevArticle" content="Previous">
+      <meta name="loc:themeLight" content="Light">
+      <meta name="loc:themeDark" content="Dark">
+      <meta name="loc:themeAuto" content="Auto">
+      <meta name="loc:changeTheme" content="Change theme">
+      <meta name="loc:copy" content="Copy">
+      <meta name="loc:downloadPdf" content="Download PDF">
+
+      <script type="module" src="./../../public/docfx.min.js"></script>
+
+      <script>
+        const theme = localStorage.getItem('theme') || 'auto'
+        document.documentElement.setAttribute('data-bs-theme', theme === 'auto' ? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light') : theme)
+      </script>
+
+  </head>
+
+  <body class="tex2jax_ignore" data-layout="" data-yaml-mime="ManagedReference">
+    <header class="bg-body border-bottom">
+      <nav id="autocollapse" class="navbar navbar-expand-md" role="navigation">
+        <div class="container-xxl flex-nowrap">
+          <a class="navbar-brand" href="../../index.html">
+            <img id="logo" class="svg" src="../../icon.png" alt="">
+            
+          </a>
+          <button class="btn btn-lg d-md-none border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navpanel" aria-controls="navpanel" aria-expanded="false" aria-label="Toggle navigation">
+            <i class="bi bi-three-dots"></i>
+          </button>
+          <div class="collapse navbar-collapse" id="navpanel">
+            <div id="navbar">
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main class="container-xxl">
+      <div class="toc-offcanvas">
+        <div class="offcanvas-md offcanvas-start" tabindex="-1" id="tocOffcanvas" aria-labelledby="tocOffcanvasLabel">
+          <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="tocOffcanvasLabel">Table of Contents</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" data-bs-target="#tocOffcanvas" aria-label="Close"></button>
+          </div>
+          <div class="offcanvas-body">
+            <nav class="toc" id="toc"></nav>
+          </div>
+        </div>
+      </div>
+
+      <div class="content">
+        <div class="actionbar">
+          <button class="btn btn-lg border-0 d-md-none" type="button" data-bs-toggle="offcanvas" data-bs-target="#tocOffcanvas" aria-controls="tocOffcanvas" aria-expanded="false" aria-label="Show table of contents">
+            <i class="bi bi-list"></i>
+          </button>
+
+          <nav id="breadcrumb"></nav>
+        </div>
+
+        <article data-uid="Fp.Plus.PlusUtil">
+
+
+
+  <h1 id="Fp_Plus_PlusUtil" data-uid="Fp.Plus.PlusUtil" class="text-break">
+Class PlusUtil  <a class="header-action link-secondary" title="View source" href="https://github.com/collectioneering/Fp/blob/main/src/Fp.Plus/Video/Utility.cs/#L8"><i class="bi bi-code-slash"></i></a>
+  </h1>
+
+  <div class="facts text-secondary">
+    <dl><dt>Namespace</dt><dd><a class="xref" href="Fp.html">Fp</a>.<a class="xref" href="Fp.Plus.html">Plus</a></dd></dl>
+  <dl><dt>Assembly</dt><dd>Fp.Plus.dll</dd></dl>
+  </div>
+
+  <div class="markdown summary"><p>Utilities.</p>
+</div>
+  <div class="markdown conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static class PlusUtil</code></pre>
+  </div>
+
+
+
+
+  <dl class="typelist inheritance">
+    <dt>Inheritance</dt>
+    <dd>
+      <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a></div>
+      <div><span class="xref">PlusUtil</span></div>
+    </dd>
+  </dl>
+
+
+
+  <dl class="typelist inheritedMembers">
+    <dt>Inherited Members</dt>
+    <dd>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)">object.Equals(object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)">object.Equals(object, object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.gethashcode">object.GetHashCode()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.gettype">object.GetType()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone">object.MemberwiseClone()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.referenceequals">object.ReferenceEquals(object, object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.tostring">object.ToString()</a>
+    </div>
+  </dd></dl>
+
+
+
+
+
+
+  <h2 class="section" id="methods">Methods
+</h2>
+
+
+  <a id="Fp_Plus_PlusUtil_CreateImage_" data-uid="Fp.Plus.PlusUtil.CreateImage*"></a>
+
+  <h3 id="Fp_Plus_PlusUtil_CreateImage_Fp_FpPath_System_Int32_System_Int32_Fp_Data__" data-uid="Fp.Plus.PlusUtil.CreateImage(Fp.FpPath,System.Int32,System.Int32,Fp.Data@)">
+  CreateImage(FpPath, int, int, out Data)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/collectioneering/Fp/blob/main/src/Fp.Plus/Images/Utility.cs/#L150"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Creates image write context.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static WriteContext&lt;uint&gt; CreateImage(this FpPath path, int width, int height, out Data image)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>path</code> <a class="xref" href="../Fp/Fp.FpPath.html">FpPath</a></dt>
+    <dd><p>Base path (without extension).</p>
+</dd>
+    <dt><code>width</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd><p>Image width.</p>
+</dd>
+    <dt><code>height</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd><p>Image height.</p>
+</dd>
+    <dt><code>image</code> <a class="xref" href="../Fp/Fp.Data.html">Data</a></dt>
+    <dd><p>Data object.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="../Fp/Fp.WriteContext-1.html">WriteContext</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.uint32">uint</a>&gt;</dt>
+    <dd><p>32bpp RGBA buffer.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Fp_Plus_PlusUtil_DeDeflate_" data-uid="Fp.Plus.PlusUtil.DeDeflate*"></a>
+
+  <h3 id="Fp_Plus_PlusUtil_DeDeflate_System_Byte___" data-uid="Fp.Plus.PlusUtil.DeDeflate(System.Byte[])">
+  DeDeflate(byte[])
+  <a class="header-action link-secondary" title="View source" href="https://github.com/collectioneering/Fp/blob/main/src/Fp.Plus/Compression/BclCompression.cs/#L30"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Decompresses deflate data.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static byte[] DeDeflate(this byte[] buffer)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>buffer</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.byte">byte</a>[]</dt>
+    <dd><p>Buffer to read.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.byte">byte</a>[]</dt>
+    <dd><p>Decompressed data.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Fp_Plus_PlusUtil_DeDeflate_" data-uid="Fp.Plus.PlusUtil.DeDeflate*"></a>
+
+  <h3 id="Fp_Plus_PlusUtil_DeDeflate_System_IO_Stream_" data-uid="Fp.Plus.PlusUtil.DeDeflate(System.IO.Stream)">
+  DeDeflate(Stream)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/collectioneering/Fp/blob/main/src/Fp.Plus/Compression/BclCompression.cs/#L38"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Decompresses deflate data.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static byte[] DeDeflate(this Stream stream)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>stream</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.io.stream">Stream</a></dt>
+    <dd><p>Stream to read.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.byte">byte</a>[]</dt>
+    <dd><p>Decompressed data.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Fp_Plus_PlusUtil_DeDeflate_" data-uid="Fp.Plus.PlusUtil.DeDeflate*"></a>
+
+  <h3 id="Fp_Plus_PlusUtil_DeDeflate_System_Memory_System_Byte__" data-uid="Fp.Plus.PlusUtil.DeDeflate(System.Memory{System.Byte})">
+  DeDeflate(Memory&lt;byte&gt;)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/collectioneering/Fp/blob/main/src/Fp.Plus/Compression/BclCompression.cs/#L22"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Decompresses deflate data.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static byte[] DeDeflate(this Memory&lt;byte&gt; buffer)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>buffer</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.memory-1">Memory</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.byte">byte</a>&gt;</dt>
+    <dd><p>Buffer to read.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.byte">byte</a>[]</dt>
+    <dd><p>Decompressed data.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Fp_Plus_PlusUtil_DeDeflate_" data-uid="Fp.Plus.PlusUtil.DeDeflate*"></a>
+
+  <h3 id="Fp_Plus_PlusUtil_DeDeflate_System_ReadOnlyMemory_System_Byte__" data-uid="Fp.Plus.PlusUtil.DeDeflate(System.ReadOnlyMemory{System.Byte})">
+  DeDeflate(ReadOnlyMemory&lt;byte&gt;)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/collectioneering/Fp/blob/main/src/Fp.Plus/Compression/BclCompression.cs/#L14"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Decompresses deflate data.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static byte[] DeDeflate(this ReadOnlyMemory&lt;byte&gt; buffer)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>buffer</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.readonlymemory-1">ReadOnlyMemory</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.byte">byte</a>&gt;</dt>
+    <dd><p>Buffer to read.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.byte">byte</a>[]</dt>
+    <dd><p>Decompressed data.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Fp_Plus_PlusUtil_DeGzip_" data-uid="Fp.Plus.PlusUtil.DeGzip*"></a>
+
+  <h3 id="Fp_Plus_PlusUtil_DeGzip_System_Byte___" data-uid="Fp.Plus.PlusUtil.DeGzip(System.Byte[])">
+  DeGzip(byte[])
+  <a class="header-action link-secondary" title="View source" href="https://github.com/collectioneering/Fp/blob/main/src/Fp.Plus/Compression/BclCompression.cs/#L62"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Decompresses gzipped data.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static byte[] DeGzip(this byte[] buffer)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>buffer</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.byte">byte</a>[]</dt>
+    <dd><p>Buffer to read.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.byte">byte</a>[]</dt>
+    <dd><p>Decompressed data.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Fp_Plus_PlusUtil_DeGzip_" data-uid="Fp.Plus.PlusUtil.DeGzip*"></a>
+
+  <h3 id="Fp_Plus_PlusUtil_DeGzip_System_IO_Stream_" data-uid="Fp.Plus.PlusUtil.DeGzip(System.IO.Stream)">
+  DeGzip(Stream)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/collectioneering/Fp/blob/main/src/Fp.Plus/Compression/BclCompression.cs/#L70"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Decompresses gzipped data.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static byte[] DeGzip(this Stream stream)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>stream</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.io.stream">Stream</a></dt>
+    <dd><p>Stream to read.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.byte">byte</a>[]</dt>
+    <dd><p>Decompressed data.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Fp_Plus_PlusUtil_DeGzip_" data-uid="Fp.Plus.PlusUtil.DeGzip*"></a>
+
+  <h3 id="Fp_Plus_PlusUtil_DeGzip_System_Memory_System_Byte__" data-uid="Fp.Plus.PlusUtil.DeGzip(System.Memory{System.Byte})">
+  DeGzip(Memory&lt;byte&gt;)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/collectioneering/Fp/blob/main/src/Fp.Plus/Compression/BclCompression.cs/#L54"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Decompresses gzipped data.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static byte[] DeGzip(this Memory&lt;byte&gt; buffer)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>buffer</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.memory-1">Memory</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.byte">byte</a>&gt;</dt>
+    <dd><p>Buffer to read.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.byte">byte</a>[]</dt>
+    <dd><p>Decompressed data.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Fp_Plus_PlusUtil_DeGzip_" data-uid="Fp.Plus.PlusUtil.DeGzip*"></a>
+
+  <h3 id="Fp_Plus_PlusUtil_DeGzip_System_ReadOnlyMemory_System_Byte__" data-uid="Fp.Plus.PlusUtil.DeGzip(System.ReadOnlyMemory{System.Byte})">
+  DeGzip(ReadOnlyMemory&lt;byte&gt;)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/collectioneering/Fp/blob/main/src/Fp.Plus/Compression/BclCompression.cs/#L46"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Decompresses gzipped data.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static byte[] DeGzip(this ReadOnlyMemory&lt;byte&gt; buffer)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>buffer</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.readonlymemory-1">ReadOnlyMemory</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.byte">byte</a>&gt;</dt>
+    <dd><p>Buffer to read.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.byte">byte</a>[]</dt>
+    <dd><p>Decompressed data.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Fp_Plus_PlusUtil_DeZlib_" data-uid="Fp.Plus.PlusUtil.DeZlib*"></a>
+
+  <h3 id="Fp_Plus_PlusUtil_DeZlib_System_Byte___" data-uid="Fp.Plus.PlusUtil.DeZlib(System.Byte[])">
+  DeZlib(byte[])
+  <a class="header-action link-secondary" title="View source" href="https://github.com/collectioneering/Fp/blob/main/src/Fp.Plus/Compression/BclCompression.cs/#L96"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Decompresses zlib data.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static byte[] DeZlib(this byte[] buffer)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>buffer</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.byte">byte</a>[]</dt>
+    <dd><p>Buffer to read.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.byte">byte</a>[]</dt>
+    <dd><p>Decompressed data.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Fp_Plus_PlusUtil_DeZlib_" data-uid="Fp.Plus.PlusUtil.DeZlib*"></a>
+
+  <h3 id="Fp_Plus_PlusUtil_DeZlib_System_IO_Stream_" data-uid="Fp.Plus.PlusUtil.DeZlib(System.IO.Stream)">
+  DeZlib(Stream)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/collectioneering/Fp/blob/main/src/Fp.Plus/Compression/BclCompression.cs/#L104"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Decompresses zlib data.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static byte[] DeZlib(this Stream stream)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>stream</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.io.stream">Stream</a></dt>
+    <dd><p>Stream to read.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.byte">byte</a>[]</dt>
+    <dd><p>Decompressed data.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Fp_Plus_PlusUtil_DeZlib_" data-uid="Fp.Plus.PlusUtil.DeZlib*"></a>
+
+  <h3 id="Fp_Plus_PlusUtil_DeZlib_System_Memory_System_Byte__" data-uid="Fp.Plus.PlusUtil.DeZlib(System.Memory{System.Byte})">
+  DeZlib(Memory&lt;byte&gt;)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/collectioneering/Fp/blob/main/src/Fp.Plus/Compression/BclCompression.cs/#L88"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Decompresses zlib data.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static byte[] DeZlib(this Memory&lt;byte&gt; buffer)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>buffer</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.memory-1">Memory</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.byte">byte</a>&gt;</dt>
+    <dd><p>Buffer to read.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.byte">byte</a>[]</dt>
+    <dd><p>Decompressed data.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Fp_Plus_PlusUtil_DeZlib_" data-uid="Fp.Plus.PlusUtil.DeZlib*"></a>
+
+  <h3 id="Fp_Plus_PlusUtil_DeZlib_System_ReadOnlyMemory_System_Byte__" data-uid="Fp.Plus.PlusUtil.DeZlib(System.ReadOnlyMemory{System.Byte})">
+  DeZlib(ReadOnlyMemory&lt;byte&gt;)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/collectioneering/Fp/blob/main/src/Fp.Plus/Compression/BclCompression.cs/#L80"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Decompresses zlib data.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static byte[] DeZlib(this ReadOnlyMemory&lt;byte&gt; buffer)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>buffer</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.readonlymemory-1">ReadOnlyMemory</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.byte">byte</a>&gt;</dt>
+    <dd><p>Buffer to read.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.byte">byte</a>[]</dt>
+    <dd><p>Decompressed data.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Fp_Plus_PlusUtil_DecodeDxt1_" data-uid="Fp.Plus.PlusUtil.DecodeDxt1*"></a>
+
+  <h3 id="Fp_Plus_PlusUtil_DecodeDxt1_System_ReadOnlySpan_System_Byte__System_Span_System_UInt32__System_Int32_System_Int32_" data-uid="Fp.Plus.PlusUtil.DecodeDxt1(System.ReadOnlySpan{System.Byte},System.Span{System.UInt32},System.Int32,System.Int32)">
+  DecodeDxt1(ReadOnlySpan&lt;byte&gt;, Span&lt;uint&gt;, int, int)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/collectioneering/Fp/blob/main/src/Fp.Plus/Images/DxtDecoder.cs/#L514"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Decompresses DXT1-compressed image.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static void DecodeDxt1(ReadOnlySpan&lt;byte&gt; src, Span&lt;uint&gt; img, int width, int height)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>src</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.readonlyspan-1">ReadOnlySpan</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.byte">byte</a>&gt;</dt>
+    <dd><p>Source buffer.</p>
+</dd>
+    <dt><code>img</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.span-1">Span</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.uint32">uint</a>&gt;</dt>
+    <dd><p>Target buffer.</p>
+</dd>
+    <dt><code>width</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd><p>Width.</p>
+</dd>
+    <dt><code>height</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd><p>Height.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Fp_Plus_PlusUtil_DecodeDxt5_" data-uid="Fp.Plus.PlusUtil.DecodeDxt5*"></a>
+
+  <h3 id="Fp_Plus_PlusUtil_DecodeDxt5_System_ReadOnlySpan_System_Byte__System_Span_System_UInt32__System_Int32_System_Int32_" data-uid="Fp.Plus.PlusUtil.DecodeDxt5(System.ReadOnlySpan{System.Byte},System.Span{System.UInt32},System.Int32,System.Int32)">
+  DecodeDxt5(ReadOnlySpan&lt;byte&gt;, Span&lt;uint&gt;, int, int)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/collectioneering/Fp/blob/main/src/Fp.Plus/Images/DxtDecoder.cs/#L524"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Decompresses DXT5-compressed image.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static void DecodeDxt5(ReadOnlySpan&lt;byte&gt; src, Span&lt;uint&gt; img, int width, int height)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>src</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.readonlyspan-1">ReadOnlySpan</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.byte">byte</a>&gt;</dt>
+    <dd><p>Source buffer.</p>
+</dd>
+    <dt><code>img</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.span-1">Span</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.uint32">uint</a>&gt;</dt>
+    <dd><p>Target buffer.</p>
+</dd>
+    <dt><code>width</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd><p>Width.</p>
+</dd>
+    <dt><code>height</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd><p>Height.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Fp_Plus_PlusUtil_DecodeEtc2_" data-uid="Fp.Plus.PlusUtil.DecodeEtc2*"></a>
+
+  <h3 id="Fp_Plus_PlusUtil_DecodeEtc2_System_ReadOnlySpan_System_Byte__System_Span_System_UInt32__System_Int32_System_Int32_System_Boolean_" data-uid="Fp.Plus.PlusUtil.DecodeEtc2(System.ReadOnlySpan{System.Byte},System.Span{System.UInt32},System.Int32,System.Int32,System.Boolean)">
+  DecodeEtc2(ReadOnlySpan&lt;byte&gt;, Span&lt;uint&gt;, int, int, bool)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/collectioneering/Fp/blob/main/src/Fp.Plus/Images/EtcDecoder.cs/#L1165"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Decodes ETC2-compressed image.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static bool DecodeEtc2(ReadOnlySpan&lt;byte&gt; src, Span&lt;uint&gt; img, int width, int height, bool hasAlpha)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>src</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.readonlyspan-1">ReadOnlySpan</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.byte">byte</a>&gt;</dt>
+    <dd><p>Source buffer.</p>
+</dd>
+    <dt><code>img</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.span-1">Span</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.uint32">uint</a>&gt;</dt>
+    <dd><p>Target buffer.</p>
+</dd>
+    <dt><code>width</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd><p>Output width.</p>
+</dd>
+    <dt><code>height</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd><p>Output height.</p>
+</dd>
+    <dt><code>hasAlpha</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd><p>Image has alpha channel.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd><p>True if succeeded.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Fp_Plus_PlusUtil_DecryptAesCbc_" data-uid="Fp.Plus.PlusUtil.DecryptAesCbc*"></a>
+
+  <h3 id="Fp_Plus_PlusUtil_DecryptAesCbc_System_Span_System_Byte__System_ReadOnlySpan_System_Byte__System_ReadOnlySpan_System_Byte__" data-uid="Fp.Plus.PlusUtil.DecryptAesCbc(System.Span{System.Byte},System.ReadOnlySpan{System.Byte},System.ReadOnlySpan{System.Byte})">
+  DecryptAesCbc(Span&lt;byte&gt;, ReadOnlySpan&lt;byte&gt;, ReadOnlySpan&lt;byte&gt;)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/collectioneering/Fp/blob/main/src/Fp.Plus/Ciphers/Aes.cs/#L37"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Decrypts with Aes using CBC mode and key/IV.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static void DecryptAesCbc(Span&lt;byte&gt; src, ReadOnlySpan&lt;byte&gt; key, ReadOnlySpan&lt;byte&gt; iv = default)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>src</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.span-1">Span</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.byte">byte</a>&gt;</dt>
+    <dd><p>Source span.</p>
+</dd>
+    <dt><code>key</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.readonlyspan-1">ReadOnlySpan</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.byte">byte</a>&gt;</dt>
+    <dd><p>Cipher key.</p>
+</dd>
+    <dt><code>iv</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.readonlyspan-1">ReadOnlySpan</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.byte">byte</a>&gt;</dt>
+    <dd><p>IV (CBC/CTR).</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Fp_Plus_PlusUtil_DecryptAesEcb_" data-uid="Fp.Plus.PlusUtil.DecryptAesEcb*"></a>
+
+  <h3 id="Fp_Plus_PlusUtil_DecryptAesEcb_System_Span_System_Byte__System_ReadOnlySpan_System_Byte__" data-uid="Fp.Plus.PlusUtil.DecryptAesEcb(System.Span{System.Byte},System.ReadOnlySpan{System.Byte})">
+  DecryptAesEcb(Span&lt;byte&gt;, ReadOnlySpan&lt;byte&gt;)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/collectioneering/Fp/blob/main/src/Fp.Plus/Ciphers/Aes.cs/#L15"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Decrypts with Aes using ECB mode and key.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static void DecryptAesEcb(Span&lt;byte&gt; src, ReadOnlySpan&lt;byte&gt; key)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>src</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.span-1">Span</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.byte">byte</a>&gt;</dt>
+    <dd><p>Source span.</p>
+</dd>
+    <dt><code>key</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.readonlyspan-1">ReadOnlySpan</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.byte">byte</a>&gt;</dt>
+    <dd><p>Cipher key.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Fp_Plus_PlusUtil_DecryptBlowfishCbc_" data-uid="Fp.Plus.PlusUtil.DecryptBlowfishCbc*"></a>
+
+  <h3 id="Fp_Plus_PlusUtil_DecryptBlowfishCbc_System_Span_System_Byte__System_ReadOnlySpan_System_Byte__System_ReadOnlySpan_System_Byte__" data-uid="Fp.Plus.PlusUtil.DecryptBlowfishCbc(System.Span{System.Byte},System.ReadOnlySpan{System.Byte},System.ReadOnlySpan{System.Byte})">
+  DecryptBlowfishCbc(Span&lt;byte&gt;, ReadOnlySpan&lt;byte&gt;, ReadOnlySpan&lt;byte&gt;)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/collectioneering/Fp/blob/main/src/Fp.Plus/Ciphers/BlowFish.cs/#L753"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Decrypt with Blowfish using CBC mode and key/IV.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static void DecryptBlowfishCbc(Span&lt;byte&gt; src, ReadOnlySpan&lt;byte&gt; key, ReadOnlySpan&lt;byte&gt; iv = default)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>src</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.span-1">Span</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.byte">byte</a>&gt;</dt>
+    <dd><p>Source span.</p>
+</dd>
+    <dt><code>key</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.readonlyspan-1">ReadOnlySpan</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.byte">byte</a>&gt;</dt>
+    <dd><p>Cipher key.</p>
+</dd>
+    <dt><code>iv</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.readonlyspan-1">ReadOnlySpan</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.byte">byte</a>&gt;</dt>
+    <dd><p>IV (CBC/CTR).</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Fp_Plus_PlusUtil_DecryptBlowfishEcb_" data-uid="Fp.Plus.PlusUtil.DecryptBlowfishEcb*"></a>
+
+  <h3 id="Fp_Plus_PlusUtil_DecryptBlowfishEcb_System_Span_System_Byte__System_ReadOnlySpan_System_Byte__" data-uid="Fp.Plus.PlusUtil.DecryptBlowfishEcb(System.Span{System.Byte},System.ReadOnlySpan{System.Byte})">
+  DecryptBlowfishEcb(Span&lt;byte&gt;, ReadOnlySpan&lt;byte&gt;)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/collectioneering/Fp/blob/main/src/Fp.Plus/Ciphers/BlowFish.cs/#L741"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Decrypt with Blowfish using ECB mode and key.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static void DecryptBlowfishEcb(Span&lt;byte&gt; src, ReadOnlySpan&lt;byte&gt; key)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>src</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.span-1">Span</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.byte">byte</a>&gt;</dt>
+    <dd><p>Source span.</p>
+</dd>
+    <dt><code>key</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.readonlyspan-1">ReadOnlySpan</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.byte">byte</a>&gt;</dt>
+    <dd><p>Cipher key.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Fp_Plus_PlusUtil_EncryptBlowfishCbc_" data-uid="Fp.Plus.PlusUtil.EncryptBlowfishCbc*"></a>
+
+  <h3 id="Fp_Plus_PlusUtil_EncryptBlowfishCbc_System_Span_System_Byte__System_ReadOnlySpan_System_Byte__System_ReadOnlySpan_System_Byte__" data-uid="Fp.Plus.PlusUtil.EncryptBlowfishCbc(System.Span{System.Byte},System.ReadOnlySpan{System.Byte},System.ReadOnlySpan{System.Byte})">
+  EncryptBlowfishCbc(Span&lt;byte&gt;, ReadOnlySpan&lt;byte&gt;, ReadOnlySpan&lt;byte&gt;)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/collectioneering/Fp/blob/main/src/Fp.Plus/Ciphers/BlowFish.cs/#L776"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Encrypt with Blowfish using CBC mode and key/IV.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static void EncryptBlowfishCbc(Span&lt;byte&gt; src, ReadOnlySpan&lt;byte&gt; key, ReadOnlySpan&lt;byte&gt; iv = default)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>src</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.span-1">Span</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.byte">byte</a>&gt;</dt>
+    <dd><p>Source span.</p>
+</dd>
+    <dt><code>key</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.readonlyspan-1">ReadOnlySpan</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.byte">byte</a>&gt;</dt>
+    <dd><p>Cipher key.</p>
+</dd>
+    <dt><code>iv</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.readonlyspan-1">ReadOnlySpan</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.byte">byte</a>&gt;</dt>
+    <dd><p>IV (CBC/CTR).</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Fp_Plus_PlusUtil_EncryptBlowfishEcb_" data-uid="Fp.Plus.PlusUtil.EncryptBlowfishEcb*"></a>
+
+  <h3 id="Fp_Plus_PlusUtil_EncryptBlowfishEcb_System_Span_System_Byte__System_ReadOnlySpan_System_Byte__" data-uid="Fp.Plus.PlusUtil.EncryptBlowfishEcb(System.Span{System.Byte},System.ReadOnlySpan{System.Byte})">
+  EncryptBlowfishEcb(Span&lt;byte&gt;, ReadOnlySpan&lt;byte&gt;)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/collectioneering/Fp/blob/main/src/Fp.Plus/Ciphers/BlowFish.cs/#L764"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Encrypt with Blowfish using ECB mode and key.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static void EncryptBlowfishEcb(Span&lt;byte&gt; src, ReadOnlySpan&lt;byte&gt; key)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>src</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.span-1">Span</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.byte">byte</a>&gt;</dt>
+    <dd><p>Source span.</p>
+</dd>
+    <dt><code>key</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.readonlyspan-1">ReadOnlySpan</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.byte">byte</a>&gt;</dt>
+    <dd><p>Cipher key.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Fp_Plus_PlusUtil_FromBgra_" data-uid="Fp.Plus.PlusUtil.FromBgra*"></a>
+
+  <h3 id="Fp_Plus_PlusUtil_FromBgra_System_ReadOnlySpan_System_Byte__" data-uid="Fp.Plus.PlusUtil.FromBgra(System.ReadOnlySpan{System.Byte})">
+  FromBgra(ReadOnlySpan&lt;byte&gt;)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/collectioneering/Fp/blob/main/src/Fp.Plus/Images/Utility.cs/#L293"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Converts 32bpp BGRA data to 32bpp RGBA.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static uint FromBgra(this ReadOnlySpan&lt;byte&gt; data)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>data</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.readonlyspan-1">ReadOnlySpan</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.byte">byte</a>&gt;</dt>
+    <dd><p>Source.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.uint32">uint</a></dt>
+    <dd><p>32-bit value with color.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Fp_Plus_PlusUtil_FromBgra_" data-uid="Fp.Plus.PlusUtil.FromBgra*"></a>
+
+  <h3 id="Fp_Plus_PlusUtil_FromBgra_System_ReadOnlySpan_System_Byte__System_Span_System_Byte__" data-uid="Fp.Plus.PlusUtil.FromBgra(System.ReadOnlySpan{System.Byte},System.Span{System.Byte})">
+  FromBgra(ReadOnlySpan&lt;byte&gt;, Span&lt;byte&gt;)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/collectioneering/Fp/blob/main/src/Fp.Plus/Images/Utility.cs/#L279"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Converts 32bpp BGRA data to 32bpp RGBA.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static void FromBgra(this ReadOnlySpan&lt;byte&gt; data, Span&lt;byte&gt; target)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>data</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.readonlyspan-1">ReadOnlySpan</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.byte">byte</a>&gt;</dt>
+    <dd><p>Source.</p>
+</dd>
+    <dt><code>target</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.span-1">Span</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.byte">byte</a>&gt;</dt>
+    <dd><p>Target.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Fp_Plus_PlusUtil_FromRgb_" data-uid="Fp.Plus.PlusUtil.FromRgb*"></a>
+
+  <h3 id="Fp_Plus_PlusUtil_FromRgb_System_ReadOnlySpan_System_Byte__System_Byte_" data-uid="Fp.Plus.PlusUtil.FromRgb(System.ReadOnlySpan{System.Byte},System.Byte)">
+  FromRgb(ReadOnlySpan&lt;byte&gt;, byte)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/collectioneering/Fp/blob/main/src/Fp.Plus/Images/Utility.cs/#L262"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Converts 24bpp RGB data to 32bpp RGBA.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static uint FromRgb(this ReadOnlySpan&lt;byte&gt; data, byte a = 255)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>data</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.readonlyspan-1">ReadOnlySpan</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.byte">byte</a>&gt;</dt>
+    <dd><p>Source.</p>
+</dd>
+    <dt><code>a</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.byte">byte</a></dt>
+    <dd><p>Alpha value.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.uint32">uint</a></dt>
+    <dd><p>32-bit value with color.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Fp_Plus_PlusUtil_FromRgb_" data-uid="Fp.Plus.PlusUtil.FromRgb*"></a>
+
+  <h3 id="Fp_Plus_PlusUtil_FromRgb_System_ReadOnlySpan_System_Byte__System_Span_System_Byte__System_Byte_" data-uid="Fp.Plus.PlusUtil.FromRgb(System.ReadOnlySpan{System.Byte},System.Span{System.Byte},System.Byte)">
+  FromRgb(ReadOnlySpan&lt;byte&gt;, Span&lt;byte&gt;, byte)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/collectioneering/Fp/blob/main/src/Fp.Plus/Images/Utility.cs/#L249"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Converts 24bpp RGB data to 32bpp RGBA.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static void FromRgb(this ReadOnlySpan&lt;byte&gt; data, Span&lt;byte&gt; target, byte a = 255)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>data</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.readonlyspan-1">ReadOnlySpan</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.byte">byte</a>&gt;</dt>
+    <dd><p>Source.</p>
+</dd>
+    <dt><code>target</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.span-1">Span</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.byte">byte</a>&gt;</dt>
+    <dd><p>Target.</p>
+</dd>
+    <dt><code>a</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.byte">byte</a></dt>
+    <dd><p>Alpha value.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Fp_Plus_PlusUtil_Image_" data-uid="Fp.Plus.PlusUtil.Image*"></a>
+
+  <h3 id="Fp_Plus_PlusUtil_Image_Fp_FpPath_System_Int32_System_Int32_System_ReadOnlyMemory_System_UInt32__" data-uid="Fp.Plus.PlusUtil.Image(Fp.FpPath,System.Int32,System.Int32,System.ReadOnlyMemory{System.UInt32})">
+  Image(FpPath, int, int, ReadOnlyMemory&lt;uint&gt;)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/collectioneering/Fp/blob/main/src/Fp.Plus/Images/Utility.cs/#L128"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Creates 32bpp RGBA image data object.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static Rgba32Data Image(this FpPath path, int width, int height, ReadOnlyMemory&lt;uint&gt; buffer)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>path</code> <a class="xref" href="../Fp/Fp.FpPath.html">FpPath</a></dt>
+    <dd><p>Base path (without extension).</p>
+</dd>
+    <dt><code>width</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd><p>Image width.</p>
+</dd>
+    <dt><code>height</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd><p>Image height.</p>
+</dd>
+    <dt><code>buffer</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.readonlymemory-1">ReadOnlyMemory</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.uint32">uint</a>&gt;</dt>
+    <dd><p>32bpp RGBA buffer.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Fp.Plus.Images.Rgba32Data.html">Rgba32Data</a></dt>
+    <dd><p>Data object.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Fp_Plus_PlusUtil_Image_" data-uid="Fp.Plus.PlusUtil.Image*"></a>
+
+  <h3 id="Fp_Plus_PlusUtil_Image_System_String_System_Int32_System_Int32_System_ReadOnlyMemory_System_UInt32__" data-uid="Fp.Plus.PlusUtil.Image(System.String,System.Int32,System.Int32,System.ReadOnlyMemory{System.UInt32})">
+  Image(string, int, int, ReadOnlyMemory&lt;uint&gt;)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/collectioneering/Fp/blob/main/src/Fp.Plus/Images/Utility.cs/#L139"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Creates 32bpp RGBA image data object.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static Rgba32Data Image(this string name, int width, int height, ReadOnlyMemory&lt;uint&gt; buffer)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>name</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd><p>Base path (without extension).</p>
+</dd>
+    <dt><code>width</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd><p>Image width.</p>
+</dd>
+    <dt><code>height</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd><p>Image height.</p>
+</dd>
+    <dt><code>buffer</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.readonlymemory-1">ReadOnlyMemory</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.uint32">uint</a>&gt;</dt>
+    <dd><p>32bpp RGBA buffer.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Fp.Plus.Images.Rgba32Data.html">Rgba32Data</a></dt>
+    <dd><p>Data object.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Fp_Plus_PlusUtil_ImageRes_" data-uid="Fp.Plus.PlusUtil.ImageRes*"></a>
+
+  <h3 id="Fp_Plus_PlusUtil_ImageRes_System_Byte_System_Byte_" data-uid="Fp.Plus.PlusUtil.ImageRes(System.Byte,System.Byte)">
+  ImageRes(byte, byte)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/collectioneering/Fp/blob/main/src/Fp.Plus/Images/Utility.cs/#L181"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Ensures value is within pixel range between 0 and max.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static byte ImageRes(this byte x, byte max)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>x</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.byte">byte</a></dt>
+    <dd><p>Input.</p>
+</dd>
+    <dt><code>max</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.byte">byte</a></dt>
+    <dd><p>Maximum size.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.byte">byte</a></dt>
+    <dd><p>Input.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <h4 class="section">Exceptions</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.argumentexception">ArgumentException</a></dt>
+    <dd><p>Thrown when size is negative or above max.</p>
+</dd>
+  </dl>
+
+
+
+  <a id="Fp_Plus_PlusUtil_ImageRes_" data-uid="Fp.Plus.PlusUtil.ImageRes*"></a>
+
+  <h3 id="Fp_Plus_PlusUtil_ImageRes_System_Int16_System_Int16_" data-uid="Fp.Plus.PlusUtil.ImageRes(System.Int16,System.Int16)">
+  ImageRes(short, short)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/collectioneering/Fp/blob/main/src/Fp.Plus/Images/Utility.cs/#L194"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Ensures value is within pixel range between 0 and max.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static short ImageRes(this short x, short max)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>x</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int16">short</a></dt>
+    <dd><p>Input.</p>
+</dd>
+    <dt><code>max</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int16">short</a></dt>
+    <dd><p>Maximum size.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int16">short</a></dt>
+    <dd><p>Input.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <h4 class="section">Exceptions</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.argumentexception">ArgumentException</a></dt>
+    <dd><p>Thrown when size is negative or above max.</p>
+</dd>
+  </dl>
+
+
+
+  <a id="Fp_Plus_PlusUtil_ImageRes_" data-uid="Fp.Plus.PlusUtil.ImageRes*"></a>
+
+  <h3 id="Fp_Plus_PlusUtil_ImageRes_System_Int32_System_Int32_" data-uid="Fp.Plus.PlusUtil.ImageRes(System.Int32,System.Int32)">
+  ImageRes(int, int)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/collectioneering/Fp/blob/main/src/Fp.Plus/Images/Utility.cs/#L220"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Ensures value is within pixel range between 0 and max.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static int ImageRes(this int x, int max)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>x</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd><p>Input.</p>
+</dd>
+    <dt><code>max</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd><p>Maximum size.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd><p>Input.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <h4 class="section">Exceptions</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.argumentexception">ArgumentException</a></dt>
+    <dd><p>Thrown when size is negative or above max.</p>
+</dd>
+  </dl>
+
+
+
+  <a id="Fp_Plus_PlusUtil_ImageRes_" data-uid="Fp.Plus.PlusUtil.ImageRes*"></a>
+
+  <h3 id="Fp_Plus_PlusUtil_ImageRes_System_SByte_System_SByte_" data-uid="Fp.Plus.PlusUtil.ImageRes(System.SByte,System.SByte)">
+  ImageRes(sbyte, sbyte)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/collectioneering/Fp/blob/main/src/Fp.Plus/Images/Utility.cs/#L168"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Ensures value is within pixel range between 0 and max.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static sbyte ImageRes(this sbyte x, sbyte max)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>x</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.sbyte">sbyte</a></dt>
+    <dd><p>Input.</p>
+</dd>
+    <dt><code>max</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.sbyte">sbyte</a></dt>
+    <dd><p>Maximum size.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.sbyte">sbyte</a></dt>
+    <dd><p>Input.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <h4 class="section">Exceptions</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.argumentexception">ArgumentException</a></dt>
+    <dd><p>Thrown when size is negative or above max.</p>
+</dd>
+  </dl>
+
+
+
+  <a id="Fp_Plus_PlusUtil_ImageRes_" data-uid="Fp.Plus.PlusUtil.ImageRes*"></a>
+
+  <h3 id="Fp_Plus_PlusUtil_ImageRes_System_UInt16_System_UInt16_" data-uid="Fp.Plus.PlusUtil.ImageRes(System.UInt16,System.UInt16)">
+  ImageRes(ushort, ushort)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/collectioneering/Fp/blob/main/src/Fp.Plus/Images/Utility.cs/#L207"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Ensures value is within pixel range between 0 and max.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static ushort ImageRes(this ushort x, ushort max)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>x</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.uint16">ushort</a></dt>
+    <dd><p>Input.</p>
+</dd>
+    <dt><code>max</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.uint16">ushort</a></dt>
+    <dd><p>Maximum size.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.uint16">ushort</a></dt>
+    <dd><p>Input.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <h4 class="section">Exceptions</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.argumentexception">ArgumentException</a></dt>
+    <dd><p>Thrown when size is negative or above max.</p>
+</dd>
+  </dl>
+
+
+
+  <a id="Fp_Plus_PlusUtil_ImageRes_" data-uid="Fp.Plus.PlusUtil.ImageRes*"></a>
+
+  <h3 id="Fp_Plus_PlusUtil_ImageRes_System_UInt32_System_UInt32_" data-uid="Fp.Plus.PlusUtil.ImageRes(System.UInt32,System.UInt32)">
+  ImageRes(uint, uint)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/collectioneering/Fp/blob/main/src/Fp.Plus/Images/Utility.cs/#L233"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Ensures value is within pixel range between 0 and max.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static uint ImageRes(this uint x, uint max)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>x</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.uint32">uint</a></dt>
+    <dd><p>Input.</p>
+</dd>
+    <dt><code>max</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.uint32">uint</a></dt>
+    <dd><p>Maximum size.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.uint32">uint</a></dt>
+    <dd><p>Input.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <h4 class="section">Exceptions</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.argumentexception">ArgumentException</a></dt>
+    <dd><p>Thrown when size is negative or above max.</p>
+</dd>
+  </dl>
+
+
+
+  <a id="Fp_Plus_PlusUtil_Pcm_" data-uid="Fp.Plus.PlusUtil.Pcm*"></a>
+
+  <h3 id="Fp_Plus_PlusUtil_Pcm_Fp_FpPath_Fp_Plus_Audio_WaveInfo_System_ReadOnlyMemory_System_Byte__" data-uid="Fp.Plus.PlusUtil.Pcm(Fp.FpPath,Fp.Plus.Audio.WaveInfo,System.ReadOnlyMemory{System.Byte})">
+  Pcm(FpPath, WaveInfo, ReadOnlyMemory&lt;byte&gt;)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/collectioneering/Fp/blob/main/src/Fp.Plus/Audio/PcmData.cs/#L129"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Creates PCM audio data object.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static PcmData Pcm(this FpPath path, WaveInfo info, ReadOnlyMemory&lt;byte&gt; memory)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>path</code> <a class="xref" href="../Fp/Fp.FpPath.html">FpPath</a></dt>
+    <dd><p>Path.</p>
+</dd>
+    <dt><code>info</code> <a class="xref" href="Fp.Plus.Audio.WaveInfo.html">WaveInfo</a></dt>
+    <dd><p>PCM information.</p>
+</dd>
+    <dt><code>memory</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.readonlymemory-1">ReadOnlyMemory</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.byte">byte</a>&gt;</dt>
+    <dd><p>Audio buffer.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Fp.Plus.Audio.PcmData.html">PcmData</a></dt>
+    <dd><p>Data object.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Fp_Plus_PlusUtil_Pcm_" data-uid="Fp.Plus.PlusUtil.Pcm*"></a>
+
+  <h3 id="Fp_Plus_PlusUtil_Pcm_System_String_Fp_Plus_Audio_WaveInfo_System_ReadOnlyMemory_System_Byte__" data-uid="Fp.Plus.PlusUtil.Pcm(System.String,Fp.Plus.Audio.WaveInfo,System.ReadOnlyMemory{System.Byte})">
+  Pcm(string, WaveInfo, ReadOnlyMemory&lt;byte&gt;)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/collectioneering/Fp/blob/main/src/Fp.Plus/Audio/PcmData.cs/#L139"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Creates PCM audio data object.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static PcmData Pcm(this string path, WaveInfo info, ReadOnlyMemory&lt;byte&gt; memory)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>path</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd><p>Path.</p>
+</dd>
+    <dt><code>info</code> <a class="xref" href="Fp.Plus.Audio.WaveInfo.html">WaveInfo</a></dt>
+    <dd><p>PCM information.</p>
+</dd>
+    <dt><code>memory</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.readonlymemory-1">ReadOnlyMemory</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.byte">byte</a>&gt;</dt>
+    <dd><p>Audio buffer.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Fp.Plus.Audio.PcmData.html">PcmData</a></dt>
+    <dd><p>Data object.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Fp_Plus_PlusUtil__AVI_" data-uid="Fp.Plus.PlusUtil._AVI*"></a>
+
+  <h3 id="Fp_Plus_PlusUtil__AVI" data-uid="Fp.Plus.PlusUtil._AVI">
+  _AVI()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/collectioneering/Fp/blob/main/src/Fp.Plus/Video/Utility.cs/#L18"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Detects WAV audio files.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static Detector _AVI()</code></pre>
+  </div>
+
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="../Fp/Fp.Detector.html">Detector</a></dt>
+    <dd><p>Detector.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Fp_Plus_PlusUtil__AVI_" data-uid="Fp.Plus.PlusUtil._AVI*"></a>
+
+  <h3 id="Fp_Plus_PlusUtil__AVI_Fp_Detector_System_Object_" data-uid="Fp.Plus.PlusUtil._AVI(Fp.Detector,System.Object)">
+  _AVI(Detector?, object?)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/collectioneering/Fp/blob/main/src/Fp.Plus/Video/Utility.cs/#L33"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Detects WAV audio files.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static Detector _AVI(this Detector? detector, object? source = null)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>detector</code> <a class="xref" href="../Fp/Fp.Detector.html">Detector</a></dt>
+    <dd><p>Existing detector.</p>
+</dd>
+    <dt><code>source</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a></dt>
+    <dd><p>Data source.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="../Fp/Fp.Detector.html">Detector</a></dt>
+    <dd><p>Detector.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Fp_Plus_PlusUtil__AVI_" data-uid="Fp.Plus.PlusUtil._AVI*"></a>
+
+  <h3 id="Fp_Plus_PlusUtil__AVI_System_Object_" data-uid="Fp.Plus.PlusUtil._AVI(System.Object)">
+  _AVI(object)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/collectioneering/Fp/blob/main/src/Fp.Plus/Video/Utility.cs/#L25"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Detects WAV audio files.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static Detector _AVI(this object source)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>source</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a></dt>
+    <dd><p>Data source.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="../Fp/Fp.Detector.html">Detector</a></dt>
+    <dd><p>Detector.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Fp_Plus_PlusUtil__BMP_" data-uid="Fp.Plus.PlusUtil._BMP*"></a>
+
+  <h3 id="Fp_Plus_PlusUtil__BMP" data-uid="Fp.Plus.PlusUtil._BMP">
+  _BMP()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/collectioneering/Fp/blob/main/src/Fp.Plus/Images/Utility.cs/#L20"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Detects BMP bitmap files.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static Detector _BMP()</code></pre>
+  </div>
+
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="../Fp/Fp.Detector.html">Detector</a></dt>
+    <dd><p>Detector.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Fp_Plus_PlusUtil__BMP_" data-uid="Fp.Plus.PlusUtil._BMP*"></a>
+
+  <h3 id="Fp_Plus_PlusUtil__BMP_Fp_Detector_System_Object_" data-uid="Fp.Plus.PlusUtil._BMP(Fp.Detector,System.Object)">
+  _BMP(Detector?, object?)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/collectioneering/Fp/blob/main/src/Fp.Plus/Images/Utility.cs/#L35"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Detects BMP bitmap files.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static Detector _BMP(this Detector? detector, object? source = null)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>detector</code> <a class="xref" href="../Fp/Fp.Detector.html">Detector</a></dt>
+    <dd><p>Existing detector.</p>
+</dd>
+    <dt><code>source</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a></dt>
+    <dd><p>Data source.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="../Fp/Fp.Detector.html">Detector</a></dt>
+    <dd><p>Detector.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Fp_Plus_PlusUtil__BMP_" data-uid="Fp.Plus.PlusUtil._BMP*"></a>
+
+  <h3 id="Fp_Plus_PlusUtil__BMP_System_Object_" data-uid="Fp.Plus.PlusUtil._BMP(System.Object)">
+  _BMP(object)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/collectioneering/Fp/blob/main/src/Fp.Plus/Images/Utility.cs/#L27"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Detects BMP bitmap files.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static Detector _BMP(this object source)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>source</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a></dt>
+    <dd><p>Data source.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="../Fp/Fp.Detector.html">Detector</a></dt>
+    <dd><p>Detector.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Fp_Plus_PlusUtil__JPEG_" data-uid="Fp.Plus.PlusUtil._JPEG*"></a>
+
+  <h3 id="Fp_Plus_PlusUtil__JPEG" data-uid="Fp.Plus.PlusUtil._JPEG">
+  _JPEG()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/collectioneering/Fp/blob/main/src/Fp.Plus/Images/Utility.cs/#L89"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Detects JPEG image files.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static Detector _JPEG()</code></pre>
+  </div>
+
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="../Fp/Fp.Detector.html">Detector</a></dt>
+    <dd><p>Detector.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Fp_Plus_PlusUtil__JPEG_" data-uid="Fp.Plus.PlusUtil._JPEG*"></a>
+
+  <h3 id="Fp_Plus_PlusUtil__JPEG_Fp_Detector_System_Object_" data-uid="Fp.Plus.PlusUtil._JPEG(Fp.Detector,System.Object)">
+  _JPEG(Detector?, object?)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/collectioneering/Fp/blob/main/src/Fp.Plus/Images/Utility.cs/#L104"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Detects JPEG image files.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static Detector _JPEG(this Detector? detector, object? source = null)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>detector</code> <a class="xref" href="../Fp/Fp.Detector.html">Detector</a></dt>
+    <dd><p>Existing detector.</p>
+</dd>
+    <dt><code>source</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a></dt>
+    <dd><p>Data source.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="../Fp/Fp.Detector.html">Detector</a></dt>
+    <dd><p>Detector.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Fp_Plus_PlusUtil__JPEG_" data-uid="Fp.Plus.PlusUtil._JPEG*"></a>
+
+  <h3 id="Fp_Plus_PlusUtil__JPEG_System_Object_" data-uid="Fp.Plus.PlusUtil._JPEG(System.Object)">
+  _JPEG(object)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/collectioneering/Fp/blob/main/src/Fp.Plus/Images/Utility.cs/#L96"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Detects JPEG image files.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static Detector _JPEG(this object source)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>source</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a></dt>
+    <dd><p>Data source.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="../Fp/Fp.Detector.html">Detector</a></dt>
+    <dd><p>Detector.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Fp_Plus_PlusUtil__MP3_" data-uid="Fp.Plus.PlusUtil._MP3*"></a>
+
+  <h3 id="Fp_Plus_PlusUtil__MP3" data-uid="Fp.Plus.PlusUtil._MP3">
+  _MP3()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/collectioneering/Fp/blob/main/src/Fp.Plus/Audio/Utility.cs/#L54"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Detects MP3 audio files.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static Detector _MP3()</code></pre>
+  </div>
+
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="../Fp/Fp.Detector.html">Detector</a></dt>
+    <dd><p>Detector.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Fp_Plus_PlusUtil__MP3_" data-uid="Fp.Plus.PlusUtil._MP3*"></a>
+
+  <h3 id="Fp_Plus_PlusUtil__MP3_Fp_Detector_System_Object_" data-uid="Fp.Plus.PlusUtil._MP3(Fp.Detector,System.Object)">
+  _MP3(Detector?, object?)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/collectioneering/Fp/blob/main/src/Fp.Plus/Audio/Utility.cs/#L69"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Detects MP3 audio files.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static Detector _MP3(this Detector? detector, object? source = null)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>detector</code> <a class="xref" href="../Fp/Fp.Detector.html">Detector</a></dt>
+    <dd><p>Existing detector.</p>
+</dd>
+    <dt><code>source</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a></dt>
+    <dd><p>Data source.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="../Fp/Fp.Detector.html">Detector</a></dt>
+    <dd><p>Detector.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Fp_Plus_PlusUtil__MP3_" data-uid="Fp.Plus.PlusUtil._MP3*"></a>
+
+  <h3 id="Fp_Plus_PlusUtil__MP3_System_Object_" data-uid="Fp.Plus.PlusUtil._MP3(System.Object)">
+  _MP3(object)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/collectioneering/Fp/blob/main/src/Fp.Plus/Audio/Utility.cs/#L61"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Detects MP3 audio files.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static Detector _MP3(this object source)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>source</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a></dt>
+    <dd><p>Data source.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="../Fp/Fp.Detector.html">Detector</a></dt>
+    <dd><p>Detector.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Fp_Plus_PlusUtil__OGA_" data-uid="Fp.Plus.PlusUtil._OGA*"></a>
+
+  <h3 id="Fp_Plus_PlusUtil__OGA" data-uid="Fp.Plus.PlusUtil._OGA">
+  _OGA()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/collectioneering/Fp/blob/main/src/Fp.Plus/Audio/Utility.cs/#L122"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Detects Ogg audio containers.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static Detector _OGA()</code></pre>
+  </div>
+
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="../Fp/Fp.Detector.html">Detector</a></dt>
+    <dd><p>Detector.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Fp_Plus_PlusUtil__OGA_" data-uid="Fp.Plus.PlusUtil._OGA*"></a>
+
+  <h3 id="Fp_Plus_PlusUtil__OGA_Fp_Detector_System_Object_" data-uid="Fp.Plus.PlusUtil._OGA(Fp.Detector,System.Object)">
+  _OGA(Detector?, object?)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/collectioneering/Fp/blob/main/src/Fp.Plus/Audio/Utility.cs/#L137"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Detects Ogg audio containers.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static Detector _OGA(this Detector? detector, object? source = null)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>detector</code> <a class="xref" href="../Fp/Fp.Detector.html">Detector</a></dt>
+    <dd><p>Existing detector.</p>
+</dd>
+    <dt><code>source</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a></dt>
+    <dd><p>Data source.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="../Fp/Fp.Detector.html">Detector</a></dt>
+    <dd><p>Detector.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Fp_Plus_PlusUtil__OGA_" data-uid="Fp.Plus.PlusUtil._OGA*"></a>
+
+  <h3 id="Fp_Plus_PlusUtil__OGA_System_Object_" data-uid="Fp.Plus.PlusUtil._OGA(System.Object)">
+  _OGA(object)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/collectioneering/Fp/blob/main/src/Fp.Plus/Audio/Utility.cs/#L129"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Detects Ogg audio containers.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static Detector _OGA(this object source)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>source</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a></dt>
+    <dd><p>Data source.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="../Fp/Fp.Detector.html">Detector</a></dt>
+    <dd><p>Detector.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Fp_Plus_PlusUtil__OGG_" data-uid="Fp.Plus.PlusUtil._OGG*"></a>
+
+  <h3 id="Fp_Plus_PlusUtil__OGG" data-uid="Fp.Plus.PlusUtil._OGG">
+  _OGG()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/collectioneering/Fp/blob/main/src/Fp.Plus/Audio/Utility.cs/#L93"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Detects Ogg containers.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static Detector _OGG()</code></pre>
+  </div>
+
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="../Fp/Fp.Detector.html">Detector</a></dt>
+    <dd><p>Detector.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Fp_Plus_PlusUtil__OGG_" data-uid="Fp.Plus.PlusUtil._OGG*"></a>
+
+  <h3 id="Fp_Plus_PlusUtil__OGG_Fp_Detector_System_Object_" data-uid="Fp.Plus.PlusUtil._OGG(Fp.Detector,System.Object)">
+  _OGG(Detector?, object?)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/collectioneering/Fp/blob/main/src/Fp.Plus/Audio/Utility.cs/#L108"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Detects Ogg containers.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static Detector _OGG(this Detector? detector, object? source = null)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>detector</code> <a class="xref" href="../Fp/Fp.Detector.html">Detector</a></dt>
+    <dd><p>Existing detector.</p>
+</dd>
+    <dt><code>source</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a></dt>
+    <dd><p>Data source.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="../Fp/Fp.Detector.html">Detector</a></dt>
+    <dd><p>Detector.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Fp_Plus_PlusUtil__OGG_" data-uid="Fp.Plus.PlusUtil._OGG*"></a>
+
+  <h3 id="Fp_Plus_PlusUtil__OGG_System_Object_" data-uid="Fp.Plus.PlusUtil._OGG(System.Object)">
+  _OGG(object)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/collectioneering/Fp/blob/main/src/Fp.Plus/Audio/Utility.cs/#L100"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Detects Ogg containers.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static Detector _OGG(this object source)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>source</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a></dt>
+    <dd><p>Data source.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="../Fp/Fp.Detector.html">Detector</a></dt>
+    <dd><p>Detector.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Fp_Plus_PlusUtil__OGV_" data-uid="Fp.Plus.PlusUtil._OGV*"></a>
+
+  <h3 id="Fp_Plus_PlusUtil__OGV" data-uid="Fp.Plus.PlusUtil._OGV">
+  _OGV()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/collectioneering/Fp/blob/main/src/Fp.Plus/Video/Utility.cs/#L54"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Detects Ogg video containers.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static Detector _OGV()</code></pre>
+  </div>
+
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="../Fp/Fp.Detector.html">Detector</a></dt>
+    <dd><p>Detector.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Fp_Plus_PlusUtil__OGV_" data-uid="Fp.Plus.PlusUtil._OGV*"></a>
+
+  <h3 id="Fp_Plus_PlusUtil__OGV_Fp_Detector_System_Object_" data-uid="Fp.Plus.PlusUtil._OGV(Fp.Detector,System.Object)">
+  _OGV(Detector?, object?)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/collectioneering/Fp/blob/main/src/Fp.Plus/Video/Utility.cs/#L69"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Detects Ogg video containers.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static Detector _OGV(this Detector? detector, object? source = null)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>detector</code> <a class="xref" href="../Fp/Fp.Detector.html">Detector</a></dt>
+    <dd><p>Existing detector.</p>
+</dd>
+    <dt><code>source</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a></dt>
+    <dd><p>Data source.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="../Fp/Fp.Detector.html">Detector</a></dt>
+    <dd><p>Detector.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Fp_Plus_PlusUtil__OGV_" data-uid="Fp.Plus.PlusUtil._OGV*"></a>
+
+  <h3 id="Fp_Plus_PlusUtil__OGV_System_Object_" data-uid="Fp.Plus.PlusUtil._OGV(System.Object)">
+  _OGV(object)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/collectioneering/Fp/blob/main/src/Fp.Plus/Video/Utility.cs/#L61"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Detects Ogg video containers.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static Detector _OGV(this object source)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>source</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a></dt>
+    <dd><p>Data source.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="../Fp/Fp.Detector.html">Detector</a></dt>
+    <dd><p>Detector.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Fp_Plus_PlusUtil__PNG_" data-uid="Fp.Plus.PlusUtil._PNG*"></a>
+
+  <h3 id="Fp_Plus_PlusUtil__PNG" data-uid="Fp.Plus.PlusUtil._PNG">
+  _PNG()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/collectioneering/Fp/blob/main/src/Fp.Plus/Images/Utility.cs/#L55"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Detects PNG image files.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static Detector _PNG()</code></pre>
+  </div>
+
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="../Fp/Fp.Detector.html">Detector</a></dt>
+    <dd><p>Detector.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Fp_Plus_PlusUtil__PNG_" data-uid="Fp.Plus.PlusUtil._PNG*"></a>
+
+  <h3 id="Fp_Plus_PlusUtil__PNG_Fp_Detector_System_Object_" data-uid="Fp.Plus.PlusUtil._PNG(Fp.Detector,System.Object)">
+  _PNG(Detector?, object?)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/collectioneering/Fp/blob/main/src/Fp.Plus/Images/Utility.cs/#L70"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Detects PNG image files.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static Detector _PNG(this Detector? detector, object? source = null)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>detector</code> <a class="xref" href="../Fp/Fp.Detector.html">Detector</a></dt>
+    <dd><p>Existing detector.</p>
+</dd>
+    <dt><code>source</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a></dt>
+    <dd><p>Data source.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="../Fp/Fp.Detector.html">Detector</a></dt>
+    <dd><p>Detector.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Fp_Plus_PlusUtil__PNG_" data-uid="Fp.Plus.PlusUtil._PNG*"></a>
+
+  <h3 id="Fp_Plus_PlusUtil__PNG_System_Object_" data-uid="Fp.Plus.PlusUtil._PNG(System.Object)">
+  _PNG(object)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/collectioneering/Fp/blob/main/src/Fp.Plus/Images/Utility.cs/#L62"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Detects PNG image files.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static Detector _PNG(this object source)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>source</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a></dt>
+    <dd><p>Data source.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="../Fp/Fp.Detector.html">Detector</a></dt>
+    <dd><p>Detector.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Fp_Plus_PlusUtil__WAV_" data-uid="Fp.Plus.PlusUtil._WAV*"></a>
+
+  <h3 id="Fp_Plus_PlusUtil__WAV" data-uid="Fp.Plus.PlusUtil._WAV">
+  _WAV()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/collectioneering/Fp/blob/main/src/Fp.Plus/Audio/Utility.cs/#L18"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Detects WAV audio files.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static Detector _WAV()</code></pre>
+  </div>
+
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="../Fp/Fp.Detector.html">Detector</a></dt>
+    <dd><p>Detector.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Fp_Plus_PlusUtil__WAV_" data-uid="Fp.Plus.PlusUtil._WAV*"></a>
+
+  <h3 id="Fp_Plus_PlusUtil__WAV_Fp_Detector_System_Object_" data-uid="Fp.Plus.PlusUtil._WAV(Fp.Detector,System.Object)">
+  _WAV(Detector?, object?)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/collectioneering/Fp/blob/main/src/Fp.Plus/Audio/Utility.cs/#L33"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Detects WAV audio files.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static Detector _WAV(this Detector? detector, object? source = null)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>detector</code> <a class="xref" href="../Fp/Fp.Detector.html">Detector</a></dt>
+    <dd><p>Existing detector.</p>
+</dd>
+    <dt><code>source</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a></dt>
+    <dd><p>Data source.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="../Fp/Fp.Detector.html">Detector</a></dt>
+    <dd><p>Detector.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Fp_Plus_PlusUtil__WAV_" data-uid="Fp.Plus.PlusUtil._WAV*"></a>
+
+  <h3 id="Fp_Plus_PlusUtil__WAV_System_Object_" data-uid="Fp.Plus.PlusUtil._WAV(System.Object)">
+  _WAV(object)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/collectioneering/Fp/blob/main/src/Fp.Plus/Audio/Utility.cs/#L25"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Detects WAV audio files.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static Detector _WAV(this object source)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>source</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a></dt>
+    <dd><p>Data source.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="../Fp/Fp.Detector.html">Detector</a></dt>
+    <dd><p>Detector.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+</article>
+
+        <div class="contribution d-print-none">
+          <a href="https://github.com/collectioneering/Fp/blob/main/src/Fp.Plus/Video/Utility.cs/#L8" class="edit-link">Edit this page</a>
+        </div>
+
+
+      </div>
+
+      <div class="affix">
+        <nav id="affix"></nav>
+      </div>
+    </main>
+
+
+    <footer class="border-top text-secondary">
+      <div class="container-xxl">
+        <div class="flex-fill">
+          <span>Made with <a href="https://dotnet.github.io/docfx">docfx</a></span>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

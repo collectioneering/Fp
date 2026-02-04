@@ -1,0 +1,949 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+      <title>Class EtcDecoder </title>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="title" content="Class EtcDecoder ">
+      
+      
+      <link rel="icon" href="../../favicon.ico">
+      <link rel="stylesheet" href="../../public/docfx.min.css">
+      <link rel="stylesheet" href="../../public/main.css">
+      <meta name="docfx:navrel" content="../../toc.html">
+      <meta name="docfx:tocrel" content="toc.html">
+      
+      
+      
+      
+      <meta name="docfx:docurl" content="https://github.com/collectioneering/Fp/new/main/apiSpec/new?filename=Fp_Plus_Images_EtcDecoder.md&amp;value=---%0Auid%3A%20Fp.Plus.Images.EtcDecoder%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">
+      <meta name="loc:inThisArticle" content="In this article">
+      <meta name="loc:searchResultsCount" content="{count} results for &quot;{query}&quot;">
+      <meta name="loc:searchNoResults" content="No results for &quot;{query}&quot;">
+      <meta name="loc:tocFilter" content="Filter by title">
+      <meta name="loc:nextArticle" content="Next">
+      <meta name="loc:prevArticle" content="Previous">
+      <meta name="loc:themeLight" content="Light">
+      <meta name="loc:themeDark" content="Dark">
+      <meta name="loc:themeAuto" content="Auto">
+      <meta name="loc:changeTheme" content="Change theme">
+      <meta name="loc:copy" content="Copy">
+      <meta name="loc:downloadPdf" content="Download PDF">
+
+      <script type="module" src="./../../public/docfx.min.js"></script>
+
+      <script>
+        const theme = localStorage.getItem('theme') || 'auto'
+        document.documentElement.setAttribute('data-bs-theme', theme === 'auto' ? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light') : theme)
+      </script>
+
+  </head>
+
+  <body class="tex2jax_ignore" data-layout="" data-yaml-mime="ManagedReference">
+    <header class="bg-body border-bottom">
+      <nav id="autocollapse" class="navbar navbar-expand-md" role="navigation">
+        <div class="container-xxl flex-nowrap">
+          <a class="navbar-brand" href="../../index.html">
+            <img id="logo" class="svg" src="../../icon.png" alt="">
+            
+          </a>
+          <button class="btn btn-lg d-md-none border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navpanel" aria-controls="navpanel" aria-expanded="false" aria-label="Toggle navigation">
+            <i class="bi bi-three-dots"></i>
+          </button>
+          <div class="collapse navbar-collapse" id="navpanel">
+            <div id="navbar">
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main class="container-xxl">
+      <div class="toc-offcanvas">
+        <div class="offcanvas-md offcanvas-start" tabindex="-1" id="tocOffcanvas" aria-labelledby="tocOffcanvasLabel">
+          <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="tocOffcanvasLabel">Table of Contents</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" data-bs-target="#tocOffcanvas" aria-label="Close"></button>
+          </div>
+          <div class="offcanvas-body">
+            <nav class="toc" id="toc"></nav>
+          </div>
+        </div>
+      </div>
+
+      <div class="content">
+        <div class="actionbar">
+          <button class="btn btn-lg border-0 d-md-none" type="button" data-bs-toggle="offcanvas" data-bs-target="#tocOffcanvas" aria-controls="tocOffcanvas" aria-expanded="false" aria-label="Show table of contents">
+            <i class="bi bi-list"></i>
+          </button>
+
+          <nav id="breadcrumb"></nav>
+        </div>
+
+        <article data-uid="Fp.Plus.Images.EtcDecoder">
+
+
+
+  <h1 id="Fp_Plus_Images_EtcDecoder" data-uid="Fp.Plus.Images.EtcDecoder" class="text-break">
+Class EtcDecoder  <a class="header-action link-secondary" title="View source" href="https://github.com/collectioneering/Fp/blob/main/src/Fp.Plus/Images/EtcDecoder.cs/#L27"><i class="bi bi-code-slash"></i></a>
+  </h1>
+
+  <div class="facts text-secondary">
+    <dl><dt>Namespace</dt><dd><a class="xref" href="Fp.html">Fp</a>.<a class="xref" href="Fp.Plus.html">Plus</a>.<a class="xref" href="Fp.Plus.Images.html">Images</a></dd></dl>
+  <dl><dt>Assembly</dt><dd>Fp.Plus.dll</dd></dl>
+  </div>
+
+  <div class="markdown summary"></div>
+  <div class="markdown conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">[SuppressMessage(&quot;ReSharper&quot;, &quot;UnusedMember.Local&quot;)]
+[SuppressMessage(&quot;ReSharper&quot;, &quot;IdentifierTypo&quot;)]
+[SuppressMessage(&quot;ReSharper&quot;, &quot;UnusedMember.Global&quot;)]
+[SuppressMessage(&quot;ReSharper&quot;, &quot;UnusedParameter.Global&quot;)]
+[SuppressMessage(&quot;ReSharper&quot;, &quot;MemberCanBePrivate.Global&quot;)]
+public static class EtcDecoder</code></pre>
+  </div>
+
+
+
+
+  <dl class="typelist inheritance">
+    <dt>Inheritance</dt>
+    <dd>
+      <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a></div>
+      <div><span class="xref">EtcDecoder</span></div>
+    </dd>
+  </dl>
+
+
+
+  <dl class="typelist inheritedMembers">
+    <dt>Inherited Members</dt>
+    <dd>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)">object.Equals(object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)">object.Equals(object, object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.gethashcode">object.GetHashCode()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.gettype">object.GetType()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone">object.MemberwiseClone()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.referenceequals">object.ReferenceEquals(object, object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.tostring">object.ToString()</a>
+    </div>
+  </dd></dl>
+
+
+
+
+
+
+  <h2 class="section" id="methods">Methods
+</h2>
+
+
+  <a id="Fp_Plus_Images_EtcDecoder_Clamp0To2047_" data-uid="Fp.Plus.Images.EtcDecoder.Clamp0To2047*"></a>
+
+  <h3 id="Fp_Plus_Images_EtcDecoder_Clamp0To2047_System_Int32_" data-uid="Fp.Plus.Images.EtcDecoder.Clamp0To2047(System.Int32)">
+  Clamp0To2047(int)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/collectioneering/Fp/blob/main/src/Fp.Plus/Images/EtcDecoder.cs/#L961"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static uint Clamp0To2047(int x)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>x</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.uint32">uint</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Fp_Plus_Images_EtcDecoder_DecodeBlockEacSigned11Bit_" data-uid="Fp.Plus.Images.EtcDecoder.DecodeBlockEacSigned11Bit*"></a>
+
+  <h3 id="Fp_Plus_Images_EtcDecoder_DecodeBlockEacSigned11Bit_System_UInt64_System_Int32_System_Int32_System_Byte__" data-uid="Fp.Plus.Images.EtcDecoder.DecodeBlockEacSigned11Bit(System.UInt64,System.Int32,System.Int32,System.Byte*)">
+  DecodeBlockEacSigned11Bit(ulong, int, int, byte*)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/collectioneering/Fp/blob/main/src/Fp.Plus/Images/EtcDecoder.cs/#L1080"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>For each pixel, decode an 11-bit signed integer and store as follows:
+If shift and offset are zero, store each value in consecutive 16 bit values in pixel_buffer.
+If shift is one, store each value in consecutive 32-bit words in pixel_buffer; if offset
+is zero, store it in the first 16 bits, if offset is one store it in the last 16 bits of each
+32-bit word.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static bool DecodeBlockEacSigned11Bit(ulong qword, int shift, int offset, byte* pixelBuffer)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>qword</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.uint64">ulong</a></dt>
+    <dd><p>Pixel.</p>
+</dd>
+    <dt><code>shift</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd><p>Shift value.</p>
+</dd>
+    <dt><code>offset</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd><p>Offset value.</p>
+</dd>
+    <dt><code>pixelBuffer</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.byte">byte</a>*</dt>
+    <dd><p>Output buffer.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd><p>True if succeeded.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Fp_Plus_Images_EtcDecoder_DecompressBlockEacR11_" data-uid="Fp.Plus.Images.EtcDecoder.DecompressBlockEacR11*"></a>
+
+  <h3 id="Fp_Plus_Images_EtcDecoder_DecompressBlockEacR11_System_Byte__Fp_Plus_Images_EtcDecoder_EtcMode_Fp_Plus_Images_EtcDecoder_DecompressionFunctionFlags_System_Byte__" data-uid="Fp.Plus.Images.EtcDecoder.DecompressBlockEacR11(System.Byte*,Fp.Plus.Images.EtcDecoder.EtcMode,Fp.Plus.Images.EtcDecoder.DecompressionFunctionFlags,System.Byte*)">
+  DecompressBlockEacR11(byte*, EtcMode, DecompressionFunctionFlags, byte*)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/collectioneering/Fp/blob/main/src/Fp.Plus/Images/EtcDecoder.cs/#L1016"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Decompress a 64-bit 4x4 pixel texture block compressed using the
+EAC_R11 format.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static bool DecompressBlockEacR11(byte* bitString, EtcDecoder.EtcMode etc, EtcDecoder.DecompressionFunctionFlags flags, byte* pixelBuffer)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>bitString</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.byte">byte</a>*</dt>
+    <dd><p>Block.</p>
+</dd>
+    <dt><code>etc</code> <a class="xref" href="Fp.Plus.Images.EtcDecoder.html">EtcDecoder</a>.<a class="xref" href="Fp.Plus.Images.EtcDecoder.EtcMode.html">EtcMode</a></dt>
+    <dd><p>ETC mode.</p>
+</dd>
+    <dt><code>flags</code> <a class="xref" href="Fp.Plus.Images.EtcDecoder.html">EtcDecoder</a>.<a class="xref" href="Fp.Plus.Images.EtcDecoder.DecompressionFunctionFlags.html">DecompressionFunctionFlags</a></dt>
+    <dd><p>Flags.</p>
+</dd>
+    <dt><code>pixelBuffer</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.byte">byte</a>*</dt>
+    <dd><p>Output buffer.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd><p>True if succeeded.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Fp_Plus_Images_EtcDecoder_DecompressBlockEacRg11_" data-uid="Fp.Plus.Images.EtcDecoder.DecompressBlockEacRg11*"></a>
+
+  <h3 id="Fp_Plus_Images_EtcDecoder_DecompressBlockEacRg11_System_Byte__Fp_Plus_Images_EtcDecoder_EtcMode_Fp_Plus_Images_EtcDecoder_DecompressionFunctionFlags_System_Byte__" data-uid="Fp.Plus.Images.EtcDecoder.DecompressBlockEacRg11(System.Byte*,Fp.Plus.Images.EtcDecoder.EtcMode,Fp.Plus.Images.EtcDecoder.DecompressionFunctionFlags,System.Byte*)">
+  DecompressBlockEacRg11(byte*, EtcMode, DecompressionFunctionFlags, byte*)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/collectioneering/Fp/blob/main/src/Fp.Plus/Images/EtcDecoder.cs/#L1034"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Decompress a 128-bit 4x4 pixel texture block compressed using the
+EAC_RG11 format.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static bool DecompressBlockEacRg11(byte* bitString, EtcDecoder.EtcMode etc, EtcDecoder.DecompressionFunctionFlags flags, byte* pixelBuffer)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>bitString</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.byte">byte</a>*</dt>
+    <dd><p>Block.</p>
+</dd>
+    <dt><code>etc</code> <a class="xref" href="Fp.Plus.Images.EtcDecoder.html">EtcDecoder</a>.<a class="xref" href="Fp.Plus.Images.EtcDecoder.EtcMode.html">EtcMode</a></dt>
+    <dd><p>ETC mode.</p>
+</dd>
+    <dt><code>flags</code> <a class="xref" href="Fp.Plus.Images.EtcDecoder.html">EtcDecoder</a>.<a class="xref" href="Fp.Plus.Images.EtcDecoder.DecompressionFunctionFlags.html">DecompressionFunctionFlags</a></dt>
+    <dd><p>Flags.</p>
+</dd>
+    <dt><code>pixelBuffer</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.byte">byte</a>*</dt>
+    <dd><p>Output buffer.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd><p>True if succeeded.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Fp_Plus_Images_EtcDecoder_DecompressBlockEacSignedR11_" data-uid="Fp.Plus.Images.EtcDecoder.DecompressBlockEacSignedR11*"></a>
+
+  <h3 id="Fp_Plus_Images_EtcDecoder_DecompressBlockEacSignedR11_System_Byte__Fp_Plus_Images_EtcDecoder_EtcMode_Fp_Plus_Images_EtcDecoder_DecompressionFunctionFlags_System_Byte__" data-uid="Fp.Plus.Images.EtcDecoder.DecompressBlockEacSignedR11(System.Byte*,Fp.Plus.Images.EtcDecoder.EtcMode,Fp.Plus.Images.EtcDecoder.DecompressionFunctionFlags,System.Byte*)">
+  DecompressBlockEacSignedR11(byte*, EtcMode, DecompressionFunctionFlags, byte*)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/collectioneering/Fp/blob/main/src/Fp.Plus/Images/EtcDecoder.cs/#L1117"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Decompress a 64-bit 4x4 pixel texture block compressed using the EAC_SIGNED_R11 format.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static bool DecompressBlockEacSignedR11(byte* bitString, EtcDecoder.EtcMode etc, EtcDecoder.DecompressionFunctionFlags flags, byte* pixelBuffer)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>bitString</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.byte">byte</a>*</dt>
+    <dd><p>Block.</p>
+</dd>
+    <dt><code>etc</code> <a class="xref" href="Fp.Plus.Images.EtcDecoder.html">EtcDecoder</a>.<a class="xref" href="Fp.Plus.Images.EtcDecoder.EtcMode.html">EtcMode</a></dt>
+    <dd><p>ETC mode.</p>
+</dd>
+    <dt><code>flags</code> <a class="xref" href="Fp.Plus.Images.EtcDecoder.html">EtcDecoder</a>.<a class="xref" href="Fp.Plus.Images.EtcDecoder.DecompressionFunctionFlags.html">DecompressionFunctionFlags</a></dt>
+    <dd><p>Flags.</p>
+</dd>
+    <dt><code>pixelBuffer</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.byte">byte</a>*</dt>
+    <dd><p>Output buffer.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd><p>True if succeeded.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Fp_Plus_Images_EtcDecoder_DecompressBlockEacSignedRg11_" data-uid="Fp.Plus.Images.EtcDecoder.DecompressBlockEacSignedRg11*"></a>
+
+  <h3 id="Fp_Plus_Images_EtcDecoder_DecompressBlockEacSignedRg11_System_Byte__Fp_Plus_Images_EtcDecoder_EtcMode_Fp_Plus_Images_EtcDecoder_DecompressionFunctionFlags_System_Byte__" data-uid="Fp.Plus.Images.EtcDecoder.DecompressBlockEacSignedRg11(System.Byte*,Fp.Plus.Images.EtcDecoder.EtcMode,Fp.Plus.Images.EtcDecoder.DecompressionFunctionFlags,System.Byte*)">
+  DecompressBlockEacSignedRg11(byte*, EtcMode, DecompressionFunctionFlags, byte*)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/collectioneering/Fp/blob/main/src/Fp.Plus/Images/EtcDecoder.cs/#L1133"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Decompress a 128-bit 4x4 pixel texture block compressed using the EAC_SIGNED_RG11 format.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static bool DecompressBlockEacSignedRg11(byte* bitString, EtcDecoder.EtcMode etc, EtcDecoder.DecompressionFunctionFlags flags, byte* pixelBuffer)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>bitString</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.byte">byte</a>*</dt>
+    <dd><p>Block.</p>
+</dd>
+    <dt><code>etc</code> <a class="xref" href="Fp.Plus.Images.EtcDecoder.html">EtcDecoder</a>.<a class="xref" href="Fp.Plus.Images.EtcDecoder.EtcMode.html">EtcMode</a></dt>
+    <dd><p>ETC mode.</p>
+</dd>
+    <dt><code>flags</code> <a class="xref" href="Fp.Plus.Images.EtcDecoder.html">EtcDecoder</a>.<a class="xref" href="Fp.Plus.Images.EtcDecoder.DecompressionFunctionFlags.html">DecompressionFunctionFlags</a></dt>
+    <dd><p>Flags.</p>
+</dd>
+    <dt><code>pixelBuffer</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.byte">byte</a>*</dt>
+    <dd><p>Output buffer.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd><p>True if succeeded.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Fp_Plus_Images_EtcDecoder_DecompressBlockEtc1_" data-uid="Fp.Plus.Images.EtcDecoder.DecompressBlockEtc1*"></a>
+
+  <h3 id="Fp_Plus_Images_EtcDecoder_DecompressBlockEtc1_System_Byte__Fp_Plus_Images_EtcDecoder_EtcMode_Fp_Plus_Images_EtcDecoder_DecompressionFunctionFlags_System_Byte__" data-uid="Fp.Plus.Images.EtcDecoder.DecompressBlockEtc1(System.Byte*,Fp.Plus.Images.EtcDecoder.EtcMode,Fp.Plus.Images.EtcDecoder.DecompressionFunctionFlags,System.Byte*)">
+  DecompressBlockEtc1(byte*, EtcMode, DecompressionFunctionFlags, byte*)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/collectioneering/Fp/blob/main/src/Fp.Plus/Images/EtcDecoder.cs/#L161"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Decompress a 64-bit 4x4 pixel texture block compressed using the ETC1 format.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static bool DecompressBlockEtc1(byte* bitString, EtcDecoder.EtcMode etc, EtcDecoder.DecompressionFunctionFlags flags, byte* pixelBuffer)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>bitString</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.byte">byte</a>*</dt>
+    <dd><p>Block.</p>
+</dd>
+    <dt><code>etc</code> <a class="xref" href="Fp.Plus.Images.EtcDecoder.html">EtcDecoder</a>.<a class="xref" href="Fp.Plus.Images.EtcDecoder.EtcMode.html">EtcMode</a></dt>
+    <dd><p>ETC mode.</p>
+</dd>
+    <dt><code>flags</code> <a class="xref" href="Fp.Plus.Images.EtcDecoder.html">EtcDecoder</a>.<a class="xref" href="Fp.Plus.Images.EtcDecoder.DecompressionFunctionFlags.html">DecompressionFunctionFlags</a></dt>
+    <dd><p>Flags.</p>
+</dd>
+    <dt><code>pixelBuffer</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.byte">byte</a>*</dt>
+    <dd><p>Output buffer.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd><p>True if succeeded.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Fp_Plus_Images_EtcDecoder_DecompressBlockEtc2_" data-uid="Fp.Plus.Images.EtcDecoder.DecompressBlockEtc2*"></a>
+
+  <h3 id="Fp_Plus_Images_EtcDecoder_DecompressBlockEtc2_System_Byte__Fp_Plus_Images_EtcDecoder_EtcMode_Fp_Plus_Images_EtcDecoder_DecompressionFunctionFlags_System_Byte__" data-uid="Fp.Plus.Images.EtcDecoder.DecompressBlockEtc2(System.Byte*,Fp.Plus.Images.EtcDecoder.EtcMode,Fp.Plus.Images.EtcDecoder.DecompressionFunctionFlags,System.Byte*)">
+  DecompressBlockEtc2(byte*, EtcMode, DecompressionFunctionFlags, byte*)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/collectioneering/Fp/blob/main/src/Fp.Plus/Images/EtcDecoder.cs/#L421"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Decompress a 64-bit 4x4 pixel texture block compressed using the ETC2 format.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static bool DecompressBlockEtc2(byte* bitString, EtcDecoder.EtcMode etc, EtcDecoder.DecompressionFunctionFlags flags, byte* pixelBuffer)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>bitString</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.byte">byte</a>*</dt>
+    <dd><p>Block.</p>
+</dd>
+    <dt><code>etc</code> <a class="xref" href="Fp.Plus.Images.EtcDecoder.html">EtcDecoder</a>.<a class="xref" href="Fp.Plus.Images.EtcDecoder.EtcMode.html">EtcMode</a></dt>
+    <dd><p>ETC mode.</p>
+</dd>
+    <dt><code>flags</code> <a class="xref" href="Fp.Plus.Images.EtcDecoder.html">EtcDecoder</a>.<a class="xref" href="Fp.Plus.Images.EtcDecoder.DecompressionFunctionFlags.html">DecompressionFunctionFlags</a></dt>
+    <dd><p>Flags.</p>
+</dd>
+    <dt><code>pixelBuffer</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.byte">byte</a>*</dt>
+    <dd><p>Output buffer.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd><p>true if succeeded.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Fp_Plus_Images_EtcDecoder_DecompressBlockEtc2Eac_" data-uid="Fp.Plus.Images.EtcDecoder.DecompressBlockEtc2Eac*"></a>
+
+  <h3 id="Fp_Plus_Images_EtcDecoder_DecompressBlockEtc2Eac_System_Byte__Fp_Plus_Images_EtcDecoder_EtcMode_Fp_Plus_Images_EtcDecoder_DecompressionFunctionFlags_System_Byte__" data-uid="Fp.Plus.Images.EtcDecoder.DecompressBlockEtc2Eac(System.Byte*,Fp.Plus.Images.EtcDecoder.EtcMode,Fp.Plus.Images.EtcDecoder.DecompressionFunctionFlags,System.Byte*)">
+  DecompressBlockEtc2Eac(byte*, EtcMode, DecompressionFunctionFlags, byte*)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/collectioneering/Fp/blob/main/src/Fp.Plus/Images/EtcDecoder.cs/#L909"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Decompress a 128-bit 4x4 pixel texture block compressed using the ETC2_EAC format.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static bool DecompressBlockEtc2Eac(byte* bitString, EtcDecoder.EtcMode etc, EtcDecoder.DecompressionFunctionFlags flags, byte* pixelBuffer)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>bitString</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.byte">byte</a>*</dt>
+    <dd><p>Block.</p>
+</dd>
+    <dt><code>etc</code> <a class="xref" href="Fp.Plus.Images.EtcDecoder.html">EtcDecoder</a>.<a class="xref" href="Fp.Plus.Images.EtcDecoder.EtcMode.html">EtcMode</a></dt>
+    <dd><p>ETC mode.</p>
+</dd>
+    <dt><code>flags</code> <a class="xref" href="Fp.Plus.Images.EtcDecoder.html">EtcDecoder</a>.<a class="xref" href="Fp.Plus.Images.EtcDecoder.DecompressionFunctionFlags.html">DecompressionFunctionFlags</a></dt>
+    <dd><p>Flags.</p>
+</dd>
+    <dt><code>pixelBuffer</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.byte">byte</a>*</dt>
+    <dd><p>Output buffer.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd><p>true if succeeded.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Fp_Plus_Images_EtcDecoder_DecompressBlockEtc2Punchthrough_" data-uid="Fp.Plus.Images.EtcDecoder.DecompressBlockEtc2Punchthrough*"></a>
+
+  <h3 id="Fp_Plus_Images_EtcDecoder_DecompressBlockEtc2Punchthrough_System_Byte__Fp_Plus_Images_EtcDecoder_EtcMode_Fp_Plus_Images_EtcDecoder_DecompressionFunctionFlags_System_Byte__" data-uid="Fp.Plus.Images.EtcDecoder.DecompressBlockEtc2Punchthrough(System.Byte*,Fp.Plus.Images.EtcDecoder.EtcMode,Fp.Plus.Images.EtcDecoder.DecompressionFunctionFlags,System.Byte*)">
+  DecompressBlockEtc2Punchthrough(byte*, EtcMode, DecompressionFunctionFlags, byte*)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/collectioneering/Fp/blob/main/src/Fp.Plus/Images/EtcDecoder.cs/#L781"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Decompress a 64-bit 4x4 pixel texture block compressed using the ETC2_PUNCHTROUGH format.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static bool DecompressBlockEtc2Punchthrough(byte* bitString, EtcDecoder.EtcMode etc, EtcDecoder.DecompressionFunctionFlags flags, byte* pixelBuffer)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>bitString</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.byte">byte</a>*</dt>
+    <dd><p>Block.</p>
+</dd>
+    <dt><code>etc</code> <a class="xref" href="Fp.Plus.Images.EtcDecoder.html">EtcDecoder</a>.<a class="xref" href="Fp.Plus.Images.EtcDecoder.EtcMode.html">EtcMode</a></dt>
+    <dd><p>ETC mode.</p>
+</dd>
+    <dt><code>flags</code> <a class="xref" href="Fp.Plus.Images.EtcDecoder.html">EtcDecoder</a>.<a class="xref" href="Fp.Plus.Images.EtcDecoder.DecompressionFunctionFlags.html">DecompressionFunctionFlags</a></dt>
+    <dd><p>Flags.</p>
+</dd>
+    <dt><code>pixelBuffer</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.byte">byte</a>*</dt>
+    <dd><p>Output buffer.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd><p>true if succeeded.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Fp_Plus_Images_EtcDecoder_GetModeEtc1_" data-uid="Fp.Plus.Images.EtcDecoder.GetModeEtc1*"></a>
+
+  <h3 id="Fp_Plus_Images_EtcDecoder_GetModeEtc1_System_Byte__" data-uid="Fp.Plus.Images.EtcDecoder.GetModeEtc1(System.Byte*)">
+  GetModeEtc1(byte*)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/collectioneering/Fp/blob/main/src/Fp.Plus/Images/EtcDecoder.cs/#L267"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Return the internal mode of a ETC1 block.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static EtcDecoder.EtcMode GetModeEtc1(byte* bitString)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>bitString</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.byte">byte</a>*</dt>
+    <dd><p>Block.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Fp.Plus.Images.EtcDecoder.html">EtcDecoder</a>.<a class="xref" href="Fp.Plus.Images.EtcDecoder.EtcMode.html">EtcMode</a></dt>
+    <dd><p>ETC mode.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Fp_Plus_Images_EtcDecoder_GetModeEtc2_" data-uid="Fp.Plus.Images.EtcDecoder.GetModeEtc2*"></a>
+
+  <h3 id="Fp_Plus_Images_EtcDecoder_GetModeEtc2_System_Byte__" data-uid="Fp.Plus.Images.EtcDecoder.GetModeEtc2(System.Byte*)">
+  GetModeEtc2(byte*)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/collectioneering/Fp/blob/main/src/Fp.Plus/Images/EtcDecoder.cs/#L482"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Return the internal mode of a ETC2 block.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static EtcDecoder.EtcMode GetModeEtc2(byte* bitString)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>bitString</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.byte">byte</a>*</dt>
+    <dd><p>Block.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Fp.Plus.Images.EtcDecoder.html">EtcDecoder</a>.<a class="xref" href="Fp.Plus.Images.EtcDecoder.EtcMode.html">EtcMode</a></dt>
+    <dd><p>ETC mode.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Fp_Plus_Images_EtcDecoder_GetModeEtc2Eac_" data-uid="Fp.Plus.Images.EtcDecoder.GetModeEtc2Eac*"></a>
+
+  <h3 id="Fp_Plus_Images_EtcDecoder_GetModeEtc2Eac_System_Byte__" data-uid="Fp.Plus.Images.EtcDecoder.GetModeEtc2Eac(System.Byte*)">
+  GetModeEtc2Eac(byte*)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/collectioneering/Fp/blob/main/src/Fp.Plus/Images/EtcDecoder.cs/#L951"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Return the internal mode of a ETC2_EAC block.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static EtcDecoder.EtcMode GetModeEtc2Eac(byte* bitstring)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>bitstring</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.byte">byte</a>*</dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Fp.Plus.Images.EtcDecoder.html">EtcDecoder</a>.<a class="xref" href="Fp.Plus.Images.EtcDecoder.EtcMode.html">EtcMode</a></dt>
+    <dd><p>ETC mode.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Fp_Plus_Images_EtcDecoder_GetModeEtc2Punchthrough_" data-uid="Fp.Plus.Images.EtcDecoder.GetModeEtc2Punchthrough*"></a>
+
+  <h3 id="Fp_Plus_Images_EtcDecoder_GetModeEtc2Punchthrough_System_Byte__" data-uid="Fp.Plus.Images.EtcDecoder.GetModeEtc2Punchthrough(System.Byte*)">
+  GetModeEtc2Punchthrough(byte*)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/collectioneering/Fp/blob/main/src/Fp.Plus/Images/EtcDecoder.cs/#L861"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Return the internal mode of a ETC2_PUNCHTROUGH block.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static EtcDecoder.EtcMode GetModeEtc2Punchthrough(byte* bitString)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>bitString</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.byte">byte</a>*</dt>
+    <dd><p>Block.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Fp.Plus.Images.EtcDecoder.html">EtcDecoder</a>.<a class="xref" href="Fp.Plus.Images.EtcDecoder.EtcMode.html">EtcMode</a></dt>
+    <dd><p>ETC mode.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Fp_Plus_Images_EtcDecoder_SetModeETC2_EAC_" data-uid="Fp.Plus.Images.EtcDecoder.SetModeETC2_EAC*"></a>
+
+  <h3 id="Fp_Plus_Images_EtcDecoder_SetModeETC2_EAC_System_Byte__Fp_Plus_Images_EtcDecoder_EtcMode_Fp_Plus_Images_EtcDecoder_DecompressionFunctionFlags_" data-uid="Fp.Plus.Images.EtcDecoder.SetModeETC2_EAC(System.Byte*,Fp.Plus.Images.EtcDecoder.EtcMode,Fp.Plus.Images.EtcDecoder.DecompressionFunctionFlags)">
+  SetModeETC2_EAC(byte*, EtcMode, DecompressionFunctionFlags)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/collectioneering/Fp/blob/main/src/Fp.Plus/Images/EtcDecoder.cs/#L956"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static void SetModeETC2_EAC(byte* bitstring, EtcDecoder.EtcMode mode, EtcDecoder.DecompressionFunctionFlags flags)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>bitstring</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.byte">byte</a>*</dt>
+    <dd></dd>
+    <dt><code>mode</code> <a class="xref" href="Fp.Plus.Images.EtcDecoder.html">EtcDecoder</a>.<a class="xref" href="Fp.Plus.Images.EtcDecoder.EtcMode.html">EtcMode</a></dt>
+    <dd></dd>
+    <dt><code>flags</code> <a class="xref" href="Fp.Plus.Images.EtcDecoder.html">EtcDecoder</a>.<a class="xref" href="Fp.Plus.Images.EtcDecoder.DecompressionFunctionFlags.html">DecompressionFunctionFlags</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Fp_Plus_Images_EtcDecoder_SetModeEtc1_" data-uid="Fp.Plus.Images.EtcDecoder.SetModeEtc1*"></a>
+
+  <h3 id="Fp_Plus_Images_EtcDecoder_SetModeEtc1_System_Byte__Fp_Plus_Images_EtcDecoder_EtcMode_Fp_Plus_Images_EtcDecoder_DecompressionFunctionFlags_" data-uid="Fp.Plus.Images.EtcDecoder.SetModeEtc1(System.Byte*,Fp.Plus.Images.EtcDecoder.EtcMode,Fp.Plus.Images.EtcDecoder.DecompressionFunctionFlags)">
+  SetModeEtc1(byte*, EtcMode, DecompressionFunctionFlags)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/collectioneering/Fp/blob/main/src/Fp.Plus/Images/EtcDecoder.cs/#L275"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static void SetModeEtc1(byte* bitString, EtcDecoder.EtcMode etcMode, EtcDecoder.DecompressionFunctionFlags flags)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>bitString</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.byte">byte</a>*</dt>
+    <dd></dd>
+    <dt><code>etcMode</code> <a class="xref" href="Fp.Plus.Images.EtcDecoder.html">EtcDecoder</a>.<a class="xref" href="Fp.Plus.Images.EtcDecoder.EtcMode.html">EtcMode</a></dt>
+    <dd></dd>
+    <dt><code>flags</code> <a class="xref" href="Fp.Plus.Images.EtcDecoder.html">EtcDecoder</a>.<a class="xref" href="Fp.Plus.Images.EtcDecoder.DecompressionFunctionFlags.html">DecompressionFunctionFlags</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Fp_Plus_Images_EtcDecoder_SetModeEtc2_" data-uid="Fp.Plus.Images.EtcDecoder.SetModeEtc2*"></a>
+
+  <h3 id="Fp_Plus_Images_EtcDecoder_SetModeEtc2_System_Byte__Fp_Plus_Images_EtcDecoder_EtcMode_Fp_Plus_Images_EtcDecoder_DecompressionFunctionFlags_" data-uid="Fp.Plus.Images.EtcDecoder.SetModeEtc2(System.Byte*,Fp.Plus.Images.EtcDecoder.EtcMode,Fp.Plus.Images.EtcDecoder.DecompressionFunctionFlags)">
+  SetModeEtc2(byte*, EtcMode, DecompressionFunctionFlags)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/collectioneering/Fp/blob/main/src/Fp.Plus/Images/EtcDecoder.cs/#L575"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static void SetModeEtc2(byte* bitString, EtcDecoder.EtcMode etcMode, EtcDecoder.DecompressionFunctionFlags flags)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>bitString</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.byte">byte</a>*</dt>
+    <dd></dd>
+    <dt><code>etcMode</code> <a class="xref" href="Fp.Plus.Images.EtcDecoder.html">EtcDecoder</a>.<a class="xref" href="Fp.Plus.Images.EtcDecoder.EtcMode.html">EtcMode</a></dt>
+    <dd></dd>
+    <dt><code>flags</code> <a class="xref" href="Fp.Plus.Images.EtcDecoder.html">EtcDecoder</a>.<a class="xref" href="Fp.Plus.Images.EtcDecoder.DecompressionFunctionFlags.html">DecompressionFunctionFlags</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Fp_Plus_Images_EtcDecoder_SetModeEtc2Thp_" data-uid="Fp.Plus.Images.EtcDecoder.SetModeEtc2Thp*"></a>
+
+  <h3 id="Fp_Plus_Images_EtcDecoder_SetModeEtc2Thp_System_Byte__Fp_Plus_Images_EtcDecoder_EtcMode_Fp_Plus_Images_EtcDecoder_DecompressionFunctionFlags_" data-uid="Fp.Plus.Images.EtcDecoder.SetModeEtc2Thp(System.Byte*,Fp.Plus.Images.EtcDecoder.EtcMode,Fp.Plus.Images.EtcDecoder.DecompressionFunctionFlags)">
+  SetModeEtc2Thp(byte*, EtcMode, DecompressionFunctionFlags)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/collectioneering/Fp/blob/main/src/Fp.Plus/Images/EtcDecoder.cs/#L502"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static void SetModeEtc2Thp(byte* bitString, EtcDecoder.EtcMode etcMode, EtcDecoder.DecompressionFunctionFlags flags)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>bitString</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.byte">byte</a>*</dt>
+    <dd></dd>
+    <dt><code>etcMode</code> <a class="xref" href="Fp.Plus.Images.EtcDecoder.html">EtcDecoder</a>.<a class="xref" href="Fp.Plus.Images.EtcDecoder.EtcMode.html">EtcMode</a></dt>
+    <dd></dd>
+    <dt><code>flags</code> <a class="xref" href="Fp.Plus.Images.EtcDecoder.html">EtcDecoder</a>.<a class="xref" href="Fp.Plus.Images.EtcDecoder.DecompressionFunctionFlags.html">DecompressionFunctionFlags</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+
+</article>
+
+        <div class="contribution d-print-none">
+          <a href="https://github.com/collectioneering/Fp/blob/main/src/Fp.Plus/Images/EtcDecoder.cs/#L27" class="edit-link">Edit this page</a>
+        </div>
+
+
+      </div>
+
+      <div class="affix">
+        <nav id="affix"></nav>
+      </div>
+    </main>
+
+
+    <footer class="border-top text-secondary">
+      <div class="container-xxl">
+        <div class="flex-fill">
+          <span>Made with <a href="https://dotnet.github.io/docfx">docfx</a></span>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

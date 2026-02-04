@@ -1,0 +1,825 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+      <title>Class Wave </title>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="title" content="Class Wave ">
+      
+      <meta name="description" content="Provides WAVE output support.">
+      <link rel="icon" href="../../favicon.ico">
+      <link rel="stylesheet" href="../../public/docfx.min.css">
+      <link rel="stylesheet" href="../../public/main.css">
+      <meta name="docfx:navrel" content="../../toc.html">
+      <meta name="docfx:tocrel" content="toc.html">
+      
+      
+      
+      
+      <meta name="docfx:docurl" content="https://github.com/collectioneering/Fp/new/main/apiSpec/new?filename=Fp_Plus_Audio_Wave.md&amp;value=---%0Auid%3A%20Fp.Plus.Audio.Wave%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">
+      <meta name="loc:inThisArticle" content="In this article">
+      <meta name="loc:searchResultsCount" content="{count} results for &quot;{query}&quot;">
+      <meta name="loc:searchNoResults" content="No results for &quot;{query}&quot;">
+      <meta name="loc:tocFilter" content="Filter by title">
+      <meta name="loc:nextArticle" content="Next">
+      <meta name="loc:prevArticle" content="Previous">
+      <meta name="loc:themeLight" content="Light">
+      <meta name="loc:themeDark" content="Dark">
+      <meta name="loc:themeAuto" content="Auto">
+      <meta name="loc:changeTheme" content="Change theme">
+      <meta name="loc:copy" content="Copy">
+      <meta name="loc:downloadPdf" content="Download PDF">
+
+      <script type="module" src="./../../public/docfx.min.js"></script>
+
+      <script>
+        const theme = localStorage.getItem('theme') || 'auto'
+        document.documentElement.setAttribute('data-bs-theme', theme === 'auto' ? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light') : theme)
+      </script>
+
+  </head>
+
+  <body class="tex2jax_ignore" data-layout="" data-yaml-mime="ManagedReference">
+    <header class="bg-body border-bottom">
+      <nav id="autocollapse" class="navbar navbar-expand-md" role="navigation">
+        <div class="container-xxl flex-nowrap">
+          <a class="navbar-brand" href="../../index.html">
+            <img id="logo" class="svg" src="../../icon.png" alt="">
+            
+          </a>
+          <button class="btn btn-lg d-md-none border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navpanel" aria-controls="navpanel" aria-expanded="false" aria-label="Toggle navigation">
+            <i class="bi bi-three-dots"></i>
+          </button>
+          <div class="collapse navbar-collapse" id="navpanel">
+            <div id="navbar">
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main class="container-xxl">
+      <div class="toc-offcanvas">
+        <div class="offcanvas-md offcanvas-start" tabindex="-1" id="tocOffcanvas" aria-labelledby="tocOffcanvasLabel">
+          <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="tocOffcanvasLabel">Table of Contents</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" data-bs-target="#tocOffcanvas" aria-label="Close"></button>
+          </div>
+          <div class="offcanvas-body">
+            <nav class="toc" id="toc"></nav>
+          </div>
+        </div>
+      </div>
+
+      <div class="content">
+        <div class="actionbar">
+          <button class="btn btn-lg border-0 d-md-none" type="button" data-bs-toggle="offcanvas" data-bs-target="#tocOffcanvas" aria-controls="tocOffcanvas" aria-expanded="false" aria-label="Show table of contents">
+            <i class="bi bi-list"></i>
+          </button>
+
+          <nav id="breadcrumb"></nav>
+        </div>
+
+        <article data-uid="Fp.Plus.Audio.Wave">
+
+
+
+  <h1 id="Fp_Plus_Audio_Wave" data-uid="Fp.Plus.Audio.Wave" class="text-break">
+Class Wave  <a class="header-action link-secondary" title="View source" href="https://github.com/collectioneering/Fp/blob/main/src/Fp.Plus/Audio/Wave.cs/#L12"><i class="bi bi-code-slash"></i></a>
+  </h1>
+
+  <div class="facts text-secondary">
+    <dl><dt>Namespace</dt><dd><a class="xref" href="Fp.html">Fp</a>.<a class="xref" href="Fp.Plus.html">Plus</a>.<a class="xref" href="Fp.Plus.Audio.html">Audio</a></dd></dl>
+  <dl><dt>Assembly</dt><dd>Fp.Plus.dll</dd></dl>
+  </div>
+
+  <div class="markdown summary"><p>Provides WAVE output support.</p>
+</div>
+  <div class="markdown conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public class Wave</code></pre>
+  </div>
+
+
+
+
+  <dl class="typelist inheritance">
+    <dt>Inheritance</dt>
+    <dd>
+      <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a></div>
+      <div><span class="xref">Wave</span></div>
+    </dd>
+  </dl>
+
+
+
+  <dl class="typelist inheritedMembers">
+    <dt>Inherited Members</dt>
+    <dd>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)">object.Equals(object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)">object.Equals(object, object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.gethashcode">object.GetHashCode()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.gettype">object.GetType()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone">object.MemberwiseClone()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.referenceequals">object.ReferenceEquals(object, object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.tostring">object.ToString()</a>
+    </div>
+  </dd></dl>
+
+  <dl class="typelist extensionMethods">
+    <dt>Extension Methods</dt>
+    <dd>
+  <div>
+      <a class="xref" href="Fp.Plus.PlusUtil.html#Fp_Plus_PlusUtil__AVI_System_Object_">PlusUtil._AVI(object)</a>
+  </div>
+  <div>
+      <a class="xref" href="Fp.Plus.PlusUtil.html#Fp_Plus_PlusUtil__BMP_System_Object_">PlusUtil._BMP(object)</a>
+  </div>
+  <div>
+      <a class="xref" href="Fp.Plus.PlusUtil.html#Fp_Plus_PlusUtil__JPEG_System_Object_">PlusUtil._JPEG(object)</a>
+  </div>
+  <div>
+      <a class="xref" href="Fp.Plus.PlusUtil.html#Fp_Plus_PlusUtil__MP3_System_Object_">PlusUtil._MP3(object)</a>
+  </div>
+  <div>
+      <a class="xref" href="Fp.Plus.PlusUtil.html#Fp_Plus_PlusUtil__OGA_System_Object_">PlusUtil._OGA(object)</a>
+  </div>
+  <div>
+      <a class="xref" href="Fp.Plus.PlusUtil.html#Fp_Plus_PlusUtil__OGG_System_Object_">PlusUtil._OGG(object)</a>
+  </div>
+  <div>
+      <a class="xref" href="Fp.Plus.PlusUtil.html#Fp_Plus_PlusUtil__OGV_System_Object_">PlusUtil._OGV(object)</a>
+  </div>
+  <div>
+      <a class="xref" href="Fp.Plus.PlusUtil.html#Fp_Plus_PlusUtil__PNG_System_Object_">PlusUtil._PNG(object)</a>
+  </div>
+  <div>
+      <a class="xref" href="Fp.Plus.PlusUtil.html#Fp_Plus_PlusUtil__WAV_System_Object_">PlusUtil._WAV(object)</a>
+  </div>
+  </dd></dl>
+
+
+
+
+
+  <h2 class="section" id="fields">Fields
+</h2>
+
+
+
+  <h3 id="Fp_Plus_Audio_Wave_IndexChunkData" data-uid="Fp.Plus.Audio.Wave.IndexChunkData">
+  IndexChunkData
+  <a class="header-action link-secondary" title="View source" href="https://github.com/collectioneering/Fp/blob/main/src/Fp.Plus/Audio/Wave.cs/#L34"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Index of &quot;data&quot; chunk in <a class="xref" href="Fp.Plus.Audio.Wave.html#Fp_Plus_Audio_Wave_ChunkNames">ChunkNames</a>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public const int IndexChunkData = 12</code></pre>
+  </div>
+
+
+
+
+  <h4 class="section">Field Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <h3 id="Fp_Plus_Audio_Wave_IndexChunkFact" data-uid="Fp.Plus.Audio.Wave.IndexChunkFact">
+  IndexChunkFact
+  <a class="header-action link-secondary" title="View source" href="https://github.com/collectioneering/Fp/blob/main/src/Fp.Plus/Audio/Wave.cs/#L38"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Index of &quot;fact&quot; chunk in <a class="xref" href="Fp.Plus.Audio.Wave.html#Fp_Plus_Audio_Wave_ChunkNames">ChunkNames</a>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public const int IndexChunkFact = 16</code></pre>
+  </div>
+
+
+
+
+  <h4 class="section">Field Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <h3 id="Fp_Plus_Audio_Wave_IndexChunkFmt" data-uid="Fp.Plus.Audio.Wave.IndexChunkFmt">
+  IndexChunkFmt
+  <a class="header-action link-secondary" title="View source" href="https://github.com/collectioneering/Fp/blob/main/src/Fp.Plus/Audio/Wave.cs/#L30"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Index of &quot;fmt &quot; chunk in <a class="xref" href="Fp.Plus.Audio.Wave.html#Fp_Plus_Audio_Wave_ChunkNames">ChunkNames</a>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public const int IndexChunkFmt = 8</code></pre>
+  </div>
+
+
+
+
+  <h4 class="section">Field Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <h3 id="Fp_Plus_Audio_Wave_IndexChunkRiff" data-uid="Fp.Plus.Audio.Wave.IndexChunkRiff">
+  IndexChunkRiff
+  <a class="header-action link-secondary" title="View source" href="https://github.com/collectioneering/Fp/blob/main/src/Fp.Plus/Audio/Wave.cs/#L22"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Index of &quot;RIFF&quot; chunk in <a class="xref" href="Fp.Plus.Audio.Wave.html#Fp_Plus_Audio_Wave_ChunkNames">ChunkNames</a>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public const int IndexChunkRiff = 0</code></pre>
+  </div>
+
+
+
+
+  <h4 class="section">Field Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <h3 id="Fp_Plus_Audio_Wave_IndexChunkWave" data-uid="Fp.Plus.Audio.Wave.IndexChunkWave">
+  IndexChunkWave
+  <a class="header-action link-secondary" title="View source" href="https://github.com/collectioneering/Fp/blob/main/src/Fp.Plus/Audio/Wave.cs/#L26"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Index of &quot;WAVE&quot; chunk in <a class="xref" href="Fp.Plus.Audio.Wave.html#Fp_Plus_Audio_Wave_ChunkNames">ChunkNames</a>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public const int IndexChunkWave = 4</code></pre>
+  </div>
+
+
+
+
+  <h4 class="section">Field Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <h3 id="Fp_Plus_Audio_Wave_WaveFormat" data-uid="Fp.Plus.Audio.Wave.WaveFormat">
+  WaveFormat
+  <a class="header-action link-secondary" title="View source" href="https://github.com/collectioneering/Fp/blob/main/src/Fp.Plus/Audio/Wave.cs/#L17"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>WAVE format.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static readonly Guid WaveFormat</code></pre>
+  </div>
+
+
+
+
+  <h4 class="section">Field Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.guid">Guid</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+  <h2 class="section" id="properties">Properties
+</h2>
+
+
+  <a id="Fp_Plus_Audio_Wave_ChunkNames_" data-uid="Fp.Plus.Audio.Wave.ChunkNames*"></a>
+
+  <h3 id="Fp_Plus_Audio_Wave_ChunkNames" data-uid="Fp.Plus.Audio.Wave.ChunkNames">
+  ChunkNames
+  <a class="header-action link-secondary" title="View source" href="https://github.com/collectioneering/Fp/blob/main/src/Fp.Plus/Audio/Wave.cs/#L43"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Standard chunk names.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static ReadOnlySpan&lt;byte&gt; ChunkNames { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.readonlyspan-1">ReadOnlySpan</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.byte">byte</a>&gt;</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <h2 class="section" id="methods">Methods
+</h2>
+
+
+  <a id="Fp_Plus_Audio_Wave_WriteFloatWave_" data-uid="Fp.Plus.Audio.Wave.WriteFloatWave*"></a>
+
+  <h3 id="Fp_Plus_Audio_Wave_WriteFloatWave__1_System_IO_Stream_Fp_Plus_Audio_WaveInfo_System_ReadOnlySpan___0__" data-uid="Fp.Plus.Audio.Wave.WriteFloatWave``1(System.IO.Stream,Fp.Plus.Audio.WaveInfo,System.ReadOnlySpan{``0})">
+  WriteFloatWave&lt;T&gt;(Stream, WaveInfo, ReadOnlySpan&lt;T&gt;)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/collectioneering/Fp/blob/main/src/Fp.Plus/Audio/Wave.cs/#L85"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Writes a WAVE format file with float data.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static void WriteFloatWave&lt;T&gt;(Stream outputStream, WaveInfo waveInfo, ReadOnlySpan&lt;T&gt; data) where T : unmanaged</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>outputStream</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.io.stream">Stream</a></dt>
+    <dd><p>Output stream.</p>
+</dd>
+    <dt><code>waveInfo</code> <a class="xref" href="Fp.Plus.Audio.WaveInfo.html">WaveInfo</a></dt>
+    <dd><p>Float info.</p>
+</dd>
+    <dt><code>data</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.readonlyspan-1">ReadOnlySpan</a>&lt;T&gt;</dt>
+    <dd><p>Raw content buffer.</p>
+</dd>
+  </dl>
+
+
+  <h4 class="section">Type Parameters</h4>
+  <dl class="parameters">
+    <dt><code>T</code></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+  <h4 class="section" id="Fp_Plus_Audio_Wave_WriteFloatWave__1_System_IO_Stream_Fp_Plus_Audio_WaveInfo_System_ReadOnlySpan___0___remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><p>Implementation derived from format details at <a href="http://soundfile.sapp.org/doc/WaveFormat/">http://soundfile.sapp.org/doc/WaveFormat/</a></p>
+</div>
+
+  <h4 class="section">Exceptions</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.argumentexception">ArgumentException</a></dt>
+    <dd><p>Thrown if invalid data parameters were detected.</p>
+</dd>
+  </dl>
+
+
+
+  <a id="Fp_Plus_Audio_Wave_WriteFloatWave_" data-uid="Fp.Plus.Audio.Wave.WriteFloatWave*"></a>
+
+  <h3 id="Fp_Plus_Audio_Wave_WriteFloatWave__1_System_IO_Stream_System_Int16_System_Int32_System_Int32_System_ReadOnlySpan___0__" data-uid="Fp.Plus.Audio.Wave.WriteFloatWave``1(System.IO.Stream,System.Int16,System.Int32,System.Int32,System.ReadOnlySpan{``0})">
+  WriteFloatWave&lt;T&gt;(Stream, short, int, int, ReadOnlySpan&lt;T&gt;)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/collectioneering/Fp/blob/main/src/Fp.Plus/Audio/Wave.cs/#L69"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Writes a WAVE format file with float data.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static void WriteFloatWave&lt;T&gt;(Stream outputStream, short numChannels, int sampleRate, int numSamples, ReadOnlySpan&lt;T&gt; data) where T : unmanaged</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>outputStream</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.io.stream">Stream</a></dt>
+    <dd><p>Output stream.</p>
+</dd>
+    <dt><code>numChannels</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int16">short</a></dt>
+    <dd><p>Mono = 1, Stereo = 2, etc.</p>
+</dd>
+    <dt><code>sampleRate</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd><p>8000, 44100, etc.</p>
+</dd>
+    <dt><code>numSamples</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd><p>Number of samples (shared count between channels).</p>
+</dd>
+    <dt><code>data</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.readonlyspan-1">ReadOnlySpan</a>&lt;T&gt;</dt>
+    <dd><p>Raw content buffer.</p>
+</dd>
+  </dl>
+
+
+  <h4 class="section">Type Parameters</h4>
+  <dl class="parameters">
+    <dt><code>T</code></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+  <h4 class="section" id="Fp_Plus_Audio_Wave_WriteFloatWave__1_System_IO_Stream_System_Int16_System_Int32_System_Int32_System_ReadOnlySpan___0___remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><p>Implementation derived from format details at <a href="http://soundfile.sapp.org/doc/WaveFormat/">http://soundfile.sapp.org/doc/WaveFormat/</a></p>
+</div>
+
+  <h4 class="section">Exceptions</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.argumentexception">ArgumentException</a></dt>
+    <dd><p>Thrown if invalid data parameters were detected.</p>
+</dd>
+  </dl>
+
+
+
+  <a id="Fp_Plus_Audio_Wave_WritePcmWave_" data-uid="Fp.Plus.Audio.Wave.WritePcmWave*"></a>
+
+  <h3 id="Fp_Plus_Audio_Wave_WritePcmWave__1_System_IO_Stream_Fp_Plus_Audio_WaveInfo_System_ReadOnlySpan___0__" data-uid="Fp.Plus.Audio.Wave.WritePcmWave``1(System.IO.Stream,Fp.Plus.Audio.WaveInfo,System.ReadOnlySpan{``0})">
+  WritePcmWave&lt;T&gt;(Stream, WaveInfo, ReadOnlySpan&lt;T&gt;)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/collectioneering/Fp/blob/main/src/Fp.Plus/Audio/Wave.cs/#L174"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Writes a WAVE format file with PCM.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static void WritePcmWave&lt;T&gt;(Stream outputStream, WaveInfo waveInfo, ReadOnlySpan&lt;T&gt; data) where T : unmanaged</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>outputStream</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.io.stream">Stream</a></dt>
+    <dd><p>Output stream.</p>
+</dd>
+    <dt><code>waveInfo</code> <a class="xref" href="Fp.Plus.Audio.WaveInfo.html">WaveInfo</a></dt>
+    <dd><p>PCM or float info.</p>
+</dd>
+    <dt><code>data</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.readonlyspan-1">ReadOnlySpan</a>&lt;T&gt;</dt>
+    <dd><p>Raw content buffer.</p>
+</dd>
+  </dl>
+
+
+  <h4 class="section">Type Parameters</h4>
+  <dl class="parameters">
+    <dt><code>T</code></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+  <h4 class="section" id="Fp_Plus_Audio_Wave_WritePcmWave__1_System_IO_Stream_Fp_Plus_Audio_WaveInfo_System_ReadOnlySpan___0___remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><p>Implementation derived from format details at <a href="http://soundfile.sapp.org/doc/WaveFormat/">http://soundfile.sapp.org/doc/WaveFormat/</a></p>
+</div>
+
+  <h4 class="section">Exceptions</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.argumentexception">ArgumentException</a></dt>
+    <dd><p>Thrown if invalid data parameters were detected.</p>
+</dd>
+  </dl>
+
+
+
+  <a id="Fp_Plus_Audio_Wave_WritePcmWave_" data-uid="Fp.Plus.Audio.Wave.WritePcmWave*"></a>
+
+  <h3 id="Fp_Plus_Audio_Wave_WritePcmWave__1_System_IO_Stream_System_Int16_System_Int32_System_Int32_System_ReadOnlySpan___0__" data-uid="Fp.Plus.Audio.Wave.WritePcmWave``1(System.IO.Stream,System.Int16,System.Int32,System.Int32,System.ReadOnlySpan{``0})">
+  WritePcmWave&lt;T&gt;(Stream, short, int, int, ReadOnlySpan&lt;T&gt;)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/collectioneering/Fp/blob/main/src/Fp.Plus/Audio/Wave.cs/#L154"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Writes a WAVE format file with PCM.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static void WritePcmWave&lt;T&gt;(Stream outputStream, short numChannels, int sampleRate, int numSamples, ReadOnlySpan&lt;T&gt; data) where T : unmanaged</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>outputStream</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.io.stream">Stream</a></dt>
+    <dd><p>Output stream.</p>
+</dd>
+    <dt><code>numChannels</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int16">short</a></dt>
+    <dd><p>Mono = 1, Stereo = 2, etc.</p>
+</dd>
+    <dt><code>sampleRate</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd><p>8000, 44100, etc.</p>
+</dd>
+    <dt><code>numSamples</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd><p>Number of samples (shared count between channels).</p>
+</dd>
+    <dt><code>data</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.readonlyspan-1">ReadOnlySpan</a>&lt;T&gt;</dt>
+    <dd><p>Raw content buffer.</p>
+</dd>
+  </dl>
+
+
+  <h4 class="section">Type Parameters</h4>
+  <dl class="parameters">
+    <dt><code>T</code></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+  <h4 class="section" id="Fp_Plus_Audio_Wave_WritePcmWave__1_System_IO_Stream_System_Int16_System_Int32_System_Int32_System_ReadOnlySpan___0___remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><p>Implementation derived from format details at <a href="http://soundfile.sapp.org/doc/WaveFormat/">http://soundfile.sapp.org/doc/WaveFormat/</a></p>
+</div>
+
+  <h4 class="section">Exceptions</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.argumentexception">ArgumentException</a></dt>
+    <dd><p>Thrown if invalid data parameters were detected.</p>
+</dd>
+  </dl>
+
+
+
+  <a id="Fp_Plus_Audio_Wave_WriteStereoFloatWave_" data-uid="Fp.Plus.Audio.Wave.WriteStereoFloatWave*"></a>
+
+  <h3 id="Fp_Plus_Audio_Wave_WriteStereoFloatWave__1_System_IO_Stream_Fp_Plus_Audio_WaveInfo_System_ReadOnlySpan___0__System_ReadOnlySpan___0__" data-uid="Fp.Plus.Audio.Wave.WriteStereoFloatWave``1(System.IO.Stream,Fp.Plus.Audio.WaveInfo,System.ReadOnlySpan{``0},System.ReadOnlySpan{``0})">
+  WriteStereoFloatWave&lt;T&gt;(Stream, WaveInfo, ReadOnlySpan&lt;T&gt;, ReadOnlySpan&lt;T&gt;)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/collectioneering/Fp/blob/main/src/Fp.Plus/Audio/Wave.cs/#L121"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Writes a WAVE format file with stereo float data.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static void WriteStereoFloatWave&lt;T&gt;(Stream outputStream, WaveInfo waveInfo, ReadOnlySpan&lt;T&gt; left, ReadOnlySpan&lt;T&gt; right) where T : unmanaged</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>outputStream</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.io.stream">Stream</a></dt>
+    <dd><p>Output stream.</p>
+</dd>
+    <dt><code>waveInfo</code> <a class="xref" href="Fp.Plus.Audio.WaveInfo.html">WaveInfo</a></dt>
+    <dd><p>Float info.</p>
+</dd>
+    <dt><code>left</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.readonlyspan-1">ReadOnlySpan</a>&lt;T&gt;</dt>
+    <dd><p>Raw content buffer for left channel.</p>
+</dd>
+    <dt><code>right</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.readonlyspan-1">ReadOnlySpan</a>&lt;T&gt;</dt>
+    <dd><p>Raw content buffer for right channel.</p>
+</dd>
+  </dl>
+
+
+  <h4 class="section">Type Parameters</h4>
+  <dl class="parameters">
+    <dt><code>T</code></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+  <h4 class="section" id="Fp_Plus_Audio_Wave_WriteStereoFloatWave__1_System_IO_Stream_Fp_Plus_Audio_WaveInfo_System_ReadOnlySpan___0__System_ReadOnlySpan___0___remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><p>Implementation derived from format details at <a href="http://soundfile.sapp.org/doc/WaveFormat/">http://soundfile.sapp.org/doc/WaveFormat/</a></p>
+</div>
+
+  <h4 class="section">Exceptions</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.argumentexception">ArgumentException</a></dt>
+    <dd><p>Thrown if invalid data parameters were detected.</p>
+</dd>
+  </dl>
+
+
+
+  <a id="Fp_Plus_Audio_Wave_WriteStereoFloatWave_" data-uid="Fp.Plus.Audio.Wave.WriteStereoFloatWave*"></a>
+
+  <h3 id="Fp_Plus_Audio_Wave_WriteStereoFloatWave__1_System_IO_Stream_System_Int32_System_Int32_System_ReadOnlySpan___0__System_ReadOnlySpan___0__" data-uid="Fp.Plus.Audio.Wave.WriteStereoFloatWave``1(System.IO.Stream,System.Int32,System.Int32,System.ReadOnlySpan{``0},System.ReadOnlySpan{``0})">
+  WriteStereoFloatWave&lt;T&gt;(Stream, int, int, ReadOnlySpan&lt;T&gt;, ReadOnlySpan&lt;T&gt;)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/collectioneering/Fp/blob/main/src/Fp.Plus/Audio/Wave.cs/#L104"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Writes a WAVE format file with stereo float data.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static void WriteStereoFloatWave&lt;T&gt;(Stream outputStream, int sampleRate, int numSamples, ReadOnlySpan&lt;T&gt; left, ReadOnlySpan&lt;T&gt; right) where T : unmanaged</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>outputStream</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.io.stream">Stream</a></dt>
+    <dd><p>Output stream.</p>
+</dd>
+    <dt><code>sampleRate</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd><p>8000, 44100, etc.</p>
+</dd>
+    <dt><code>numSamples</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd><p>Number of samples (shared count between channels).</p>
+</dd>
+    <dt><code>left</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.readonlyspan-1">ReadOnlySpan</a>&lt;T&gt;</dt>
+    <dd><p>Raw content buffer for left channel.</p>
+</dd>
+    <dt><code>right</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.readonlyspan-1">ReadOnlySpan</a>&lt;T&gt;</dt>
+    <dd><p>Raw content buffer for right channel.</p>
+</dd>
+  </dl>
+
+
+  <h4 class="section">Type Parameters</h4>
+  <dl class="parameters">
+    <dt><code>T</code></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+  <h4 class="section" id="Fp_Plus_Audio_Wave_WriteStereoFloatWave__1_System_IO_Stream_System_Int32_System_Int32_System_ReadOnlySpan___0__System_ReadOnlySpan___0___remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><p>Implementation derived from format details at <a href="http://soundfile.sapp.org/doc/WaveFormat/">http://soundfile.sapp.org/doc/WaveFormat/</a></p>
+</div>
+
+  <h4 class="section">Exceptions</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.argumentexception">ArgumentException</a></dt>
+    <dd><p>Thrown if invalid data parameters were detected.</p>
+</dd>
+  </dl>
+
+
+
+  <a id="Fp_Plus_Audio_Wave_WriteWave_" data-uid="Fp.Plus.Audio.Wave.WriteWave*"></a>
+
+  <h3 id="Fp_Plus_Audio_Wave_WriteWave__1_System_IO_Stream_Fp_Plus_Audio_WaveInfo_System_ReadOnlySpan___0__" data-uid="Fp.Plus.Audio.Wave.WriteWave``1(System.IO.Stream,Fp.Plus.Audio.WaveInfo,System.ReadOnlySpan{``0})">
+  WriteWave&lt;T&gt;(Stream, WaveInfo, ReadOnlySpan&lt;T&gt;)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/collectioneering/Fp/blob/main/src/Fp.Plus/Audio/Wave.cs/#L196"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Writes a WAVE format file.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static void WriteWave&lt;T&gt;(Stream outputStream, WaveInfo waveInfo, ReadOnlySpan&lt;T&gt; data) where T : unmanaged</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>outputStream</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.io.stream">Stream</a></dt>
+    <dd><p>Output stream.</p>
+</dd>
+    <dt><code>waveInfo</code> <a class="xref" href="Fp.Plus.Audio.WaveInfo.html">WaveInfo</a></dt>
+    <dd><p>PCM or float info.</p>
+</dd>
+    <dt><code>data</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.readonlyspan-1">ReadOnlySpan</a>&lt;T&gt;</dt>
+    <dd><p>Raw content buffer.</p>
+</dd>
+  </dl>
+
+
+  <h4 class="section">Type Parameters</h4>
+  <dl class="parameters">
+    <dt><code>T</code></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+  <h4 class="section" id="Fp_Plus_Audio_Wave_WriteWave__1_System_IO_Stream_Fp_Plus_Audio_WaveInfo_System_ReadOnlySpan___0___remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><p>Implementation derived from format details at <a href="http://soundfile.sapp.org/doc/WaveFormat/">http://soundfile.sapp.org/doc/WaveFormat/</a></p>
+</div>
+
+  <h4 class="section">Exceptions</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.argumentexception">ArgumentException</a></dt>
+    <dd><p>Thrown if invalid data parameters were detected.</p>
+</dd>
+  </dl>
+
+
+
+
+</article>
+
+        <div class="contribution d-print-none">
+          <a href="https://github.com/collectioneering/Fp/blob/main/src/Fp.Plus/Audio/Wave.cs/#L12" class="edit-link">Edit this page</a>
+        </div>
+
+
+      </div>
+
+      <div class="affix">
+        <nav id="affix"></nav>
+      </div>
+    </main>
+
+
+    <footer class="border-top text-secondary">
+      <div class="container-xxl">
+        <div class="flex-fill">
+          <span>Made with <a href="https://dotnet.github.io/docfx">docfx</a></span>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>
