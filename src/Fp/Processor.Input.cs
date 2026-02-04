@@ -208,16 +208,16 @@ namespace Fp
         /// <param name="stream">Stream to read from.</param>
         /// <param name="span">Target to copy to, may be replaced by an internal memory buffer.</param>
         /// <param name="lenient">If false, throws when failed to fill target.</param>
-        /// <param name="forceNew">Force use provided span.</param>
+        /// <param name="forceUseCurrentSpan">Force use provided span.</param>
         /// <returns>Number of bytes read.</returns>
         /// <exception cref="IOException">Thrown when <paramref name="lenient"/> is false
         /// and stream cannot provide enough data to fill target.</exception>
         /// <remarks>
         /// This method advances <paramref name="stream"/> to the end of the read data.
         /// </remarks>
-        public static int Read(Stream stream, ref Span<byte> span, bool lenient = true, bool forceNew = false)
+        public static int Read(Stream stream, ref Span<byte> span, bool lenient = true, bool forceUseCurrentSpan = false)
         {
-            if (forceNew)
+            if (forceUseCurrentSpan)
             {
                 if (!TryGetRawReadOnlyMemoryFromStream(stream, out var buffer, out int position))
                     return ReadBaseSpan(stream, span, lenient);
@@ -403,7 +403,7 @@ namespace Fp
         /// </summary>
         /// <param name="span">Target to copy to, may be replaced by an internal memory buffer.</param>
         /// <param name="lenient">If false, throws when failed to fill target.</param>
-        /// <param name="forceNew">Force use provided span.</param>
+        /// <param name="forceUseCurrentSpan">Force use provided span.</param>
         /// <returns>Number of bytes read.</returns>
         /// <exception cref="InvalidOperationException">Thrown if <see cref="InputStream"/> is not set.</exception>
         /// <exception cref="IOException">Thrown when <paramref name="lenient"/> is false
@@ -411,8 +411,8 @@ namespace Fp
         /// <remarks>
         /// This method advances <see cref="InputStream"/> to the end of the read data.
         /// </remarks>
-        public int Read(ref Span<byte> span, bool lenient = true, bool forceNew = false)
-            => Read(_inputStream ?? throw new InvalidOperationException(), ref span, lenient, forceNew);
+        public int Read(ref Span<byte> span, bool lenient = true, bool forceUseCurrentSpan = false)
+            => Read(_inputStream ?? throw new InvalidOperationException(), ref span, lenient, forceUseCurrentSpan);
 
         /// <summary>
         /// Reads data from current file's input stream.
@@ -484,19 +484,19 @@ namespace Fp
         /// <param name="offset">Offset to read from.</param>
         /// <param name="span">Target to copy to.</param>
         /// <param name="lenient">If false, throws when failed to fill target.</param>
-        /// <param name="forceNew">Force use provided span.</param>
+        /// <param name="forceUseCurrentSpan">Force use provided span.</param>
         /// <returns>Number of bytes read.</returns>
         /// <exception cref="IOException">Thrown when <paramref name="lenient"/> is false
         /// and stream cannot provide enough data to fill target.</exception>
         /// <remarks>Original position of <paramref name="stream"/> is restored on completion.</remarks>
         public static int Read(Stream stream, long offset, ref Span<byte> span, bool lenient = true,
-            bool forceNew = false)
+            bool forceUseCurrentSpan = false)
         {
             long position = stream.Position;
             try
             {
                 stream.Position = offset;
-                int count = Read(stream, ref span, lenient, forceNew);
+                int count = Read(stream, ref span, lenient, forceUseCurrentSpan);
                 return count;
             }
             finally
@@ -617,14 +617,14 @@ namespace Fp
         /// <param name="offset">Offset to read from.</param>
         /// <param name="span">Target to copy to.</param>
         /// <param name="lenient">If false, throws when failed to fill target.</param>
-        /// <param name="forceNew">Force use provided span.</param>
+        /// <param name="forceUseCurrentSpan">Force use provided span.</param>
         /// <returns>Number of bytes read.</returns>
         /// <exception cref="InvalidOperationException">Thrown if <see cref="InputStream"/> is not set.</exception>
         /// <exception cref="IOException">Thrown when <paramref name="lenient"/> is false
         /// and stream cannot provide enough data to fill target.</exception>
         /// <remarks>Original position of <see cref="InputStream"/> is restored on completion.</remarks>
-        public int Read(long offset, ref Span<byte> span, bool lenient = true, bool forceNew = false)
-            => Read(_inputStream ?? throw new InvalidOperationException(), offset, ref span, lenient, forceNew);
+        public int Read(long offset, ref Span<byte> span, bool lenient = true, bool forceUseCurrentSpan = false)
+            => Read(_inputStream ?? throw new InvalidOperationException(), offset, ref span, lenient, forceUseCurrentSpan);
 
         /// <summary>
         /// Reads data from current file's input stream at the specified offset.

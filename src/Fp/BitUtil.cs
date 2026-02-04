@@ -37,7 +37,38 @@ public static class BitUtil
     /// </summary>
     /// <param name="bytes">Input bytes.</param>
     /// <returns>Number of bits contained by input bytes.</returns>
-    public static int GetBitsForBytes(this int bytes) => bytes * 8;
+    public static int GetBitsForBytes(this int bytes)
+    {
+        if (bytes < 0)
+        {
+            throw new ArgumentOutOfRangeException(nameof(bytes), bytes, "Value must not be negative");
+        }
+        long value = (long)bytes * 8;
+        if (value > int.MaxValue)
+        {
+            throw new ArgumentException("Input caused an overflow");
+        }
+        return (int)value;
+    }
+
+    /// <summary>
+    /// Gets number of bits contained by input bytes.
+    /// </summary>
+    /// <param name="bytes">Input bytes.</param>
+    /// <returns>Number of bits contained by input bytes.</returns>
+    public static long GetBitsForBytes(this long bytes)
+    {
+        if (bytes < 0)
+        {
+            throw new ArgumentOutOfRangeException(nameof(bytes), bytes, "Value must not be negative");
+        }
+        long value = bytes * 8;
+        if (value < 0)
+        {
+            throw new ArgumentException("Input caused an overflow");
+        }
+        return value;
+    }
 
     /// <summary>
     /// Skips over bits matching specified value.
