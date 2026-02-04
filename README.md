@@ -19,18 +19,15 @@ Many utilities for working with primitive data (including endianness-dependent I
 
 ### Libraries
 * Fp: Base file processing library
-    - .NET Standard 2.1 / .NET 6.0
 * Fp.Fs: Filesystem processing library
-    - .NET Standard 2.1 / .NET 6.0
 * Fp.Plus: Extension library (e.g. RGBA32 image (through ImageSharp) / PCM WAVE output)
-    - .NET Standard 2.1 / .NET 6.0
 * Fp.Platforms.Nitro: Nintendo DS file format integrations
-    - .NET Standard 2.1 / .NET 6.0
+
 ### Scripting
 * fpx: Script execution program (thin wrapper of [dotnet-script](https://github.com/filipw/dotnet-script))
-    - Requires [.NET 6 SDK](https://get.dot.net/) for execution
+    - Requires [.NET 10 SDK](https://get.dot.net/) for execution
 * Dereliction: Basic Avalonia GUI script editor / testing program
-    - Requires [.NET 6 SDK](https://get.dot.net/) for execution
+    - Requires [.NET 10 SDK](https://get.dot.net/) for execution
 
 ### Details
 
