@@ -1150,8 +1150,7 @@ namespace Fp.Plus.Images
 }
 
 // ReSharper disable once CheckNamespace
-namespace Fp
-{
+namespace Fp.Plus {
     public partial class PlusUtil
     {
         /// <summary>

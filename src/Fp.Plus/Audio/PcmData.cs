@@ -116,8 +116,7 @@ namespace Fp.Plus.Audio
 }
 
 // ReSharper disable once CheckNamespace
-namespace Fp
-{
+namespace Fp.Plus {
     public partial class PlusUtil
     {
         /// <summary>

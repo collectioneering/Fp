@@ -1,11 +1,14 @@
 - name: Articles
   href: articles/
 - name: Fp API Reference
-  href: api/Fp
+  href: api/Fp/
   homepage: api/Fp/index.md
 - name: Fp.Fs API Reference
-  href: api/Fp.Fs
+  href: api/Fp.Fs/
   homepage: api/Fp.Fs/index.md
 - name: Fp.Plus API Reference
-  href: api/Fp.Plus
+  href: api/Fp.Plus/
   homepage: api/Fp.Plus/index.md
+- name: Fp.Platforms.Nitro API Reference
+  href: api/Fp.Platforms.Nitro/
+  homepage: api/Fp.Platforms.Nitro/index.md

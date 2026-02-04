@@ -1,6 +1,6 @@
 ﻿// ReSharper disable once CheckNamespace
 
-namespace Fp;
+namespace Fp.Plus;
 
 /// <summary>
 /// Utilities.

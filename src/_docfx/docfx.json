@@ -50,6 +50,23 @@
       "dest": "api/Fp.Plus",
       "disableGitFeatures": false,
       "disableDefaultFilter": false
+    },
+    {
+      "src": [
+        {
+          "src": "../Fp.Platforms.Nitro",
+          "files": [
+            "**.csproj"
+          ],
+          "exclude": [
+            "**/bin/**",
+            "**/obj/**"
+          ]
+        }
+      ],
+      "dest": "api/Fp.Platforms.Nitro",
+      "disableGitFeatures": false,
+      "disableDefaultFilter": false
     }
   ],
   "build": {
@@ -94,7 +111,7 @@
     "fileMetadataFiles": [],
     "template": [
       "default",
-      "templates/unity"
+      "modern"
     ],
     "postProcessors": [],
     "markdownEngineName": "markdig",
