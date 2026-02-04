@@ -7,9 +7,11 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 
 ## Unreleased
 
+## [0.28.0] 2026-02-03
+
 ### Added
 
-- Support for .NET 7 (preview)
+- `public static long BitUtil.GetBitsForBytes(long bytes)`
 
 - Added intermediary types `BaseUnmanagedIntegerHelper<T>` and `BaseUnmanagedIntegerArrayHelper<T>` for helpers to provide additional functionality
 
@@ -19,8 +21,11 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 
 ### Changed
 
+- Target TFMs are now `netstandard2.1`, `net8.0`, `net10.0`
 - Deprecated array-based `Processor.Read` / `Processor.Write` etc. overloads
 - `public void Processor.OutputAll(ReadOnlySpan<byte> span, Stream? outputStream = null)` changed to `public void Processor.OutputAll(ReadOnlySpan<byte> span)` for minimal utility gain
+- `public static int BitUtil.GetBitsForBytes(int bytes)` throws when an overflow is detected
+- Renamed `forceNew` parameter on `ref Span` `Processor.Read` overloads to `forceUseCurrentSpan` for better clarity
 
 ### Fixed
 

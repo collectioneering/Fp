@@ -8,7 +8,7 @@
     </PropertyGroup>
     
     <ItemGroup>
-        <PackageReference Include="Fp.Fs" Version="0.28.0"/>
+        <PackageReference Include="Fp.Fs" Version="0.28.0" />
     </ItemGroup>
 
 </Project>
