@@ -61,9 +61,14 @@ namespace fpx
                 ? Path.GetDirectoryName(file)
                 : null) ?? Directory.GetCurrentDirectory();
             log ??= (_, _) => { };
-            var options = new ExecuteCodeCommandOptions(text, directory,
-                args?.ToArray() ?? new[] { FsProcessor.NO_EXECUTE_CLI },
-                OptimizationLevel.Debug, false, null);
+            var options = new ExecuteCodeCommandOptions(
+                code: text,
+                workingDirectory: directory,
+                arguments: args?.ToArray() ?? [FsProcessor.NO_EXECUTE_CLI],
+                optimizationLevel: OptimizationLevel.Debug,
+                cachePath: null,
+                noCache: true,
+                packageSources: null);
             LogDebug(log, "Executing script...");
             var logWriter = new LogWriter(log);
             await new ExecuteCodeCommand(new ScriptConsole(logWriter, TextReader.Null, logWriter),
@@ -90,7 +95,7 @@ namespace fpx
                 case LogLevel.Trace:
                 case LogLevel.Debug:
                 case LogLevel.Info:
-                    LogDebug(log, "Execution finished.");
+                    LogDebug(log, m);
                     break;
             }
         };

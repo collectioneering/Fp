@@ -31,11 +31,11 @@
                 <NativeMenu/>
               </NativeMenuItem.Menu>
             </NativeMenuItem>-->
-                        <NativeMenuItemSeperator />
+                        <NativeMenuItemSeparator />
                         <NativeMenuItem Header="{x:Static local:MainWindow.RefreshScriptsHeader}"
                                         Gesture="{x:Static local:MainWindow.RefreshScriptsGesture}"
                                         Click="OnRefreshScriptsClicked" />
-                        <NativeMenuItemSeperator />
+                        <NativeMenuItemSeparator />
                         <NativeMenuItem Header="{x:Static local:MainWindow.QuitHeader}"
                                         Gesture="{x:Static local:MainWindow.QuitGesture}"
                                         Click="OnQuitClicked" />

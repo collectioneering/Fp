@@ -6,7 +6,7 @@ using Dereliction.ViewModels;
 
 namespace Dereliction.Views;
 
-public class OperationRunnerView : UserControl
+public partial class OperationRunnerView : UserControl
 {
     private readonly ScrollViewer _logScrollViewer;
 
@@ -16,7 +16,7 @@ public class OperationRunnerView : UserControl
     public OperationRunnerView()
     {
         InitializeComponent();
-        _logScrollViewer = this.FindControl<ScrollViewer>("LogScrollViewer");
+        _logScrollViewer = this.FindControl<ScrollViewer>("LogScrollViewer")!;
     }
 
     private void InitializeComponent()

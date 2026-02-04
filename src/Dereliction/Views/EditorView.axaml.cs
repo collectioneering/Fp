@@ -15,7 +15,7 @@ using Dereliction.ViewModels;
 
 namespace Dereliction.Views;
 
-public class EditorView : UserControl
+public partial class EditorView : UserControl
 {
     private EditorViewModel EditorModel => DataContext as EditorViewModel ?? throw new ApplicationException();
 
@@ -38,7 +38,7 @@ public class EditorView : UserControl
             csScriptDarkHighlighting);
 
         InitializeComponent();
-        _textEditor = this.FindControl<TextEditor>("Editor");
+        _textEditor = this.FindControl<TextEditor>("Editor")!;
         _textEditor.Background = Brushes.Transparent;
         _textEditor.ShowLineNumbers = true;
         //_textEditor.SyntaxHighlighting = HighlightingManager.Instance.GetDefinition("C#");

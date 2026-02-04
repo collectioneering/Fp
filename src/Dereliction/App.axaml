@@ -2,7 +2,8 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
              xmlns:local="using:Dereliction"
              xmlns:cc="clr-namespace:AvaloniaEdit.CodeCompletion;assembly=AvaloniaEdit"
-             x:Class="Dereliction.App">
+             x:Class="Dereliction.App"
+             RequestedThemeVariant="Dark">
     <Application.DataTemplates>
         <local:ViewLocator />
     </Application.DataTemplates>
@@ -11,8 +12,8 @@
 
     <!-- Taken from AvaloniaEdit demo program -->
     <Application.Styles>
-        <FluentTheme Mode="Dark" />
-        <StyleInclude Source="avares://AvaloniaEdit/AvaloniaEdit.xaml" />
+        <FluentTheme />
+        <StyleInclude Source="avares://AvaloniaEdit/Themes/Fluent/AvaloniaEdit.xaml" />
 
         <!--Code completion-->
         <Style Selector="cc|CompletionList">

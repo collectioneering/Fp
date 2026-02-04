@@ -49,12 +49,12 @@
             </StackPanel>
             <Label Content="Input" Grid.Row="1" Grid.Column="0" />
             <Border BorderBrush="White" BorderThickness="1" Grid.Row="2" Grid.Column="0">
-                <TreeView Items="{Binding Inputs}">
+                <TreeView ItemsSource="{Binding Inputs}">
                     <TreeView.DataTemplates>
                         <TreeDataTemplate DataType="models:InfoElement">
                             <TextBlock Text="{Binding Value}" />
                         </TreeDataTemplate>
-                        <TreeDataTemplate ItemsSource="{Binding Infos}">
+                        <TreeDataTemplate DataType="models:RealFsElement" ItemsSource="{Binding Infos}">
                             <TextBlock Text="{Binding Name}" />
                         </TreeDataTemplate>
                     </TreeView.DataTemplates>
@@ -62,12 +62,12 @@
             </Border>
             <Label Content="Output" Grid.Row="1" Grid.Column="1" />
             <Border BorderBrush="White" BorderThickness="1" Grid.Row="2" Grid.Column="1">
-                <TreeView Items="{Binding Outputs}">
+                <TreeView ItemsSource="{Binding Outputs}">
                     <TreeView.DataTemplates>
                         <TreeDataTemplate DataType="models:InfoElement">
                             <TextBlock Text="{Binding Value}" />
                         </TreeDataTemplate>
-                        <TreeDataTemplate ItemsSource="{Binding Infos}">
+                        <TreeDataTemplate DataType="models:RealFsElement" ItemsSource="{Binding Infos}">
                             <TextBlock Text="{Binding Name}" />
                         </TreeDataTemplate>
                     </TreeView.DataTemplates>

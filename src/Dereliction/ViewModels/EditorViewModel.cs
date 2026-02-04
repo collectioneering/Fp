@@ -1,15 +1,15 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.IO;
 using System.Threading.Tasks;
 using Avalonia.Controls;
+using Avalonia.Platform.Storage;
 using Avalonia.VisualTree;
 using Dereliction.Models;
 using Dereliction.Views;
-using MessageBox.Avalonia;
-using MessageBox.Avalonia.DTO;
-using MessageBox.Avalonia.Enums;
+using MsBox.Avalonia;
+using MsBox.Avalonia.Dto;
+using MsBox.Avalonia.Enums;
 using ReactiveUI;
 
 namespace Dereliction.ViewModels;
@@ -113,12 +113,12 @@ public class EditorViewModel : ViewModelBase
 
     #endregion
 
-    private static async Task DialogOrExceptionAsync(Exception e, IVisual? control)
+    private static async Task DialogOrExceptionAsync(Exception e, Control? control)
     {
         var window = control?.FindAncestorOfType<Window>();
         if (control == null || window == null) throw e;
-        var msgWindow = MessageBoxManager.GetMessageBoxStandardWindow(e.Message, e.ToString());
-        await msgWindow.Show(window);
+        var msgWindow = MessageBoxManager.GetMessageBoxStandard(e.Message, e.ToString());
+        await msgWindow.ShowWindowDialogAsync(window);
     }
 
     private static async Task<string?> PromptSourceAsync(EditorView? view)
@@ -126,16 +126,16 @@ public class EditorViewModel : ViewModelBase
         if (view == null) return null;
         var window = view.FindAncestorOfType<Window>();
         if (window == null) throw new ApplicationException("Couldn't find root window");
-        string[] res = await new OpenFileDialog
+        var sp = window.StorageProvider;
+        var res = await sp.OpenFilePickerAsync(new FilePickerOpenOptions
         {
-            Directory = Program.WorkingDirectory,
-            Filters = new List<FileDialogFilter>
-            {
-                new() { Name = "dotnet-script csx file", Extensions = new List<string> { "csx" } }
-            }
-        }.ShowAsync(window);
-        if (res == null || res.Length == 0) return null;
-        return res[0];
+            SuggestedStartLocation = await sp.TryGetFolderFromPathAsync(Program.WorkingDirectory),
+            FileTypeFilter =
+            [
+                new FilePickerFileType("dotnet-script csx file") { Patterns = ["*.csx"] }
+            ]
+        });
+        return res.Count == 0 ? null : res[0].Path.LocalPath;
     }
 
     private static async Task<string?> PromptTargetAsync(EditorView? view)
@@ -143,16 +143,17 @@ public class EditorViewModel : ViewModelBase
         if (view == null) return null;
         var window = view.FindAncestorOfType<Window>();
         if (window == null) throw new ApplicationException("Couldn't find root window");
-        return await new SaveFileDialog
+        var  sp = window.StorageProvider;
+        var result = await sp.SaveFilePickerAsync(new FilePickerSaveOptions
         {
-            Directory = Program.WorkingDirectory,
+            SuggestedStartLocation = await sp.TryGetFolderFromPathAsync(Program.WorkingDirectory),
             DefaultExtension = "csx",
-            InitialFileName = "untitled.csx",
-            Filters = new List<FileDialogFilter>
-            {
-                new() { Name = "dotnet-script csx file", Extensions = new List<string> { "csx" } }
-            }
-        }.ShowAsync(window);
+            SuggestedFileName = "untitled.csx",
+            FileTypeChoices = [
+                new FilePickerFileType("dotnet-script csx file") { Patterns = ["*.csx"] }
+            ]
+        });
+        return result?.Path.LocalPath;
     }
 
     private async Task<bool> PromptSaveBeforeAsync(EditorView? view)
@@ -160,14 +161,14 @@ public class EditorViewModel : ViewModelBase
         if (view == null) return true;
         var window = view.FindAncestorOfType<Window>();
         if (window == null) throw new ApplicationException("Couldn't find root window");
-        var msgWindow = MessageBoxManager.GetMessageBoxStandardWindow(
+        var msgWindow = MessageBoxManager.GetMessageBoxStandard(
             new MessageBoxStandardParams
             {
                 ContentTitle = "Save before closing?",
                 ContentMessage = "Do you want to save the current file\nbefore closing?",
                 ButtonDefinitions = ButtonEnum.YesNoCancel,
             });
-        return await msgWindow.ShowDialog(window) switch
+        return await msgWindow.ShowWindowDialogAsync(window) switch
         {
             ButtonResult.Yes => await SaveFileAsync(view),
             ButtonResult.No => true,
@@ -179,8 +180,10 @@ public class EditorViewModel : ViewModelBase
     {
         ScriptList.Clear();
         if (!Directory.Exists(Program.WorkingDirectory)) return;
-        foreach (string? script in Directory.EnumerateFiles(Program.WorkingDirectory))
+        foreach (string script in Directory.EnumerateFiles(Program.WorkingDirectory))
+        {
             ScriptList.Add(new RealFsElement(Path.GetFileName(script), script));
+        }
     }
 
     private void NewFileCore(EditorView? view)

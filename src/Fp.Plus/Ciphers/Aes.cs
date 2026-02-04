@@ -40,7 +40,7 @@ public partial class PlusUtil
         aes.Key = key.ToArray();
         aes.Padding = PaddingMode.None;
         aes.Mode = CipherMode.CBC;
-        aes.IV = iv == default ? new byte[128 / 8] : iv.ToArray();
+        aes.IV = iv.IsEmpty ? new byte[128 / 8] : iv.ToArray();
         ICryptoTransform decryptor = aes.CreateDecryptor();
         fixed (byte* p = &src.GetPinnableReference())
         {

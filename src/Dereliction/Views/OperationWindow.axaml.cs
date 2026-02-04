@@ -12,10 +12,10 @@ using static System.Runtime.InteropServices.RuntimeInformation;
 
 namespace Dereliction.Views;
 
-public class OperationWindow : Window
+public partial class OperationWindow : Window
 {
     public MainWindow Main { get; init; } = null!;
-    private OperationRunnerView RunnerView => this.FindDescendantOfType<OperationRunnerView>();
+    private OperationRunnerView RunnerView => this.FindDescendantOfType<OperationRunnerView>()!;
 
     public OperationWindow()
     {

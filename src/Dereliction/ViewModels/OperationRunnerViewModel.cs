@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading;
 using System.Threading.Tasks;
 using Avalonia.Controls;
+using Avalonia.Platform.Storage;
 using Avalonia.VisualTree;
 using Dereliction.Models;
 using Dereliction.Views;
@@ -66,24 +67,26 @@ public class OperationRunnerViewModel : ViewModelBase
     #region Public surface
 
     public async Task AddDirectory(Window window) =>
-        await new OpenFolderDialog().ShowAsync(window).ContinueWith(t =>
+        await window.StorageProvider.OpenFolderPickerAsync(new FolderPickerOpenOptions { AllowMultiple = true }).ContinueWith(t =>
         {
             if (!t.IsCanceled)
             {
-                string file = t.Result;
-                if (file.Length == 0)
-                    return;
-                AddInput(file);
+                foreach (var entry in t.Result)
+                {
+                    AddInput(entry.Path.LocalPath);
+                }
             }
         });
 
     public async Task AddFiles(Window window) =>
-        await new OpenFileDialog { AllowMultiple = false }.ShowAsync(window).ContinueWith(t =>
+        await window.StorageProvider.OpenFilePickerAsync(new FilePickerOpenOptions { AllowMultiple = true }).ContinueWith(t =>
         {
             if (!t.IsCanceled)
             {
-                foreach (string? f in t.Result)
-                    AddInput(f);
+                foreach (var f in t.Result)
+                {
+                    AddInput(f.Path.LocalPath);
+                }
             }
         });
 
@@ -96,7 +99,7 @@ public class OperationRunnerViewModel : ViewModelBase
 
     public Task RunScriptVisualAsync(MainWindow w)
     {
-        var view = w.FindDescendantOfType<EditorView>();
+        var view = w.FindDescendantOfType<EditorView>()!;
         var viewModel = (view.DataContext as EditorViewModel)!;
         return RunScriptAsync(view.GetBody(), viewModel.EditorState.CurrentFile, viewModel.OperationState);
     }
@@ -230,14 +233,16 @@ public class OperationRunnerViewModel : ViewModelBase
 
     public async Task SetOutputDirectoryAsync(Window window)
     {
-        await new OpenFolderDialog().ShowAsync(window).ContinueWith(t =>
+        await window.StorageProvider.OpenFolderPickerAsync(new FolderPickerOpenOptions { AllowMultiple = false }).ContinueWith(t =>
         {
             if (!t.IsCanceled)
             {
-                string sourcePath = t.Result;
-                if (sourcePath.Length == 0)
+                var paths = t.Result;
+                if (paths.Count == 0)
+                {
                     return;
-                OutputDirectory = sourcePath;
+                }
+                OutputDirectory = paths[0].Path.LocalPath;
             }
         });
     }
@@ -320,7 +325,7 @@ public class OperationRunnerViewModel : ViewModelBase
                 Leaves.Add(fake, (real, true));
                 List<(string fakePath, bool isDirectory)> files = new();
                 Directories.Add(fake, files);
-                foreach (string? fse in Directory.GetFileSystemEntries(fake))
+                foreach (string fse in Directory.GetFileSystemEntries(fake))
                 {
                     string fakeSub = Path.GetFileName(fse);
                     if (Add(fakeRoot, fse, Path.Combine(fake, fakeSub), out bool isSubDirectory))

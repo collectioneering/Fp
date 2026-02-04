@@ -13,12 +13,12 @@ using static System.Runtime.InteropServices.RuntimeInformation;
 
 namespace Dereliction.Views;
 
-public class MainWindow : Window
+public partial class MainWindow : Window
 {
     public static bool EnableInlineMenu => IsOSPlatform(OSPlatform.Windows);
 
     private readonly OperationWindow _operationWindow;
-    private EditorView EditorView => this.FindDescendantOfType<EditorView>();
+    private EditorView EditorView => this.FindDescendantOfType<EditorView>()!;
     private bool _shutdownWindow;
 
     public MainWindow()
