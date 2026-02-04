@@ -10,5 +10,5 @@
     "type": "project"
   },
   "sourceName": "Fpt",
-  "preferNameDirectory": "true"
+  "preferNameDirectory": true
 }
