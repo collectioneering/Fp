@@ -1,0 +1,15 @@
+<Solution>
+  <Configurations>
+    <Platform Name="Any CPU" />
+    <Platform Name="x64" />
+    <Platform Name="x86" />
+  </Configurations>
+  <Project Path="BrewBar/BrewBar.csproj" />
+  <Project Path="EdelweissTgp/EdelweissTgp.csproj" />
+  <Project Path="Fewss/Fewss.csproj">
+    <Platform Solution="Debug|x86" Project="x86" />
+  </Project>
+  <Project Path="LinkDataAbc/LinkDataAbc.csproj" />
+  <Project Path="RnR/RnR.csproj" />
+  <Project Path="SnO/SnO.csproj" />
+</Solution>
