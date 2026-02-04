@@ -233,7 +233,7 @@ public partial class FsProcessor
     public void OutputAll(byte[] array, string? extension = null, string? filename = null)
     {
         using Stream fileStream = OpenOutputFile(false, extension, filename);
-        Output(array, 0, array.Length, fileStream);
+        fileStream.Write(array);
     }
 
     /// <summary>
@@ -245,7 +245,7 @@ public partial class FsProcessor
     public void OutputAllSub(byte[] array, string? extension = null, string? filename = null)
     {
         using Stream fileStream = OpenOutputSubFile(false, extension, filename);
-        OutputAll(array, fileStream);
+        fileStream.Write(array);
     }
 
     /// <summary>
@@ -268,7 +268,7 @@ public partial class FsProcessor
     public void Output(byte[] array, int offset, int length, string? extension = null, string? filename = null)
     {
         using Stream fileStream = OpenOutputFile(false, extension, filename);
-        Output(array, offset, length, fileStream);
+        fileStream.Write(array, offset, length);
     }
 
     /// <summary>
@@ -282,7 +282,7 @@ public partial class FsProcessor
     public void OutputSub(byte[] array, int offset, int length, string? extension = null, string? filename = null)
     {
         using Stream fileStream = OpenOutputSubFile(false, extension, filename);
-        Output(array, offset, length, fileStream);
+        fileStream.Write(array, offset, length);
     }
 
     #endregion
@@ -298,7 +298,7 @@ public partial class FsProcessor
     public void OutputAll(ReadOnlySpan<byte> span, string? extension = null, string? filename = null)
     {
         using Stream fileStream = OpenOutputFile(false, extension, filename);
-        OutputAll(span, fileStream);
+        fileStream.Write(span);
     }
 
     /// <summary>
@@ -310,7 +310,7 @@ public partial class FsProcessor
     public void OutputAllSub(ReadOnlySpan<byte> span, string? extension = null, string? filename = null)
     {
         using Stream fileStream = OpenOutputSubFile(false, extension, filename);
-        OutputAll(span, fileStream);
+        fileStream.Write(span);
     }
 
     #endregion

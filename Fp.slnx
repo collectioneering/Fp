@@ -1,0 +1,10 @@
+<Solution>
+  <Project Path="src/Dereliction/Dereliction.csproj" />
+  <Project Path="src/Fp.ApiBench/Fp.ApiBench.csproj" />
+  <Project Path="src/Fp.Fs/Fp.Fs.csproj" />
+  <Project Path="src/Fp.Platforms.Nitro/Fp.Platforms.Nitro.csproj" />
+  <Project Path="src/Fp.Plus/Fp.Plus.csproj" />
+  <Project Path="src/Fp.Tests/Fp.Tests.csproj" />
+  <Project Path="src/Fp/Fp.csproj" />
+  <Project Path="src/fpx/fpx.csproj" />
+</Solution>

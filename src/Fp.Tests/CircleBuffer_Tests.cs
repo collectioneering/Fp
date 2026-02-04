@@ -226,18 +226,18 @@ public class CircleBuffer_Tests
         foreach (byte b in a)
             cb.Add(b);
         List<byte> list = new(a);
-        Assert.IsTrue(cb.SequenceEqual(list));
+        Assert.That(cb.SequenceEqual(list));
         cb.RemoveAt(40);
         list.RemoveAt(40);
-        Assert.IsTrue(cb.SequenceEqual(list));
+        Assert.That(cb.SequenceEqual(list));
         cb.RemoveAt(10);
         list.RemoveAt(10);
-        Assert.IsTrue(cb.SequenceEqual(list));
+        Assert.That(cb.SequenceEqual(list));
         cb.Insert(5, 10);
         list.Insert(5, 10);
-        Assert.IsTrue(cb.SequenceEqual(list));
+        Assert.That(cb.SequenceEqual(list));
         cb.Insert(50, 60);
         list.Insert(50, 60);
-        Assert.IsTrue(cb.SequenceEqual(list));
+        Assert.That(cb.SequenceEqual(list));
     }
 }

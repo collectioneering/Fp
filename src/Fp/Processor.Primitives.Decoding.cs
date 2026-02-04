@@ -1075,7 +1075,7 @@ public partial class Processor
     public sbyte[] ReadS8Array(int count, Stream? stream = null)
     {
         sbyte[] arr = new sbyte[count];
-        Span<byte> span = MemoryMarshal.Cast<sbyte, byte>(arr);
+        Span<byte> span = MemoryMarshal.Cast<sbyte, byte>((Span<sbyte>)arr);
         ReadS8Array(span, stream);
         return arr;
     }
@@ -1090,7 +1090,7 @@ public partial class Processor
     public sbyte[] ReadS8Array(long offset, int count, Stream? stream = null)
     {
         sbyte[] arr = new sbyte[count];
-        Span<byte> span = MemoryMarshal.Cast<sbyte, byte>(arr);
+        Span<byte> span = MemoryMarshal.Cast<sbyte, byte>((Span<sbyte>)arr);
         ReadS8Array(span, offset, stream);
         return arr;
     }
@@ -1206,7 +1206,7 @@ public partial class Processor
     public short[] ReadS16Array(int count, Stream? stream = null)
     {
         short[] arr = new short[count];
-        Span<byte> span = MemoryMarshal.Cast<short, byte>(arr);
+        Span<byte> span = MemoryMarshal.Cast<short, byte>((Span<short>)arr);
         ReadS16Array(span, stream);
         return arr;
     }
@@ -1221,7 +1221,7 @@ public partial class Processor
     public short[] ReadS16Array(long offset, int count, Stream? stream = null)
     {
         short[] arr = new short[count];
-        Span<byte> span = MemoryMarshal.Cast<short, byte>(arr);
+        Span<byte> span = MemoryMarshal.Cast<short, byte>((Span<short>)arr);
         ReadS16Array(span, offset, stream);
         return arr;
     }
@@ -1285,7 +1285,7 @@ public partial class Processor
     public ushort[] ReadU16Array(int count, Stream? stream = null)
     {
         ushort[] arr = new ushort[count];
-        Span<byte> span = MemoryMarshal.Cast<ushort, byte>(arr);
+        Span<byte> span = MemoryMarshal.Cast<ushort, byte>((Span<ushort>)arr);
         ReadU16Array(span, stream);
         return arr;
     }
@@ -1300,7 +1300,7 @@ public partial class Processor
     public ushort[] ReadU16Array(long offset, int count, Stream? stream = null)
     {
         ushort[] arr = new ushort[count];
-        Span<byte> span = MemoryMarshal.Cast<ushort, byte>(arr);
+        Span<byte> span = MemoryMarshal.Cast<ushort, byte>((Span<ushort>)arr);
         ReadU16Array(span, offset, stream);
         return arr;
     }
@@ -1364,7 +1364,7 @@ public partial class Processor
     public int[] ReadS32Array(int count, Stream? stream = null)
     {
         int[] arr = new int[count];
-        Span<byte> span = MemoryMarshal.Cast<int, byte>(arr);
+        Span<byte> span = MemoryMarshal.Cast<int, byte>((Span<int>)arr);
         ReadS32Array(span, stream);
         return arr;
     }
@@ -1379,7 +1379,7 @@ public partial class Processor
     public int[] ReadS32Array(long offset, int count, Stream? stream = null)
     {
         int[] arr = new int[count];
-        Span<byte> span = MemoryMarshal.Cast<int, byte>(arr);
+        Span<byte> span = MemoryMarshal.Cast<int, byte>((Span<int>)arr);
         ReadS32Array(span, offset, stream);
         return arr;
     }
@@ -1443,7 +1443,7 @@ public partial class Processor
     public uint[] ReadU32Array(int count, Stream? stream = null)
     {
         uint[] arr = new uint[count];
-        Span<byte> span = MemoryMarshal.Cast<uint, byte>(arr);
+        Span<byte> span = MemoryMarshal.Cast<uint, byte>((Span<uint>)arr);
         ReadU32Array(span, stream);
         return arr;
     }
@@ -1458,7 +1458,7 @@ public partial class Processor
     public uint[] ReadU32Array(long offset, int count, Stream? stream = null)
     {
         uint[] arr = new uint[count];
-        Span<byte> span = MemoryMarshal.Cast<uint, byte>(arr);
+        Span<byte> span = MemoryMarshal.Cast<uint, byte>((Span<uint>)arr);
         ReadU32Array(span, offset, stream);
         return arr;
     }
@@ -1522,7 +1522,7 @@ public partial class Processor
     public long[] ReadS64Array(int count, Stream? stream = null)
     {
         long[] arr = new long[count];
-        Span<byte> span = MemoryMarshal.Cast<long, byte>(arr);
+        Span<byte> span = MemoryMarshal.Cast<long, byte>((Span<long>)arr);
         ReadS64Array(span, stream);
         return arr;
     }
@@ -1537,7 +1537,7 @@ public partial class Processor
     public long[] ReadS64Array(long offset, int count, Stream? stream = null)
     {
         long[] arr = new long[count];
-        Span<byte> span = MemoryMarshal.Cast<long, byte>(arr);
+        Span<byte> span = MemoryMarshal.Cast<long, byte>((Span<long>)arr);
         ReadS64Array(span, offset, stream);
         return arr;
     }
@@ -1601,7 +1601,7 @@ public partial class Processor
     public ulong[] ReadU64Array(int count, Stream? stream = null)
     {
         ulong[] arr = new ulong[count];
-        Span<byte> span = MemoryMarshal.Cast<ulong, byte>(arr);
+        Span<byte> span = MemoryMarshal.Cast<ulong, byte>((Span<ulong>)arr);
         ReadS16Array(span, stream);
         return arr;
     }
@@ -1616,7 +1616,7 @@ public partial class Processor
     public ulong[] ReadU64Array(long offset, int count, Stream? stream = null)
     {
         ulong[] arr = new ulong[count];
-        Span<byte> span = MemoryMarshal.Cast<ulong, byte>(arr);
+        Span<byte> span = MemoryMarshal.Cast<ulong, byte>((Span<ulong>)arr);
         ReadS16Array(span, offset, stream);
         return arr;
     }
