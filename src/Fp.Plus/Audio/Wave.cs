@@ -131,7 +131,7 @@ public class Wave
                 iBuf[i * 2] = left[i];
                 iBuf[i * 2 + 1] = right[i];
             }
-            WriteWave<T>(outputStream, waveInfo, iBuf.AsSpan(0, left.Length * 2));
+            WriteWave(outputStream, waveInfo, iBuf.AsSpan(0, left.Length * 2));
         }
         finally
         {

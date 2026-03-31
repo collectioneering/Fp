@@ -89,7 +89,7 @@ public class Processor_Bitwise : ProcessorTestBase
     {
         int[] source = { 0, 1, 2, 3, 4, 5, 6, 7 };
         int[] expected = { 0, 2, 4, 6, 8, 10, 12, 14 };
-        Processor.ApplyTransform<int>(source, (v, _) => v * 2);
+        Processor.ApplyTransform(source, (v, _) => v * 2);
         Assert.That(source, Is.EqualTo(expected));
     }
 }

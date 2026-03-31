@@ -37,7 +37,9 @@ public class CircleBuffer_Tests
     [Test]
     public void Add_AtCapacity_Throws()
     {
+        // ReSharper disable CollectionNeverQueried.Local
         CircleBuffer<byte> cb = new(10);
+        // ReSharper restore CollectionNeverQueried.Local
         for (int i = 0; i < 10; i++) cb.Add(50);
         Assert.That(() => cb.Add(50), Throws.InvalidOperationException);
     }
@@ -83,7 +85,9 @@ public class CircleBuffer_Tests
     [Test]
     public void Remove_Empty_False()
     {
+        // ReSharper disable CollectionNeverUpdated.Local
         CircleBuffer<byte> cb = new(10);
+        // ReSharper restore CollectionNeverUpdated.Local
         Assert.That(cb.Remove(20), Is.False);
         Assert.That(cb.Count, Is.EqualTo(0));
     }
@@ -109,7 +113,9 @@ public class CircleBuffer_Tests
     [Test]
     public void RemoveAt_Empty_Throws()
     {
+        // ReSharper disable CollectionNeverUpdated.Local
         CircleBuffer<byte> cb = new(10);
+        // ReSharper restore CollectionNeverUpdated.Local
         Assert.That(() => cb.RemoveAt(0), Throws.InstanceOf<IndexOutOfRangeException>());
     }
 
@@ -133,14 +139,18 @@ public class CircleBuffer_Tests
     [Test]
     public void Contains_Empty_NoResults()
     {
+        // ReSharper disable CollectionNeverUpdated.Local
         CircleBuffer<byte> cb = new(10);
+        // ReSharper restore CollectionNeverUpdated.Local
         Assert.That(cb.Contains(0), Is.False);
     }
 
     [Test]
     public void IndexOf_Empty_NoResults()
     {
+        // ReSharper disable CollectionNeverUpdated.Local
         CircleBuffer<byte> cb = new(10);
+        // ReSharper restore CollectionNeverUpdated.Local
         Assert.That(cb.IndexOf(0), Is.EqualTo(-1));
     }
 
@@ -205,14 +215,18 @@ public class CircleBuffer_Tests
     [Test]
     public void IndexerGet_InvalidIndex_Throws()
     {
+        // ReSharper disable CollectionNeverUpdated.Local
         CircleBuffer<byte> cb = new(10);
+        // ReSharper restore CollectionNeverUpdated.Local
         Assert.That(() => cb[0], Throws.InstanceOf<IndexOutOfRangeException>());
     }
 
     [Test]
     public void IndexerSet_InvalidIndex_Throws()
     {
+        // ReSharper disable CollectionNeverUpdated.Local
         CircleBuffer<byte> cb = new(10);
+        // ReSharper restore CollectionNeverUpdated.Local
         Assert.That(() => cb[0] = 120, Throws.InstanceOf<IndexOutOfRangeException>());
     }
 

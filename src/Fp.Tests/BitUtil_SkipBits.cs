@@ -43,17 +43,17 @@ public class BitUtil_SkipBits
     {
         int i = 0;
         ReadOnlySpan<byte> ba = s_arr;
-        ba.SkipBits(32, ref i, false, false);
+        ba.SkipBits(32, ref i, false, bigEndian: false);
         Assert.That(i, Is.EqualTo(4));
-        ba.SkipBits(32, ref i, true, false);
+        ba.SkipBits(32, ref i, true, bigEndian: false);
         Assert.That(i, Is.EqualTo(6));
-        ba.SkipBits(32, ref i, false, false);
+        ba.SkipBits(32, ref i, false, bigEndian: false);
         Assert.That(i, Is.EqualTo(16));
-        ba.SkipBits(32, ref i, true, false);
+        ba.SkipBits(32, ref i, true, bigEndian: false);
         Assert.That(i, Is.EqualTo(20));
-        ba.SkipBits(32, ref i, false, false);
+        ba.SkipBits(32, ref i, false, bigEndian: false);
         Assert.That(i, Is.EqualTo(22));
-        ba.SkipBits(32, ref i, true, false);
+        ba.SkipBits(32, ref i, true, bigEndian: false);
         Assert.That(i, Is.EqualTo(32));
     }
 
@@ -102,19 +102,19 @@ public class BitUtil_SkipBits
     {
         int i = 0;
         ReadOnlySpan<byte> ba = s_arr;
-        Assert.That(ba.ConstrainedSkipBits(32, ref i, false, false), Is.True);
+        Assert.That(ba.ConstrainedSkipBits(32, ref i, false, bigEndian: false), Is.True);
         Assert.That(i, Is.EqualTo(4));
-        Assert.That(ba.ConstrainedSkipBits(32, ref i, true, false), Is.True);
+        Assert.That(ba.ConstrainedSkipBits(32, ref i, true, bigEndian: false), Is.True);
         Assert.That(i, Is.EqualTo(6));
-        Assert.That(ba.ConstrainedSkipBits(32, ref i, false, false), Is.True);
+        Assert.That(ba.ConstrainedSkipBits(32, ref i, false, bigEndian: false), Is.True);
         Assert.That(i, Is.EqualTo(16));
-        Assert.That(ba.ConstrainedSkipBits(32, ref i, true, false), Is.True);
+        Assert.That(ba.ConstrainedSkipBits(32, ref i, true, bigEndian: false), Is.True);
         Assert.That(i, Is.EqualTo(20));
-        Assert.That(ba.ConstrainedSkipBits(32, ref i, false, false), Is.True);
+        Assert.That(ba.ConstrainedSkipBits(32, ref i, false, bigEndian: false), Is.True);
         Assert.That(i, Is.EqualTo(22));
-        Assert.That(ba.ConstrainedSkipBits(32, ref i, true, false), Is.False);
+        Assert.That(ba.ConstrainedSkipBits(32, ref i, true, bigEndian: false), Is.False);
         Assert.That(i, Is.EqualTo(31));
-        Assert.That(ba.ConstrainedSkipBits(32, ref i, false, false), Is.True);
+        Assert.That(ba.ConstrainedSkipBits(32, ref i, false, bigEndian: false), Is.True);
         Assert.That(i, Is.EqualTo(31));
     }
 
