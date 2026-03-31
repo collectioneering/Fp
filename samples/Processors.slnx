@@ -4,6 +4,10 @@
     <Platform Name="x64" />
     <Platform Name="x86" />
   </Configurations>
+  <Project Path="../src/Fp.Fs/Fp.Fs.csproj" />
+  <Project Path="../src/Fp.Platforms.Nitro/Fp.Platforms.Nitro.csproj" />
+  <Project Path="../src/Fp.Plus/Fp.Plus.csproj" />
+  <Project Path="../src/Fp/Fp.csproj" />
   <Project Path="BrewBar/BrewBar.csproj" />
   <Project Path="EdelweissTgp/EdelweissTgp.csproj" />
   <Project Path="Fewss/Fewss.csproj">
