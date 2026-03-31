@@ -1,10 +1,8 @@
 using System;
 using System.Diagnostics.CodeAnalysis;
-#if NET6_0_OR_GREATER
 using System.Numerics;
 using System.Runtime.Intrinsics.Arm;
 using System.Runtime.Intrinsics.X86;
-#endif
 
 namespace Fp;
 
@@ -19,7 +17,6 @@ public partial class Processor
     /// <param name="value">XOR value.</param>
     public static void ApplyXor(Span<byte> span, byte value)
     {
-#if NET6_0_OR_GREATER
         if (Avx2.IsSupported && ContainsAtLeastOneAligned(span, 32))
             ApplyXorAvx2(span, value);
         else if (Sse2.IsSupported && ContainsAtLeastOneAligned(span, 16))
@@ -30,9 +27,6 @@ public partial class Processor
             ApplyXorVectorized(span, value);
         else
             ApplyXorFallback(span, value);
-#else
-        ApplyXorFallback(span, value);
-#endif
     }
 
     /// <summary>
@@ -43,17 +37,11 @@ public partial class Processor
     /// <param name="sequenceBehaviour">Key behaviour.</param>
     public static void ApplyXor(Span<byte> span, ReadOnlySpan<byte> pattern, SequenceBehaviour sequenceBehaviour)
     {
-#if NET6_0_OR_GREATER
         if (Vector.IsHardwareAccelerated && span.Length >= Vector<byte>.Count && pattern.Length >= Vector<byte>.Count)
             ApplyXorVectorized(span, pattern, sequenceBehaviour);
         else
             ApplyXorFallback(span, pattern, sequenceBehaviour);
-#else
-        ApplyXorFallback(span, pattern, sequenceBehaviour);
-#endif
     }
-
-#if NET6_0_OR_GREATER
 
     /// <summary>
     /// Applies XOR to memory.
@@ -277,8 +265,6 @@ public partial class Processor
                 throw new ArgumentOutOfRangeException(nameof(sequenceBehaviour), sequenceBehaviour, null);
         }
     }
-
-#endif
 
     /// <summary>
     /// Applies XOR to memory.

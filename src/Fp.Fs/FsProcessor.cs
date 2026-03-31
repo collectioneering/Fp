@@ -85,7 +85,6 @@ public partial class FsProcessor : FileProcessor
     /// <remarks>
     /// Not applicable in a multithreaded environment.
     /// </remarks>
-    [SuppressMessage("ReSharper", "UnassignedField.Global")]
     public bool Lock;
 
     /// <summary>
@@ -255,14 +254,10 @@ public partial class FsProcessor : FileProcessor
                 {
                     ShieldDown();
                 }
-
                 if (has)
-                    yield return
-#if NET6_0_OR_GREATER
-                        enumerator.Current;
-#else
-                        enumerator.Current!;
-#endif
+                {
+                    yield return enumerator.Current;
+                }
             } while (has);
         }
         finally

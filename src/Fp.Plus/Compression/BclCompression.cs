@@ -70,8 +70,6 @@ public partial class PlusUtil
     public static byte[] DeGzip(this Stream stream)
         => Processor.Dump(new System.IO.Compression.GZipStream(stream, System.IO.Compression.CompressionMode.Decompress, true));
 
-#if NET6_0_OR_GREATER
-
     /// <summary>
     /// Decompresses zlib data.
     /// </summary>
@@ -103,5 +101,4 @@ public partial class PlusUtil
     /// <returns>Decompressed data.</returns>
     public static byte[] DeZlib(this Stream stream)
         => Processor.Dump(new System.IO.Compression.ZLibStream(stream, System.IO.Compression.CompressionMode.Decompress, true));
-#endif
 }

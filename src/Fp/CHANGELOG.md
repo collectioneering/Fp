@@ -7,6 +7,10 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 
 ## Unreleased
 
+### Changed
+
+- Target TFMs are now `net8.0` and `net10.0`
+
 ## [0.29.0] 2026-02-03
 
 ## [0.28.0] 2026-02-03

@@ -1,11 +1,9 @@
 using System;
 using System.Diagnostics.CodeAnalysis;
-#if NET6_0_OR_GREATER
 using System.Runtime.CompilerServices;
 using System.Runtime.Intrinsics;
 using System.Runtime.Intrinsics.Arm;
 using System.Runtime.Intrinsics.X86;
-#endif
 
 namespace Fp;
 
@@ -13,8 +11,6 @@ namespace Fp;
 [SuppressMessage("ReSharper", "UnusedMember.Global")]
 public partial class Processor
 {
-#if NET6_0_OR_GREATER
-
     [MethodImpl(MethodImplOptions.AggressiveInlining)]
     private static unsafe Vector128<byte> FillVector128AdvSimd(byte value)
     {
@@ -57,8 +53,6 @@ public partial class Processor
         srcPtr[7] = iValue;
         return Avx.LoadVector256((byte*)srcPtr);
     }
-
-#endif
 
     /// <summary>
     /// Gets the first aligned index or <paramref name="buffer"/>.<see cref="ReadOnlySpan{T}.Length"/> if no aligned values are contained.

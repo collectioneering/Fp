@@ -30,12 +30,7 @@ public abstract partial record BaseUnmanagedIntegerArrayHelper<T>
     /// <returns>Segments.</returns>
     /// <typeparam name="TElement">Output index type.</typeparam>
     /// <exception cref="InvalidDataException">Thrown for an invalid index value (each successive element must compare greater than or equal to the previous element).</exception>
-    public OffsetSegment<TElement>[] GetEndTerminatedIndexArray<TElement>(byte[] source, int offset, int count, Func<T, TElement> transform, out TElement end)
-#if NET7_0_OR_GREATER
-        where TElement : System.Numerics.INumber<TElement>
-#else
-        where TElement : IComparable<TElement>
-#endif
+    public OffsetSegment<TElement>[] GetEndTerminatedIndexArray<TElement>(byte[] source, int offset, int count, Func<T, TElement> transform, out TElement end) where TElement : System.Numerics.INumber<TElement>
     {
         return Processor.GetEndTerminatedIndexArray(this[source, offset, count + 1], transform, out end);
     }
@@ -65,12 +60,7 @@ public abstract partial record BaseUnmanagedIntegerArrayHelper<T>
     /// <returns>Segments.</returns>
     /// <typeparam name="TElement">Output index type.</typeparam>
     /// <exception cref="InvalidDataException">Thrown for an invalid index value (each successive element must compare greater than or equal to the previous element).</exception>
-    public OffsetSegment<TElement>[] GetEndTerminatedIndexArray<TElement>(Memory<byte> source, int offset, int count, Func<T, TElement> transform, out TElement end)
-#if NET7_0_OR_GREATER
-        where TElement : System.Numerics.INumber<TElement>
-#else
-        where TElement : IComparable<TElement>
-#endif
+    public OffsetSegment<TElement>[] GetEndTerminatedIndexArray<TElement>(Memory<byte> source, int offset, int count, Func<T, TElement> transform, out TElement end) where TElement : System.Numerics.INumber<TElement>
     {
         return Processor.GetEndTerminatedIndexArray(this[source, offset, count + 1], transform, out end);
     }
@@ -100,12 +90,7 @@ public abstract partial record BaseUnmanagedIntegerArrayHelper<T>
     /// <returns>Segments.</returns>
     /// <typeparam name="TElement">Output index type.</typeparam>
     /// <exception cref="InvalidDataException">Thrown for an invalid index value (each successive element must compare greater than or equal to the previous element).</exception>
-    public OffsetSegment<TElement>[] GetEndTerminatedIndexArray<TElement>(Span<byte> source, int offset, int count, Func<T, TElement> transform, out TElement end)
-#if NET7_0_OR_GREATER
-        where TElement : System.Numerics.INumber<TElement>
-#else
-        where TElement : IComparable<TElement>
-#endif
+    public OffsetSegment<TElement>[] GetEndTerminatedIndexArray<TElement>(Span<byte> source, int offset, int count, Func<T, TElement> transform, out TElement end) where TElement : System.Numerics.INumber<TElement>
     {
         return Processor.GetEndTerminatedIndexArray(this[source, offset, count + 1], transform, out end);
     }
@@ -135,12 +120,7 @@ public abstract partial record BaseUnmanagedIntegerArrayHelper<T>
     /// <returns>Segments.</returns>
     /// <typeparam name="TElement">Output index type.</typeparam>
     /// <exception cref="InvalidDataException">Thrown for an invalid index value (each successive element must compare greater than or equal to the previous element).</exception>
-    public OffsetSegment<TElement>[] GetEndTerminatedIndexArray<TElement>(ReadOnlyMemory<byte> source, int offset, int count, Func<T, TElement> transform, out TElement end)
-#if NET7_0_OR_GREATER
-        where TElement : System.Numerics.INumber<TElement>
-#else
-        where TElement : IComparable<TElement>
-#endif
+    public OffsetSegment<TElement>[] GetEndTerminatedIndexArray<TElement>(ReadOnlyMemory<byte> source, int offset, int count, Func<T, TElement> transform, out TElement end) where TElement : System.Numerics.INumber<TElement>
     {
         return Processor.GetEndTerminatedIndexArray(this[source, offset, count + 1], transform, out end);
     }
@@ -170,12 +150,7 @@ public abstract partial record BaseUnmanagedIntegerArrayHelper<T>
     /// <returns>Segments.</returns>
     /// <typeparam name="TElement">Output index type.</typeparam>
     /// <exception cref="InvalidDataException">Thrown for an invalid index value (each successive element must compare greater than or equal to the previous element).</exception>
-    public OffsetSegment<TElement>[] GetEndTerminatedIndexArray<TElement>(ReadOnlySpan<byte> source, int offset, int count, Func<T, TElement> transform, out TElement end)
-#if NET7_0_OR_GREATER
-        where TElement : System.Numerics.INumber<TElement>
-#else
-        where TElement : IComparable<TElement>
-#endif
+    public OffsetSegment<TElement>[] GetEndTerminatedIndexArray<TElement>(ReadOnlySpan<byte> source, int offset, int count, Func<T, TElement> transform, out TElement end) where TElement : System.Numerics.INumber<TElement>
     {
         return Processor.GetEndTerminatedIndexArray(this[source, offset, count + 1], transform, out end);
     }
@@ -203,12 +178,7 @@ public abstract partial record BaseUnmanagedIntegerArrayHelper<T>
     /// <returns>Segments.</returns>
     /// <typeparam name="TElement">Output index type.</typeparam>
     /// <exception cref="InvalidDataException">Thrown for an invalid index value (each successive element must compare greater than or equal to the previous element).</exception>
-    public OffsetSegment<TElement>[] GetEndTerminatedIndexArray<TElement>(long offset, int count, Func<T, TElement> transform, out TElement end)
-#if NET7_0_OR_GREATER
-        where TElement : System.Numerics.INumber<TElement>
-#else
-        where TElement : IComparable<TElement>
-#endif
+    public OffsetSegment<TElement>[] GetEndTerminatedIndexArray<TElement>(long offset, int count, Func<T, TElement> transform, out TElement end) where TElement : System.Numerics.INumber<TElement>
     {
         return Processor.GetEndTerminatedIndexArray(this[offset, count + 1], transform, out end);
     }
@@ -238,12 +208,7 @@ public abstract partial record BaseUnmanagedIntegerArrayHelper<T>
     /// <returns>Segments.</returns>
     /// <typeparam name="TElement">Output index type.</typeparam>
     /// <exception cref="InvalidDataException">Thrown for an invalid index value (each successive element must compare greater than or equal to the previous element).</exception>
-    public OffsetSegment<TElement>[] GetEndTerminatedIndexArray<TElement>(long offset, int count, Stream stream, Func<T, TElement> transform, out TElement end)
-#if NET7_0_OR_GREATER
-        where TElement : System.Numerics.INumber<TElement>
-#else
-        where TElement : IComparable<TElement>
-#endif
+    public OffsetSegment<TElement>[] GetEndTerminatedIndexArray<TElement>(long offset, int count, Stream stream, Func<T, TElement> transform, out TElement end) where TElement : System.Numerics.INumber<TElement>
     {
         return Processor.GetEndTerminatedIndexArray(this[offset, count + 1, stream], transform, out end);
     }

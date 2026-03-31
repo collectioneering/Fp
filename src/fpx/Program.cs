@@ -46,12 +46,7 @@ namespace fpx
 
         private static async Task<string> ReadAllTextAsync(string file)
         {
-#if NET6_0_OR_GREATER
             return await File.ReadAllTextAsync(file);
-#else
-            await Task.Yield();
-            return File.ReadAllText(file);
-#endif
         }
 
         private static async Task ExecuteCoreAsync(string text, string? file, IEnumerable<string>? args,

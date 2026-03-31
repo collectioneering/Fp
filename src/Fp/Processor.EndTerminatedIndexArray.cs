@@ -18,12 +18,7 @@ public partial class Processor
     /// <returns>Segments.</returns>
     /// <exception cref="ArgumentException"></exception>
     /// <exception cref="InvalidDataException"></exception>
-    public static OffsetSegment<T>[] GetEndTerminatedIndexArray<T>(T[] buffer, out T end)
-#if NET7_0_OR_GREATER
-        where T : System.Numerics.INumber<T>
-#else
-        where T : IComparable<T>
-#endif
+    public static OffsetSegment<T>[] GetEndTerminatedIndexArray<T>(T[] buffer, out T end) where T : System.Numerics.INumber<T>
         => GetEndTerminatedIndexArray(buffer.AsSpan(), out end);
 
     /// <summary>
@@ -35,12 +30,7 @@ public partial class Processor
     /// <returns>Segments.</returns>
     /// <exception cref="ArgumentException"></exception>
     /// <exception cref="InvalidDataException"></exception>
-    public static OffsetSegment<T>[] GetEndTerminatedIndexArray<T>(ReadOnlyMemory<T> buffer, out T end)
-#if NET7_0_OR_GREATER
-        where T : System.Numerics.INumber<T>
-#else
-        where T : IComparable<T>
-#endif
+    public static OffsetSegment<T>[] GetEndTerminatedIndexArray<T>(ReadOnlyMemory<T> buffer, out T end) where T : System.Numerics.INumber<T>
         => GetEndTerminatedIndexArray(buffer.Span, out end);
 
     /// <summary>
@@ -52,12 +42,7 @@ public partial class Processor
     /// <returns>Segments.</returns>
     /// <exception cref="ArgumentException"></exception>
     /// <exception cref="InvalidDataException"></exception>
-    public static OffsetSegment<T>[] GetEndTerminatedIndexArray<T>(ReadOnlySpan<T> buffer, out T end)
-#if NET7_0_OR_GREATER
-        where T : System.Numerics.INumber<T>
-#else
-        where T : IComparable<T>
-#endif
+    public static OffsetSegment<T>[] GetEndTerminatedIndexArray<T>(ReadOnlySpan<T> buffer, out T end) where T : System.Numerics.INumber<T>
     {
         if (buffer.IsEmpty) throw new ArgumentException(); // >= 1
         if (buffer.Length == 1)
@@ -89,12 +74,7 @@ public partial class Processor
     /// <returns>Segments.</returns>
     /// <exception cref="ArgumentException">Thrown for an empty buffer.</exception>
     /// <exception cref="InvalidDataException">Thrown for an invalid index value (each successive element must compare greater than or equal to the previous element).</exception>
-    public static OffsetSegment<TElement>[] GetEndTerminatedIndexArray<T, TElement>(T[] buffer, Func<T, TElement> transform, out TElement end)
-#if NET7_0_OR_GREATER
-        where TElement : System.Numerics.INumber<TElement>
-#else
-        where TElement : IComparable<TElement>
-#endif
+    public static OffsetSegment<TElement>[] GetEndTerminatedIndexArray<T, TElement>(T[] buffer, Func<T, TElement> transform, out TElement end) where TElement : System.Numerics.INumber<TElement>
         => GetEndTerminatedIndexArray(buffer.AsSpan(), transform, out end);
 
     /// <summary>
@@ -108,12 +88,7 @@ public partial class Processor
     /// <returns>Segments.</returns>
     /// <exception cref="ArgumentException">Thrown for an empty buffer.</exception>
     /// <exception cref="InvalidDataException">Thrown for an invalid index value (each successive element must compare greater than or equal to the previous element).</exception>
-    public static OffsetSegment<TElement>[] GetEndTerminatedIndexArray<T, TElement>(ReadOnlyMemory<T> buffer, Func<T, TElement> transform, out TElement end)
-#if NET7_0_OR_GREATER
-        where TElement : System.Numerics.INumber<TElement>
-#else
-        where TElement : IComparable<TElement>
-#endif
+    public static OffsetSegment<TElement>[] GetEndTerminatedIndexArray<T, TElement>(ReadOnlyMemory<T> buffer, Func<T, TElement> transform, out TElement end) where TElement : System.Numerics.INumber<TElement>
         => GetEndTerminatedIndexArray(buffer.Span, transform, out end);
 
     /// <summary>
@@ -127,12 +102,7 @@ public partial class Processor
     /// <returns>Segments.</returns>
     /// <exception cref="ArgumentException">Thrown for an empty buffer.</exception>
     /// <exception cref="InvalidDataException">Thrown for an invalid index value (each successive element must compare greater than or equal to the previous element).</exception>
-    public static OffsetSegment<TElement>[] GetEndTerminatedIndexArray<T, TElement>(ReadOnlySpan<T> buffer, Func<T, TElement> transform, out TElement end)
-#if NET7_0_OR_GREATER
-        where TElement : System.Numerics.INumber<TElement>
-#else
-        where TElement : IComparable<TElement>
-#endif
+    public static OffsetSegment<TElement>[] GetEndTerminatedIndexArray<T, TElement>(ReadOnlySpan<T> buffer, Func<T, TElement> transform, out TElement end) where TElement : System.Numerics.INumber<TElement>
     {
         if (buffer.IsEmpty) throw new ArgumentException(); // >= 1
         if (buffer.Length == 1)
@@ -162,12 +132,7 @@ public partial class Processor
     /// <returns>Segments.</returns>
     /// <exception cref="ArgumentException">Thrown for an empty buffer.</exception>
     /// <exception cref="InvalidDataException">Thrown for an invalid index value (each successive element must compare greater than or equal to the previous element).</exception>
-    public static IReadOnlyList<OffsetSegment<T>> GetEndTerminatedIndexArray<T>(IEnumerable<T> enumerable, out T end)
-#if NET7_0_OR_GREATER
-        where T : System.Numerics.INumber<T>
-#else
-        where T : IComparable<T>
-#endif
+    public static IReadOnlyList<OffsetSegment<T>> GetEndTerminatedIndexArray<T>(IEnumerable<T> enumerable, out T end) where T : System.Numerics.INumber<T>
     {
         using var enumerator = enumerable.GetEnumerator();
         if (!enumerator.MoveNext()) throw new ArgumentException(); // >= 1
@@ -202,12 +167,7 @@ public partial class Processor
     /// <returns>Segments.</returns>
     /// <exception cref="ArgumentException">Thrown for an empty buffer.</exception>
     /// <exception cref="InvalidDataException">Thrown for an invalid index value (each successive element must compare greater than or equal to the previous element).</exception>
-    public static IReadOnlyList<OffsetSegment<TElement>> GetEndTerminatedIndexArray<T, TElement>(IEnumerable<T> enumerable, Func<T, TElement> transform, out TElement end)
-#if NET7_0_OR_GREATER
-        where TElement : System.Numerics.INumber<TElement>
-#else
-        where TElement : IComparable<TElement>
-#endif
+    public static IReadOnlyList<OffsetSegment<TElement>> GetEndTerminatedIndexArray<T, TElement>(IEnumerable<T> enumerable, Func<T, TElement> transform, out TElement end) where TElement : System.Numerics.INumber<TElement>
     {
         using var enumerator = enumerable.GetEnumerator();
         if (!enumerator.MoveNext()) throw new ArgumentException(); // >= 1
