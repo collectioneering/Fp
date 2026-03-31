@@ -12,20 +12,20 @@ public partial class PlusUtil
     #region AVI
 
     /// <summary>
-    /// Detects WAV audio files.
+    /// Detects AVI audio/video files.
     /// </summary>
     /// <returns>Detector.</returns>
     public static Detector _AVI() => _AVI(null);
 
     /// <summary>
-    /// Detects WAV audio files.
+    /// Detects AVI audio/video files.
     /// </summary>
     /// <param name="source">Data source.</param>
     /// <returns>Detector.</returns>
     public static Detector _AVI(this object source) => _AVI(null, source);
 
     /// <summary>
-    /// Detects WAV audio files.
+    /// Detects AVI audio/video files.
     /// </summary>
     /// <param name="detector">Existing detector.</param>
     /// <param name="source">Data source.</param>
