@@ -113,14 +113,6 @@ public partial class Processor : IDisposable
 
     private Encoder Utf8Encoder => _utf8Encoder ??= Encoding.UTF8.GetEncoder();
     private Encoder? _utf8Encoder;
-    private Encoder?[] Utf16Encoders => _utf16Encoders ??= new Encoder?[GUtf16Encodings.Length];
-    private Encoder?[]? _utf16Encoders;
-
-    private Encoder GetUtf16Encoder(bool bigEndian, bool bom)
-    {
-        int i = (bigEndian ? 1 : 0) + (bom ? 2 : 0);
-        return Utf16Encoders[i] ??= GUtf16Encodings[i].GetEncoder();
-    }
 
     private static Encoding GetUtf16Encoding(bool bigEndian, bool bom) =>
         GUtf16Encodings[(bigEndian ? 1 : 0) + (bom ? 2 : 0)];
