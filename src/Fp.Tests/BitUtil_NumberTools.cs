@@ -1,5 +1,3 @@
-using NUnit.Framework;
-
 namespace Fp.Tests;
 
 public class BitUtil_NumberTools
@@ -46,27 +44,36 @@ public class BitUtil_NumberTools
         (17, 3), //
     };
 
-    [Test]
-    public void AlignUp_ValidInputs_Correct([ValueSource("AlignUp_ValidInputs")] (int value, int align, int expected) input)
+    public static TheoryData<(int value, int align, int expected)> TdAlignUp_ValidInputs = new(AlignUp_ValidInputs);
+    public static TheoryData<(int value, int align, int expected)> TdAlignDown_ValidInputs = new(AlignDown_ValidInputs);
+    public static TheoryData<(int value, int expected)> TdGetBitsForBytes_ValidInputs = new(GetBitsForBytes_ValidInputs);
+    public static TheoryData<(int value, int expected)> TdGetBytesForBits_ValidInputs = new(GetBytesForBits_ValidInputs);
+
+    [Theory]
+    [MemberData(nameof(TdAlignUp_ValidInputs))]
+    public void AlignUp_ValidInputs_Correct((int value, int align, int expected) input)
     {
-        Assert.That(BitUtil.AlignUp(input.value, input.align), Is.EqualTo(input.expected));
+        Assert.Equal(input.expected, BitUtil.AlignUp(input.value, input.align));
     }
 
-    [Test]
-    public void AlignDown_ValidInputs_Correct([ValueSource("AlignDown_ValidInputs")] (int value, int align, int expected) input)
+    [Theory]
+    [MemberData(nameof(TdAlignDown_ValidInputs))]
+    public void AlignDown_ValidInputs_Correct((int value, int align, int expected) input)
     {
-        Assert.That(BitUtil.AlignDown(input.value, input.align), Is.EqualTo(input.expected));
+        Assert.Equal(input.expected, BitUtil.AlignDown(input.value, input.align));
     }
 
-    [Test]
-    public void GetBytesForBits_ValidInputs_Correct([ValueSource("GetBytesForBits_ValidInputs")] (int value, int expected) input)
+    [Theory]
+    [MemberData(nameof(TdGetBytesForBits_ValidInputs))]
+    public void GetBytesForBits_ValidInputs_Correct((int value, int expected) input)
     {
-        Assert.That(BitUtil.GetBytesForBits(input.value), Is.EqualTo(input.expected));
+        Assert.Equal(input.expected, BitUtil.GetBytesForBits(input.value));
     }
 
-    [Test]
-    public void GetBitsForBytes_ValidInputs_Correct([ValueSource("GetBitsForBytes_ValidInputs")] (int value, int expected) input)
+    [Theory]
+    [MemberData(nameof(TdGetBitsForBytes_ValidInputs))]
+    public void GetBitsForBytes_ValidInputs_Correct((int value, int expected) input)
     {
-        Assert.That(BitUtil.GetBitsForBytes(input.value), Is.EqualTo(input.expected));
+        Assert.Equal(input.expected, BitUtil.GetBitsForBytes(input.value));
     }
 }

@@ -1,156 +1,155 @@
 using System;
 using System.IO;
 using Fp.Tests.Utility;
-using NUnit.Framework;
 
 namespace Fp.Tests;
 
 public class Processor_Filesystem : ProcessorTestBase
 {
-    [Test]
+    [Fact]
     public void UseStream_AssignsInputStream()
     {
         var ms1 = new MemoryStream();
         P.UseStream(ms1);
-        Assert.That(ReferenceEquals(ms1, P.InputStream), Is.True);
+        Assert.True(ReferenceEquals(ms1, P.InputStream));
     }
 
-    [Test]
+    [Fact]
     public void UseOutputStream_AssignsOutputStream()
     {
         var ms1 = new MemoryStream();
         P.UseOutputStream(ms1);
-        Assert.That(ReferenceEquals(ms1, P.OutputStream), Is.True);
+        Assert.True(ReferenceEquals(ms1, P.OutputStream));
     }
 
-    [Test]
+    [Fact]
     public void CloseFile_AsMainFalse_Noop()
     {
         var ms1 = new MemoryStream();
         P.UseStream(ms1);
-        Assert.That(ReferenceEquals(ms1, P.InputStream), Is.True);
-        Assert.That(ms1.ReadByte(), Is.EqualTo(-1));
+        Assert.True(ReferenceEquals(ms1, P.InputStream));
+        Assert.Equal(-1, ms1.ReadByte());
         P.CloseFile(false);
-        Assert.That(ReferenceEquals(ms1, P.InputStream), Is.True);
-        Assert.That(ms1.ReadByte(), Is.EqualTo(-1));
+        Assert.True(ReferenceEquals(ms1, P.InputStream));
+        Assert.Equal(-1, ms1.ReadByte());
     }
 
-    [Test]
+    [Fact]
     public void CloseFile_AsMainFalseCustomStream_ClosesAndDisposesInputStreamButDoesNotUnset()
     {
         var ms1 = new MemoryStream();
         P.UseStream(ms1);
-        Assert.That(ReferenceEquals(ms1, P.InputStream), Is.True);
-        Assert.That(ms1.ReadByte(), Is.EqualTo(-1));
+        Assert.True(ReferenceEquals(ms1, P.InputStream));
+        Assert.Equal(-1, ms1.ReadByte());
         var ms2 = new MemoryStream();
-        Assert.That(ms2.ReadByte(), Is.EqualTo(-1));
+        Assert.Equal(-1, ms2.ReadByte());
         P.CloseFile(false, ms2);
-        Assert.That(ms1.ReadByte(), Is.EqualTo(-1));
-        Assert.That(() => ms2.ReadByte(), Throws.InstanceOf<ObjectDisposedException>());
-        Assert.That(ReferenceEquals(ms1, P.InputStream), Is.True);
+        Assert.Equal(-1, ms1.ReadByte());
+        Assert.Throws<ObjectDisposedException>(() => ms2.ReadByte());
+        Assert.True(ReferenceEquals(ms1, P.InputStream));
     }
 
-    [Test]
+    [Fact]
     public void CloseFile_AsMainTrue_ClosesAndDisposesInputStreamAndUnsets()
     {
         var ms1 = new MemoryStream();
         P.UseStream(ms1);
-        Assert.That(ReferenceEquals(ms1, P.InputStream), Is.True);
-        Assert.That(ms1.ReadByte(), Is.EqualTo(-1));
+        Assert.True(ReferenceEquals(ms1, P.InputStream));
+        Assert.Equal(-1, ms1.ReadByte());
         P.CloseFile(true);
-        Assert.That(() => ms1.ReadByte(), Throws.InstanceOf<ObjectDisposedException>());
-        Assert.That(P.InputStream, Is.Null);
+        Assert.Throws<ObjectDisposedException>(() => ms1.ReadByte());
+        Assert.Null(P.InputStream);
     }
 
-    [Test]
+    [Fact]
     public void CloseFile_AsMainTrueCustomStream_ClosesAndDisposesStreamAndUnsets()
     {
         var ms1 = new MemoryStream();
         P.UseStream(ms1);
-        Assert.That(ReferenceEquals(ms1, P.InputStream), Is.True);
-        Assert.That(ms1.ReadByte(), Is.EqualTo(-1));
+        Assert.True(ReferenceEquals(ms1, P.InputStream));
+        Assert.Equal(-1, ms1.ReadByte());
         var ms2 = new MemoryStream();
-        Assert.That(ms2.ReadByte(), Is.EqualTo(-1));
+        Assert.Equal(-1, ms2.ReadByte());
         P.CloseFile(true, ms2);
-        Assert.That(ms1.ReadByte(), Is.EqualTo(-1));
-        Assert.That(() => ms2.ReadByte(), Throws.InstanceOf<ObjectDisposedException>());
-        Assert.That(P.InputStream, Is.Null);
+        Assert.Equal(-1, ms1.ReadByte());
+        Assert.Throws<ObjectDisposedException>(() => ms2.ReadByte());
+        Assert.Null(P.InputStream);
     }
 
-    [Test]
+    [Fact]
     public void CloseFile_ClosesAndDisposesInputStream()
     {
         var ms1 = new MemoryStream();
         P.UseStream(ms1);
-        Assert.That(ReferenceEquals(ms1, P.InputStream), Is.True);
-        Assert.That(ms1.ReadByte(), Is.EqualTo(-1));
+        Assert.True(ReferenceEquals(ms1, P.InputStream));
+        Assert.Equal(-1, ms1.ReadByte());
         P.CloseFile();
-        Assert.That(() => ms1.ReadByte(), Throws.InstanceOf<ObjectDisposedException>());
+        Assert.Throws<ObjectDisposedException>(() => ms1.ReadByte());
     }
 
-    [Test]
+    [Fact]
     public void CloseOutputFile_ClosesAndDisposesInputStream()
     {
         var ms1 = new MemoryStream();
         P.UseOutputStream(ms1);
-        Assert.That(ReferenceEquals(ms1, P.OutputStream), Is.True);
-        Assert.That(ms1.ReadByte(), Is.EqualTo(-1));
+        Assert.True(ReferenceEquals(ms1, P.OutputStream));
+        Assert.Equal(-1, ms1.ReadByte());
         P.CloseOutputFile();
-        Assert.That(() => ms1.ReadByte(), Throws.InstanceOf<ObjectDisposedException>());
+        Assert.Throws<ObjectDisposedException>(() => ms1.ReadByte());
     }
 
-    [Test]
+    [Fact]
     public void CloseOutputFile_AsMainFalse_Noop()
     {
         var ms1 = new MemoryStream();
         P.UseOutputStream(ms1);
-        Assert.That(ReferenceEquals(ms1, P.OutputStream), Is.True);
-        Assert.That(ms1.ReadByte(), Is.EqualTo(-1));
+        Assert.True(ReferenceEquals(ms1, P.OutputStream));
+        Assert.Equal(-1, ms1.ReadByte());
         P.CloseOutputFile(false);
-        Assert.That(ReferenceEquals(ms1, P.OutputStream), Is.True);
-        Assert.That(ms1.ReadByte(), Is.EqualTo(-1));
+        Assert.True(ReferenceEquals(ms1, P.OutputStream));
+        Assert.Equal(-1, ms1.ReadByte());
     }
 
-    [Test]
+    [Fact]
     public void CloseOutputFile_AsMainFalseCustomStream_ClosesAndDisposesInputStreamButDoesNotUnset()
     {
         var ms1 = new MemoryStream();
         P.UseOutputStream(ms1);
-        Assert.That(ReferenceEquals(ms1, P.OutputStream), Is.True);
-        Assert.That(ms1.ReadByte(), Is.EqualTo(-1));
+        Assert.True(ReferenceEquals(ms1, P.OutputStream));
+        Assert.Equal(-1, ms1.ReadByte());
         var ms2 = new MemoryStream();
-        Assert.That(ms2.ReadByte(), Is.EqualTo(-1));
+        Assert.Equal(-1, ms2.ReadByte());
         P.CloseOutputFile(false, ms2);
-        Assert.That(ms1.ReadByte(), Is.EqualTo(-1));
-        Assert.That(() => ms2.ReadByte(), Throws.InstanceOf<ObjectDisposedException>());
-        Assert.That(ReferenceEquals(ms1, P.OutputStream), Is.True);
+        Assert.Equal(-1, ms1.ReadByte());
+        Assert.Throws<ObjectDisposedException>(() => ms2.ReadByte());
+        Assert.True(ReferenceEquals(ms1, P.OutputStream));
     }
 
-    [Test]
+    [Fact]
     public void CloseOutputFile_AsMainTrue_ClosesAndDisposesInputStreamAndUnsets()
     {
         var ms1 = new MemoryStream();
         P.UseOutputStream(ms1);
-        Assert.That(ReferenceEquals(ms1, P.OutputStream), Is.True);
-        Assert.That(ms1.ReadByte(), Is.EqualTo(-1));
+        Assert.True(ReferenceEquals(ms1, P.OutputStream));
+        Assert.Equal(-1, ms1.ReadByte());
         P.CloseOutputFile(true);
-        Assert.That(() => ms1.ReadByte(), Throws.InstanceOf<ObjectDisposedException>());
-        Assert.That(P.OutputStream, Is.Null);
+        Assert.Throws<ObjectDisposedException>(() => ms1.ReadByte());
+        Assert.Null(P.OutputStream);
     }
 
-    [Test]
+    [Fact]
     public void CloseOutputFile_AsMainTrueCustomStream_ClosesAndDisposesStreamAndUnsets()
     {
         var ms1 = new MemoryStream();
         P.UseOutputStream(ms1);
-        Assert.That(ReferenceEquals(ms1, P.OutputStream), Is.True);
-        Assert.That(ms1.ReadByte(), Is.EqualTo(-1));
+        Assert.True(ReferenceEquals(ms1, P.OutputStream));
+        Assert.Equal(-1, ms1.ReadByte());
         var ms2 = new MemoryStream();
-        Assert.That(ms2.ReadByte(), Is.EqualTo(-1));
+        Assert.Equal(-1, ms2.ReadByte());
         P.CloseOutputFile(true, ms2);
-        Assert.That(ms1.ReadByte(), Is.EqualTo(-1));
-        Assert.That(() => ms2.ReadByte(), Throws.InstanceOf<ObjectDisposedException>());
-        Assert.That(P.OutputStream, Is.Null);
+        Assert.Equal(-1, ms1.ReadByte());
+        Assert.Throws<ObjectDisposedException>(() => ms2.ReadByte());
+        Assert.Null(P.OutputStream);
     }
 
     // TODO

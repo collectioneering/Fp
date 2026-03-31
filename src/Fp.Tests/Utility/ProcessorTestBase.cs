@@ -1,19 +1,17 @@
-using NUnit.Framework;
+using System;
 
 namespace Fp.Tests.Utility;
 
-public class ProcessorTestBase
+public class ProcessorTestBase : IDisposable
 {
     protected Processor P;
 
-    [SetUp]
-    public void SetUp()
+    protected ProcessorTestBase()
     {
         P = new Processor();
     }
 
-    [TearDown]
-    public void TearDown()
+    public void Dispose()
     {
         P.Dispose();
         P = null;

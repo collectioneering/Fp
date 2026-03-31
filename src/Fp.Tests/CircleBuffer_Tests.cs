@@ -1,236 +1,241 @@
 using System;
 using System.Collections.Generic;
 using System.Linq;
-using NUnit.Framework;
 
 namespace Fp.Tests;
 
 public class CircleBuffer_Tests
 {
-    [Test]
+    [Fact]
     public void Constructor_CapacityZero_Allowed()
     {
-        Assert.That(() => new CircleBuffer<byte>(0), Throws.Nothing);
+        _ = new CircleBuffer<byte>(0);
     }
 
-    [Test]
+    [Fact]
     public void Constructor_CapacityUnderZero_Disallowed()
     {
-        Assert.That(() => new CircleBuffer<byte>(-1), Throws.ArgumentException);
+        Assert.Throws<ArgumentException>(() => new CircleBuffer<byte>(-1));
     }
 
-    [Test]
+    [Fact]
     public void Capacity_ReportsCorrectly()
     {
         CircleBuffer<byte> cb = new(10);
-        Assert.That(cb.Capacity, Is.EqualTo(10));
+        Assert.Equal(10, cb.Capacity);
     }
 
-    [Test]
+    [Fact]
     public void Add_UnderCapacity_Success()
     {
         CircleBuffer<byte> cb = new(10);
-        Assert.That(() => cb.Add(50), Throws.Nothing);
-        Assert.That(cb[0], Is.EqualTo(50));
+        cb.Add(50);
+        Assert.Equal(50, cb[0]);
     }
 
-    [Test]
+    [Fact]
     public void Add_AtCapacity_Throws()
     {
         // ReSharper disable CollectionNeverQueried.Local
         CircleBuffer<byte> cb = new(10);
         // ReSharper restore CollectionNeverQueried.Local
         for (int i = 0; i < 10; i++) cb.Add(50);
-        Assert.That(() => cb.Add(50), Throws.InvalidOperationException);
+        Assert.Throws<InvalidOperationException>(() => cb.Add(50));
     }
 
-    [Test]
+    [Fact]
     public void Insert_FromEmpty_Success()
     {
         CircleBuffer<byte> cb = new(10);
-        Assert.That(() => cb.Insert(0, 50), Throws.Nothing);
-        Assert.That(cb[0], Is.EqualTo(50));
+        cb.Insert(0, 50);
+        Assert.Equal(50, cb[0]);
     }
 
-    [Test]
+    [Fact]
     public void Insert_FromStart_Success()
     {
         CircleBuffer<byte> cb = new(10);
         cb.Add(10);
         cb.Add(20);
-        Assert.That(() => cb.Insert(0, 50), Throws.Nothing);
-        Assert.That(cb.ToArray(), Is.EqualTo(new byte[] { 50, 10, 20 }));
+        cb.Insert(0, 50);
+        Assert.Equal(new byte[] { 50, 10, 20 }, cb.ToArray());
     }
 
-    [Test]
+    [Fact]
     public void Insert_FromMiddle_Success()
     {
         CircleBuffer<byte> cb = new(10);
         cb.Add(10);
         cb.Add(20);
-        Assert.That(() => cb.Insert(1, 50), Throws.Nothing);
-        Assert.That(cb.ToArray(), Is.EqualTo(new byte[] { 10, 50, 20 }));
+        cb.Insert(1, 50);
+        Assert.Equal(new byte[] { 10, 50, 20 }, cb.ToArray());
     }
 
-    [Test]
+    [Fact]
     public void Insert_FromEnd_Success()
     {
         CircleBuffer<byte> cb = new(10);
         cb.Add(10);
         cb.Add(20);
-        Assert.That(() => cb.Insert(2, 50), Throws.Nothing);
-        Assert.That(cb.ToArray(), Is.EqualTo(new byte[] { 10, 20, 50 }));
+        cb.Insert(2, 50);
+        Assert.Equal(new byte[] { 10, 20, 50 }, cb.ToArray());
     }
 
-    [Test]
+    [Fact]
     public void Remove_Empty_False()
     {
         // ReSharper disable CollectionNeverUpdated.Local
         CircleBuffer<byte> cb = new(10);
         // ReSharper restore CollectionNeverUpdated.Local
-        Assert.That(cb.Remove(20), Is.False);
-        Assert.That(cb.Count, Is.EqualTo(0));
+        Assert.False(cb.Remove(20));
+        Assert.Empty(cb);
     }
 
-    [Test]
+    [Fact]
     public void Remove_Missing_False()
     {
         CircleBuffer<byte> cb = new(10);
         cb.AddRange(new byte[] { 0, 10, 20, 30, 40 });
-        Assert.That(cb.Remove(50), Is.False);
-        Assert.That(cb.ToArray(), Is.EqualTo(new byte[] { 0, 10, 20, 30, 40 }));
+        Assert.False(cb.Remove(50));
+        Assert.Equal(new byte[] { 0, 10, 20, 30, 40 }, cb.ToArray());
     }
 
-    [Test]
+    [Fact]
     public void Remove_Existing_True()
     {
         CircleBuffer<byte> cb = new(10);
         cb.AddRange(new byte[] { 0, 10, 20, 30, 40 });
-        Assert.That(cb.Remove(20), Is.True);
-        Assert.That(cb.ToArray(), Is.EqualTo(new byte[] { 0, 10, 30, 40 }));
+        Assert.True(cb.Remove(20));
+        Assert.Equal(new byte[] { 0, 10, 30, 40 }, cb.ToArray());
     }
 
-    [Test]
+    [Fact]
     public void RemoveAt_Empty_Throws()
     {
         // ReSharper disable CollectionNeverUpdated.Local
         CircleBuffer<byte> cb = new(10);
         // ReSharper restore CollectionNeverUpdated.Local
-        Assert.That(() => cb.RemoveAt(0), Throws.InstanceOf<IndexOutOfRangeException>());
+        Assert.Throws<IndexOutOfRangeException>(() => cb.RemoveAt(0));
     }
 
-    [Test]
+    [Fact]
     public void RemoveAt_InvalidIndex_Throws()
     {
         CircleBuffer<byte> cb = new(10);
         cb.AddRange(new byte[] { 0, 10, 20, 30, 40 });
-        Assert.That(() => cb.RemoveAt(8), Throws.InstanceOf<IndexOutOfRangeException>());
+        Assert.Throws<IndexOutOfRangeException>(() => cb.RemoveAt(8));
     }
 
-    [Test]
+    [Fact]
     public void Remove_ValidIndex_Success()
     {
         CircleBuffer<byte> cb = new(10);
         cb.AddRange(new byte[] { 0, 10, 20, 30, 40 });
-        Assert.That(() => cb.RemoveAt(2), Throws.Nothing);
-        Assert.That(cb.ToArray(), Is.EqualTo(new byte[] { 0, 10, 30, 40 }));
+        cb.RemoveAt(2);
+        Assert.Equal(new byte[] { 0, 10, 30, 40 }, cb.ToArray());
     }
 
-    [Test]
+    [Fact]
     public void Contains_Empty_NoResults()
     {
         // ReSharper disable CollectionNeverUpdated.Local
         CircleBuffer<byte> cb = new(10);
         // ReSharper restore CollectionNeverUpdated.Local
-        Assert.That(cb.Contains(0), Is.False);
+#pragma warning disable xUnit2017
+        Assert.False(cb.Contains(0));
+#pragma warning restore xUnit2017
     }
 
-    [Test]
+    [Fact]
     public void IndexOf_Empty_NoResults()
     {
         // ReSharper disable CollectionNeverUpdated.Local
         CircleBuffer<byte> cb = new(10);
         // ReSharper restore CollectionNeverUpdated.Local
-        Assert.That(cb.IndexOf(0), Is.EqualTo(-1));
+        Assert.Equal(-1, cb.IndexOf(0));
     }
 
-    [Test]
+    [Fact]
     public void Contains_Missing_NoResults()
     {
         CircleBuffer<byte> cb = new(10);
         cb.Add(10);
-        Assert.That(cb.Contains(20), Is.False);
+#pragma warning disable xUnit2017
+        Assert.False(cb.Contains(20));
+#pragma warning restore xUnit2017
     }
 
-    [Test]
+    [Fact]
     public void IndexOf_Missing_NoResults()
     {
         CircleBuffer<byte> cb = new(10);
         cb.Add(10);
-        Assert.That(cb.IndexOf(20), Is.EqualTo(-1));
+        Assert.Equal(-1, cb.IndexOf(20));
     }
 
-    [Test]
+    [Fact]
     public void Contains_Existing_Found()
     {
         CircleBuffer<byte> cb = new(10);
         cb.AddRange(new byte[] { 0, 10, 20, 30, 40 });
-        Assert.That(cb.Contains(30), Is.True);
+#pragma warning disable xUnit2017
+        Assert.True(cb.Contains(30));
+#pragma warning restore xUnit2017
     }
 
-    [Test]
+    [Fact]
     public void IndexOf_Existing_Found()
     {
         CircleBuffer<byte> cb = new(10);
         cb.AddRange(new byte[] { 0, 10, 20, 30, 40 });
-        Assert.That(cb.IndexOf(30), Is.EqualTo(3));
+        Assert.Equal(3, cb.IndexOf(30));
     }
 
-    [Test]
+    [Fact]
     public void GetEnumerator_ReturnsCorrect()
     {
         CircleBuffer<byte> cb = new(10);
         byte[] seq = new byte[] { 0, 10, 20, 30, 40 };
         cb.AddRange(seq);
-        Assert.That(cb.ToArray(), Is.EqualTo(seq));
+        Assert.Equal(seq, cb.ToArray());
     }
 
-    [Test]
+    [Fact]
     public void IndexerGet_ValidIndex_Success()
     {
         CircleBuffer<byte> cb = new(10);
         cb.Add(50);
-        Assert.That(cb[0], Is.EqualTo(50));
+        Assert.Equal(50, cb[0]);
     }
 
-    [Test]
+    [Fact]
     public void IndexerSet_ValidIndex_Success()
     {
         CircleBuffer<byte> cb = new(10);
         cb.Add(50);
-        Assert.That(() => cb[0] = 120, Throws.Nothing);
-        Assert.That(cb[0], Is.EqualTo(120));
+        cb[0] = 120;
+        Assert.Equal(120, cb[0]);
     }
 
-    [Test]
+    [Fact]
     public void IndexerGet_InvalidIndex_Throws()
     {
         // ReSharper disable CollectionNeverUpdated.Local
         CircleBuffer<byte> cb = new(10);
         // ReSharper restore CollectionNeverUpdated.Local
-        Assert.That(() => cb[0], Throws.InstanceOf<IndexOutOfRangeException>());
+        Assert.Throws<IndexOutOfRangeException>(() => cb[0]);
     }
 
-    [Test]
+    [Fact]
     public void IndexerSet_InvalidIndex_Throws()
     {
         // ReSharper disable CollectionNeverUpdated.Local
         CircleBuffer<byte> cb = new(10);
         // ReSharper restore CollectionNeverUpdated.Local
-        Assert.That(() => cb[0] = 120, Throws.InstanceOf<IndexOutOfRangeException>());
+        Assert.Throws<IndexOutOfRangeException>(() => cb[0] = 120);
     }
 
-    [Test]
+    [Fact]
     public void AddRemoveCycle_SequenceCorrect()
     {
         CircleBuffer<byte> cb = new(100);
@@ -240,18 +245,18 @@ public class CircleBuffer_Tests
         foreach (byte b in a)
             cb.Add(b);
         List<byte> list = new(a);
-        Assert.That(cb.SequenceEqual(list));
+        Assert.True(cb.SequenceEqual(list));
         cb.RemoveAt(40);
         list.RemoveAt(40);
-        Assert.That(cb.SequenceEqual(list));
+        Assert.True(cb.SequenceEqual(list));
         cb.RemoveAt(10);
         list.RemoveAt(10);
-        Assert.That(cb.SequenceEqual(list));
+        Assert.True(cb.SequenceEqual(list));
         cb.Insert(5, 10);
         list.Insert(5, 10);
-        Assert.That(cb.SequenceEqual(list));
+        Assert.True(cb.SequenceEqual(list));
         cb.Insert(50, 60);
         list.Insert(50, 60);
-        Assert.That(cb.SequenceEqual(list));
+        Assert.True(cb.SequenceEqual(list));
     }
 }

@@ -1,6 +1,5 @@
 using System.IO;
 using Fp.Tests.Utility;
-using NUnit.Framework;
 
 namespace Fp.Tests;
 
@@ -19,144 +18,144 @@ public class Processor_Strings : ProcessorTestBase
     private static readonly byte[] Message_UTF16BEBOM = { 0xFE, 0xFF, 0x00, 0x70, 0x00, 0x6F, 0x00, 0x6E, 0x00, 0x74, 0x00, 0x6F, 0x00, 0x6F, 0x00, 0x6E };
     private static readonly byte[] Message_UTF16BEBOMNull = { 0xFE, 0xFF, 0x00, 0x70, 0x00, 0x6F, 0x00, 0x6E, 0x00, 0x74, 0x00, 0x6F, 0x00, 0x6F, 0x00, 0x6E, 0x00, 0x00 };
 
-    [Test]
+    [Fact]
     public void WriteUtf8String_Basic_Correct()
     {
         MemoryStream ms = new();
         P.WriteUtf8String(Message, false, ms);
-        Assert.That(ms.ToArray(), Is.EqualTo(Message_UTF8));
+        Assert.Equal(Message_UTF8, ms.ToArray());
         ms.SetLength(0);
         P.WriteUtf8String(Message, true, ms);
-        Assert.That(ms.ToArray(), Is.EqualTo(Message_UTF8Null));
+        Assert.Equal(Message_UTF8Null, ms.ToArray());
     }
 
-    [Test]
+    [Fact]
     public void ReadUtf8String_Basic_Correct()
     {
         MemoryStream ms = new();
         ms.Write(Message_UTF8);
         ms.Position = 0;
-        Assert.That(P.ReadUtf8String(ms, out int read, out int numBytes), Is.EqualTo(Message));
-        Assert.That(read, Is.EqualTo(Message_UTF8.Length));
-        Assert.That(numBytes, Is.EqualTo(Message_UTF8.Length));
+        Assert.Equal(Message, P.ReadUtf8String(ms, out int read, out int numBytes));
+        Assert.Equal(Message_UTF8.Length, read);
+        Assert.Equal(Message_UTF8.Length, numBytes);
         ms.SetLength(0);
         ms.Write(Message_UTF8Null);
         ms.Position = 0;
-        Assert.That(P.ReadUtf8String(ms, out read, out numBytes), Is.EqualTo(Message));
-        Assert.That(read, Is.EqualTo(Message_UTF8Null.Length));
-        Assert.That(numBytes, Is.EqualTo(Message_UTF8.Length));
+        Assert.Equal(Message, P.ReadUtf8String(ms, out read, out numBytes));
+        Assert.Equal(Message_UTF8Null.Length, read);
+        Assert.Equal(Message_UTF8.Length, numBytes);
     }
 
-    [Test]
+    [Fact]
     public void WriteUtf16String_BasicLE_Correct()
     {
         MemoryStream ms = new();
         P.WriteUtf16String(Message, false, false, false, ms);
-        Assert.That(ms.ToArray(), Is.EqualTo(Message_UTF16LE));
+        Assert.Equal(Message_UTF16LE, ms.ToArray());
         ms.SetLength(0);
         P.WriteUtf16String(Message, true, false, false, ms);
-        Assert.That(ms.ToArray(), Is.EqualTo(Message_UTF16LENull));
+        Assert.Equal(Message_UTF16LENull, ms.ToArray());
     }
 
-    [Test]
+    [Fact]
     public void ReadUtf16String_BasicLE_Correct()
     {
         MemoryStream ms = new();
         ms.Write(Message_UTF16LE);
         ms.Position = 0;
-        Assert.That(P.ReadUtf16String(ms, out int read, out int numBytes), Is.EqualTo(Message));
-        Assert.That(read, Is.EqualTo(Message_UTF16LE.Length));
-        Assert.That(numBytes, Is.EqualTo(Message_UTF16LE.Length));
+        Assert.Equal(Message, P.ReadUtf16String(ms, out int read, out int numBytes));
+        Assert.Equal(Message_UTF16LE.Length, read);
+        Assert.Equal(Message_UTF16LE.Length, numBytes);
         ms.SetLength(0);
         ms.Write(Message_UTF16LENull);
         ms.Position = 0;
-        Assert.That(P.ReadUtf16String(ms, out read, out numBytes), Is.EqualTo(Message));
-        Assert.That(read, Is.EqualTo(Message_UTF16LENull.Length));
-        Assert.That(numBytes, Is.EqualTo(Message_UTF16LE.Length));
+        Assert.Equal(Message, P.ReadUtf16String(ms, out read, out numBytes));
+        Assert.Equal(Message_UTF16LENull.Length, read);
+        Assert.Equal(Message_UTF16LE.Length, numBytes);
     }
 
-    [Test]
+    [Fact]
     public void WriteUtf16String_BasicBE_Correct()
     {
         MemoryStream ms = new();
         P.WriteUtf16String(Message, false, true, false, ms);
-        Assert.That(ms.ToArray(), Is.EqualTo(Message_UTF16BE));
+        Assert.Equal(Message_UTF16BE, ms.ToArray());
         ms.SetLength(0);
         P.WriteUtf16String(Message, true, true, false, ms);
-        Assert.That(ms.ToArray(), Is.EqualTo(Message_UTF16BENull));
+        Assert.Equal(Message_UTF16BENull, ms.ToArray());
     }
 
-    [Test]
+    [Fact]
     public void ReadUtf16String_BasicBE_Correct()
     {
         MemoryStream ms = new();
         ms.Write(Message_UTF16BE);
         ms.Position = 0;
-        Assert.That(P.ReadUtf16String(ms, out int read, out int numBytes), Is.EqualTo(Message));
-        Assert.That(read, Is.EqualTo(Message_UTF16BE.Length));
-        Assert.That(numBytes, Is.EqualTo(Message_UTF16BE.Length));
+        Assert.Equal(Message, P.ReadUtf16String(ms, out int read, out int numBytes));
+        Assert.Equal(Message_UTF16BE.Length, read);
+        Assert.Equal(Message_UTF16BE.Length, numBytes);
         ms.SetLength(0);
         ms.Write(Message_UTF16BENull);
         ms.Position = 0;
-        Assert.That(P.ReadUtf16String(ms, out read, out numBytes), Is.EqualTo(Message));
-        Assert.That(read, Is.EqualTo(Message_UTF16BENull.Length));
-        Assert.That(numBytes, Is.EqualTo(Message_UTF16BE.Length));
+        Assert.Equal(Message, P.ReadUtf16String(ms, out read, out numBytes));
+        Assert.Equal(Message_UTF16BENull.Length, read);
+        Assert.Equal(Message_UTF16BE.Length, numBytes);
     }
 
-    [Test]
+    [Fact]
     public void WriteUtf16String_LEBOM_Correct()
     {
         MemoryStream ms = new();
         P.WriteUtf16String(Message, false, false, true, ms);
-        Assert.That(ms.ToArray(), Is.EqualTo(Message_UTF16LEBOM));
+        Assert.Equal(Message_UTF16LEBOM, ms.ToArray());
         ms.SetLength(0);
         P.WriteUtf16String(Message, true, false, true, ms);
-        Assert.That(ms.ToArray(), Is.EqualTo(Message_UTF16LEBOMNull));
+        Assert.Equal(Message_UTF16LEBOMNull, ms.ToArray());
     }
 
-    [Test]
+    [Fact]
     public void ReadUtf16String_LEBOM_Correct()
     {
         MemoryStream ms = new();
         ms.Write(Message_UTF16LEBOM);
         ms.Position = 0;
-        Assert.That(P.ReadUtf16String(ms, out int read, out int numBytes), Is.EqualTo(MessageBOM));
-        Assert.That(read, Is.EqualTo(Message_UTF16LEBOM.Length));
-        Assert.That(numBytes, Is.EqualTo(Message_UTF16LEBOM.Length));
+        Assert.Equal(MessageBOM, P.ReadUtf16String(ms, out int read, out int numBytes));
+        Assert.Equal(Message_UTF16LEBOM.Length, read);
+        Assert.Equal(Message_UTF16LEBOM.Length, numBytes);
         ms.SetLength(0);
         ms.Write(Message_UTF16LEBOMNull);
         ms.Position = 0;
-        Assert.That(P.ReadUtf16String(ms, out read, out numBytes), Is.EqualTo(MessageBOM));
-        Assert.That(read, Is.EqualTo(Message_UTF16LEBOMNull.Length));
-        Assert.That(numBytes, Is.EqualTo(Message_UTF16LEBOM.Length));
+        Assert.Equal(MessageBOM, P.ReadUtf16String(ms, out read, out numBytes));
+        Assert.Equal(Message_UTF16LEBOMNull.Length, read);
+        Assert.Equal(Message_UTF16LEBOM.Length, numBytes);
     }
 
-    [Test]
+    [Fact]
     public void WriteUtf16String_BEBOM_Correct()
     {
         MemoryStream ms = new();
         P.WriteUtf16String(Message, false, true, true, ms);
-        Assert.That(ms.ToArray(), Is.EqualTo(Message_UTF16BEBOM));
+        Assert.Equal(Message_UTF16BEBOM, ms.ToArray());
         ms.SetLength(0);
         P.WriteUtf16String(Message, true, true, true, ms);
-        Assert.That(ms.ToArray(), Is.EqualTo(Message_UTF16BEBOMNull));
+        Assert.Equal(Message_UTF16BEBOMNull, ms.ToArray());
     }
 
-    [Test]
+    [Fact]
     public void ReadUtf16String_BEBOM_Correct()
     {
         MemoryStream ms = new();
         ms.Write(Message_UTF16BEBOM);
         ms.Position = 0;
-        Assert.That(P.ReadUtf16String(ms, out int read, out int numBytes), Is.EqualTo(MessageBOM));
-        Assert.That(read, Is.EqualTo(Message_UTF16BEBOM.Length));
-        Assert.That(numBytes, Is.EqualTo(Message_UTF16BEBOM.Length));
+        Assert.Equal(MessageBOM, P.ReadUtf16String(ms, out int read, out int numBytes));
+        Assert.Equal(Message_UTF16BEBOM.Length, read);
+        Assert.Equal(Message_UTF16BEBOM.Length, numBytes);
         ms.SetLength(0);
         ms.Write(Message_UTF16BEBOMNull);
         ms.Position = 0;
-        Assert.That(P.ReadUtf16String(ms, out read, out numBytes), Is.EqualTo(MessageBOM));
-        Assert.That(read, Is.EqualTo(Message_UTF16BEBOMNull.Length));
-        Assert.That(numBytes, Is.EqualTo(Message_UTF16BEBOM.Length));
+        Assert.Equal(MessageBOM, P.ReadUtf16String(ms, out read, out numBytes));
+        Assert.Equal(Message_UTF16BEBOMNull.Length, read);
+        Assert.Equal(Message_UTF16BEBOM.Length, numBytes);
     }
 
     // TODO

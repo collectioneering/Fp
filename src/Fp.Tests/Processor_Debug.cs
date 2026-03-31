@@ -2,129 +2,128 @@ using System;
 using System.Linq;
 using System.Text;
 using Fp.Tests.Utility;
-using NUnit.Framework;
 
 namespace Fp.Tests;
 
 public class Processor_Debug : ProcessorTestBase
 {
-    [Test]
+    [Fact]
     public void MemClear_Clears()
     {
         P.Debug = true;
         byte[] data = Encoding.UTF8.GetBytes("hello world");
         Span<byte> pattern = stackalloc byte[] { (byte)'o' };
         P.MemLabel(data, pattern);
-        Assert.That(P.MemAnnotations.Count, Is.Not.EqualTo(0));
+        Assert.NotEmpty(P.MemAnnotations);
         P.MemClear();
-        Assert.That(P.MemAnnotations.Count, Is.EqualTo(0));
+        Assert.Empty(P.MemAnnotations);
     }
 
-    [Test]
+    [Fact]
     public void MemLabel_PosDebugTrue_HasAssignment()
     {
         P.Debug = true;
         byte[] data = Encoding.UTF8.GetBytes("hello world");
         P.MemLabel(data, 0, 1);
-        Assert.That(P.MemAnnotations.Count, Is.EqualTo(1));
+        Assert.Single(P.MemAnnotations);
         var kv = P.MemAnnotations.Single();
-        Assert.That(kv.Key, Is.EqualTo((ReadOnlyMemory<byte>)data.AsMemory()));
-        Assert.That(kv.Value.Count, Is.EqualTo(1));
-        Assert.That(kv.Value.Values[0].Offset, Is.EqualTo(0));
-        Assert.That(kv.Value.Values[0].Length, Is.EqualTo(1));
+        Assert.Equal((ReadOnlyMemory<byte>)data.AsMemory(), kv.Key);
+        Assert.Single(kv.Value);
+        Assert.Equal(0, kv.Value.Values[0].Offset);
+        Assert.Equal(1, kv.Value.Values[0].Length);
     }
 
-    [Test]
+    [Fact]
     public void MemLabel_PatternDebugTrue_HasAssignment()
     {
         P.Debug = true;
         byte[] data = Encoding.UTF8.GetBytes("hello world");
         Span<byte> pattern = stackalloc byte[] { (byte)'o' };
         var results = P.MemLabel(data, pattern);
-        Assert.That(results.Count, Is.EqualTo(2));
-        Assert.That(P.MemAnnotations.Count, Is.EqualTo(1));
+        Assert.Equal(2, results.Count);
+        Assert.Single(P.MemAnnotations);
         var kv = P.MemAnnotations.Single();
-        Assert.That(kv.Key, Is.EqualTo((ReadOnlyMemory<byte>)data.AsMemory()));
-        Assert.That(kv.Value.Count, Is.EqualTo(2));
-        Assert.That(kv.Value.Values[0].Offset, Is.EqualTo(4));
-        Assert.That(kv.Value.Values[1].Offset, Is.EqualTo(7));
+        Assert.Equal((ReadOnlyMemory<byte>)data.AsMemory(), kv.Key);
+        Assert.Equal(2, kv.Value.Count);
+        Assert.Equal(4, kv.Value.Values[0].Offset);
+        Assert.Equal(7, kv.Value.Values[1].Offset);
     }
 
-    [Test]
+    [Fact]
     public void MemLabel_PosDebugFalse_HasNoAssignment()
     {
         byte[] data = Encoding.UTF8.GetBytes("hello world");
         P.MemLabel(data, 0, 1);
-        Assert.That(P.MemAnnotations.Count, Is.EqualTo(0));
+        Assert.Empty(P.MemAnnotations);
     }
 
-    [Test]
+    [Fact]
     public void MemLabel_PatternDebugFalse_HasNoAssignment()
     {
         byte[] data = Encoding.UTF8.GetBytes("hello world");
         Span<byte> pattern = stackalloc byte[] { (byte)'o' };
         var results = P.MemLabel(data, pattern);
-        Assert.That(results.Count, Is.EqualTo(2));
-        Assert.That(P.MemAnnotations.Count, Is.EqualTo(0));
+        Assert.Equal(2, results.Count);
+        Assert.Empty(P.MemAnnotations);
     }
 
-    [Test]
+    [Fact]
     public void MemLabel_PosDebugTrueAndSameOffset_NoRepeatAssignment()
     {
         P.Debug = true;
         byte[] data = Encoding.UTF8.GetBytes("hello world");
         P.MemLabel(data, 0, 1, "a");
-        Assert.That(P.MemAnnotations.Count, Is.EqualTo(1));
+        Assert.Single(P.MemAnnotations);
         var kv = P.MemAnnotations.Single();
-        Assert.That(kv.Key, Is.EqualTo((ReadOnlyMemory<byte>)data.AsMemory()));
-        Assert.That(kv.Value.Count, Is.EqualTo(1));
-        Assert.That(kv.Value[0].Label, Is.EqualTo("a"));
+        Assert.Equal((ReadOnlyMemory<byte>)data.AsMemory(), kv.Key);
+        Assert.Single(kv.Value);
+        Assert.Equal("a", kv.Value[0].Label);
         P.MemLabel(data, 0, 1, "b");
-        Assert.That(P.MemAnnotations.Count, Is.EqualTo(1));
+        Assert.Single(P.MemAnnotations);
         var kv2 = P.MemAnnotations.Single();
-        Assert.That(kv2.Key, Is.EqualTo((ReadOnlyMemory<byte>)data.AsMemory()));
-        Assert.That(kv2.Value.Count, Is.EqualTo(1));
-        Assert.That(kv.Value[0].Label, Is.EqualTo("a"));
+        Assert.Equal((ReadOnlyMemory<byte>)data.AsMemory(), kv2.Key);
+        Assert.Single(kv2.Value);
+        Assert.Equal("a", kv.Value[0].Label);
     }
 
-    [Test]
+    [Fact]
     public void MemLabel_PatternDebugTrueAndSameOffset_NoRepeatAssignment()
     {
         P.Debug = true;
         byte[] data = Encoding.UTF8.GetBytes("hello world");
         P.MemLabel(data, new[] { (byte)'h' }, "a");
-        Assert.That(P.MemAnnotations.Count, Is.EqualTo(1));
+        Assert.Single(P.MemAnnotations);
         var kv = P.MemAnnotations.Single();
-        Assert.That(kv.Key, Is.EqualTo((ReadOnlyMemory<byte>)data.AsMemory()));
-        Assert.That(kv.Value.Count, Is.EqualTo(1));
-        Assert.That(kv.Value[0].Label, Is.EqualTo("a"));
+        Assert.Equal((ReadOnlyMemory<byte>)data.AsMemory(), kv.Key);
+        Assert.Single(kv.Value);
+        Assert.Equal("a", kv.Value[0].Label);
         P.MemLabel(data, new[] { (byte)'h' }, "b");
-        Assert.That(P.MemAnnotations.Count, Is.EqualTo(1));
+        Assert.Single(P.MemAnnotations);
         var kv2 = P.MemAnnotations.Single();
-        Assert.That(kv2.Key, Is.EqualTo((ReadOnlyMemory<byte>)data.AsMemory()));
-        Assert.That(kv2.Value.Count, Is.EqualTo(1));
-        Assert.That(kv.Value[0].Label, Is.EqualTo("a"));
+        Assert.Equal((ReadOnlyMemory<byte>)data.AsMemory(), kv2.Key);
+        Assert.Single(kv2.Value);
+        Assert.Equal("a", kv.Value[0].Label);
     }
 
-    [Test]
+    [Fact]
     public void MemLabel_RepeatingSequence_HasConcatenated()
     {
         P.Debug = true;
         byte[] data = Encoding.UTF8.GetBytes("super_ababab_drome_abababab");
         Span<byte> pattern = stackalloc byte[] { (byte)'a', (byte)'b' };
         var results = P.MemLabel(data, pattern);
-        Assert.That(results.Count, Is.EqualTo(2));
-        Assert.That(P.MemAnnotations.Count, Is.EqualTo(1));
+        Assert.Equal(2, results.Count);
+        Assert.Single(P.MemAnnotations);
         var kv = P.MemAnnotations.Single();
-        Assert.That(kv.Key, Is.EqualTo((ReadOnlyMemory<byte>)data.AsMemory()));
-        Assert.That(kv.Value.Count, Is.EqualTo(2));
-        Assert.That(kv.Value.Values[0].Offset, Is.EqualTo(6));
-        Assert.That(kv.Value.Values[0].Length, Is.EqualTo(6));
-        Assert.That(kv.Value.Values[1].Offset, Is.EqualTo(19));
-        Assert.That(kv.Value.Values[1].Length, Is.EqualTo(8));
+        Assert.Equal((ReadOnlyMemory<byte>)data.AsMemory(), kv.Key);
+        Assert.Equal(2, kv.Value.Count);
+        Assert.Equal(6, kv.Value.Values[0].Offset);
+        Assert.Equal(6, kv.Value.Values[0].Length);
+        Assert.Equal(19, kv.Value.Values[1].Offset);
+        Assert.Equal(8, kv.Value.Values[1].Length);
     }
 
-    [Test]
+    [Fact]
     public void MemPrint_Plain_FormatMatches()
     {
         string expected = @"
@@ -140,10 +139,10 @@ public class Processor_Debug : ProcessorTestBase
         var sbl = new StringBuilderLog { Delimiter = "\n" };
         P.LogWriter = sbl;
         P.MemPrint(data, space: true, pow2Modulus: false, displayWidth: 41);
-        Assert.That(sbl.GetContent(), Is.EqualTo(expected));
+        Assert.Equal(expected, sbl.GetContent());
     }
 
-    [Test]
+    [Fact]
     public void MemLabel_PatternAnnotatedWhenDebugFalse_PrintNoAnnotation()
     {
         string expected = @"
@@ -160,10 +159,10 @@ public class Processor_Debug : ProcessorTestBase
         P.MemLabel(data, new byte[] { 0 }, "label1");
         P.Debug = true;
         P.MemPrint(data, space: true, pow2Modulus: false, displayWidth: 41);
-        Assert.That(sbl.GetContent(), Is.EqualTo(expected));
+        Assert.Equal(expected, sbl.GetContent());
     }
 
-    [Test]
+    [Fact]
     public void MemLabel_PosAnnotatedWhenDebugFalse_PrintNoAnnotation()
     {
         string expected = @"
@@ -180,10 +179,10 @@ public class Processor_Debug : ProcessorTestBase
         P.MemLabel(data, 0, 4, "label1");
         P.Debug = true;
         P.MemPrint(data, space: true, pow2Modulus: false, displayWidth: 41);
-        Assert.That(sbl.GetContent(), Is.EqualTo(expected));
+        Assert.Equal(expected, sbl.GetContent());
     }
 
-    [Test]
+    [Fact]
     public void MemPrint_Annotated_FormatMatches()
     {
         string expected = @"
@@ -200,10 +199,10 @@ public class Processor_Debug : ProcessorTestBase
         P.LogWriter = sbl;
         P.MemLabel(data, 0, 4, "label1");
         P.MemPrint(data, space: true, pow2Modulus: false, displayWidth: 41);
-        Assert.That(sbl.GetContent(), Is.EqualTo(expected));
+        Assert.Equal(expected, sbl.GetContent());
     }
 
-    [Test]
+    [Fact]
     public void MemPrint_AnnotatedLongerThanMax16_LengthTrim()
     {
         string expected = @"
@@ -220,10 +219,10 @@ public class Processor_Debug : ProcessorTestBase
         P.LogWriter = sbl;
         P.MemLabel(data, 0, 4, "0123456789abcdefg");
         P.MemPrint(data, space: true, pow2Modulus: false, displayWidth: 41);
-        Assert.That(sbl.GetContent(), Is.EqualTo(expected));
+        Assert.Equal(expected, sbl.GetContent());
     }
 
-    [Test]
+    [Fact]
     public void MemPrint_OverlapDifferentStart_CarryOver()
     {
         string expected = @"
@@ -241,20 +240,20 @@ public class Processor_Debug : ProcessorTestBase
         P.MemLabel(data, 0, 2, "label1");
         P.MemLabel(data, 1, 1, "label2");
         P.MemPrint(data, space: true, pow2Modulus: false, displayWidth: 41);
-        Assert.That(sbl.GetContent(), Is.EqualTo(expected));
+        Assert.Equal(expected, sbl.GetContent());
     }
 
-    [Test]
+    [Fact]
     public void MemPrint_DebugFalse_Noop()
     {
         byte[] data = { 0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16 };
         var sbl = new StringBuilderLog { Delimiter = "\n" };
         P.LogWriter = sbl;
         P.MemPrint(data, space: true, pow2Modulus: false, displayWidth: 41);
-        Assert.That(sbl.GetContent(), Is.EqualTo(""));
+        Assert.Equal("", sbl.GetContent());
     }
 
-    [Test]
+    [Fact]
     public void MemPrint_AnnotatedMultipleOnSameLine_CarryOver()
     {
         string expected = @"
@@ -272,10 +271,10 @@ public class Processor_Debug : ProcessorTestBase
         P.MemLabel(data, 0, 2, "label1");
         P.MemLabel(data, 2, 2, "label2");
         P.MemPrint(data, space: true, pow2Modulus: false, displayWidth: 41);
-        Assert.That(sbl.GetContent(), Is.EqualTo(expected));
+        Assert.Equal(expected, sbl.GetContent());
     }
 
-    [Test]
+    [Fact]
     public void MemPrint_AnnotatedMultipleOnSameLineAfterEnd_CarryOver()
     {
         string expected = @"
@@ -294,6 +293,6 @@ public class Processor_Debug : ProcessorTestBase
         P.MemLabel(data, 0x10, 1, "label1");
         P.MemLabel(data, 0x11, 1, "label2");
         P.MemPrint(data, space: true, pow2Modulus: false, displayWidth: 41);
-        Assert.That(sbl.GetContent(), Is.EqualTo(expected));
+        Assert.Equal(expected, sbl.GetContent());
     }
 }
