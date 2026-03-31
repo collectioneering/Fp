@@ -30,7 +30,7 @@ public class RnRProcessor : FormatMultiProcessor
         for (int i = 0, h = 0, offset, next = i4l[0]; (offset = next) < InputLength; h += 8)
         {
             next = i4l[h + 8];
-            byte[] file = buf[offset, next - offset];
+            byte[] file = buf[offset..next];
             int fake = i4l[h + 4];
             if (fake < 0 && next != offset) file = file.DeNitro(fake & int.MaxValue);
             yield return Buffer(NamePathNoExt / ($"{i++:D4}" + file.GetNitroExtension()), file);

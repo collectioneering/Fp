@@ -23,16 +23,14 @@ public class BrewBarProcessor : FormatMultiProcessor
         {
             int offset = offsets[i];
             int hLength = i2l[offset];
-            int dataOffset = offset + hLength;
-            int length = offsets[i + 1] - dataOffset;
-            byte[] buffer = buf[dataOffset, length].DeGzip();
+            byte[] buffer = buf[(offset + hLength)..offsets[i + 1]].DeGzip();
             string ext = buffer
                 ._BMP() // BMP image
                 ._WAV() // WAV audio
                 .__("cmid", ".cmf") // CMF seq sound (Qualcomm Compact Media Format)
                 .__("«JSR184»\r\n\x1A\n", ".m3g") // M3G model (Java Mobile 3D Graphics API scene graph, JSR-184)
                 .___(".bin");
-            LogInfo($"{i}: {utf8[offset + 2, hLength - 2].String}");
+            LogInfo($"{i}: {utf8[(2..hLength).WithOffset(offset)].String}");
             yield return Buffer(NamePathNoExt / $"{i}{ext}", buffer);
         }
     }

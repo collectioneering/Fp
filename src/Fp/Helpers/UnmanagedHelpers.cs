@@ -223,6 +223,90 @@ public record U8ArrayHelper(Processor Parent) : BaseUnmanagedIntegerArrayHelper<
 
     /// <inheritdoc />
     public override ReadOnlySpan<byte> this[ReadOnlySpan<byte> source] => source;
+
+    /// <summary>
+    /// Reads data.
+    /// </summary>
+    /// <param name="source">Data source.</param>
+    /// <param name="range">Range.</param>
+    public ReadOnlySpan<byte> this[byte[] source, Range range] =>
+        this[source.AsSpan(), range];
+
+    /// <summary>
+    /// Reads data.
+    /// </summary>
+    /// <param name="source">Data source.</param>
+    /// <param name="range">Range.</param>
+    public ReadOnlySpan<byte> this[Memory<byte> source, Range range] =>
+        this[source.Span, range];
+
+    /// <summary>
+    /// Reads data.
+    /// </summary>
+    /// <param name="source">Data source.</param>
+    /// <param name="range">Range.</param>
+    public virtual ReadOnlySpan<byte> this[ReadOnlyMemory<byte> source, Range range] =>
+        this[source.Span, range];
+
+    /// <summary>
+    /// Reads data.
+    /// </summary>
+    /// <param name="source">Data source.</param>
+    /// <param name="range">Range.</param>
+    public ReadOnlySpan<byte> this[Span<byte> source, Range range]
+    {
+        get
+        {
+            return this[source[range]];
+        }
+    }
+
+    /// <summary>
+    /// Reads data.
+    /// </summary>
+    /// <param name="source">Data source.</param>
+    /// <param name="range">Range.</param>
+    public ReadOnlySpan<byte> this[ReadOnlySpan<byte> source, Range range]
+    {
+        get
+        {
+            return this[source[range]];
+        }
+    }
+
+    /// <summary>
+    /// Reads data.
+    /// </summary>
+    /// <param name="range">Range.</param>
+    public virtual byte[] this[Range range] => this[range, InputStream];
+
+    /// <summary>
+    /// Reads data.
+    /// </summary>
+    /// <param name="range">Range.</param>
+    /// <param name="stream">Data source.</param>
+    public virtual byte[] this[Range range, Stream stream]
+    {
+        get
+        {
+            if (stream.Length > int.MaxValue)
+            {
+                throw new ArgumentException($"Stream exceeds {int.MaxValue} bytes");
+            }
+            (int offset, int length) = range.GetOffsetAndLength((int)stream.Length);
+            byte[] arr = System.Buffers.ArrayPool<byte>.Shared.Rent(length);
+            try
+            {
+                Span<byte> span = arr.AsSpan(0, length);
+                Read(stream, offset, span, false);
+                return this[arr, 0, length].ToArray();
+            }
+            finally
+            {
+                System.Buffers.ArrayPool<byte>.Shared.Return(arr);
+            }
+        }
+    }
 }
 
 /// <summary>

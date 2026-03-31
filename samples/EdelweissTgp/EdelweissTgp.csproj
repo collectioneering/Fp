@@ -9,7 +9,8 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <PackageReference Include="Fp.Fs" Version="0.29.0"/>
+    <ProjectReference Include="../../src/Fp.Fs/Fp.Fs.csproj"/>
+    <!--<PackageReference Include="Fp.Fs" Version="0.29.0"/>-->
     <PackageReference Include="Esper.Zstandard" Version="0.4.0"/>
   </ItemGroup>
 

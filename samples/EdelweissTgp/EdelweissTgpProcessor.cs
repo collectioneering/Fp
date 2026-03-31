@@ -55,8 +55,7 @@ public class EdelweissTgpProcessor : FormatMultiProcessor
             {
                 if (positions.Count == 1 && count >= 1)
                 {
-                    int offset = positions[0];
-                    decompressedSource = new ZstandardStream(buf[offset, (int)InputLength - offset].Stream(), CompressionMode.Decompress).Dump();
+                    decompressedSource = new ZstandardStream(buf[positions[0]..(int)InputLength].Stream(), CompressionMode.Decompress).Dump();
                     endAll = decompressedSource.Length;
                     mainOff = 0;
                     positions = null;
@@ -89,12 +88,13 @@ public class EdelweissTgpProcessor : FormatMultiProcessor
             int offset = positions?[i] ?? mainOff + i4l[entry, 0x60];
             int uncompressedLength = i4l[entry, 0x64];
             int end = i + 1 == count ? endAll : positions?[i + 1] ?? offset + uncompressedLength;
-            if (Debug) LogInfo($"#{i} {offset:X8}..{offset + uncompressedLength:X8}({uncompressedLength:X8})/{endAll:X8} {name}");
+            Range dataRange = offset..end;
+            if (Debug) LogInfo($"#{i} {dataRange}({uncompressedLength})/{endAll} {name}");
             var stream = compress
-                ? new ZstandardStream(buf[offset, end - offset].Stream(), CompressionMode.Decompress)
+                ? new ZstandardStream(buf[dataRange].Stream(), CompressionMode.Decompress)
                 : decompressedSource != null
-                    ? buf[decompressedSource, offset, end - offset].ToArray().Stream()
-                    : buf[offset, end - offset].Stream();
+                    ? buf[decompressedSource, dataRange].ToArray().Stream()
+                    : buf[dataRange].Stream();
             yield return Buffer(name, stream.Dump());
         }
     }

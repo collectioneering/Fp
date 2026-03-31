@@ -15,6 +15,14 @@ public abstract record BaseStringHelper : Helper
     /// Reads data.
     /// </summary>
     /// <param name="source">Data source.</param>
+    /// <param name="range">Max range to read.</param>
+    public virtual StringData this[byte[] source, Range range] =>
+        this[source.AsSpan(), range];
+
+    /// <summary>
+    /// Reads data.
+    /// </summary>
+    /// <param name="source">Data source.</param>
     /// <param name="offset">Offset.</param>
     /// <param name="maxBytes">Maximum bytes to read.</param>
     public virtual StringData this[byte[] source, int offset, int maxBytes] =>
@@ -40,6 +48,14 @@ public abstract record BaseStringHelper : Helper
         get => this[source.AsSpan()];
         set => this[source.AsSpan()] = value;
     }
+
+    /// <summary>
+    /// Reads data.
+    /// </summary>
+    /// <param name="source">Data source.</param>
+    /// <param name="range">Max range to read.</param>
+    public virtual StringData this[Memory<byte> source, Range range] =>
+        this[source.Span, range];
 
     /// <summary>
     /// Reads data.
@@ -75,6 +91,14 @@ public abstract record BaseStringHelper : Helper
     /// Reads data.
     /// </summary>
     /// <param name="source">Data source.</param>
+    /// <param name="range">Max range to read.</param>
+    public virtual StringData this[Span<byte> source, Range range] =>
+        this[(ReadOnlySpan<byte>)source, range];
+
+    /// <summary>
+    /// Reads data.
+    /// </summary>
+    /// <param name="source">Data source.</param>
     /// <param name="offset">Offset.</param>
     /// <param name="maxBytes">Maximum bytes to read.</param>
     public virtual StringData this[Span<byte> source, int offset, int maxBytes] =>
@@ -101,6 +125,14 @@ public abstract record BaseStringHelper : Helper
     /// Reads data.
     /// </summary>
     /// <param name="source">Data source.</param>
+    /// <param name="range">Max range to read.</param>
+    public virtual StringData this[ReadOnlyMemory<byte> source, Range range] =>
+        this[source.Span, range];
+
+    /// <summary>
+    /// Reads data.
+    /// </summary>
+    /// <param name="source">Data source.</param>
     /// <param name="offset">Offset.</param>
     /// <param name="maxBytes">Maximum bytes to read.</param>
     public virtual StringData this[ReadOnlyMemory<byte> source, int offset, int maxBytes] =>
@@ -112,6 +144,19 @@ public abstract record BaseStringHelper : Helper
     /// <param name="offset">Offset.</param>
     /// <param name="source">Data source.</param>
     public virtual StringData this[ReadOnlyMemory<byte> source, int offset] => this[source.Span, offset];
+
+    /// <summary>
+    /// Reads data.
+    /// </summary>
+    /// <param name="source">Data source.</param>
+    /// <param name="range">Max range to read.</param>
+    public virtual StringData this[ReadOnlySpan<byte> source, Range range]
+    {
+        get
+        {
+            return this[source[range]];
+        }
+    }
 
     /// <summary>
     /// Reads data.
@@ -139,10 +184,35 @@ public abstract record BaseStringHelper : Helper
     /// <summary>
     /// Reads data.
     /// </summary>
+    /// <param name="range">Max range to read.</param>
+    /// <param name="stream">Data source.</param>
+    public virtual StringData this[Range range, Stream stream]
+    {
+        get
+        {
+            if (stream.Length > int.MaxValue)
+            {
+                throw new ArgumentException($"Stream exceeds {int.MaxValue} bytes");
+            }
+            (int offset, int length) = range.GetOffsetAndLength((int)stream.Length);
+            return this[offset, stream, length];
+        }
+    }
+
+    /// <summary>
+    /// Reads data.
+    /// </summary>
     /// <param name="offset">Offset (no seeking if -1).</param>v
     /// <param name="stream">Data source.</param>
     /// <param name="maxBytes">Maximum bytes to read.</param>
     public abstract StringData this[long offset, Stream stream, int maxBytes] { get; }
+
+    /// <summary>
+    /// Reads data.
+    /// </summary>
+    /// <param name="range">Max range to read.</param>
+    public virtual StringData this[Range range] =>
+        this[range, InputStream];
 
     /// <summary>
     /// Reads data.
