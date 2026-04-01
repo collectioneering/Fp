@@ -259,4 +259,43 @@ public class CircleBuffer_Tests
         list.Insert(50, 60);
         Assert.True(cb.SequenceEqual(list));
     }
+
+    [Fact]
+    public void AddBuffers_SequenceCorrect()
+    {
+        CircleBuffer<byte> cb = new(100);
+        Random r = new();
+        byte[] a = new byte[60];
+        r.NextBytes(a);
+        cb.AddRange(a);
+        List<byte> list = new(a);
+        // 60 @ 0
+        Assert.True(cb.SequenceEqual(list));
+        Assert.Equal(0, cb.First);
+        cb.RemoveRange(40, 10);
+        list.RemoveRange(40, 10);
+        // 50 @ 0
+        Assert.True(cb.SequenceEqual(list));
+        Assert.Equal(0, cb.First);
+        cb.RemoveRange(10, 10);
+        list.RemoveRange(10, 10);
+        // 40 @ 10
+        Assert.True(cb.SequenceEqual(list));
+        Assert.Equal(10, cb.First);
+        cb.InsertRange(20, a);
+        list.InsertRange(20, a);
+        // 100 @ 10
+        Assert.True(cb.SequenceEqual(list));
+        Assert.Equal(10, cb.First);
+        cb.RemoveRange(80, 20);
+        list.RemoveRange(80, 20);
+        // 80 @ 10
+        Assert.True(cb.SequenceEqual(list));
+        Assert.Equal(10, cb.First);
+        cb.RemoveRange(20, 20);
+        list.RemoveRange(20, 20);
+        // 60 @ 30
+        Assert.True(cb.SequenceEqual(list));
+        Assert.Equal(30, cb.First);
+    }
 }

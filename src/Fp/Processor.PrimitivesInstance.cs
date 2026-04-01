@@ -1,4 +1,5 @@
 using System;
+using System.Numerics;
 
 namespace Fp;
 
@@ -87,4 +88,20 @@ public partial class Processor
     /// <param name="span">Target span.</param>
     /// <param name="array">Source array.</param>
     public void SetU64Array(Span<byte> span, ulong[] array) => SetU64Array(span, array, LittleEndian);
+
+    /// <summary>
+    /// Reads converted array (with endianness switch).
+    /// </summary>
+    /// <param name="span">Source span.</param>
+    /// <returns>Converted array.</returns>
+    public T[] GetNumberArray<T>(ReadOnlySpan<byte> span) where T : unmanaged, INumber<T>
+        => GetNumberArray<T>(span, LittleEndian);
+
+    /// <summary>
+    /// Writes array (with endianness switch).
+    /// </summary>
+    /// <param name="span">Target span.</param>
+    /// <param name="array">Source array.</param>
+    public void SetNumberArray<T>(Span<byte> span, T[] array) where T : unmanaged, INumber<T>
+        => SetNumberArray(span, array, LittleEndian);
 }

@@ -21,6 +21,8 @@ public class CircleBuffer<T> : IList<T>
     private int _first;
     private int _count;
 
+    internal int First => _first;
+
     /// <summary>
     /// Creates a new instance of <see cref="CircleBuffer{T}"/>.
     /// </summary>
@@ -38,64 +40,120 @@ public class CircleBuffer<T> : IList<T>
     {
         get
         {
-            RangeThrow(i);
+            RangeThrow(i, false);
             return _entries[Index(i)];
         }
         set
         {
-            RangeThrow(i);
+            RangeThrow(i, false);
             _entries[Index(i)] = value;
         }
     }
 
     /// <inheritdoc />
-    public void RemoveAt(int i)
+    public void RemoveAt(int index)
     {
-        RangeThrow(i);
-        if (i < _count / 2)
-        {
-            // Better to move elements below
-            for (int j = i; j > 0; j--) _entries[Index(j)] = _entries[Index(j - 1)];
-            _entries[_first] = default!;
-            // Move bottom up
-            _first = (_first + 1) % _capacity;
-        }
-        else
-        {
-            // Better to move elements above
-            int top = _count - 1;
-            for (int j = i; j < top; j++) _entries[Index(j)] = _entries[Index(j + 1)];
-            _entries[Index(_count - 1)] = default!;
-        }
+        RangeThrow(index, true);
+        ShrinkForRemove(index, 1);
+    }
 
-        _count--;
+    /// <summary>
+    /// Removes a range of values.
+    /// </summary>
+    /// <param name="index"></param>
+    /// <param name="count"></param>
+    public void RemoveRange(int index, int count)
+    {
+        RangeThrow(index, true);
+        if (count < 0)
+        {
+            throw new ArgumentOutOfRangeException(nameof(count));
+        }
+        ShrinkForRemove(index, count);
     }
 
     /// <inheritdoc />
     public void Insert(int index, T value)
     {
-        if (_count == _capacity)
-            throw new InvalidOperationException($"Cannot push with length {_count} and capacity {_capacity}");
-        _count++;
-        RangeThrow(index);
+        RangeThrow(index, true);
+        ExpandForInsert(index, 1);
+        _entries[Index(index)] = value;
+    }
+
+    /// <summary>
+    /// Inserts a range of values at the specified index.
+    /// </summary>
+    /// <param name="index">Index at which to insert new values.</param>
+    /// <param name="values">Values to insert.</param>
+    /// <exception cref="IndexOutOfRangeException">Thrown if the added values would exceed this container's capacity.</exception>
+    public void InsertRange(int index, ReadOnlySpan<T> values)
+    {
+        RangeThrow(index, true);
+        ExpandForInsert(index, values.Length);
+        int remaining = values.Length;
+        int writeIndex = Index(index);
+        int firstSegmentLength = Math.Min(remaining, _capacity - writeIndex);
+        values[..firstSegmentLength].CopyTo(_entries.AsSpan(writeIndex, firstSegmentLength));
+        remaining -= firstSegmentLength;
+        if (remaining > 0)
+        {
+            values[firstSegmentLength..].CopyTo(_entries);
+        }
+    }
+
+    private void ShrinkForRemove(int index, int valueCount)
+    {
+        if ((uint)(index + valueCount) > _count)
+        {
+            throw new IndexOutOfRangeException($"Cannot remove {valueCount} items at index {index} with length {_count} and capacity {_capacity}");
+        }
         if (index < _count / 2)
         {
-            _first = (_capacity + _first - 1) % _capacity;
             // Better to move elements below
-            for (int j = 0; j < index; j++) _entries[Index(j)] = _entries[Index(j + 1)];
+            for (int j = index - 1; j >= 0; j--) _entries[Index(j + valueCount)] = _entries[Index(j)];
+            for (int j = 0; j < valueCount; j++)
+            {
+                _entries[_first] = default!;
+                // Move bottom up
+                _first = (_first + 1) % _capacity;
+            }
         }
         else
         {
             // Better to move elements above
-            for (int j = _count - 1; j > index; j--) _entries[Index(j)] = _entries[Index(j - 1)];
+            for (int j = index + valueCount; j < _count; j++) _entries[Index(j - valueCount)] = _entries[Index(j)];
+            for (int i = 0; i < valueCount; i++)
+            {
+                _entries[Index(_count - 1 - i)] = default!;
+            }
         }
-
-        _entries[Index(index)] = value;
+        _count -= valueCount;
     }
 
-    private void RangeThrow(int i)
+    private void ExpandForInsert(int index, int valueCount)
     {
-        if (i < 0 || i >= _count) throw new IndexOutOfRangeException($"Invalid index {i} for list of length {_count}");
+        if ((uint)(_count + valueCount) > _capacity)
+        {
+            throw new InvalidOperationException($"Cannot push {valueCount} items with length {_count} and capacity {_capacity}");
+        }
+        int oldCount = _count;
+        _count += valueCount;
+        if (index < oldCount / 2)
+        {
+            // Better to move elements below
+            _first = (_capacity + _first - valueCount) % _capacity;
+            for (int j = 0; j < index; j++) _entries[Index(j)] = _entries[Index(j + valueCount)];
+        }
+        else
+        {
+            // Better to move elements above
+            for (int j = _count - 1; j >= index + valueCount; j--) _entries[Index(j)] = _entries[Index(j - valueCount)];
+        }
+    }
+
+    private void RangeThrow(int i, bool insertionOrRemoval)
+    {
+        if (i < 0 || (insertionOrRemoval ? i > _count : i >= _count)) throw new IndexOutOfRangeException($"Invalid index {i} for list of length {_count}");
     }
 
     [MethodImpl(MethodImplOptions.AggressiveInlining)]
@@ -134,8 +192,7 @@ public class CircleBuffer<T> : IList<T>
     /// <param name="span">Source collection.</param>
     public void AddRange(ReadOnlySpan<T> span)
     {
-        if (Count + span.Length > Capacity) throw new InvalidOperationException("Collection cannot add all elements of specified collection");
-        foreach (T value in span) Add(value); // TODO buffer op for > 1
+        InsertRange(_count, span);
     }
 
     /// <inheritdoc />

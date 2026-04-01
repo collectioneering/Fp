@@ -106,10 +106,10 @@ public class Processor_Main : ProcessorTestBase
         P.UseStream(ms1);
         using (_ = P.Region(0, 0))
         {
-            Assert.False(ReferenceEquals(ms1, P.InputStream));
+            Assert.NotSame(ms1, P.InputStream);
             Assert.NotNull(P.InputStream!);
         }
-        Assert.True(ReferenceEquals(ms1, P.InputStream));
+        Assert.Same(ms1, P.InputStream);
     }
 
     [Fact]
@@ -119,16 +119,16 @@ public class Processor_Main : ProcessorTestBase
         P.UseStream(ms1);
         using (_ = P.Region(0, 0))
         {
-            Assert.False(ReferenceEquals(ms1, P.InputStream));
+            Assert.NotSame(ms1, P.InputStream);
             Assert.NotNull(P.InputStream!);
             var sub = P.InputStream;
             var ms2 = new MemoryStream();
             P.UseStream(ms2);
-            Assert.False(ReferenceEquals(ms1, P.InputStream));
-            Assert.False(ReferenceEquals(sub, P.InputStream));
-            Assert.True(ReferenceEquals(ms2, P.InputStream));
+            Assert.NotSame(ms1, P.InputStream);
+            Assert.NotSame(sub, P.InputStream);
+            Assert.Same(ms2, P.InputStream);
         }
-        Assert.True(ReferenceEquals(ms1, P.InputStream));
+        Assert.Same(ms1, P.InputStream);
     }
 
     [Fact]
@@ -138,30 +138,30 @@ public class Processor_Main : ProcessorTestBase
         P.UseStream(ms1);
         using (_ = P.Region(1, 4))
         {
-            Assert.False(ReferenceEquals(ms1, P.InputStream));
+            Assert.NotSame(ms1, P.InputStream);
             Assert.NotNull(P.InputStream!);
             var sub = P.InputStream;
             var ms2 = new MemoryStream();
             P.UseStream(ms2);
-            Assert.False(ReferenceEquals(ms1, P.InputStream));
-            Assert.False(ReferenceEquals(sub, P.InputStream));
-            Assert.True(ReferenceEquals(ms2, P.InputStream));
+            Assert.NotSame(ms1, P.InputStream);
+            Assert.NotSame(sub, P.InputStream);
+            Assert.Same(ms2, P.InputStream);
             using (_ = P.Region(1, 2))
             {
-                Assert.False(ReferenceEquals(ms1, P.InputStream));
-                Assert.False(ReferenceEquals(sub, P.InputStream));
-                Assert.False(ReferenceEquals(ms2, P.InputStream));
+                Assert.NotSame(ms1, P.InputStream);
+                Assert.NotSame(sub, P.InputStream);
+                Assert.NotSame(ms2, P.InputStream);
                 Assert.NotNull(P.InputStream!);
                 var ms3 = new MemoryStream();
                 P.UseStream(ms3);
-                Assert.False(ReferenceEquals(ms1, P.InputStream));
-                Assert.False(ReferenceEquals(sub, P.InputStream));
-                Assert.False(ReferenceEquals(ms2, P.InputStream));
-                Assert.True(ReferenceEquals(ms3, P.InputStream));
+                Assert.NotSame(ms1, P.InputStream);
+                Assert.NotSame(sub, P.InputStream);
+                Assert.NotSame(ms2, P.InputStream);
+                Assert.Same(ms3, P.InputStream);
             }
-            Assert.True(ReferenceEquals(ms2, P.InputStream));
+            Assert.Same(ms2, P.InputStream);
         }
-        Assert.True(ReferenceEquals(ms1, P.InputStream));
+        Assert.Same(ms1, P.InputStream);
     }
 
     [Fact]
@@ -210,10 +210,10 @@ public class Processor_Main : ProcessorTestBase
         P.UseStream(ss3);
         using (_ = P.Region(0, 2))
         {
-            Assert.False(ReferenceEquals(ms1, P.InputStream));
+            Assert.NotSame(ms1, P.InputStream);
             var stream = P.InputStream as SStream;
             Assert.NotNull(stream!);
-            Assert.True(ReferenceEquals(ms1, stream.BaseStream));
+            Assert.Same(ms1, stream.BaseStream);
             Assert.Equal(2, stream.Length);
             Assert.Equal(3, stream.ReadByte());
             Assert.Equal(4, stream.ReadByte());

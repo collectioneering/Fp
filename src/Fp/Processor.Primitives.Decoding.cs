@@ -2,6 +2,8 @@ using System;
 using System.Buffers.Binary;
 using System.Diagnostics.CodeAnalysis;
 using System.IO;
+using System.Numerics;
+using System.Runtime.CompilerServices;
 using System.Runtime.InteropServices;
 using static System.Buffers.ArrayPool<byte>;
 
@@ -312,8 +314,45 @@ public partial class Processor
     /// </summary>
     /// <param name="span">Span to convert.</param>
     /// <param name="littleEndian">If true, use little-endian encoding.</param>
-    public static void ConvertS16Array(Span<byte> span, bool littleEndian) =>
+    public static unsafe void ConvertS16Array(Span<byte> span, bool littleEndian)
+    {
+        fixed (byte* p = span)
+        {
+            if ((nint)p % 2 == 0)
+            {
+                ConvertS16ArrayAligned(span, littleEndian);
+            }
+            else
+            {
+                ConvertS16ArrayUnaligned(span, littleEndian);
+            }
+        }
+    }
+
+    /// <summary>
+    /// Converts endianness of signed 16-bit array between source and platform's endianness.
+    /// </summary>
+    /// <param name="span">Span to convert.</param>
+    /// <param name="littleEndian">If true, use little-endian encoding.</param>
+    public static void ConvertS16ArrayAligned(Span<byte> span, bool littleEndian)
+    {
         ConvertS16Array(MemoryMarshal.Cast<byte, short>(span), littleEndian);
+    }
+
+    /// <summary>
+    /// Converts endianness of signed 16-bit array between source and platform's endianness.
+    /// </summary>
+    /// <param name="span">Span to convert.</param>
+    /// <param name="littleEndian">If true, use little-endian encoding.</param>
+    public static void ConvertS16ArrayUnaligned(Span<byte> span, bool littleEndian)
+    {
+        if (littleEndian == BitConverter.IsLittleEndian) return;
+        for (int i = 0; i + 1 < span.Length; i += 2)
+        {
+            ref byte sub = ref span[i];
+            Unsafe.WriteUnaligned(ref sub, BinaryPrimitives.ReverseEndianness(Unsafe.ReadUnaligned<short>(ref sub)));
+        }
+    }
 
     /// <summary>
     /// Converts endianness of unsigned 16-bit array between source and platform's endianness.
@@ -331,8 +370,45 @@ public partial class Processor
     /// </summary>
     /// <param name="span">Span to convert.</param>
     /// <param name="littleEndian">If true, use little-endian encoding.</param>
-    public static void ConvertU16Array(Span<byte> span, bool littleEndian) =>
+    public static unsafe void ConvertU16Array(Span<byte> span, bool littleEndian)
+    {
+        fixed (byte* p = span)
+        {
+            if ((nint)p % 2 == 0)
+            {
+                ConvertU16ArrayAligned(span, littleEndian);
+            }
+            else
+            {
+                ConvertU16ArrayUnaligned(span, littleEndian);
+            }
+        }
+    }
+
+    /// <summary>
+    /// Converts endianness of unsigned 16-bit array between source and platform's endianness.
+    /// </summary>
+    /// <param name="span">Span to convert.</param>
+    /// <param name="littleEndian">If true, use little-endian encoding.</param>
+    public static void ConvertU16ArrayAligned(Span<byte> span, bool littleEndian)
+    {
         ConvertU16Array(MemoryMarshal.Cast<byte, ushort>(span), littleEndian);
+    }
+
+    /// <summary>
+    /// Converts endianness of unsigned 16-bit array between source and platform's endianness.
+    /// </summary>
+    /// <param name="span">Span to convert.</param>
+    /// <param name="littleEndian">If true, use little-endian encoding.</param>
+    public static void ConvertU16ArrayUnaligned(Span<byte> span, bool littleEndian)
+    {
+        if (littleEndian == BitConverter.IsLittleEndian) return;
+        for (int i = 0; i + 1 < span.Length; i += 2)
+        {
+            ref byte sub = ref span[i];
+            Unsafe.WriteUnaligned(ref sub, BinaryPrimitives.ReverseEndianness(Unsafe.ReadUnaligned<ushort>(ref sub)));
+        }
+    }
 
     /// <summary>
     /// Converts endianness of signed 32-bit array between source and platform's endianness.
@@ -350,8 +426,45 @@ public partial class Processor
     /// </summary>
     /// <param name="span">Span to convert.</param>
     /// <param name="littleEndian">If true, use little-endian encoding.</param>
-    public static void ConvertS32Array(Span<byte> span, bool littleEndian) =>
+    public static unsafe void ConvertS32Array(Span<byte> span, bool littleEndian)
+    {
+        fixed (byte* p = span)
+        {
+            if ((nint)p % 4 == 0)
+            {
+                ConvertS32ArrayAligned(span, littleEndian);
+            }
+            else
+            {
+                ConvertS32ArrayUnaligned(span, littleEndian);
+            }
+        }
+    }
+
+    /// <summary>
+    /// Converts endianness of signed 32-bit array between source and platform's endianness.
+    /// </summary>
+    /// <param name="span">Span to convert.</param>
+    /// <param name="littleEndian">If true, use little-endian encoding.</param>
+    public static void ConvertS32ArrayAligned(Span<byte> span, bool littleEndian)
+    {
         ConvertS32Array(MemoryMarshal.Cast<byte, int>(span), littleEndian);
+    }
+
+    /// <summary>
+    /// Converts endianness of signed 32-bit array between source and platform's endianness.
+    /// </summary>
+    /// <param name="span">Span to convert.</param>
+    /// <param name="littleEndian">If true, use little-endian encoding.</param>
+    public static void ConvertS32ArrayUnaligned(Span<byte> span, bool littleEndian)
+    {
+        if (littleEndian == BitConverter.IsLittleEndian) return;
+        for (int i = 0; i + 3 < span.Length; i += 4)
+        {
+            ref byte sub = ref span[i];
+            Unsafe.WriteUnaligned(ref sub, BinaryPrimitives.ReverseEndianness(Unsafe.ReadUnaligned<int>(ref sub)));
+        }
+    }
 
     /// <summary>
     /// Converts endianness of unsigned 32-bit array between source and platform's endianness.
@@ -369,8 +482,45 @@ public partial class Processor
     /// </summary>
     /// <param name="span">Span to convert.</param>
     /// <param name="littleEndian">If true, use little-endian encoding.</param>
-    public static void ConvertU32Array(Span<byte> span, bool littleEndian) =>
+    public static unsafe void ConvertU32Array(Span<byte> span, bool littleEndian)
+    {
+        fixed (byte* p = span)
+        {
+            if ((nint)p % 4 == 0)
+            {
+                ConvertU32ArrayAligned(span, littleEndian);
+            }
+            else
+            {
+                ConvertU32ArrayUnaligned(span, littleEndian);
+            }
+        }
+    }
+
+    /// <summary>
+    /// Converts endianness of unsigned 32-bit array between source and platform's endianness.
+    /// </summary>
+    /// <param name="span">Span to convert.</param>
+    /// <param name="littleEndian">If true, use little-endian encoding.</param>
+    public static void ConvertU32ArrayAligned(Span<byte> span, bool littleEndian)
+    {
         ConvertU32Array(MemoryMarshal.Cast<byte, uint>(span), littleEndian);
+    }
+
+    /// <summary>
+    /// Converts endianness of unsigned 32-bit array between source and platform's endianness.
+    /// </summary>
+    /// <param name="span">Span to convert.</param>
+    /// <param name="littleEndian">If true, use little-endian encoding.</param>
+    public static void ConvertU32ArrayUnaligned(Span<byte> span, bool littleEndian)
+    {
+        if (littleEndian == BitConverter.IsLittleEndian) return;
+        for (int i = 0; i + 3 < span.Length; i += 4)
+        {
+            ref byte sub = ref span[i];
+            Unsafe.WriteUnaligned(ref sub, BinaryPrimitives.ReverseEndianness(Unsafe.ReadUnaligned<uint>(ref sub)));
+        }
+    }
 
     /// <summary>
     /// Converts endianness of signed 64-bit array between source and platform's endianness.
@@ -388,8 +538,45 @@ public partial class Processor
     /// </summary>
     /// <param name="span">Span to convert.</param>
     /// <param name="littleEndian">If true, use little-endian encoding.</param>
-    public static void ConvertS64Array(Span<byte> span, bool littleEndian) =>
+    public static unsafe void ConvertS64Array(Span<byte> span, bool littleEndian)
+    {
+        fixed (byte* p = span)
+        {
+            if ((nint)p % 8 == 0)
+            {
+                ConvertS64ArrayAligned(span, littleEndian);
+            }
+            else
+            {
+                ConvertS64ArrayUnaligned(span, littleEndian);
+            }
+        }
+    }
+
+    /// <summary>
+    /// Converts endianness of signed 64-bit array between source and platform's endianness.
+    /// </summary>
+    /// <param name="span">Span to convert.</param>
+    /// <param name="littleEndian">If true, use little-endian encoding.</param>
+    public static void ConvertS64ArrayAligned(Span<byte> span, bool littleEndian)
+    {
         ConvertS64Array(MemoryMarshal.Cast<byte, long>(span), littleEndian);
+    }
+
+    /// <summary>
+    /// Converts endianness of signed 64-bit array between source and platform's endianness.
+    /// </summary>
+    /// <param name="span">Span to convert.</param>
+    /// <param name="littleEndian">If true, use little-endian encoding.</param>
+    public static void ConvertS64ArrayUnaligned(Span<byte> span, bool littleEndian)
+    {
+        if (littleEndian == BitConverter.IsLittleEndian) return;
+        for (int i = 0; i + 7 < span.Length; i += 8)
+        {
+            ref byte sub = ref span[i];
+            Unsafe.WriteUnaligned(ref sub, BinaryPrimitives.ReverseEndianness(Unsafe.ReadUnaligned<long>(ref sub)));
+        }
+    }
 
     /// <summary>
     /// Converts endianness of unsigned 64-bit array between source and platform's endianness.
@@ -407,8 +594,162 @@ public partial class Processor
     /// </summary>
     /// <param name="span">Span to convert.</param>
     /// <param name="littleEndian">If true, use little-endian encoding.</param>
-    public static void ConvertU64Array(Span<byte> span, bool littleEndian) =>
+    public static unsafe void ConvertU64Array(Span<byte> span, bool littleEndian)
+    {
+        fixed (byte* p = span)
+        {
+            if ((nint)p % 8 == 0)
+            {
+                ConvertU64ArrayAligned(span, littleEndian);
+            }
+            else
+            {
+                ConvertU64ArrayUnaligned(span, littleEndian);
+            }
+        }
+    }
+
+    /// <summary>
+    /// Converts endianness of unsigned 64-bit array between source and platform's endianness.
+    /// </summary>
+    /// <param name="span">Span to convert.</param>
+    /// <param name="littleEndian">If true, use little-endian encoding.</param>
+    public static void ConvertU64ArrayAligned(Span<byte> span, bool littleEndian)
+    {
         ConvertU64Array(MemoryMarshal.Cast<byte, ulong>(span), littleEndian);
+    }
+
+    /// <summary>
+    /// Converts endianness of unsigned 64-bit array between source and platform's endianness.
+    /// </summary>
+    /// <param name="span">Span to convert.</param>
+    /// <param name="littleEndian">If true, use little-endian encoding.</param>
+    public static void ConvertU64ArrayUnaligned(Span<byte> span, bool littleEndian)
+    {
+        if (littleEndian == BitConverter.IsLittleEndian) return;
+        for (int i = 0; i + 7 < span.Length; i += 8)
+        {
+            ref byte sub = ref span[i];
+            Unsafe.WriteUnaligned(ref sub, BinaryPrimitives.ReverseEndianness(Unsafe.ReadUnaligned<ulong>(ref sub)));
+        }
+    }
+
+    /// <summary>
+    /// Converts endianness of signed 32-bit array between source and platform's endianness.
+    /// </summary>
+    /// <param name="span">Span to convert.</param>
+    /// <param name="littleEndian">If true, use little-endian encoding.</param>
+    public static unsafe void ConvertNumberArray<T>(Span<T> span, bool littleEndian) where T : unmanaged, INumber<T>
+    {
+        if (littleEndian == BitConverter.IsLittleEndian)
+        {
+            return;
+        }
+        int typeSize = sizeof(T);
+        switch (typeSize)
+        {
+            case 1:
+                break;
+            case 2:
+                {
+                    var buffer = MemoryMarshal.Cast<T, ushort>(span);
+                    BinaryPrimitives.ReverseEndianness(buffer, buffer);
+                    break;
+                }
+            case 4:
+                {
+                    var buffer = MemoryMarshal.Cast<T, uint>(span);
+                    BinaryPrimitives.ReverseEndianness(buffer, buffer);
+                    break;
+                }
+            case 8:
+                {
+                    var buffer = MemoryMarshal.Cast<T, ulong>(span);
+                    BinaryPrimitives.ReverseEndianness(buffer, buffer);
+                    break;
+                }
+            default:
+                throw new ArgumentOutOfRangeException($"Type size {typeSize} is not supported");
+        }
+    }
+
+    /// <summary>
+    /// Converts endianness of signed 32-bit array between source and platform's endianness.
+    /// </summary>
+    /// <param name="span">Span to convert.</param>
+    /// <param name="littleEndian">If true, use little-endian encoding.</param>
+    public static unsafe void ConvertNumberArray<T>(Span<byte> span, bool littleEndian) where T : unmanaged, INumber<T>
+    {
+        fixed (byte* p = span)
+        {
+            if ((nint)p % sizeof(T) == 0)
+            {
+                ConvertNumberArrayAligned<T>(span, littleEndian);
+            }
+            else
+            {
+                ConvertNumberArrayUnaligned<T>(span, littleEndian);
+            }
+        }
+    }
+
+    /// <summary>
+    /// Converts endianness of signed 32-bit array between source and platform's endianness.
+    /// </summary>
+    /// <param name="span">Span to convert.</param>
+    /// <param name="littleEndian">If true, use little-endian encoding.</param>
+    public static void ConvertNumberArrayAligned<T>(Span<byte> span, bool littleEndian) where T : unmanaged, INumber<T>
+    {
+        ConvertNumberArray(MemoryMarshal.Cast<byte, T>(span), littleEndian);
+    }
+
+    /// <summary>
+    /// Converts endianness of signed 32-bit array between source and platform's endianness.
+    /// </summary>
+    /// <param name="span">Span to convert.</param>
+    /// <param name="littleEndian">If true, use little-endian encoding.</param>
+    public static unsafe void ConvertNumberArrayUnaligned<T>(Span<byte> span, bool littleEndian) where T : unmanaged, INumber<T>
+    {
+        if (littleEndian == BitConverter.IsLittleEndian)
+        {
+            return;
+        }
+        int typeSize = sizeof(T);
+        switch (typeSize)
+        {
+            case 1:
+                break;
+            case 2:
+                {
+                    for (int i = 0; i + 1 < span.Length; i += 2)
+                    {
+                        ref byte sub = ref span[i];
+                        Unsafe.WriteUnaligned(ref sub, BinaryPrimitives.ReverseEndianness(Unsafe.ReadUnaligned<ushort>(ref sub)));
+                    }
+                    break;
+                }
+            case 4:
+                {
+                    for (int i = 0; i + 3 < span.Length; i += 4)
+                    {
+                        ref byte sub = ref span[i];
+                        Unsafe.WriteUnaligned(ref sub, BinaryPrimitives.ReverseEndianness(Unsafe.ReadUnaligned<uint>(ref sub)));
+                    }
+                    break;
+                }
+            case 8:
+                {
+                    for (int i = 0; i + 7 < span.Length; i += 8)
+                    {
+                        ref byte sub = ref span[i];
+                        Unsafe.WriteUnaligned(ref sub, BinaryPrimitives.ReverseEndianness(Unsafe.ReadUnaligned<ulong>(ref sub)));
+                    }
+                    break;
+                }
+            default:
+                throw new ArgumentOutOfRangeException($"Type size {typeSize} is not supported");
+        }
+    }
 
     #endregion
 

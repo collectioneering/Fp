@@ -10,14 +10,18 @@ public class IndexUtility_Tests
         (^0, 0, ^0),
         (0, 1, 1),
         (0, int.MaxValue, int.MaxValue),
+        (int.MaxValue, -int.MaxValue, 0),
         (^0, -1, ^1),
         (^0, -int.MaxValue, ^int.MaxValue),
+        (^int.MaxValue, int.MaxValue, ^0),
     ];
 
     private static readonly (Index value, int offset)[] s_errorTestCases =
     [
         (0, -1),
+        (int.MaxValue, 1),
         (^0, 1),
+        (^int.MaxValue, -1),
     ];
 
     public static TheoryData<(Index value, int offset, Index expected)> TdTestCases = new(s_testCases);

@@ -11,10 +11,12 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 
 - `U8ArrayHelper` (type of `Processor.buf` and `Processor.u1a`) and `BaseStringHelper` (base type of `Processor.ascii`, `Processor.utf8`, and `Processor.utf16`) now support range specifiers
 - `IndexUtility.WithOffset` and `RangeUtility.WithOffset` apply offsets to `System.Index` and `System.Range`
+- `Processor.GetNumberArray<T>` / `Processor.SetNumberArray<T>`
 
 ### Changed
 
 - Target TFMs are now `net8.0` and `net10.0`
+
 
 ## [0.29.0] 2026-02-03
 

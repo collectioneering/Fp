@@ -1,4 +1,5 @@
 using System;
+using System.Numerics;
 using System.Runtime.InteropServices;
 
 namespace Fp;
@@ -33,7 +34,7 @@ public partial class Processor
     /// <returns>Converted array.</returns>
     public static short[] GetS16Array(ReadOnlySpan<byte> span, bool littleEndian)
     {
-        short[] result = MemoryMarshal.Cast<byte, short>(span).ToArray();
+        short[] result = GetUnconvertedNumberArray<short>(span);
         ConvertS16Array(result, littleEndian);
         return result;
     }
@@ -58,7 +59,7 @@ public partial class Processor
     /// <returns>Converted array.</returns>
     public static int[] GetS32Array(ReadOnlySpan<byte> span, bool littleEndian)
     {
-        int[] result = MemoryMarshal.Cast<byte, int>(span).ToArray();
+        int[] result = GetUnconvertedNumberArray<int>(span);
         ConvertS32Array(result, littleEndian);
         return result;
     }
@@ -83,7 +84,7 @@ public partial class Processor
     /// <returns>Converted array.</returns>
     public static long[] GetS64Array(ReadOnlySpan<byte> span, bool littleEndian)
     {
-        long[] result = MemoryMarshal.Cast<byte, long>(span).ToArray();
+        long[] result = GetUnconvertedNumberArray<long>(span);
         ConvertS64Array(result, littleEndian);
         return result;
     }
@@ -108,7 +109,7 @@ public partial class Processor
     /// <returns>Converted array.</returns>
     public static ushort[] GetU16Array(ReadOnlySpan<byte> span, bool littleEndian)
     {
-        ushort[] result = MemoryMarshal.Cast<byte, ushort>(span).ToArray();
+        ushort[] result = GetUnconvertedNumberArray<ushort>(span);
         ConvertU16Array(result, littleEndian);
         return result;
     }
@@ -122,7 +123,7 @@ public partial class Processor
     public static void SetU16Array(Span<byte> span, ReadOnlySpan<ushort> array, bool littleEndian)
     {
         MemoryMarshal.Cast<ushort, byte>(array).CopyTo(span);
-        ConvertS32Array(span, littleEndian);
+        ConvertU16Array(span, littleEndian);
     }
 
     /// <summary>
@@ -133,7 +134,7 @@ public partial class Processor
     /// <returns>Converted array.</returns>
     public static uint[] GetU32Array(ReadOnlySpan<byte> span, bool littleEndian)
     {
-        uint[] result = MemoryMarshal.Cast<byte, uint>(span).ToArray();
+        uint[] result = GetUnconvertedNumberArray<uint>(span);
         ConvertU32Array(result, littleEndian);
         return result;
     }
@@ -147,7 +148,7 @@ public partial class Processor
     public static void SetU32Array(Span<byte> span, ReadOnlySpan<uint> array, bool littleEndian)
     {
         MemoryMarshal.Cast<uint, byte>(array).CopyTo(span);
-        ConvertS32Array(span, littleEndian);
+        ConvertU32Array(span, littleEndian);
     }
 
     /// <summary>
@@ -158,7 +159,7 @@ public partial class Processor
     /// <returns>Converted array.</returns>
     public static ulong[] GetU64Array(ReadOnlySpan<byte> span, bool littleEndian)
     {
-        ulong[] result = MemoryMarshal.Cast<byte, ulong>(span).ToArray();
+        ulong[] result = GetUnconvertedNumberArray<ulong>(span);
         ConvertU64Array(result, littleEndian);
         return result;
     }
@@ -172,7 +173,7 @@ public partial class Processor
     public static void SetU64Array(Span<byte> span, ReadOnlySpan<ulong> array, bool littleEndian)
     {
         MemoryMarshal.Cast<ulong, byte>(array).CopyTo(span);
-        ConvertS32Array(span, littleEndian);
+        ConvertU64Array(span, littleEndian);
     }
 
     /// <summary>
@@ -206,5 +207,38 @@ public partial class Processor
     public static void SetTArray<T>(Span<byte> span, ReadOnlySpan<T> array) where T : unmanaged
     {
         MemoryMarshal.Cast<T, byte>(array).CopyTo(span);
+    }
+
+    /// <summary>
+    /// Reads converted array (with endianness switch).
+    /// </summary>
+    /// <param name="span">Source span.</param>
+    /// <param name="littleEndian">If true, use little-endian encoding.</param>
+    /// <returns>Converted array.</returns>
+    public static T[] GetNumberArray<T>(ReadOnlySpan<byte> span, bool littleEndian) where T : unmanaged, INumber<T>
+    {
+        T[] result = GetUnconvertedNumberArray<T>(span);
+        ConvertNumberArray(result, littleEndian);
+        return result;
+    }
+
+    private static unsafe T[] GetUnconvertedNumberArray<T>(ReadOnlySpan<byte> span) where T : unmanaged, INumber<T>
+    {
+        int outputLength = span.Length / sizeof(T);
+        T[] result = new T[outputLength];
+        span[..(outputLength * sizeof(T))].CopyTo(MemoryMarshal.Cast<T, byte>((Span<T>)result));
+        return result;
+    }
+
+    /// <summary>
+    /// Writes array (with endianness switch).
+    /// </summary>
+    /// <param name="span">Target span.</param>
+    /// <param name="array">Source array.</param>
+    /// <param name="littleEndian">If true, use little-endian encoding.</param>
+    public static void SetNumberArray<T>(Span<byte> span, ReadOnlySpan<T> array, bool littleEndian) where T : unmanaged, INumber<T>
+    {
+        MemoryMarshal.Cast<T, byte>(array).CopyTo(span);
+        ConvertNumberArray<T>(span, littleEndian);
     }
 }
