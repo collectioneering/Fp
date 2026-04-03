@@ -11,10 +11,10 @@ public class Processor_Bitwise_Xor : ProcessorTestBase
 {
     private const byte XorByte = 0xd5;
 
-    [SkippableFact]
+    [Fact]
     public void SingleByteApplyXorArm_LargeBuffer_MatchesExpected()
     {
-        Skip.IfNot(AdvSimd.IsSupported, "AdvSimd intrinsics not supported");
+        Assert.SkipUnless(AdvSimd.IsSupported, "AdvSimd intrinsics not supported");
 
         Span<byte> arr = new byte[1097];
         Random.Shared.NextBytes(arr);
@@ -27,10 +27,10 @@ public class Processor_Bitwise_Xor : ProcessorTestBase
         Assert.True(arr.SequenceEqual(arr2));
     }
 
-    [SkippableFact]
+    [Fact]
     public void SingleByteApplyXorArm_Misaligned_MatchesExpected()
     {
-        Skip.IfNot(AdvSimd.IsSupported, "AdvSimd intrinsics not supported");
+        Assert.SkipUnless(AdvSimd.IsSupported, "AdvSimd intrinsics not supported");
 
         // Cut somewhere in 0..31 for misalignment
         Span<byte> arr = MemoryMarshal.Cast<int, byte>((Span<int>)new int[(1097 + sizeof(int) - 1) / sizeof(int)])[14..1097];
@@ -44,10 +44,10 @@ public class Processor_Bitwise_Xor : ProcessorTestBase
         Assert.True(arr.SequenceEqual(arr2));
     }
 
-    [SkippableFact]
+    [Fact]
     public void SingleByteApplyXorSse2_LargeBuffer_MatchesExpected()
     {
-        Skip.IfNot(Sse2.IsSupported, "Sse2 intrinsics not supported");
+        Assert.SkipUnless(Sse2.IsSupported, "Sse2 intrinsics not supported");
 
         Span<byte> arr = new byte[1097];
         Random.Shared.NextBytes(arr);
@@ -61,10 +61,10 @@ public class Processor_Bitwise_Xor : ProcessorTestBase
         Assert.True(arr.SequenceEqual(arr2));
     }
 
-    [SkippableFact]
+    [Fact]
     public void SingleByteApplyXorSse2_Misaligned_MatchesExpected()
     {
-        Skip.IfNot(Sse2.IsSupported, "Sse2 intrinsics not supported");
+        Assert.SkipUnless(Sse2.IsSupported, "Sse2 intrinsics not supported");
 
         // Cut somewhere in 0..31 for misalignment
         Span<byte> arr = MemoryMarshal.Cast<int, byte>((Span<int>)new int[(1097 + sizeof(int) - 1) / sizeof(int)])[14..1097];
@@ -78,10 +78,10 @@ public class Processor_Bitwise_Xor : ProcessorTestBase
         Assert.True(arr.SequenceEqual(arr2));
     }
 
-    [SkippableFact]
+    [Fact]
     public void SingleByteApplyXorAvx2_LargeBuffer_MatchesExpected()
     {
-        Skip.IfNot(Avx2.IsSupported, "Avx2 intrinsics not supported");
+        Assert.SkipUnless(Avx2.IsSupported, "Avx2 intrinsics not supported");
 
         Span<byte> arr = new byte[1097];
         Random.Shared.NextBytes(arr);
@@ -95,10 +95,10 @@ public class Processor_Bitwise_Xor : ProcessorTestBase
         Assert.True(arr.SequenceEqual(arr2));
     }
 
-    [SkippableFact]
+    [Fact]
     public void SingleByteApplyXorAvx2_Misaligned_MatchesExpected()
     {
-        Skip.IfNot(Avx2.IsSupported, "Avx2 intrinsics not supported");
+        Assert.SkipUnless(Avx2.IsSupported, "Avx2 intrinsics not supported");
 
         // Cut somewhere in 0..31 for misalignment
         Span<byte> arr = MemoryMarshal.Cast<int, byte>((Span<int>)new int[(1097 + sizeof(int) - 1) / sizeof(int)])[14..1097];
@@ -112,10 +112,10 @@ public class Processor_Bitwise_Xor : ProcessorTestBase
         Assert.True(arr.SequenceEqual(arr2));
     }
 
-    [SkippableFact]
+    [Fact]
     public void SingleByteApplyXor_LargeBuffer_MatchesExpected()
     {
-        Skip.IfNot(Vector.IsHardwareAccelerated, "Hardware vector acceleration not supported");
+        Assert.SkipUnless(Vector.IsHardwareAccelerated, "Hardware vector acceleration not supported");
         Span<byte> arr = new byte[1097];
         Random.Shared.NextBytes(arr);
         Span<byte> arr2 = new byte[arr.Length];
@@ -128,10 +128,10 @@ public class Processor_Bitwise_Xor : ProcessorTestBase
         Assert.True(arr.SequenceEqual(arr2));
     }
 
-    [SkippableFact]
+    [Fact]
     public void SingleByteApplyXor_Misaligned_MatchesExpected()
     {
-        Skip.IfNot(Vector.IsHardwareAccelerated, "Hardware vector acceleration not supported");
+        Assert.SkipUnless(Vector.IsHardwareAccelerated, "Hardware vector acceleration not supported");
         // Cut somewhere in 0..31 for misalignment
         Span<byte> arr = MemoryMarshal.Cast<int, byte>((Span<int>)new int[(1097 + sizeof(int) - 1) / sizeof(int)])[14..1097];
         Random.Shared.NextBytes(arr);
@@ -144,10 +144,10 @@ public class Processor_Bitwise_Xor : ProcessorTestBase
         Assert.True(arr.SequenceEqual(arr2));
     }
 
-    [SkippableFact]
+    [Fact]
     public void BufferApplyXor_SmallBufferTruncate_MatchesExpected()
     {
-        Skip.IfNot(Vector.IsHardwareAccelerated, "Hardware vector acceleration not supported");
+        Assert.SkipUnless(Vector.IsHardwareAccelerated, "Hardware vector acceleration not supported");
         Span<byte> arr = new byte[91];
         Random.Shared.NextBytes(arr);
         Span<byte> xorArr = new byte[1843];
@@ -161,10 +161,10 @@ public class Processor_Bitwise_Xor : ProcessorTestBase
         Assert.True(arr.SequenceEqual(arr2));
     }
 
-    [SkippableFact]
+    [Fact]
     public void BufferApplyXor_LargeBufferTruncate_MatchesExpected()
     {
-        Skip.IfNot(Vector.IsHardwareAccelerated, "Hardware vector acceleration not supported");
+        Assert.SkipUnless(Vector.IsHardwareAccelerated, "Hardware vector acceleration not supported");
         Span<byte> arr = new byte[1097];
         Random.Shared.NextBytes(arr);
         Span<byte> xorArr = new byte[53];
@@ -178,10 +178,10 @@ public class Processor_Bitwise_Xor : ProcessorTestBase
         Assert.True(arr.SequenceEqual(arr2));
     }
 
-    [SkippableFact]
+    [Fact]
     public void BufferApplyXor_SmallBufferRepeat_MatchesExpected()
     {
-        Skip.IfNot(Vector.IsHardwareAccelerated, "Hardware vector acceleration not supported");
+        Assert.SkipUnless(Vector.IsHardwareAccelerated, "Hardware vector acceleration not supported");
         Span<byte> arr = new byte[91];
         Random.Shared.NextBytes(arr);
         Span<byte> xorArr = new byte[1843];
@@ -195,10 +195,10 @@ public class Processor_Bitwise_Xor : ProcessorTestBase
         Assert.True(arr.SequenceEqual(arr2));
     }
 
-    [SkippableFact]
+    [Fact]
     public void BufferApplyXor_LargeBufferRepeat_MatchesExpected()
     {
-        Skip.IfNot(Vector.IsHardwareAccelerated, "Hardware vector acceleration not supported");
+        Assert.SkipUnless(Vector.IsHardwareAccelerated, "Hardware vector acceleration not supported");
         Span<byte> arr = new byte[1097];
         Random.Shared.NextBytes(arr);
         Span<byte> xorArr = new byte[53];
@@ -212,10 +212,10 @@ public class Processor_Bitwise_Xor : ProcessorTestBase
         Assert.True(arr.SequenceEqual(arr2));
     }
 
-    [SkippableFact]
+    [Fact]
     public void BufferApplyAnd_EmptyBuffer_Noop()
     {
-        Skip.IfNot(Vector.IsHardwareAccelerated, "Hardware vector acceleration not supported");
+        Assert.SkipUnless(Vector.IsHardwareAccelerated, "Hardware vector acceleration not supported");
         Span<byte> xorArr = new byte[53];
         Random.Shared.NextBytes(xorArr);
 
@@ -225,10 +225,10 @@ public class Processor_Bitwise_Xor : ProcessorTestBase
         Processor.ApplyXorFallback(Span<byte>.Empty, xorArr, SequenceBehaviour.Truncate);
     }
 
-    [SkippableFact]
+    [Fact]
     public void BufferApplyXor_EmptyPattern_Noop()
     {
-        Skip.IfNot(Vector.IsHardwareAccelerated, "Hardware vector acceleration not supported");
+        Assert.SkipUnless(Vector.IsHardwareAccelerated, "Hardware vector acceleration not supported");
         Span<byte> arr = new byte[1097];
         Random.Shared.NextBytes(arr);
         Span<byte> arr2 = new byte[arr.Length];
