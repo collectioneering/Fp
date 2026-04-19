@@ -18,8 +18,8 @@ jobs:
       with:
         dotnet-version: '10.0.x'
     - name: Install dependencies
-      run: dotnet restore Fp.slnx
+      run: dotnet restore src/Fp.slnx
     - name: Build
-      run: dotnet build Fp.slnx --configuration Release --no-restore
+      run: dotnet build src/Fp.slnx --configuration Release --no-restore
     - name: Test
-      run: dotnet test Fp.slnx --configuration Release --no-build --verbosity normal
+      run: dotnet test src/Fp.slnx --configuration Release --no-build --verbosity normal
