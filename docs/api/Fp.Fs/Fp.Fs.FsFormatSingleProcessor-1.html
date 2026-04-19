@@ -98,7 +98,7 @@ Class FsFormatSingleProcessor&lt;TData&gt;  <a class="header-action link-seconda
   <div class="markdown conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public class FsFormatSingleProcessor&lt;TData&gt; : FormatSingleProcessor&lt;TData&gt;, IDisposable where TData : Data, IFsFormatSingleRunnerType</code></pre>
+    <pre><code class="lang-csharp hljs">public class FsFormatSingleProcessor&lt;TData&gt; : FormatSingleProcessor&lt;TData&gt;, IDisposable, IFsFormatSingleRunnerType&lt;TData&gt; where TData : Data</code></pre>
   </div>
 
 
@@ -126,6 +126,7 @@ Class FsFormatSingleProcessor&lt;TData&gt;  <a class="header-action link-seconda
     <dt>Implements</dt>
     <dd>
       <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.idisposable">IDisposable</a></div>
+      <div><a class="xref" href="Fp.Fs.IFsFormatSingleRunnerType-1.html">IFsFormatSingleRunnerType</a>&lt;TData&gt;</div>
     </dd>
   </dl>
 
@@ -1849,26 +1850,30 @@ Class FsFormatSingleProcessor&lt;TData&gt;  <a class="header-action link-seconda
   <a class="header-action link-secondary" title="View source" href="https://github.com/collectioneering/Fp/blob/main/src/Fp.Fs/FsFormatSingleProcessor.cs/#L25"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Processes using segmented function.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static void Run&lt;T&gt;(IList&lt;string&gt;? args, FileProcessorInfo? info = null) where T : FormatSingleProcessor, new()</code></pre>
+    <pre><code class="lang-csharp hljs">public static void Run&lt;T&gt;(IList&lt;string&gt;? args, FileProcessorInfo? info = null) where T : FormatSingleProcessor&lt;TData&gt;, new()</code></pre>
   </div>
 
   <h4 class="section">Parameters</h4>
   <dl class="parameters">
     <dt><code>args</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.ilist-1">IList</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a>&gt;</dt>
-    <dd></dd>
+    <dd><p>Arguments. If null, only register processor.</p>
+</dd>
     <dt><code>info</code> <a class="xref" href="../Fp/Fp.FileProcessorInfo.html">FileProcessorInfo</a></dt>
-    <dd></dd>
+    <dd><p>Processor info.</p>
+</dd>
   </dl>
 
 
   <h4 class="section">Type Parameters</h4>
   <dl class="parameters">
     <dt><code>T</code></dt>
-    <dd></dd>
+    <dd><p>Processor type.</p>
+</dd>
   </dl>
 
 
@@ -1887,30 +1892,36 @@ Class FsFormatSingleProcessor&lt;TData&gt;  <a class="header-action link-seconda
   <a class="header-action link-secondary" title="View source" href="https://github.com/collectioneering/Fp/blob/main/src/Fp.Fs/FsFormatSingleProcessor.cs/#L31"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Processes using segmented function.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static void Run&lt;T&gt;(IList&lt;string&gt;? args, string name, string description, params string?[] extensions) where T : FormatSingleProcessor, new()</code></pre>
+    <pre><code class="lang-csharp hljs">public static void Run&lt;T&gt;(IList&lt;string&gt;? args, string name, string description, params string?[] extensions) where T : FormatSingleProcessor&lt;TData&gt;, new()</code></pre>
   </div>
 
   <h4 class="section">Parameters</h4>
   <dl class="parameters">
     <dt><code>args</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.ilist-1">IList</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a>&gt;</dt>
-    <dd></dd>
+    <dd><p>Arguments. If null, only register processor.</p>
+</dd>
     <dt><code>name</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
-    <dd></dd>
+    <dd><p>Processor name.</p>
+</dd>
     <dt><code>description</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
-    <dd></dd>
+    <dd><p>Processor description.</p>
+</dd>
     <dt><code>extensions</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a>[]</dt>
-    <dd></dd>
+    <dd><p>Processor extensions.</p>
+</dd>
   </dl>
 
 
   <h4 class="section">Type Parameters</h4>
   <dl class="parameters">
     <dt><code>T</code></dt>
-    <dd></dd>
+    <dd><p>Processor type.</p>
+</dd>
   </dl>
 
 

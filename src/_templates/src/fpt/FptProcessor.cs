@@ -3,13 +3,22 @@ using System.Collections.Generic;
 using System.Diagnostics.CodeAnalysis;
 using Fp;
 using Fp.Fs;
+using Fp.Fs.CommandLine;
 
-FptProcessor.Run<FptProcessor>(args,
-    "Fpt",
-    "yourDescription",
-    ".yourExtension1"); // Change or remove if no filtering desired
-public class FptProcessor : FsProcessor
+public partial class FptProcessor
 {
+    private static readonly FileProcessorInfo s_info = new(
+        "Fpt",
+        "yourDescription",
+        ".yourExtension1");
+
+    public FptProcessor() => Info = s_info;
+}
+
+public partial class FptProcessor : FsProcessor
+{
+    private static void Main(string[] args) => CommandLineFsProcessor.Run<FptProcessor>(args, s_info);
+
     protected override void ProcessImpl()
     {
         // Implement your logic here
@@ -28,8 +37,10 @@ public class FptProcessor : FsProcessor
 
 // One output, InputStream available
 /*
-public class FptProcessor : FsFormatSingleProcessor
+public partial class FptProcessor : FsFormatSingleProcessor
 {
+    private static void Main(string[] args) => CommandLineFsFormatSingleProcessor.Run<FptProcessor>(args, s_info);
+
     public override bool TryProcess([NotNullWhen(true)] out Data? data)
     {
         // Implement your logic here
@@ -40,8 +51,10 @@ public class FptProcessor : FsFormatSingleProcessor
 
 // One output of specific type, InputStream available
 /*
-public class FptProcessor : FsFormatSingleProcessor<BufferData<byte>>
+public partial class FptProcessor : FsFormatSingleProcessor<BufferData<byte>>
 {
+    private static void Main(string[] args) => CommandLineFsFormatSingleProcessor.Run<FptProcessor>(args, s_info);
+
     public override bool TryProcess([NotNullWhen(true)] out BufferData<byte>? data)
     {
         // Implement your logic here
@@ -52,8 +65,10 @@ public class FptProcessor : FsFormatSingleProcessor<BufferData<byte>>
 
 // Segmented, InputStream available
 /*
-public class FptProcessor : FsFormatMultiProcessor
+public partial class FptProcessor : FsFormatMultiProcessor
 {
+    private static void Main(string[] args) => CommandLineFsFormatMultiProcessor.Run<FptProcessor>(args, s_info);
+
     public override IEnumerable<Data> Process()
     {
         // Implement your logic here

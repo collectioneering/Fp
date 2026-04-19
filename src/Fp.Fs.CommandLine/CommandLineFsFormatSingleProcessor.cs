@@ -23,16 +23,16 @@ public class CommandLineFsFormatSingleProcessor : IFsFormatSingleRunnerType
 /// <summary>
 /// Provides methods for executing command-line programs.
 /// </summary>
-public class CommandLineFsFormatSingleProcessor<TData> where TData : Data, IFsFormatSingleRunnerType
+public class CommandLineFsFormatSingleProcessor<TData> : IFsFormatSingleRunnerType<TData> where TData : Data
 {
     /// <inheritdoc />
-    public static void Run<T>(IList<string>? args, FileProcessorInfo? info = null) where T : FormatSingleProcessor, new()
+    public static void Run<T>(IList<string>? args, FileProcessorInfo? info = null) where T : FormatSingleProcessor<TData>, new()
     {
         CommandLineFsProcessor.Run(null, args, new GenericNewFsProcessorFactory<FormatSingleProcessorFsWrapper<T>>(info));
     }
 
     /// <inheritdoc />
-    public static void Run<T>(IList<string>? args, string name, string description, params string?[] extensions) where T : FormatSingleProcessor, new()
+    public static void Run<T>(IList<string>? args, string name, string description, params string?[] extensions) where T : FormatSingleProcessor<TData>, new()
     {
         CommandLineFsProcessor.Run(null, args, new GenericNewFsProcessorFactory<FormatSingleProcessorFsWrapper<T>>(new FileProcessorInfo(name, description, description, extensions)));
     }

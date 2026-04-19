@@ -6,9 +6,10 @@
         <LangVersion>preview</LangVersion>
         <Nullable>Enable</Nullable>
     </PropertyGroup>
-    
+
     <ItemGroup>
-        <PackageReference Include="Fp.Fs" Version="0.29.0" />
+        <PackageReference Include="Fp.Fs" Version="0.31.0" />
+        <PackageReference Include="Fp.Fs.CommandLine" Version="0.31.0" />
     </ItemGroup>
 
 </Project>

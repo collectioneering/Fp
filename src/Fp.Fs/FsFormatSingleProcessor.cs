@@ -19,16 +19,16 @@ public class FsFormatSingleProcessor : FormatSingleProcessor, IFsFormatSingleRun
 }
 
 /// <inheritdoc cref="FormatSingleProcessor{T}" />
-public class FsFormatSingleProcessor<TData> : FormatSingleProcessor<TData> where TData : Data, IFsFormatSingleRunnerType
+public class FsFormatSingleProcessor<TData> : FormatSingleProcessor<TData>, IFsFormatSingleRunnerType<TData> where TData : Data
 {
     /// <inheritdoc />
-    public static void Run<T>(IList<string>? args, FileProcessorInfo? info = null) where T : FormatSingleProcessor, new()
+    public static void Run<T>(IList<string>? args, FileProcessorInfo? info = null) where T : FormatSingleProcessor<TData>, new()
     {
         FsProcessor.Run(null, args, new GenericNewFsProcessorFactory<FormatSingleProcessorFsWrapper<T>>(info));
     }
 
     /// <inheritdoc />
-    public static void Run<T>(IList<string>? args, string name, string description, params string?[] extensions) where T : FormatSingleProcessor, new()
+    public static void Run<T>(IList<string>? args, string name, string description, params string?[] extensions) where T : FormatSingleProcessor<TData>, new()
     {
         FsProcessor.Run(null, args, new GenericNewFsProcessorFactory<FormatSingleProcessorFsWrapper<T>>(new FileProcessorInfo(name, description, description, extensions)));
     }

@@ -2,11 +2,11 @@
 <html>
   <head>
     <meta charset="utf-8">
-      <title>Class CommandLineFsFormatSingleProcessor&lt;TData&gt; </title>
+      <title>Interface IFsFormatSingleRunnerType&lt;TData&gt; </title>
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
-      <meta name="title" content="Class CommandLineFsFormatSingleProcessor&lt;TData&gt; ">
+      <meta name="title" content="Interface IFsFormatSingleRunnerType&lt;TData&gt; ">
       
-      <meta name="description" content="Provides methods for executing command-line programs.">
+      <meta name="description" content="Provides base runner interface for .">
       <link rel="icon" href="../../favicon.ico">
       <link rel="stylesheet" href="../../public/docfx.min.css">
       <link rel="stylesheet" href="../../public/main.css">
@@ -16,7 +16,7 @@
       
       
       
-      <meta name="docfx:docurl" content="https://github.com/collectioneering/Fp/new/main/apiSpec/new?filename=Fp_Fs_CommandLine_CommandLineFsFormatSingleProcessor_1.md&amp;value=---%0Auid%3A%20Fp.Fs.CommandLine.CommandLineFsFormatSingleProcessor%601%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">
+      <meta name="docfx:docurl" content="https://github.com/collectioneering/Fp/new/main/apiSpec/new?filename=Fp_Fs_IFsFormatSingleRunnerType_1.md&amp;value=---%0Auid%3A%20Fp.Fs.IFsFormatSingleRunnerType%601%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">
       <meta name="loc:inThisArticle" content="In this article">
       <meta name="loc:searchResultsCount" content="{count} results for &quot;{query}&quot;">
       <meta name="loc:searchNoResults" content="No results for &quot;{query}&quot;">
@@ -80,25 +80,25 @@
           <nav id="breadcrumb"></nav>
         </div>
 
-        <article data-uid="Fp.Fs.CommandLine.CommandLineFsFormatSingleProcessor`1">
+        <article data-uid="Fp.Fs.IFsFormatSingleRunnerType`1">
 
 
 
-  <h1 id="Fp_Fs_CommandLine_CommandLineFsFormatSingleProcessor_1" data-uid="Fp.Fs.CommandLine.CommandLineFsFormatSingleProcessor`1" class="text-break">
-Class CommandLineFsFormatSingleProcessor&lt;TData&gt;  <a class="header-action link-secondary" title="View source" href="https://github.com/collectioneering/Fp/blob/main/src/Fp.Fs.CommandLine/CommandLineFsFormatSingleProcessor.cs/#L26"><i class="bi bi-code-slash"></i></a>
+  <h1 id="Fp_Fs_IFsFormatSingleRunnerType_1" data-uid="Fp.Fs.IFsFormatSingleRunnerType`1" class="text-break">
+Interface IFsFormatSingleRunnerType&lt;TData&gt;  <a class="header-action link-secondary" title="View source" href="https://github.com/collectioneering/Fp/blob/main/src/Fp.Fs/IFsFormatSingleRunnerType.cs/#L32"><i class="bi bi-code-slash"></i></a>
   </h1>
 
   <div class="facts text-secondary">
-    <dl><dt>Namespace</dt><dd><a class="xref" href="Fp.html">Fp</a>.<a class="xref" href="Fp.Fs.html">Fs</a>.<a class="xref" href="Fp.Fs.CommandLine.html">CommandLine</a></dd></dl>
-  <dl><dt>Assembly</dt><dd>Fp.Fs.CommandLine.dll</dd></dl>
+    <dl><dt>Namespace</dt><dd><a class="xref" href="Fp.html">Fp</a>.<a class="xref" href="Fp.Fs.html">Fs</a></dd></dl>
+  <dl><dt>Assembly</dt><dd>Fp.Fs.dll</dd></dl>
   </div>
 
-  <div class="markdown summary"><p>Provides methods for executing command-line programs.</p>
+  <div class="markdown summary"><p>Provides base runner interface for <a class="xref" href="../Fp/Fp.FormatSingleProcessor.html">FormatSingleProcessor</a>.</p>
 </div>
   <div class="markdown conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public class CommandLineFsFormatSingleProcessor&lt;TData&gt; : IFsFormatSingleRunnerType&lt;TData&gt; where TData : Data</code></pre>
+    <pre><code class="lang-csharp hljs">public interface IFsFormatSingleRunnerType&lt;TData&gt; where TData : Data</code></pre>
   </div>
 
 
@@ -109,47 +109,9 @@ Class CommandLineFsFormatSingleProcessor&lt;TData&gt;  <a class="header-action l
     <dd></dd>
   </dl>
 
-  <dl class="typelist inheritance">
-    <dt>Inheritance</dt>
-    <dd>
-      <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a></div>
-      <div><span class="xref">CommandLineFsFormatSingleProcessor&lt;TData&gt;</span></div>
-    </dd>
-  </dl>
-
-  <dl class="typelist implements">
-    <dt>Implements</dt>
-    <dd>
-      <div><a class="xref" href="../Fp.Fs/Fp.Fs.IFsFormatSingleRunnerType-1.html">IFsFormatSingleRunnerType</a>&lt;TData&gt;</div>
-    </dd>
-  </dl>
 
 
-  <dl class="typelist inheritedMembers">
-    <dt>Inherited Members</dt>
-    <dd>
-    <div>
-      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)">object.Equals(object)</a>
-    </div>
-    <div>
-      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)">object.Equals(object, object)</a>
-    </div>
-    <div>
-      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.gethashcode">object.GetHashCode()</a>
-    </div>
-    <div>
-      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.gettype">object.GetType()</a>
-    </div>
-    <div>
-      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone">object.MemberwiseClone()</a>
-    </div>
-    <div>
-      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.referenceequals">object.ReferenceEquals(object, object)</a>
-    </div>
-    <div>
-      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.tostring">object.ToString()</a>
-    </div>
-  </dd></dl>
+
 
 
 
@@ -160,11 +122,11 @@ Class CommandLineFsFormatSingleProcessor&lt;TData&gt;  <a class="header-action l
 </h2>
 
 
-  <a id="Fp_Fs_CommandLine_CommandLineFsFormatSingleProcessor_1_Run_" data-uid="Fp.Fs.CommandLine.CommandLineFsFormatSingleProcessor`1.Run*"></a>
+  <a id="Fp_Fs_IFsFormatSingleRunnerType_1_Run_" data-uid="Fp.Fs.IFsFormatSingleRunnerType`1.Run*"></a>
 
-  <h3 id="Fp_Fs_CommandLine_CommandLineFsFormatSingleProcessor_1_Run__1_System_Collections_Generic_IList_System_String__Fp_FileProcessorInfo_" data-uid="Fp.Fs.CommandLine.CommandLineFsFormatSingleProcessor`1.Run``1(System.Collections.Generic.IList{System.String},Fp.FileProcessorInfo)">
+  <h3 id="Fp_Fs_IFsFormatSingleRunnerType_1_Run__1_System_Collections_Generic_IList_System_String__Fp_FileProcessorInfo_" data-uid="Fp.Fs.IFsFormatSingleRunnerType`1.Run``1(System.Collections.Generic.IList{System.String},Fp.FileProcessorInfo)">
   Run&lt;T&gt;(IList&lt;string&gt;?, FileProcessorInfo?)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/collectioneering/Fp/blob/main/src/Fp.Fs.CommandLine/CommandLineFsFormatSingleProcessor.cs/#L29"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/collectioneering/Fp/blob/main/src/Fp.Fs/IFsFormatSingleRunnerType.cs/#L40"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Processes using segmented function.</p>
@@ -172,7 +134,7 @@ Class CommandLineFsFormatSingleProcessor&lt;TData&gt;  <a class="header-action l
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static void Run&lt;T&gt;(IList&lt;string&gt;? args, FileProcessorInfo? info = null) where T : FormatSingleProcessor&lt;TData&gt;, new()</code></pre>
+    <pre><code class="lang-csharp hljs">public static abstract void Run&lt;T&gt;(IList&lt;string&gt;? args, FileProcessorInfo? info = null) where T : FormatSingleProcessor&lt;TData&gt;, new()</code></pre>
   </div>
 
   <h4 class="section">Parameters</h4>
@@ -202,11 +164,11 @@ Class CommandLineFsFormatSingleProcessor&lt;TData&gt;  <a class="header-action l
 
 
 
-  <a id="Fp_Fs_CommandLine_CommandLineFsFormatSingleProcessor_1_Run_" data-uid="Fp.Fs.CommandLine.CommandLineFsFormatSingleProcessor`1.Run*"></a>
+  <a id="Fp_Fs_IFsFormatSingleRunnerType_1_Run_" data-uid="Fp.Fs.IFsFormatSingleRunnerType`1.Run*"></a>
 
-  <h3 id="Fp_Fs_CommandLine_CommandLineFsFormatSingleProcessor_1_Run__1_System_Collections_Generic_IList_System_String__System_String_System_String_System_String___" data-uid="Fp.Fs.CommandLine.CommandLineFsFormatSingleProcessor`1.Run``1(System.Collections.Generic.IList{System.String},System.String,System.String,System.String[])">
+  <h3 id="Fp_Fs_IFsFormatSingleRunnerType_1_Run__1_System_Collections_Generic_IList_System_String__System_String_System_String_System_String___" data-uid="Fp.Fs.IFsFormatSingleRunnerType`1.Run``1(System.Collections.Generic.IList{System.String},System.String,System.String,System.String[])">
   Run&lt;T&gt;(IList&lt;string&gt;?, string, string, params string?[])
-  <a class="header-action link-secondary" title="View source" href="https://github.com/collectioneering/Fp/blob/main/src/Fp.Fs.CommandLine/CommandLineFsFormatSingleProcessor.cs/#L35"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/collectioneering/Fp/blob/main/src/Fp.Fs/IFsFormatSingleRunnerType.cs/#L50"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Processes using segmented function.</p>
@@ -214,7 +176,7 @@ Class CommandLineFsFormatSingleProcessor&lt;TData&gt;  <a class="header-action l
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static void Run&lt;T&gt;(IList&lt;string&gt;? args, string name, string description, params string?[] extensions) where T : FormatSingleProcessor&lt;TData&gt;, new()</code></pre>
+    <pre><code class="lang-csharp hljs">public static abstract void Run&lt;T&gt;(IList&lt;string&gt;? args, string name, string description, params string?[] extensions) where T : FormatSingleProcessor&lt;TData&gt;, new()</code></pre>
   </div>
 
   <h4 class="section">Parameters</h4>
@@ -254,7 +216,7 @@ Class CommandLineFsFormatSingleProcessor&lt;TData&gt;  <a class="header-action l
 </article>
 
         <div class="contribution d-print-none">
-          <a href="https://github.com/collectioneering/Fp/blob/main/src/Fp.Fs.CommandLine/CommandLineFsFormatSingleProcessor.cs/#L26" class="edit-link">Edit this page</a>
+          <a href="https://github.com/collectioneering/Fp/blob/main/src/Fp.Fs/IFsFormatSingleRunnerType.cs/#L32" class="edit-link">Edit this page</a>
         </div>
 
 
