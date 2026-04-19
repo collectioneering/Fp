@@ -1,4 +1,4 @@
-<Project Sdk="Microsoft.NET.Sdk">
+﻿<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
     <PackageVersion>0.30.0</PackageVersion>
@@ -23,17 +23,21 @@
   </PropertyGroup>
 
   <PropertyGroup>
-    <Authors>riina,Lucina</Authors>
-    <Owners>riina,Lucina</Owners>
-    <Description>File processing (filesystem variants)</Description>
-    <Copyright>Copyright ©2020 riina</Copyright>
+    <Authors>riina</Authors>
+    <Owners>riina</Owners>
+    <Description>Command-line support for Fp.Fs</Description>
+    <Copyright>Copyright ©2026 riina</Copyright>
     <PackageProjectUrl>https://github.com/collectioneering/Fp</PackageProjectUrl>
     <RepositoryUrl>https://github.com/collectioneering/Fp</RepositoryUrl>
     <Company>riina</Company>
   </PropertyGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\Fp\Fp.csproj" />
+    <PackageReference Include="System.CommandLine" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Fp.Fs\Fp.Fs.csproj" />
   </ItemGroup>
 
   <PropertyGroup>

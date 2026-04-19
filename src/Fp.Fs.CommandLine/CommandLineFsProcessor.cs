@@ -1,28 +1,25 @@
-using System;
+﻿using System;
 using System.Collections.Generic;
+using System.Diagnostics;
 using System.Linq;
 
-namespace Fp.Fs;
+namespace Fp.Fs.CommandLine;
 
-// ReSharper disable InconsistentNaming
-public partial class FsProcessor : IFsRunnerType
+/// <summary>
+/// Provides methods for executing command-line programs.
+/// </summary>
+public class CommandLineFsProcessor : IFsRunnerType
 {
-    /// <summary>
-    /// Keyword arg for stopping cli execution.
-    /// </summary>
-    public const string NO_EXECUTE_CLI = "--no-execute-cli";
-
-    /// <summary>
-    /// Registered scripting processors.
-    /// </summary>
-    public static readonly FsProcessorSource Registered = new();
-
     /// <inheritdoc />
     public static void Run(FileSystemSource? fileSystemSource, IList<string>? args, params FsProcessorFactory[] factories)
     {
-        Registered.Factories.UnionWith(factories);
-        if (args == null || args.Count == 1 && args[0] == NO_EXECUTE_CLI) return;
-        Coordinator.CliRunFilesystem(args.ToArray(), default, default, fileSystemSource, factories);
+        FsProcessor.Registered.Factories.UnionWith(factories);
+        Debug.Assert(FsProcessor.NO_EXECUTE_CLI == FpFsRootCommand.NoExecuteCliOption);
+        var rootCommand = new FpFsRootCommand(fileSystemSource, factories);
+        var parseResult = rootCommand.Parse(args?.ToArray() ?? []);
+        parseResult.InvocationConfiguration.Output = Console.Out;
+        parseResult.InvocationConfiguration.Error = Console.Error;
+        parseResult.Invoke();
     }
 
     /// <inheritdoc />

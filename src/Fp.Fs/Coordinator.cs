@@ -51,6 +51,33 @@ public static class Coordinator
 
     #region CLI tools
 
+    internal static FpInput ResolveFpInputForPath(string str)
+    {
+        string full = Path.GetFullPath(str);
+        return new FpInput(
+            File.Exists(str),
+            Path.GetDirectoryName(full) ?? Path.GetPathRoot(full) ?? throw new ArgumentException($"Failed to resolve path root for [{str}] (full: [{full}])"),
+            full);
+    }
+
+    internal static void AppendProcessorInfos(
+        StringBuilder stringBuilder,
+        IEnumerable<FileProcessorInfo> infos,
+        string linePrefix = "")
+    {
+        foreach (var i in infos)
+        {
+            stringBuilder.Append(i.Name).AppendLine()
+                .Append(linePrefix).Append("    Extensions:");
+            if (i.Extensions.Length == 0) stringBuilder.Append(" <all>");
+            else stringBuilder.Append(' ').Append(i.Extensions[0] ?? "<empty>");
+            foreach (string? ext in i.Extensions.Skip(1))
+                stringBuilder.Append(", ").Append(ext ?? "<empty>");
+            stringBuilder.AppendLine()
+                .Append(linePrefix).Append("    ").Append(i.ExtendedDescription.Replace("\n", "\n    ")).AppendLine();
+        }
+    }
+
     /// <summary>
     /// Gets processor configuration from cli.
     /// </summary>
@@ -62,9 +89,13 @@ public static class Coordinator
     /// <param name="executionSettings">Generated execution settings.</param>
     /// <param name="inputs">Generated input sources.</param>
     /// <returns>True if parsing succeeded.</returns>
-    public static bool CliGetConfiguration(IList<string> exeName, IReadOnlyList<string> args,
-        ILogWriter? logWriter, bool enableParallel, [NotNullWhen(true)] out ProcessorConfiguration? configuration,
-        [NotNullWhen(true)] out ExecutionSettings? executionSettings, out List<FpInput> inputs)
+    public static bool CliGetConfiguration(IList<string> exeName,
+        IReadOnlyList<string> args,
+        ILogWriter? logWriter,
+        bool enableParallel,
+        [NotNullWhen(true)] out ProcessorConfiguration? configuration,
+        [NotNullWhen(true)] out ExecutionSettings? executionSettings,
+        out List<FpInput> inputs)
     {
         logWriter ??= NullLog.Instance;
         configuration = null;
@@ -89,9 +120,7 @@ public static class Coordinator
             if (str.Length == 0) continue;
             if (str[0] != '-')
             {
-                string full = Path.GetFullPath(str);
-                inputs.Add(
-                    new FpInput(File.Exists(str), Path.GetDirectoryName(full) ?? Path.GetFullPath("/"), full));
+                inputs.Add(ResolveFpInputForPath(str));
                 continue;
             }
 
@@ -160,18 +189,7 @@ public static class Coordinator
                 sb.Append(' ').Append(str);
 
             var sb2 = new StringBuilder();
-            foreach (var x in FsProcessor.Registered.Factories)
-            {
-                var i = x.Info;
-                sb2.Append(i.Name).AppendLine()
-                    .Append("    Extensions:");
-                if (i.Extensions.Length == 0) sb2.Append(" <all>");
-                else sb2.Append(' ').Append(i.Extensions[0] ?? "<empty>");
-                foreach (string? ext in i.Extensions.Skip(1))
-                    sb2.Append(", ").Append(ext ?? "<empty>");
-                sb2.AppendLine()
-                    .Append("    ").Append(i.ExtendedDescription.Replace("\n", "\n    ")).AppendLine();
-            }
+            AppendProcessorInfos(sb2, FsProcessor.Registered.Factories.Select(static v => v.Info));
 
             logWriter.WriteInformation(@$"Usage:
     {sb} <inputs...> [options/flags] [-- [args...]]
@@ -218,9 +236,11 @@ Flags:
     /// <param name="logWriter">Log output target.</param>
     /// <returns>A task that will execute recursively.</returns>
     /// <exception cref="ArgumentException">Thrown if an invalid number of arguments is provided.</exception>
-    public static void CliRunFilesystem<T>(string[] args, IList<string>? exeName = null,
-        ILogWriter? logWriter = null, FileSystemSource? fileSystem = null) where T : FsProcessor, new() =>
-        CliRunFilesystem(args, exeName, logWriter, fileSystem, FsProcessor.GetFsFactory<T>());
+    public static void CliRunFilesystem<T>(string[] args,
+        IList<string>? exeName = null,
+        ILogWriter? logWriter = null,
+        FileSystemSource? fileSystem = null) where T : FsProcessor, new() =>
+        CliRunFilesystem(args, exeName, logWriter, fileSystem, [FsProcessor.GetFsFactory<T>()]);
 
     /// <summary>
     /// Processes filesystem tree using command-line argument inputs.
@@ -232,21 +252,45 @@ Flags:
     /// <param name="logWriter">Log output target.</param>
     /// <returns>A task that will execute recursively.</returns>
     /// <exception cref="ArgumentException">Thrown if an invalid number of arguments is provided.</exception>
-    public static void CliRunFilesystem(string[] args, IList<string>? exeName, ILogWriter? logWriter,
-        FileSystemSource? fileSystem, params FsProcessorFactory[] processorFactories)
+    public static void CliRunFilesystem(
+        string[] args,
+        IList<string>? exeName,
+        ILogWriter? logWriter,
+        FileSystemSource? fileSystem,
+        IReadOnlyList<FsProcessorFactory> processorFactories)
     {
         exeName ??= GuessExe(args);
         logWriter ??= ConsoleLog.Default;
-        fileSystem ??= FileSystemSource.Default;
         if (!CliGetConfiguration(exeName, args, logWriter, false, out ProcessorConfiguration? conf,
                 out ExecutionSettings? exec, out var inputs)) return;
-        switch (exec.Parallel)
+        CliRunFilesystem(conf, exec, inputs, fileSystem, processorFactories);
+    }
+
+    /// <summary>
+    /// Processes filesystem tree.
+    /// </summary>
+    /// <param name="processorConfiguration">Processor configuration.</param>
+    /// <param name="executionSettings">Execution settings.</param>
+    /// <param name="inputs">Inputs.</param>
+    /// <param name="fileSystem">Filesystem to read from.</param>
+    /// <param name="processorFactories">Functions that create new processor instances.</param>
+    /// <returns>A task that will execute recursively.</returns>
+    /// <exception cref="ArgumentException">Thrown if an invalid number of arguments is provided.</exception>
+    public static void CliRunFilesystem(
+        ProcessorConfiguration processorConfiguration,
+        ExecutionSettings executionSettings,
+        IReadOnlyList<FpInput> inputs,
+        FileSystemSource? fileSystem,
+        IReadOnlyList<FsProcessorFactory> processorFactories)
+    {
+        fileSystem ??= FileSystemSource.Default;
+        switch (executionSettings.Parallel)
         {
             case 0:
-                Recurse(inputs, new ExecutionSource(conf, exec, fileSystem), processorFactories);
+                Recurse(inputs, new ExecutionSource(processorConfiguration, executionSettings, fileSystem), processorFactories);
                 break;
             default:
-                RecurseAsync(inputs, new ExecutionSource(conf, exec, fileSystem), processorFactories).Wait();
+                RecurseAsync(inputs, new ExecutionSource(processorConfiguration, executionSettings, fileSystem), processorFactories).Wait();
                 break;
         }
     }
@@ -260,9 +304,11 @@ Flags:
     /// <param name="logWriter">Log output target.</param>
     /// <returns>A task that will execute recursively.</returns>
     /// <exception cref="ArgumentException">Thrown if an invalid number of arguments is provided.</exception>
-    public static async Task CliRunFilesystemAsync<T>(string[] args, IList<string>? exeName = null,
-        ILogWriter? logWriter = null, FileSystemSource? fileSystem = null) where T : FsProcessor, new() =>
-        await CliRunFilesystemAsync(args, exeName, logWriter, fileSystem, FsProcessor.GetFsFactory<T>());
+    public static async Task CliRunFilesystemAsync<T>(string[] args,
+        IList<string>? exeName = null,
+        ILogWriter? logWriter = null,
+        FileSystemSource? fileSystem = null) where T : FsProcessor, new() =>
+        await CliRunFilesystemAsync(args, exeName, logWriter, fileSystem, [FsProcessor.GetFsFactory<T>()]);
 
     /// <summary>
     /// Processes filesystem tree using command-line argument inputs.
@@ -274,26 +320,48 @@ Flags:
     /// <param name="logWriter">Log output target.</param>
     /// <returns>A task that will execute recursively.</returns>
     /// <exception cref="ArgumentException">Thrown if an invalid number of arguments is provided.</exception>
-    public static async Task CliRunFilesystemAsync(string[] args, IList<string>? exeName,
-        ILogWriter? logWriter, FileSystemSource? fileSystem, params FsProcessorFactory[] processorFactories)
+    public static Task CliRunFilesystemAsync(string[] args,
+        IList<string>? exeName,
+        ILogWriter? logWriter,
+        FileSystemSource? fileSystem,
+        IReadOnlyList<FsProcessorFactory> processorFactories)
     {
         exeName ??= GuessExe(args);
         logWriter ??= ConsoleLog.Default;
-        fileSystem ??= FileSystemSource.Default;
         if (!CliGetConfiguration(exeName, args, logWriter, true, out ProcessorConfiguration? conf,
-                out ExecutionSettings? exec, out var inputs)) return;
-        switch (exec.Parallel)
+                out ExecutionSettings? exec, out var inputs)) return Task.CompletedTask;
+        return CliRunFilesystemAsync(conf, exec, inputs, fileSystem, processorFactories);
+    }
+
+    /// <summary>
+    /// Processes filesystem tree.
+    /// </summary>
+    /// <param name="processorConfiguration">Processor configuration.</param>
+    /// <param name="executionSettings">Execution settings.</param>
+    /// <param name="inputs">Inputs.</param>
+    /// <param name="fileSystem">Filesystem to read from.</param>
+    /// <param name="processorFactories">Functions that create new processor instances.</param>
+    /// <returns>A task that will execute recursively.</returns>
+    /// <exception cref="ArgumentException">Thrown if an invalid number of arguments is provided.</exception>
+    public static async Task CliRunFilesystemAsync(
+        ProcessorConfiguration processorConfiguration,
+        ExecutionSettings executionSettings,
+        IReadOnlyList<FpInput> inputs,
+        FileSystemSource? fileSystem,
+        IReadOnlyList<FsProcessorFactory> processorFactories)
+    {
+        fileSystem ??= FileSystemSource.Default;
+        switch (executionSettings.Parallel)
         {
             case 0:
                 // ReSharper disable once MethodHasAsyncOverload
-                Recurse(inputs, new ExecutionSource(conf, exec, fileSystem), processorFactories);
+                Recurse(inputs, new ExecutionSource(processorConfiguration, executionSettings, fileSystem), processorFactories);
                 break;
             default:
-                await RecurseAsync(inputs, new ExecutionSource(conf, exec, fileSystem), processorFactories);
+                await RecurseAsync(inputs, new ExecutionSource(processorConfiguration, executionSettings, fileSystem), processorFactories);
                 break;
         }
     }
-
 
     /// <summary>
     /// Guesses executable string (might be multiple components) based on args.
@@ -304,7 +372,8 @@ Flags:
     /// <remarks>
     /// Just matches up the tail and sends the rest, fallback on argv[0].
     /// </remarks>
-    public static IList<string> GuessExe(IList<string>? args, bool prependDotNetIfDll = true)
+    public static IList<string> GuessExe(IList<string>? args,
+        bool prependDotNetIfDll = true)
     {
         var list = GuessExeCore(args);
         if (list[0].EndsWith(".dll", StringComparison.InvariantCultureIgnoreCase) && prependDotNetIfDll)
@@ -324,7 +393,9 @@ Flags:
     /// <param name="processorFactories">Functions that create new processor instances.</param>
     /// <returns>Task that will execute recursively.</returns>
     /// <exception cref="ArgumentException">Thrown if <paramref name="processorFactories"/> is empty or <paramref name="src"/>.<see cref="ExecutionSource.Exec"/>.<see cref="ExecutionSettings.Parallel"/> is less than 1.</exception>
-    public static async Task RecurseAsync(IReadOnlyList<FpInput> inputs, ExecutionSource src, params FsProcessorFactory[] processorFactories)
+    public static async Task RecurseAsync(IReadOnlyList<FpInput> inputs,
+        ExecutionSource src,
+        IReadOnlyList<FsProcessorFactory> processorFactories)
     {
         InitializeProcessors(src.Exec, processorFactories, out var processors, out int baseCount, out int parallelCount);
         SeedInputs(inputs, out var dQueue, out var fQueue);
@@ -353,8 +424,9 @@ Flags:
     /// <param name="src">Execution source.</param>
     /// <param name="processorFactories">Functions that create new processor instances.</param>
     /// <exception cref="ArgumentException">Thrown if <paramref name="processorFactories"/> is empty or <paramref name="src"/>.<see cref="ExecutionSource.Exec"/>.<see cref="ExecutionSettings.Parallel"/> is less than 1.</exception>
-    public static void Recurse(IReadOnlyList<FpInput> inputs, ExecutionSource src,
-        params FsProcessorFactory[] processorFactories)
+    public static void Recurse(IReadOnlyList<FpInput> inputs,
+        ExecutionSource src,
+        IReadOnlyList<FsProcessorFactory> processorFactories)
     {
         if (src.Exec.Parallel != 0)
             throw new ArgumentException($"Cannot start synchronous operation with {nameof(src.Exec.Parallel)} value of {src.Exec.Parallel}, use {nameof(Coordinator)}.{nameof(RecurseAsync)} instead");
@@ -381,7 +453,10 @@ Flags:
     /// <param name="src">Execution source.</param>
     /// <param name="workerId">Worker ID.</param>
     /// <returns>Processing result.</returns>
-    public static ProcessResult Run(FsProcessor processor, FpTarget source, ExecutionSource src, int workerId)
+    public static ProcessResult Run(FsProcessor processor,
+        FpTarget source,
+        ExecutionSource src,
+        int workerId)
     {
         try
         {
@@ -423,7 +498,10 @@ Flags:
     /// <param name="src">Execution source.</param>
     /// <param name="workerId">Worker ID.</param>
     /// <returns>Processing results.</returns>
-    public static IEnumerable<Data> RunSegmented(FsProcessor processor, (string inputRoot, string file) input, ExecutionSource src, int workerId)
+    public static IEnumerable<Data> RunSegmented(FsProcessor processor,
+        (string inputRoot, string file) input,
+        ExecutionSource src,
+        int workerId)
     {
         try
         {
@@ -474,26 +552,32 @@ Flags:
             : new List<string> { DefaultCurrentExecutableName };
     }
 
-    private static string? GetArgValue(IReadOnlyList<string> args, int cPos) =>
+    private static string? GetArgValue(IReadOnlyList<string> args,
+        int cPos) =>
         cPos + 1 >= args.Count ? null : args[cPos + 1];
 
-    private static void InitializeProcessors(ExecutionSettings exec, FsProcessorFactory[] processorFactories, out FsProcessor[] processors, out int baseCount, out int parallelCount)
+    private static void InitializeProcessors(ExecutionSettings exec,
+        IReadOnlyList<FsProcessorFactory> processorFactories,
+        out FsProcessor[] processors,
+        out int baseCount,
+        out int parallelCount)
     {
-        if (processorFactories.Length == 0)
+        if (processorFactories.Count == 0)
             throw new ArgumentException("Cannot start operation with 0 provided processors");
         if (exec.Parallel < 0)
             throw new ArgumentException(
                 $"Illegal {nameof(exec.Parallel)} value of {exec.Parallel}");
         parallelCount = Math.Min(TaskScheduler.Current.MaximumConcurrencyLevel,
             Math.Max(1, exec.Parallel));
-        baseCount = processorFactories.Length;
+        baseCount = processorFactories.Count;
         processors = new FsProcessor[parallelCount * baseCount];
         for (int iParallel = 0; iParallel < parallelCount; iParallel++)
         for (int iBase = 0; iBase < baseCount; iBase++)
             processors[iParallel * baseCount + iBase] = processorFactories[iBase].CreateProcessor();
     }
 
-    private static void SeedInputs(IEnumerable<FpInput> inputs, out Queue<FpTarget> dQueue,
+    private static void SeedInputs(IEnumerable<FpInput> inputs,
+        out Queue<FpTarget> dQueue,
         out Queue<FpTarget> fQueue)
     {
         dQueue = new Queue<FpTarget>();
@@ -502,7 +586,9 @@ Flags:
             (isFile ? fQueue : dQueue).Enqueue(new FpTarget(dir, item));
     }
 
-    private static void GetMoreInputs(FileSystemSource fileSystem, Queue<FpTarget> dQueue, Queue<FpTarget> fQueue)
+    private static void GetMoreInputs(FileSystemSource fileSystem,
+        Queue<FpTarget> dQueue,
+        Queue<FpTarget> fQueue)
     {
         (string inputRoot, string curDir) = dQueue.Dequeue();
         if (!fileSystem.DirectoryExists(curDir)) return;
@@ -512,7 +598,8 @@ Flags:
             dQueue.Enqueue(new FpTarget(inputRoot, folder));
     }
 
-    private static bool _TryDequeue<T>(this Queue<T> queue, [NotNullWhen(true)] out T? result)
+    private static bool _TryDequeue<T>(this Queue<T> queue,
+        [NotNullWhen(true)] out T? result)
     {
         if (queue.Count != 0)
         {

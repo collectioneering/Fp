@@ -2,50 +2,34 @@ using System.Collections.Generic;
 
 namespace Fp.Fs;
 
-/// <inheritdoc />
-public class FsFormatSingleProcessor : FormatSingleProcessor
+/// <inheritdoc cref="FormatSingleProcessor" />
+public class FsFormatSingleProcessor : FormatSingleProcessor, IFsFormatSingleRunnerType
 {
-    /// <summary>
-    /// Processes using segmented function.
-    /// </summary>
-    /// <param name="args">Arguments. If null, only register processor.</param>
-    /// <param name="info">Processor info.</param>
-    /// <typeparam name="T">Processor type.</typeparam>
-    public static void Run<T>(IList<string>? args, FileProcessorInfo? info = null) where T : FormatSingleProcessor, new() =>
+    /// <inheritdoc />
+    public static void Run<T>(IList<string>? args, FileProcessorInfo? info = null) where T : FormatSingleProcessor, new()
+    {
         FsProcessor.Run(null, args, new GenericNewFsProcessorFactory<FormatSingleProcessorFsWrapper<T>>(info));
+    }
 
-    /// <summary>
-    /// Processes using segmented function.
-    /// </summary>
-    /// <param name="args">Arguments. If null, only register processor.</param>
-    /// <param name="name">Processor name.</param>
-    /// <param name="description">Processor description.</param>
-    /// <param name="extensions">Processor extensions.</param>
-    /// <typeparam name="T">Processor type.</typeparam>
-    public static void Run<T>(IList<string>? args, string name, string description, params string?[] extensions) where T : FormatSingleProcessor, new() =>
+    /// <inheritdoc />
+    public static void Run<T>(IList<string>? args, string name, string description, params string?[] extensions) where T : FormatSingleProcessor, new()
+    {
         FsProcessor.Run(null, args, new GenericNewFsProcessorFactory<FormatSingleProcessorFsWrapper<T>>(new FileProcessorInfo(name, description, description, extensions)));
+    }
 }
 
-/// <inheritdoc />
-public class FsFormatSingleProcessor<T> : FormatSingleProcessor<T> where T : Data
+/// <inheritdoc cref="FormatSingleProcessor{T}" />
+public class FsFormatSingleProcessor<TData> : FormatSingleProcessor<TData> where TData : Data, IFsFormatSingleRunnerType
 {
-    /// <summary>
-    /// Processes using segmented function.
-    /// </summary>
-    /// <param name="args">Arguments. If null, only register processor.</param>
-    /// <param name="info">Processor info.</param>
-    /// <typeparam name="TProcessor">Processor type.</typeparam>
-    public static void Run<TProcessor>(IList<string>? args, FileProcessorInfo? info = null) where TProcessor : FormatSingleProcessor, new() =>
-        FsProcessor.Run(null, args, new GenericNewFsProcessorFactory<FormatSingleProcessorFsWrapper<TProcessor>>(info));
+    /// <inheritdoc />
+    public static void Run<T>(IList<string>? args, FileProcessorInfo? info = null) where T : FormatSingleProcessor, new()
+    {
+        FsProcessor.Run(null, args, new GenericNewFsProcessorFactory<FormatSingleProcessorFsWrapper<T>>(info));
+    }
 
-    /// <summary>
-    /// Processes using segmented function.
-    /// </summary>
-    /// <param name="args">Arguments. If null, only register processor.</param>
-    /// <param name="name">Processor name.</param>
-    /// <param name="description">Processor description.</param>
-    /// <param name="extensions">Processor extensions.</param>
-    /// <typeparam name="TProcessor">Processor type.</typeparam>
-    public static void Run<TProcessor>(IList<string>? args, string name, string description, params string?[] extensions) where TProcessor : FormatSingleProcessor, new() =>
-        FsProcessor.Run(null, args, new GenericNewFsProcessorFactory<FormatSingleProcessorFsWrapper<TProcessor>>(new FileProcessorInfo(name, description, description, extensions)));
+    /// <inheritdoc />
+    public static void Run<T>(IList<string>? args, string name, string description, params string?[] extensions) where T : FormatSingleProcessor, new()
+    {
+        FsProcessor.Run(null, args, new GenericNewFsProcessorFactory<FormatSingleProcessorFsWrapper<T>>(new FileProcessorInfo(name, description, description, extensions)));
+    }
 }

@@ -7,6 +7,7 @@
 |----------------------|-----------------------------------------------------------------------------------------------------------------------|
 | `Fp`                 | [![NuGet](https://img.shields.io/nuget/v/Fp.svg)](https://www.nuget.org/packages/Fp/)                                 |
 | `Fp.Fs`              | [![NuGet](https://img.shields.io/nuget/v/Fp.Fs.svg)](https://www.nuget.org/packages/Fp.Fs/)                           |
+| `Fp.Fs.CommandLine`  | [![NuGet](https://img.shields.io/nuget/v/Fp.Fs.CommandLine.svg)](https://www.nuget.org/packages/Fp.Fs.CommandLine/)   |
 | `Fp.Plus`            | [![NuGet](https://img.shields.io/nuget/v/Fp.Plus.svg)](https://www.nuget.org/packages/Fp.Plus/)                       |
 | `Fp.Platforms.Nitro` | [![NuGet](https://img.shields.io/nuget/v/Fp.Platforms.Nitro.svg)](https://www.nuget.org/packages/Fp.Platforms.Nitro/) |
 | `Fp.Templates`       | [![NuGet](https://img.shields.io/nuget/v/Fp.Templates.svg)](https://www.nuget.org/packages/Fp.Templates/)             |
