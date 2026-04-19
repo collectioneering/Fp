@@ -1,7 +1,100 @@
 {
-  "source_base_path": "/Users/Shared/gabura/git/Fp/src/_docfx",
+  "source_base_path": "C:/workspace/Fp/src/_docfx",
   "xrefmap": "xrefmap.yml",
   "files": [
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Fp.Fs.CommandLine/Fp.Fs.CommandLine.CommandLineFsFormatMultiProcessor.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Fp.Fs.CommandLine/Fp.Fs.CommandLine.CommandLineFsFormatMultiProcessor.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Fp.Fs.CommandLine.CommandLineFsFormatMultiProcessor",
+      "Summary": "<p sourcefile=\"api/Fp.Fs.CommandLine/Fp.Fs.CommandLine.CommandLineFsFormatMultiProcessor.yml\" sourcestartlinenumber=\"1\">Provides methods for executing command-line programs.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Fp.Fs.CommandLine/Fp.Fs.CommandLine.CommandLineFsFormatSingleProcessor-1.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Fp.Fs.CommandLine/Fp.Fs.CommandLine.CommandLineFsFormatSingleProcessor-1.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Fp.Fs.CommandLine.CommandLineFsFormatSingleProcessor<TData>",
+      "Summary": "<p sourcefile=\"api/Fp.Fs.CommandLine/Fp.Fs.CommandLine.CommandLineFsFormatSingleProcessor-1.yml\" sourcestartlinenumber=\"1\">Provides methods for executing command-line programs.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Fp.Fs.CommandLine/Fp.Fs.CommandLine.CommandLineFsFormatSingleProcessor.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Fp.Fs.CommandLine/Fp.Fs.CommandLine.CommandLineFsFormatSingleProcessor.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Fp.Fs.CommandLine.CommandLineFsFormatSingleProcessor",
+      "Summary": "<p sourcefile=\"api/Fp.Fs.CommandLine/Fp.Fs.CommandLine.CommandLineFsFormatSingleProcessor.yml\" sourcestartlinenumber=\"1\">Provides methods for executing command-line programs.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Fp.Fs.CommandLine/Fp.Fs.CommandLine.CommandLineFsProcessor.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Fp.Fs.CommandLine/Fp.Fs.CommandLine.CommandLineFsProcessor.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Fp.Fs.CommandLine.CommandLineFsProcessor",
+      "Summary": "<p sourcefile=\"api/Fp.Fs.CommandLine/Fp.Fs.CommandLine.CommandLineFsProcessor.yml\" sourcestartlinenumber=\"1\">Provides methods for executing command-line programs.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Fp.Fs.CommandLine/Fp.Fs.CommandLine.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Fp.Fs.CommandLine/Fp.Fs.CommandLine.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Fp.Fs.CommandLine",
+      "Summary": null
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "api/Fp.Fs.CommandLine/index.md",
+      "output": {
+        ".html": {
+          "relative_path": "api/Fp.Fs.CommandLine/index.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Toc",
+      "source_relative_path": "api/Fp.Fs.CommandLine/toc.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Fp.Fs.CommandLine/toc.html"
+        },
+        ".json": {
+          "relative_path": "api/Fp.Fs.CommandLine/toc.json"
+        }
+      },
+      "version": ""
+    },
     {
       "type": "ManagedReference",
       "source_relative_path": "api/Fp.Fs/Fp.Fs.Coordinator.ExecutionSettings.yml",
@@ -181,7 +274,7 @@
       "version": "",
       "Uid": null,
       "IsMRef": true,
-      "Title": "Fp.Fs.FsFormatSingleProcessor<T>",
+      "Title": "Fp.Fs.FsFormatSingleProcessor<TData>",
       "Summary": "<p sourcefile=\"api/Fp.Fs/Fp.Fs.FsFormatSingleProcessor-1.yml\" sourcestartlinenumber=\"1\">Represents a processor that operates on a single input and generates multiple outputs.</p>\n"
     },
     {
@@ -267,6 +360,48 @@
       "IsMRef": true,
       "Title": "Fp.Fs.GenericNewFsProcessorFactory<T>",
       "Summary": "<p sourcefile=\"api/Fp.Fs/Fp.Fs.GenericNewFsProcessorFactory-1.yml\" sourcestartlinenumber=\"1\">Processor descriptor.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Fp.Fs/Fp.Fs.IFsFormatMultiRunnerType.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Fp.Fs/Fp.Fs.IFsFormatMultiRunnerType.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Fp.Fs.IFsFormatMultiRunnerType",
+      "Summary": "<p sourcefile=\"api/Fp.Fs/Fp.Fs.IFsFormatMultiRunnerType.yml\" sourcestartlinenumber=\"1\">Provides base runner interface for <xref href=\"Fp.FormatMultiProcessor\" data-throw-if-not-resolved=\"false\"></xref>.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Fp.Fs/Fp.Fs.IFsFormatSingleRunnerType.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Fp.Fs/Fp.Fs.IFsFormatSingleRunnerType.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Fp.Fs.IFsFormatSingleRunnerType",
+      "Summary": "<p sourcefile=\"api/Fp.Fs/Fp.Fs.IFsFormatSingleRunnerType.yml\" sourcestartlinenumber=\"1\">Provides base runner interface for <xref href=\"Fp.FormatSingleProcessor\" data-throw-if-not-resolved=\"false\"></xref>.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Fp.Fs/Fp.Fs.IFsRunnerType.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Fp.Fs/Fp.Fs.IFsRunnerType.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Fp.Fs.IFsRunnerType",
+      "Summary": "<p sourcefile=\"api/Fp.Fs/Fp.Fs.IFsRunnerType.yml\" sourcestartlinenumber=\"1\">Provides base runner interface for <xref href=\"Fp.Fs.FsProcessor\" data-throw-if-not-resolved=\"false\"></xref>.</p>\n"
     },
     {
       "type": "ManagedReference",
@@ -983,6 +1118,34 @@
     },
     {
       "type": "ManagedReference",
+      "source_relative_path": "api/Fp/Fp.Helpers.BaseUnmanagedMultiByteIntegerArrayHelper-1.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Fp/Fp.Helpers.BaseUnmanagedMultiByteIntegerArrayHelper-1.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Fp.Helpers.BaseUnmanagedMultiByteIntegerArrayHelper<T>",
+      "Summary": "<p sourcefile=\"api/Fp/Fp.Helpers.BaseUnmanagedMultiByteIntegerArrayHelper-1.yml\" sourcestartlinenumber=\"1\">Base unmanaged multi-byte integer array data helper.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Fp/Fp.Helpers.BaseUnmanagedSingleByteIntegerArrayHelper-1.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Fp/Fp.Helpers.BaseUnmanagedSingleByteIntegerArrayHelper-1.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Fp.Helpers.BaseUnmanagedSingleByteIntegerArrayHelper<T>",
+      "Summary": "<p sourcefile=\"api/Fp/Fp.Helpers.BaseUnmanagedSingleByteIntegerArrayHelper-1.yml\" sourcestartlinenumber=\"1\">Base unmanaged single byte integer array data helper.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
       "source_relative_path": "api/Fp/Fp.Helpers.F16ArrayHelper.yml",
       "output": {
         ".html": {
@@ -1389,6 +1552,20 @@
     },
     {
       "type": "ManagedReference",
+      "source_relative_path": "api/Fp/Fp.IndexUtility.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Fp/Fp.IndexUtility.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Fp.IndexUtility",
+      "Summary": "<p sourcefile=\"api/Fp/Fp.IndexUtility.yml\" sourcestartlinenumber=\"1\">Provides utilities for working with <xref href=\"System.Index\" data-throw-if-not-resolved=\"false\"></xref>.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
       "source_relative_path": "api/Fp/Fp.LogLevel.yml",
       "output": {
         ".html": {
@@ -1568,6 +1745,20 @@
       "IsMRef": true,
       "Title": "Fp.ProcessorConfiguration",
       "Summary": "<p sourcefile=\"api/Fp/Fp.ProcessorConfiguration.yml\" sourcestartlinenumber=\"1\">Configuration for batch-processing fs with processors.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Fp/Fp.RangeUtility.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Fp/Fp.RangeUtility.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Fp.RangeUtility",
+      "Summary": "<p sourcefile=\"api/Fp/Fp.RangeUtility.yml\" sourcestartlinenumber=\"1\">Provides utilities for working with <xref href=\"System.Range\" data-throw-if-not-resolved=\"false\"></xref>.</p>\n"
     },
     {
       "type": "ManagedReference",

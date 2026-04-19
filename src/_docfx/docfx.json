@@ -37,6 +37,23 @@
     {
       "src": [
         {
+          "src": "../Fp.Fs.CommandLine",
+          "files": [
+            "**.csproj"
+          ],
+          "exclude": [
+            "**/bin/**",
+            "**/obj/**"
+          ]
+        }
+      ],
+      "dest": "api/Fp.Fs.CommandLine",
+      "disableGitFeatures": false,
+      "disableDefaultFilter": false
+    },
+    {
+      "src": [
+        {
           "src": "../Fp.Plus",
           "files": [
             "**.csproj"

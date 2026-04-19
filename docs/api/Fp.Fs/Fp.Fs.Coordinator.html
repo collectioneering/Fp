@@ -224,7 +224,7 @@ Class Coordinator  <a class="header-action link-secondary" title="View source" h
 
   <h3 id="Fp_Fs_Coordinator_CliGetConfiguration_System_Collections_Generic_IList_System_String__System_Collections_Generic_IReadOnlyList_System_String__Fp_ILogWriter_System_Boolean_Fp_ProcessorConfiguration__Fp_Fs_Coordinator_ExecutionSettings__System_Collections_Generic_List_Fp_Fs_Coordinator_FpInput___" data-uid="Fp.Fs.Coordinator.CliGetConfiguration(System.Collections.Generic.IList{System.String},System.Collections.Generic.IReadOnlyList{System.String},Fp.ILogWriter,System.Boolean,Fp.ProcessorConfiguration@,Fp.Fs.Coordinator.ExecutionSettings@,System.Collections.Generic.List{Fp.Fs.Coordinator.FpInput}@)">
   CliGetConfiguration(IList&lt;string&gt;, IReadOnlyList&lt;string&gt;, ILogWriter?, bool, out ProcessorConfiguration?, out ExecutionSettings?, out List&lt;FpInput&gt;)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/collectioneering/Fp/blob/main/src/Fp.Fs/Coordinator.cs/#L65"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/collectioneering/Fp/blob/main/src/Fp.Fs/Coordinator.cs/#L92"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Gets processor configuration from cli.</p>
@@ -279,9 +279,60 @@ Class Coordinator  <a class="header-action link-secondary" title="View source" h
 
   <a id="Fp_Fs_Coordinator_CliRunFilesystem_" data-uid="Fp.Fs.Coordinator.CliRunFilesystem*"></a>
 
-  <h3 id="Fp_Fs_Coordinator_CliRunFilesystem_System_String___System_Collections_Generic_IList_System_String__Fp_ILogWriter_Fp_Fs_FileSystemSource_Fp_Fs_FsProcessorFactory___" data-uid="Fp.Fs.Coordinator.CliRunFilesystem(System.String[],System.Collections.Generic.IList{System.String},Fp.ILogWriter,Fp.Fs.FileSystemSource,Fp.Fs.FsProcessorFactory[])">
-  CliRunFilesystem(string[], IList&lt;string&gt;?, ILogWriter?, FileSystemSource?, params FsProcessorFactory[])
-  <a class="header-action link-secondary" title="View source" href="https://github.com/collectioneering/Fp/blob/main/src/Fp.Fs/Coordinator.cs/#L235"><i class="bi bi-code-slash"></i></a>
+  <h3 id="Fp_Fs_Coordinator_CliRunFilesystem_Fp_ProcessorConfiguration_Fp_Fs_Coordinator_ExecutionSettings_System_Collections_Generic_IReadOnlyList_Fp_Fs_Coordinator_FpInput__Fp_Fs_FileSystemSource_System_Collections_Generic_IReadOnlyList_Fp_Fs_FsProcessorFactory__" data-uid="Fp.Fs.Coordinator.CliRunFilesystem(Fp.ProcessorConfiguration,Fp.Fs.Coordinator.ExecutionSettings,System.Collections.Generic.IReadOnlyList{Fp.Fs.Coordinator.FpInput},Fp.Fs.FileSystemSource,System.Collections.Generic.IReadOnlyList{Fp.Fs.FsProcessorFactory})">
+  CliRunFilesystem(ProcessorConfiguration, ExecutionSettings, IReadOnlyList&lt;FpInput&gt;, FileSystemSource?, IReadOnlyList&lt;FsProcessorFactory&gt;)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/collectioneering/Fp/blob/main/src/Fp.Fs/Coordinator.cs/#L279"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Processes filesystem tree.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static void CliRunFilesystem(ProcessorConfiguration processorConfiguration, Coordinator.ExecutionSettings executionSettings, IReadOnlyList&lt;Coordinator.FpInput&gt; inputs, FileSystemSource? fileSystem, IReadOnlyList&lt;FsProcessorFactory&gt; processorFactories)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>processorConfiguration</code> <a class="xref" href="../Fp/Fp.ProcessorConfiguration.html">ProcessorConfiguration</a></dt>
+    <dd><p>Processor configuration.</p>
+</dd>
+    <dt><code>executionSettings</code> <a class="xref" href="Fp.Fs.Coordinator.html">Coordinator</a>.<a class="xref" href="Fp.Fs.Coordinator.ExecutionSettings.html">ExecutionSettings</a></dt>
+    <dd><p>Execution settings.</p>
+</dd>
+    <dt><code>inputs</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.ireadonlylist-1">IReadOnlyList</a>&lt;<a class="xref" href="Fp.Fs.Coordinator.html">Coordinator</a>.<a class="xref" href="Fp.Fs.Coordinator.FpInput.html">FpInput</a>&gt;</dt>
+    <dd><p>Inputs.</p>
+</dd>
+    <dt><code>fileSystem</code> <a class="xref" href="Fp.Fs.FileSystemSource.html">FileSystemSource</a></dt>
+    <dd><p>Filesystem to read from.</p>
+</dd>
+    <dt><code>processorFactories</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.ireadonlylist-1">IReadOnlyList</a>&lt;<a class="xref" href="Fp.Fs.FsProcessorFactory.html">FsProcessorFactory</a>&gt;</dt>
+    <dd><p>Functions that create new processor instances.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+  <h4 class="section">Exceptions</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.argumentexception">ArgumentException</a></dt>
+    <dd><p>Thrown if an invalid number of arguments is provided.</p>
+</dd>
+  </dl>
+
+
+
+  <a id="Fp_Fs_Coordinator_CliRunFilesystem_" data-uid="Fp.Fs.Coordinator.CliRunFilesystem*"></a>
+
+  <h3 id="Fp_Fs_Coordinator_CliRunFilesystem_System_String___System_Collections_Generic_IList_System_String__Fp_ILogWriter_Fp_Fs_FileSystemSource_System_Collections_Generic_IReadOnlyList_Fp_Fs_FsProcessorFactory__" data-uid="Fp.Fs.Coordinator.CliRunFilesystem(System.String[],System.Collections.Generic.IList{System.String},Fp.ILogWriter,Fp.Fs.FileSystemSource,System.Collections.Generic.IReadOnlyList{Fp.Fs.FsProcessorFactory})">
+  CliRunFilesystem(string[], IList&lt;string&gt;?, ILogWriter?, FileSystemSource?, IReadOnlyList&lt;FsProcessorFactory&gt;)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/collectioneering/Fp/blob/main/src/Fp.Fs/Coordinator.cs/#L255"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Processes filesystem tree using command-line argument inputs.</p>
@@ -289,7 +340,7 @@ Class Coordinator  <a class="header-action link-secondary" title="View source" h
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static void CliRunFilesystem(string[] args, IList&lt;string&gt;? exeName, ILogWriter? logWriter, FileSystemSource? fileSystem, params FsProcessorFactory[] processorFactories)</code></pre>
+    <pre><code class="lang-csharp hljs">public static void CliRunFilesystem(string[] args, IList&lt;string&gt;? exeName, ILogWriter? logWriter, FileSystemSource? fileSystem, IReadOnlyList&lt;FsProcessorFactory&gt; processorFactories)</code></pre>
   </div>
 
   <h4 class="section">Parameters</h4>
@@ -306,7 +357,7 @@ Class Coordinator  <a class="header-action link-secondary" title="View source" h
     <dt><code>fileSystem</code> <a class="xref" href="Fp.Fs.FileSystemSource.html">FileSystemSource</a></dt>
     <dd><p>Filesystem to read from.</p>
 </dd>
-    <dt><code>processorFactories</code> <a class="xref" href="Fp.Fs.FsProcessorFactory.html">FsProcessorFactory</a>[]</dt>
+    <dt><code>processorFactories</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.ireadonlylist-1">IReadOnlyList</a>&lt;<a class="xref" href="Fp.Fs.FsProcessorFactory.html">FsProcessorFactory</a>&gt;</dt>
     <dd><p>Functions that create new processor instances.</p>
 </dd>
   </dl>
@@ -330,9 +381,66 @@ Class Coordinator  <a class="header-action link-secondary" title="View source" h
 
   <a id="Fp_Fs_Coordinator_CliRunFilesystemAsync_" data-uid="Fp.Fs.Coordinator.CliRunFilesystemAsync*"></a>
 
-  <h3 id="Fp_Fs_Coordinator_CliRunFilesystemAsync_System_String___System_Collections_Generic_IList_System_String__Fp_ILogWriter_Fp_Fs_FileSystemSource_Fp_Fs_FsProcessorFactory___" data-uid="Fp.Fs.Coordinator.CliRunFilesystemAsync(System.String[],System.Collections.Generic.IList{System.String},Fp.ILogWriter,Fp.Fs.FileSystemSource,Fp.Fs.FsProcessorFactory[])">
-  CliRunFilesystemAsync(string[], IList&lt;string&gt;?, ILogWriter?, FileSystemSource?, params FsProcessorFactory[])
-  <a class="header-action link-secondary" title="View source" href="https://github.com/collectioneering/Fp/blob/main/src/Fp.Fs/Coordinator.cs/#L277"><i class="bi bi-code-slash"></i></a>
+  <h3 id="Fp_Fs_Coordinator_CliRunFilesystemAsync_Fp_ProcessorConfiguration_Fp_Fs_Coordinator_ExecutionSettings_System_Collections_Generic_IReadOnlyList_Fp_Fs_Coordinator_FpInput__Fp_Fs_FileSystemSource_System_Collections_Generic_IReadOnlyList_Fp_Fs_FsProcessorFactory__" data-uid="Fp.Fs.Coordinator.CliRunFilesystemAsync(Fp.ProcessorConfiguration,Fp.Fs.Coordinator.ExecutionSettings,System.Collections.Generic.IReadOnlyList{Fp.Fs.Coordinator.FpInput},Fp.Fs.FileSystemSource,System.Collections.Generic.IReadOnlyList{Fp.Fs.FsProcessorFactory})">
+  CliRunFilesystemAsync(ProcessorConfiguration, ExecutionSettings, IReadOnlyList&lt;FpInput&gt;, FileSystemSource?, IReadOnlyList&lt;FsProcessorFactory&gt;)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/collectioneering/Fp/blob/main/src/Fp.Fs/Coordinator.cs/#L346"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Processes filesystem tree.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static Task CliRunFilesystemAsync(ProcessorConfiguration processorConfiguration, Coordinator.ExecutionSettings executionSettings, IReadOnlyList&lt;Coordinator.FpInput&gt; inputs, FileSystemSource? fileSystem, IReadOnlyList&lt;FsProcessorFactory&gt; processorFactories)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>processorConfiguration</code> <a class="xref" href="../Fp/Fp.ProcessorConfiguration.html">ProcessorConfiguration</a></dt>
+    <dd><p>Processor configuration.</p>
+</dd>
+    <dt><code>executionSettings</code> <a class="xref" href="Fp.Fs.Coordinator.html">Coordinator</a>.<a class="xref" href="Fp.Fs.Coordinator.ExecutionSettings.html">ExecutionSettings</a></dt>
+    <dd><p>Execution settings.</p>
+</dd>
+    <dt><code>inputs</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.ireadonlylist-1">IReadOnlyList</a>&lt;<a class="xref" href="Fp.Fs.Coordinator.html">Coordinator</a>.<a class="xref" href="Fp.Fs.Coordinator.FpInput.html">FpInput</a>&gt;</dt>
+    <dd><p>Inputs.</p>
+</dd>
+    <dt><code>fileSystem</code> <a class="xref" href="Fp.Fs.FileSystemSource.html">FileSystemSource</a></dt>
+    <dd><p>Filesystem to read from.</p>
+</dd>
+    <dt><code>processorFactories</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.ireadonlylist-1">IReadOnlyList</a>&lt;<a class="xref" href="Fp.Fs.FsProcessorFactory.html">FsProcessorFactory</a>&gt;</dt>
+    <dd><p>Functions that create new processor instances.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.tasks.task">Task</a></dt>
+    <dd><p>A task that will execute recursively.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <h4 class="section">Exceptions</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.argumentexception">ArgumentException</a></dt>
+    <dd><p>Thrown if an invalid number of arguments is provided.</p>
+</dd>
+  </dl>
+
+
+
+  <a id="Fp_Fs_Coordinator_CliRunFilesystemAsync_" data-uid="Fp.Fs.Coordinator.CliRunFilesystemAsync*"></a>
+
+  <h3 id="Fp_Fs_Coordinator_CliRunFilesystemAsync_System_String___System_Collections_Generic_IList_System_String__Fp_ILogWriter_Fp_Fs_FileSystemSource_System_Collections_Generic_IReadOnlyList_Fp_Fs_FsProcessorFactory__" data-uid="Fp.Fs.Coordinator.CliRunFilesystemAsync(System.String[],System.Collections.Generic.IList{System.String},Fp.ILogWriter,Fp.Fs.FileSystemSource,System.Collections.Generic.IReadOnlyList{Fp.Fs.FsProcessorFactory})">
+  CliRunFilesystemAsync(string[], IList&lt;string&gt;?, ILogWriter?, FileSystemSource?, IReadOnlyList&lt;FsProcessorFactory&gt;)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/collectioneering/Fp/blob/main/src/Fp.Fs/Coordinator.cs/#L323"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Processes filesystem tree using command-line argument inputs.</p>
@@ -340,7 +448,7 @@ Class Coordinator  <a class="header-action link-secondary" title="View source" h
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static Task CliRunFilesystemAsync(string[] args, IList&lt;string&gt;? exeName, ILogWriter? logWriter, FileSystemSource? fileSystem, params FsProcessorFactory[] processorFactories)</code></pre>
+    <pre><code class="lang-csharp hljs">public static Task CliRunFilesystemAsync(string[] args, IList&lt;string&gt;? exeName, ILogWriter? logWriter, FileSystemSource? fileSystem, IReadOnlyList&lt;FsProcessorFactory&gt; processorFactories)</code></pre>
   </div>
 
   <h4 class="section">Parameters</h4>
@@ -357,7 +465,7 @@ Class Coordinator  <a class="header-action link-secondary" title="View source" h
     <dt><code>fileSystem</code> <a class="xref" href="Fp.Fs.FileSystemSource.html">FileSystemSource</a></dt>
     <dd><p>Filesystem to read from.</p>
 </dd>
-    <dt><code>processorFactories</code> <a class="xref" href="Fp.Fs.FsProcessorFactory.html">FsProcessorFactory</a>[]</dt>
+    <dt><code>processorFactories</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.ireadonlylist-1">IReadOnlyList</a>&lt;<a class="xref" href="Fp.Fs.FsProcessorFactory.html">FsProcessorFactory</a>&gt;</dt>
     <dd><p>Functions that create new processor instances.</p>
 </dd>
   </dl>
@@ -389,7 +497,7 @@ Class Coordinator  <a class="header-action link-secondary" title="View source" h
 
   <h3 id="Fp_Fs_Coordinator_CliRunFilesystemAsync__1_System_String___System_Collections_Generic_IList_System_String__Fp_ILogWriter_Fp_Fs_FileSystemSource_" data-uid="Fp.Fs.Coordinator.CliRunFilesystemAsync``1(System.String[],System.Collections.Generic.IList{System.String},Fp.ILogWriter,Fp.Fs.FileSystemSource)">
   CliRunFilesystemAsync&lt;T&gt;(string[], IList&lt;string&gt;?, ILogWriter?, FileSystemSource?)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/collectioneering/Fp/blob/main/src/Fp.Fs/Coordinator.cs/#L263"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/collectioneering/Fp/blob/main/src/Fp.Fs/Coordinator.cs/#L307"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Processes filesystem tree using command-line argument inputs.</p>
@@ -448,7 +556,7 @@ Class Coordinator  <a class="header-action link-secondary" title="View source" h
 
   <h3 id="Fp_Fs_Coordinator_CliRunFilesystem__1_System_String___System_Collections_Generic_IList_System_String__Fp_ILogWriter_Fp_Fs_FileSystemSource_" data-uid="Fp.Fs.Coordinator.CliRunFilesystem``1(System.String[],System.Collections.Generic.IList{System.String},Fp.ILogWriter,Fp.Fs.FileSystemSource)">
   CliRunFilesystem&lt;T&gt;(string[], IList&lt;string&gt;?, ILogWriter?, FileSystemSource?)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/collectioneering/Fp/blob/main/src/Fp.Fs/Coordinator.cs/#L221"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/collectioneering/Fp/blob/main/src/Fp.Fs/Coordinator.cs/#L239"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Processes filesystem tree using command-line argument inputs.</p>
@@ -501,7 +609,7 @@ Class Coordinator  <a class="header-action link-secondary" title="View source" h
 
   <h3 id="Fp_Fs_Coordinator_GuessExe_System_Collections_Generic_IList_System_String__System_Boolean_" data-uid="Fp.Fs.Coordinator.GuessExe(System.Collections.Generic.IList{System.String},System.Boolean)">
   GuessExe(IList&lt;string&gt;?, bool)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/collectioneering/Fp/blob/main/src/Fp.Fs/Coordinator.cs/#L307"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/collectioneering/Fp/blob/main/src/Fp.Fs/Coordinator.cs/#L375"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Guesses executable string (might be multiple components) based on args.</p>
@@ -544,9 +652,9 @@ Class Coordinator  <a class="header-action link-secondary" title="View source" h
 
   <a id="Fp_Fs_Coordinator_Recurse_" data-uid="Fp.Fs.Coordinator.Recurse*"></a>
 
-  <h3 id="Fp_Fs_Coordinator_Recurse_System_Collections_Generic_IReadOnlyList_Fp_Fs_Coordinator_FpInput__Fp_Fs_Coordinator_ExecutionSource_Fp_Fs_FsProcessorFactory___" data-uid="Fp.Fs.Coordinator.Recurse(System.Collections.Generic.IReadOnlyList{Fp.Fs.Coordinator.FpInput},Fp.Fs.Coordinator.ExecutionSource,Fp.Fs.FsProcessorFactory[])">
-  Recurse(IReadOnlyList&lt;FpInput&gt;, ExecutionSource, params FsProcessorFactory[])
-  <a class="header-action link-secondary" title="View source" href="https://github.com/collectioneering/Fp/blob/main/src/Fp.Fs/Coordinator.cs/#L356"><i class="bi bi-code-slash"></i></a>
+  <h3 id="Fp_Fs_Coordinator_Recurse_System_Collections_Generic_IReadOnlyList_Fp_Fs_Coordinator_FpInput__Fp_Fs_Coordinator_ExecutionSource_System_Collections_Generic_IReadOnlyList_Fp_Fs_FsProcessorFactory__" data-uid="Fp.Fs.Coordinator.Recurse(System.Collections.Generic.IReadOnlyList{Fp.Fs.Coordinator.FpInput},Fp.Fs.Coordinator.ExecutionSource,System.Collections.Generic.IReadOnlyList{Fp.Fs.FsProcessorFactory})">
+  Recurse(IReadOnlyList&lt;FpInput&gt;, ExecutionSource, IReadOnlyList&lt;FsProcessorFactory&gt;)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/collectioneering/Fp/blob/main/src/Fp.Fs/Coordinator.cs/#L427"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Processes filesystem tree.</p>
@@ -554,7 +662,7 @@ Class Coordinator  <a class="header-action link-secondary" title="View source" h
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static void Recurse(IReadOnlyList&lt;Coordinator.FpInput&gt; inputs, Coordinator.ExecutionSource src, params FsProcessorFactory[] processorFactories)</code></pre>
+    <pre><code class="lang-csharp hljs">public static void Recurse(IReadOnlyList&lt;Coordinator.FpInput&gt; inputs, Coordinator.ExecutionSource src, IReadOnlyList&lt;FsProcessorFactory&gt; processorFactories)</code></pre>
   </div>
 
   <h4 class="section">Parameters</h4>
@@ -565,7 +673,7 @@ Class Coordinator  <a class="header-action link-secondary" title="View source" h
     <dt><code>src</code> <a class="xref" href="Fp.Fs.Coordinator.html">Coordinator</a>.<a class="xref" href="Fp.Fs.Coordinator.ExecutionSource.html">ExecutionSource</a></dt>
     <dd><p>Execution source.</p>
 </dd>
-    <dt><code>processorFactories</code> <a class="xref" href="Fp.Fs.FsProcessorFactory.html">FsProcessorFactory</a>[]</dt>
+    <dt><code>processorFactories</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.ireadonlylist-1">IReadOnlyList</a>&lt;<a class="xref" href="Fp.Fs.FsProcessorFactory.html">FsProcessorFactory</a>&gt;</dt>
     <dd><p>Functions that create new processor instances.</p>
 </dd>
   </dl>
@@ -589,9 +697,9 @@ Class Coordinator  <a class="header-action link-secondary" title="View source" h
 
   <a id="Fp_Fs_Coordinator_RecurseAsync_" data-uid="Fp.Fs.Coordinator.RecurseAsync*"></a>
 
-  <h3 id="Fp_Fs_Coordinator_RecurseAsync_System_Collections_Generic_IReadOnlyList_Fp_Fs_Coordinator_FpInput__Fp_Fs_Coordinator_ExecutionSource_Fp_Fs_FsProcessorFactory___" data-uid="Fp.Fs.Coordinator.RecurseAsync(System.Collections.Generic.IReadOnlyList{Fp.Fs.Coordinator.FpInput},Fp.Fs.Coordinator.ExecutionSource,Fp.Fs.FsProcessorFactory[])">
-  RecurseAsync(IReadOnlyList&lt;FpInput&gt;, ExecutionSource, params FsProcessorFactory[])
-  <a class="header-action link-secondary" title="View source" href="https://github.com/collectioneering/Fp/blob/main/src/Fp.Fs/Coordinator.cs/#L327"><i class="bi bi-code-slash"></i></a>
+  <h3 id="Fp_Fs_Coordinator_RecurseAsync_System_Collections_Generic_IReadOnlyList_Fp_Fs_Coordinator_FpInput__Fp_Fs_Coordinator_ExecutionSource_System_Collections_Generic_IReadOnlyList_Fp_Fs_FsProcessorFactory__" data-uid="Fp.Fs.Coordinator.RecurseAsync(System.Collections.Generic.IReadOnlyList{Fp.Fs.Coordinator.FpInput},Fp.Fs.Coordinator.ExecutionSource,System.Collections.Generic.IReadOnlyList{Fp.Fs.FsProcessorFactory})">
+  RecurseAsync(IReadOnlyList&lt;FpInput&gt;, ExecutionSource, IReadOnlyList&lt;FsProcessorFactory&gt;)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/collectioneering/Fp/blob/main/src/Fp.Fs/Coordinator.cs/#L396"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Processes filesystem tree asynchronously.</p>
@@ -599,7 +707,7 @@ Class Coordinator  <a class="header-action link-secondary" title="View source" h
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static Task RecurseAsync(IReadOnlyList&lt;Coordinator.FpInput&gt; inputs, Coordinator.ExecutionSource src, params FsProcessorFactory[] processorFactories)</code></pre>
+    <pre><code class="lang-csharp hljs">public static Task RecurseAsync(IReadOnlyList&lt;Coordinator.FpInput&gt; inputs, Coordinator.ExecutionSource src, IReadOnlyList&lt;FsProcessorFactory&gt; processorFactories)</code></pre>
   </div>
 
   <h4 class="section">Parameters</h4>
@@ -610,7 +718,7 @@ Class Coordinator  <a class="header-action link-secondary" title="View source" h
     <dt><code>src</code> <a class="xref" href="Fp.Fs.Coordinator.html">Coordinator</a>.<a class="xref" href="Fp.Fs.Coordinator.ExecutionSource.html">ExecutionSource</a></dt>
     <dd><p>Execution source.</p>
 </dd>
-    <dt><code>processorFactories</code> <a class="xref" href="Fp.Fs.FsProcessorFactory.html">FsProcessorFactory</a>[]</dt>
+    <dt><code>processorFactories</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.ireadonlylist-1">IReadOnlyList</a>&lt;<a class="xref" href="Fp.Fs.FsProcessorFactory.html">FsProcessorFactory</a>&gt;</dt>
     <dd><p>Functions that create new processor instances.</p>
 </dd>
   </dl>
@@ -642,7 +750,7 @@ Class Coordinator  <a class="header-action link-secondary" title="View source" h
 
   <h3 id="Fp_Fs_Coordinator_Run_Fp_Fs_FsProcessor_Fp_Fs_Coordinator_FpTarget_Fp_Fs_Coordinator_ExecutionSource_System_Int32_" data-uid="Fp.Fs.Coordinator.Run(Fp.Fs.FsProcessor,Fp.Fs.Coordinator.FpTarget,Fp.Fs.Coordinator.ExecutionSource,System.Int32)">
   Run(FsProcessor, FpTarget, ExecutionSource, int)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/collectioneering/Fp/blob/main/src/Fp.Fs/Coordinator.cs/#L384"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/collectioneering/Fp/blob/main/src/Fp.Fs/Coordinator.cs/#L456"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Operates on a file.</p>
@@ -690,7 +798,7 @@ Class Coordinator  <a class="header-action link-secondary" title="View source" h
 
   <h3 id="Fp_Fs_Coordinator_RunSegmented_Fp_Fs_FsProcessor_System_ValueTuple_System_String_System_String__Fp_Fs_Coordinator_ExecutionSource_System_Int32_" data-uid="Fp.Fs.Coordinator.RunSegmented(Fp.Fs.FsProcessor,System.ValueTuple{System.String,System.String},Fp.Fs.Coordinator.ExecutionSource,System.Int32)">
   RunSegmented(FsProcessor, (string inputRoot, string file), ExecutionSource, int)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/collectioneering/Fp/blob/main/src/Fp.Fs/Coordinator.cs/#L426"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/collectioneering/Fp/blob/main/src/Fp.Fs/Coordinator.cs/#L501"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Operate on a file using segmented operation.</p>

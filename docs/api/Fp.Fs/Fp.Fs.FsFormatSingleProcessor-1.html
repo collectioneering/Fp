@@ -2,9 +2,9 @@
 <html>
   <head>
     <meta charset="utf-8">
-      <title>Class FsFormatSingleProcessor&lt;T&gt; </title>
+      <title>Class FsFormatSingleProcessor&lt;TData&gt; </title>
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
-      <meta name="title" content="Class FsFormatSingleProcessor&lt;T&gt; ">
+      <meta name="title" content="Class FsFormatSingleProcessor&lt;TData&gt; ">
       
       <meta name="description" content="Represents a processor that operates on a single input and generates multiple outputs.">
       <link rel="icon" href="../../favicon.ico">
@@ -85,7 +85,7 @@
 
 
   <h1 id="Fp_Fs_FsFormatSingleProcessor_1" data-uid="Fp.Fs.FsFormatSingleProcessor`1" class="text-break">
-Class FsFormatSingleProcessor&lt;T&gt;  <a class="header-action link-secondary" title="View source" href="https://github.com/collectioneering/Fp/blob/main/src/Fp.Fs/FsFormatSingleProcessor.cs/#L30"><i class="bi bi-code-slash"></i></a>
+Class FsFormatSingleProcessor&lt;TData&gt;  <a class="header-action link-secondary" title="View source" href="https://github.com/collectioneering/Fp/blob/main/src/Fp.Fs/FsFormatSingleProcessor.cs/#L22"><i class="bi bi-code-slash"></i></a>
   </h1>
 
   <div class="facts text-secondary">
@@ -98,14 +98,14 @@ Class FsFormatSingleProcessor&lt;T&gt;  <a class="header-action link-secondary" 
   <div class="markdown conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public class FsFormatSingleProcessor&lt;T&gt; : FormatSingleProcessor&lt;T&gt;, IDisposable where T : Data</code></pre>
+    <pre><code class="lang-csharp hljs">public class FsFormatSingleProcessor&lt;TData&gt; : FormatSingleProcessor&lt;TData&gt;, IDisposable where TData : Data, IFsFormatSingleRunnerType</code></pre>
   </div>
 
 
 
   <h4 class="section">Type Parameters</h4>
   <dl class="parameters">
-    <dt><code>T</code></dt>
+    <dt><code>TData</code></dt>
     <dd></dd>
   </dl>
 
@@ -117,8 +117,8 @@ Class FsFormatSingleProcessor&lt;T&gt;  <a class="header-action link-secondary" 
       <div><a class="xref" href="../Fp/Fp.FileProcessor.html">FileProcessor</a></div>
       <div><a class="xref" href="../Fp/Fp.FormatProcessor.html">FormatProcessor</a></div>
       <div><a class="xref" href="../Fp/Fp.FormatSingleProcessor.html">FormatSingleProcessor</a></div>
-      <div><a class="xref" href="../Fp/Fp.FormatSingleProcessor-1.html">FormatSingleProcessor</a>&lt;T&gt;</div>
-      <div><span class="xref">FsFormatSingleProcessor&lt;T&gt;</span></div>
+      <div><a class="xref" href="../Fp/Fp.FormatSingleProcessor-1.html">FormatSingleProcessor</a>&lt;TData&gt;</div>
+      <div><span class="xref">FsFormatSingleProcessor&lt;TData&gt;</span></div>
     </dd>
   </dl>
 
@@ -134,34 +134,34 @@ Class FsFormatSingleProcessor&lt;T&gt;  <a class="header-action link-secondary" 
     <dt>Inherited Members</dt>
     <dd>
     <div>
-      <a class="xref" href="../Fp/Fp.FormatSingleProcessor-1.html#Fp_FormatSingleProcessor_1_TryProcess__1_System_IO_Stream_System_String__0__Fp_ProcessorConfiguration_">FormatSingleProcessor&lt;T&gt;.TryProcess&lt;TProcessor&gt;(Stream, string, out T, ProcessorConfiguration)</a>
+      <a class="xref" href="../Fp/Fp.FormatSingleProcessor-1.html#Fp_FormatSingleProcessor_1_TryProcess__1_System_IO_Stream_System_String__0__Fp_ProcessorConfiguration_">FormatSingleProcessor&lt;TData&gt;.TryProcess&lt;TProcessor&gt;(Stream, string, out TData, ProcessorConfiguration)</a>
     </div>
     <div>
-      <a class="xref" href="../Fp/Fp.FormatSingleProcessor-1.html#Fp_FormatSingleProcessor_1_TryProcess_System_IO_Stream_System_String__0__Fp_ProcessorConfiguration_">FormatSingleProcessor&lt;T&gt;.TryProcess(Stream, string, out T, ProcessorConfiguration)</a>
+      <a class="xref" href="../Fp/Fp.FormatSingleProcessor-1.html#Fp_FormatSingleProcessor_1_TryProcess_System_IO_Stream_System_String__0__Fp_ProcessorConfiguration_">FormatSingleProcessor&lt;TData&gt;.TryProcess(Stream, string, out TData, ProcessorConfiguration)</a>
     </div>
     <div>
-      <a class="xref" href="../Fp/Fp.FormatSingleProcessor-1.html#Fp_FormatSingleProcessor_1_TryProcess__1_System_ReadOnlyMemory_System_Byte__System_String__0__Fp_ProcessorConfiguration_">FormatSingleProcessor&lt;T&gt;.TryProcess&lt;TProcessor&gt;(ReadOnlyMemory&lt;byte&gt;, string, out T, ProcessorConfiguration)</a>
+      <a class="xref" href="../Fp/Fp.FormatSingleProcessor-1.html#Fp_FormatSingleProcessor_1_TryProcess__1_System_ReadOnlyMemory_System_Byte__System_String__0__Fp_ProcessorConfiguration_">FormatSingleProcessor&lt;TData&gt;.TryProcess&lt;TProcessor&gt;(ReadOnlyMemory&lt;byte&gt;, string, out TData, ProcessorConfiguration)</a>
     </div>
     <div>
-      <a class="xref" href="../Fp/Fp.FormatSingleProcessor-1.html#Fp_FormatSingleProcessor_1_TryProcess_System_ReadOnlyMemory_System_Byte__System_String__0__Fp_ProcessorConfiguration_">FormatSingleProcessor&lt;T&gt;.TryProcess(ReadOnlyMemory&lt;byte&gt;, string, out T, ProcessorConfiguration)</a>
+      <a class="xref" href="../Fp/Fp.FormatSingleProcessor-1.html#Fp_FormatSingleProcessor_1_TryProcess_System_ReadOnlyMemory_System_Byte__System_String__0__Fp_ProcessorConfiguration_">FormatSingleProcessor&lt;TData&gt;.TryProcess(ReadOnlyMemory&lt;byte&gt;, string, out TData, ProcessorConfiguration)</a>
     </div>
     <div>
-      <a class="xref" href="../Fp/Fp.FormatSingleProcessor-1.html#Fp_FormatSingleProcessor_1_TryProcess__1_Fp_BufferData_System_Byte__System_String__0__Fp_ProcessorConfiguration_">FormatSingleProcessor&lt;T&gt;.TryProcess&lt;TProcessor&gt;(BufferData&lt;byte&gt;, string, out T, ProcessorConfiguration)</a>
+      <a class="xref" href="../Fp/Fp.FormatSingleProcessor-1.html#Fp_FormatSingleProcessor_1_TryProcess__1_Fp_BufferData_System_Byte__System_String__0__Fp_ProcessorConfiguration_">FormatSingleProcessor&lt;TData&gt;.TryProcess&lt;TProcessor&gt;(BufferData&lt;byte&gt;, string, out TData, ProcessorConfiguration)</a>
     </div>
     <div>
-      <a class="xref" href="../Fp/Fp.FormatSingleProcessor-1.html#Fp_FormatSingleProcessor_1_TryProcess_Fp_BufferData_System_Byte__System_String__0__Fp_ProcessorConfiguration_">FormatSingleProcessor&lt;T&gt;.TryProcess(BufferData&lt;byte&gt;, string, out T, ProcessorConfiguration)</a>
+      <a class="xref" href="../Fp/Fp.FormatSingleProcessor-1.html#Fp_FormatSingleProcessor_1_TryProcess_Fp_BufferData_System_Byte__System_String__0__Fp_ProcessorConfiguration_">FormatSingleProcessor&lt;TData&gt;.TryProcess(BufferData&lt;byte&gt;, string, out TData, ProcessorConfiguration)</a>
     </div>
     <div>
-      <a class="xref" href="../Fp/Fp.FormatSingleProcessor-1.html#Fp_FormatSingleProcessor_1_TryProcess__1_Fp_BufferData_System_Byte___0__Fp_ProcessorConfiguration_">FormatSingleProcessor&lt;T&gt;.TryProcess&lt;TProcessor&gt;(BufferData&lt;byte&gt;, out T, ProcessorConfiguration)</a>
+      <a class="xref" href="../Fp/Fp.FormatSingleProcessor-1.html#Fp_FormatSingleProcessor_1_TryProcess__1_Fp_BufferData_System_Byte___0__Fp_ProcessorConfiguration_">FormatSingleProcessor&lt;TData&gt;.TryProcess&lt;TProcessor&gt;(BufferData&lt;byte&gt;, out TData, ProcessorConfiguration)</a>
     </div>
     <div>
-      <a class="xref" href="../Fp/Fp.FormatSingleProcessor-1.html#Fp_FormatSingleProcessor_1_TryProcess_Fp_BufferData_System_Byte___0__Fp_ProcessorConfiguration_">FormatSingleProcessor&lt;T&gt;.TryProcess(BufferData&lt;byte&gt;, out T, ProcessorConfiguration)</a>
+      <a class="xref" href="../Fp/Fp.FormatSingleProcessor-1.html#Fp_FormatSingleProcessor_1_TryProcess_Fp_BufferData_System_Byte___0__Fp_ProcessorConfiguration_">FormatSingleProcessor&lt;TData&gt;.TryProcess(BufferData&lt;byte&gt;, out TData, ProcessorConfiguration)</a>
     </div>
     <div>
-      <a class="xref" href="../Fp/Fp.FormatSingleProcessor-1.html#Fp_FormatSingleProcessor_1_TryProcess__0__">FormatSingleProcessor&lt;T&gt;.TryProcess(out T)</a>
+      <a class="xref" href="../Fp/Fp.FormatSingleProcessor-1.html#Fp_FormatSingleProcessor_1_TryProcess__0__">FormatSingleProcessor&lt;TData&gt;.TryProcess(out TData)</a>
     </div>
     <div>
-      <a class="xref" href="../Fp/Fp.FormatSingleProcessor-1.html#Fp_FormatSingleProcessor_1_TryProcess_Fp_Data__">FormatSingleProcessor&lt;T&gt;.TryProcess(out Data)</a>
+      <a class="xref" href="../Fp/Fp.FormatSingleProcessor-1.html#Fp_FormatSingleProcessor_1_TryProcess_Fp_Data__">FormatSingleProcessor&lt;TData&gt;.TryProcess(out Data)</a>
     </div>
     <div>
       <a class="xref" href="../Fp/Fp.FormatSingleProcessor.html#Fp_FormatSingleProcessor_TryProcess__1_System_IO_Stream_System_String_Fp_Data__Fp_ProcessorConfiguration_">FormatSingleProcessor.TryProcess&lt;T&gt;(Stream, string, out Data, ProcessorConfiguration)</a>
@@ -1151,10 +1151,22 @@ Class FsFormatSingleProcessor&lt;T&gt;  <a class="header-action link-secondary" 
       <a class="xref" href="../Fp/Fp.Processor.html#Fp_Processor_ConvertS16Array_System_Span_System_Byte__System_Boolean_">Processor.ConvertS16Array(Span&lt;byte&gt;, bool)</a>
     </div>
     <div>
+      <a class="xref" href="../Fp/Fp.Processor.html#Fp_Processor_ConvertS16ArrayAligned_System_Span_System_Byte__System_Boolean_">Processor.ConvertS16ArrayAligned(Span&lt;byte&gt;, bool)</a>
+    </div>
+    <div>
+      <a class="xref" href="../Fp/Fp.Processor.html#Fp_Processor_ConvertS16ArrayUnaligned_System_Span_System_Byte__System_Boolean_">Processor.ConvertS16ArrayUnaligned(Span&lt;byte&gt;, bool)</a>
+    </div>
+    <div>
       <a class="xref" href="../Fp/Fp.Processor.html#Fp_Processor_ConvertU16Array_System_Span_System_UInt16__System_Boolean_">Processor.ConvertU16Array(Span&lt;ushort&gt;, bool)</a>
     </div>
     <div>
       <a class="xref" href="../Fp/Fp.Processor.html#Fp_Processor_ConvertU16Array_System_Span_System_Byte__System_Boolean_">Processor.ConvertU16Array(Span&lt;byte&gt;, bool)</a>
+    </div>
+    <div>
+      <a class="xref" href="../Fp/Fp.Processor.html#Fp_Processor_ConvertU16ArrayAligned_System_Span_System_Byte__System_Boolean_">Processor.ConvertU16ArrayAligned(Span&lt;byte&gt;, bool)</a>
+    </div>
+    <div>
+      <a class="xref" href="../Fp/Fp.Processor.html#Fp_Processor_ConvertU16ArrayUnaligned_System_Span_System_Byte__System_Boolean_">Processor.ConvertU16ArrayUnaligned(Span&lt;byte&gt;, bool)</a>
     </div>
     <div>
       <a class="xref" href="../Fp/Fp.Processor.html#Fp_Processor_ConvertS32Array_System_Span_System_Int32__System_Boolean_">Processor.ConvertS32Array(Span&lt;int&gt;, bool)</a>
@@ -1163,10 +1175,22 @@ Class FsFormatSingleProcessor&lt;T&gt;  <a class="header-action link-secondary" 
       <a class="xref" href="../Fp/Fp.Processor.html#Fp_Processor_ConvertS32Array_System_Span_System_Byte__System_Boolean_">Processor.ConvertS32Array(Span&lt;byte&gt;, bool)</a>
     </div>
     <div>
+      <a class="xref" href="../Fp/Fp.Processor.html#Fp_Processor_ConvertS32ArrayAligned_System_Span_System_Byte__System_Boolean_">Processor.ConvertS32ArrayAligned(Span&lt;byte&gt;, bool)</a>
+    </div>
+    <div>
+      <a class="xref" href="../Fp/Fp.Processor.html#Fp_Processor_ConvertS32ArrayUnaligned_System_Span_System_Byte__System_Boolean_">Processor.ConvertS32ArrayUnaligned(Span&lt;byte&gt;, bool)</a>
+    </div>
+    <div>
       <a class="xref" href="../Fp/Fp.Processor.html#Fp_Processor_ConvertU32Array_System_Span_System_UInt32__System_Boolean_">Processor.ConvertU32Array(Span&lt;uint&gt;, bool)</a>
     </div>
     <div>
       <a class="xref" href="../Fp/Fp.Processor.html#Fp_Processor_ConvertU32Array_System_Span_System_Byte__System_Boolean_">Processor.ConvertU32Array(Span&lt;byte&gt;, bool)</a>
+    </div>
+    <div>
+      <a class="xref" href="../Fp/Fp.Processor.html#Fp_Processor_ConvertU32ArrayAligned_System_Span_System_Byte__System_Boolean_">Processor.ConvertU32ArrayAligned(Span&lt;byte&gt;, bool)</a>
+    </div>
+    <div>
+      <a class="xref" href="../Fp/Fp.Processor.html#Fp_Processor_ConvertU32ArrayUnaligned_System_Span_System_Byte__System_Boolean_">Processor.ConvertU32ArrayUnaligned(Span&lt;byte&gt;, bool)</a>
     </div>
     <div>
       <a class="xref" href="../Fp/Fp.Processor.html#Fp_Processor_ConvertS64Array_System_Span_System_Int64__System_Boolean_">Processor.ConvertS64Array(Span&lt;long&gt;, bool)</a>
@@ -1175,10 +1199,34 @@ Class FsFormatSingleProcessor&lt;T&gt;  <a class="header-action link-secondary" 
       <a class="xref" href="../Fp/Fp.Processor.html#Fp_Processor_ConvertS64Array_System_Span_System_Byte__System_Boolean_">Processor.ConvertS64Array(Span&lt;byte&gt;, bool)</a>
     </div>
     <div>
+      <a class="xref" href="../Fp/Fp.Processor.html#Fp_Processor_ConvertS64ArrayAligned_System_Span_System_Byte__System_Boolean_">Processor.ConvertS64ArrayAligned(Span&lt;byte&gt;, bool)</a>
+    </div>
+    <div>
+      <a class="xref" href="../Fp/Fp.Processor.html#Fp_Processor_ConvertS64ArrayUnaligned_System_Span_System_Byte__System_Boolean_">Processor.ConvertS64ArrayUnaligned(Span&lt;byte&gt;, bool)</a>
+    </div>
+    <div>
       <a class="xref" href="../Fp/Fp.Processor.html#Fp_Processor_ConvertU64Array_System_Span_System_UInt64__System_Boolean_">Processor.ConvertU64Array(Span&lt;ulong&gt;, bool)</a>
     </div>
     <div>
       <a class="xref" href="../Fp/Fp.Processor.html#Fp_Processor_ConvertU64Array_System_Span_System_Byte__System_Boolean_">Processor.ConvertU64Array(Span&lt;byte&gt;, bool)</a>
+    </div>
+    <div>
+      <a class="xref" href="../Fp/Fp.Processor.html#Fp_Processor_ConvertU64ArrayAligned_System_Span_System_Byte__System_Boolean_">Processor.ConvertU64ArrayAligned(Span&lt;byte&gt;, bool)</a>
+    </div>
+    <div>
+      <a class="xref" href="../Fp/Fp.Processor.html#Fp_Processor_ConvertU64ArrayUnaligned_System_Span_System_Byte__System_Boolean_">Processor.ConvertU64ArrayUnaligned(Span&lt;byte&gt;, bool)</a>
+    </div>
+    <div>
+      <a class="xref" href="../Fp/Fp.Processor.html#Fp_Processor_ConvertNumberArray__1_System_Span___0__System_Boolean_">Processor.ConvertNumberArray&lt;T&gt;(Span&lt;T&gt;, bool)</a>
+    </div>
+    <div>
+      <a class="xref" href="../Fp/Fp.Processor.html#Fp_Processor_ConvertNumberArray__1_System_Span_System_Byte__System_Boolean_">Processor.ConvertNumberArray&lt;T&gt;(Span&lt;byte&gt;, bool)</a>
+    </div>
+    <div>
+      <a class="xref" href="../Fp/Fp.Processor.html#Fp_Processor_ConvertNumberArrayAligned__1_System_Span_System_Byte__System_Boolean_">Processor.ConvertNumberArrayAligned&lt;T&gt;(Span&lt;byte&gt;, bool)</a>
+    </div>
+    <div>
+      <a class="xref" href="../Fp/Fp.Processor.html#Fp_Processor_ConvertNumberArrayUnaligned__1_System_Span_System_Byte__System_Boolean_">Processor.ConvertNumberArrayUnaligned&lt;T&gt;(Span&lt;byte&gt;, bool)</a>
     </div>
     <div>
       <a class="xref" href="../Fp/Fp.Processor.html#Fp_Processor_ReadS16_System_IO_Stream_">Processor.ReadS16(Stream)</a>
@@ -1649,6 +1697,12 @@ Class FsFormatSingleProcessor&lt;T&gt;  <a class="header-action link-secondary" 
       <a class="xref" href="../Fp/Fp.Processor.html#Fp_Processor_SetU64Array_System_Span_System_Byte__System_UInt64___">Processor.SetU64Array(Span&lt;byte&gt;, ulong[])</a>
     </div>
     <div>
+      <a class="xref" href="../Fp/Fp.Processor.html#Fp_Processor_GetNumberArray__1_System_ReadOnlySpan_System_Byte__">Processor.GetNumberArray&lt;T&gt;(ReadOnlySpan&lt;byte&gt;)</a>
+    </div>
+    <div>
+      <a class="xref" href="../Fp/Fp.Processor.html#Fp_Processor_SetNumberArray__1_System_Span_System_Byte____0___">Processor.SetNumberArray&lt;T&gt;(Span&lt;byte&gt;, T[])</a>
+    </div>
+    <div>
       <a class="xref" href="../Fp/Fp.Processor.html#Fp_Processor_SetS8Array_System_Span_System_Byte__System_ReadOnlySpan_System_SByte__">Processor.SetS8Array(Span&lt;byte&gt;, ReadOnlySpan&lt;sbyte&gt;)</a>
     </div>
     <div>
@@ -1698,6 +1752,12 @@ Class FsFormatSingleProcessor&lt;T&gt;  <a class="header-action link-secondary" 
     </div>
     <div>
       <a class="xref" href="../Fp/Fp.Processor.html#Fp_Processor_SetTArray__1_System_Span_System_Byte__System_ReadOnlySpan___0__">Processor.SetTArray&lt;T&gt;(Span&lt;byte&gt;, ReadOnlySpan&lt;T&gt;)</a>
+    </div>
+    <div>
+      <a class="xref" href="../Fp/Fp.Processor.html#Fp_Processor_GetNumberArray__1_System_ReadOnlySpan_System_Byte__System_Boolean_">Processor.GetNumberArray&lt;T&gt;(ReadOnlySpan&lt;byte&gt;, bool)</a>
+    </div>
+    <div>
+      <a class="xref" href="../Fp/Fp.Processor.html#Fp_Processor_SetNumberArray__1_System_Span_System_Byte__System_ReadOnlySpan___0__System_Boolean_">Processor.SetNumberArray&lt;T&gt;(Span&lt;byte&gt;, ReadOnlySpan&lt;T&gt;, bool)</a>
     </div>
     <div>
       <a class="xref" href="../Fp/Fp.Processor.html#Fp_Processor_Ascii_System_String_System_Byte___">Processor.Ascii(string, byte[])</a>
@@ -1785,34 +1845,30 @@ Class FsFormatSingleProcessor&lt;T&gt;  <a class="header-action link-secondary" 
   <a id="Fp_Fs_FsFormatSingleProcessor_1_Run_" data-uid="Fp.Fs.FsFormatSingleProcessor`1.Run*"></a>
 
   <h3 id="Fp_Fs_FsFormatSingleProcessor_1_Run__1_System_Collections_Generic_IList_System_String__Fp_FileProcessorInfo_" data-uid="Fp.Fs.FsFormatSingleProcessor`1.Run``1(System.Collections.Generic.IList{System.String},Fp.FileProcessorInfo)">
-  Run&lt;TProcessor&gt;(IList&lt;string&gt;?, FileProcessorInfo?)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/collectioneering/Fp/blob/main/src/Fp.Fs/FsFormatSingleProcessor.cs/#L38"><i class="bi bi-code-slash"></i></a>
+  Run&lt;T&gt;(IList&lt;string&gt;?, FileProcessorInfo?)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/collectioneering/Fp/blob/main/src/Fp.Fs/FsFormatSingleProcessor.cs/#L25"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"><p>Processes using segmented function.</p>
-</div>
+  <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static void Run&lt;TProcessor&gt;(IList&lt;string&gt;? args, FileProcessorInfo? info = null) where TProcessor : FormatSingleProcessor, new()</code></pre>
+    <pre><code class="lang-csharp hljs">public static void Run&lt;T&gt;(IList&lt;string&gt;? args, FileProcessorInfo? info = null) where T : FormatSingleProcessor, new()</code></pre>
   </div>
 
   <h4 class="section">Parameters</h4>
   <dl class="parameters">
     <dt><code>args</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.ilist-1">IList</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a>&gt;</dt>
-    <dd><p>Arguments. If null, only register processor.</p>
-</dd>
+    <dd></dd>
     <dt><code>info</code> <a class="xref" href="../Fp/Fp.FileProcessorInfo.html">FileProcessorInfo</a></dt>
-    <dd><p>Processor info.</p>
-</dd>
+    <dd></dd>
   </dl>
 
 
   <h4 class="section">Type Parameters</h4>
   <dl class="parameters">
-    <dt><code>TProcessor</code></dt>
-    <dd><p>Processor type.</p>
-</dd>
+    <dt><code>T</code></dt>
+    <dd></dd>
   </dl>
 
 
@@ -1827,40 +1883,34 @@ Class FsFormatSingleProcessor&lt;T&gt;  <a class="header-action link-secondary" 
   <a id="Fp_Fs_FsFormatSingleProcessor_1_Run_" data-uid="Fp.Fs.FsFormatSingleProcessor`1.Run*"></a>
 
   <h3 id="Fp_Fs_FsFormatSingleProcessor_1_Run__1_System_Collections_Generic_IList_System_String__System_String_System_String_System_String___" data-uid="Fp.Fs.FsFormatSingleProcessor`1.Run``1(System.Collections.Generic.IList{System.String},System.String,System.String,System.String[])">
-  Run&lt;TProcessor&gt;(IList&lt;string&gt;?, string, string, params string?[])
-  <a class="header-action link-secondary" title="View source" href="https://github.com/collectioneering/Fp/blob/main/src/Fp.Fs/FsFormatSingleProcessor.cs/#L49"><i class="bi bi-code-slash"></i></a>
+  Run&lt;T&gt;(IList&lt;string&gt;?, string, string, params string?[])
+  <a class="header-action link-secondary" title="View source" href="https://github.com/collectioneering/Fp/blob/main/src/Fp.Fs/FsFormatSingleProcessor.cs/#L31"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"><p>Processes using segmented function.</p>
-</div>
+  <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static void Run&lt;TProcessor&gt;(IList&lt;string&gt;? args, string name, string description, params string?[] extensions) where TProcessor : FormatSingleProcessor, new()</code></pre>
+    <pre><code class="lang-csharp hljs">public static void Run&lt;T&gt;(IList&lt;string&gt;? args, string name, string description, params string?[] extensions) where T : FormatSingleProcessor, new()</code></pre>
   </div>
 
   <h4 class="section">Parameters</h4>
   <dl class="parameters">
     <dt><code>args</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.ilist-1">IList</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a>&gt;</dt>
-    <dd><p>Arguments. If null, only register processor.</p>
-</dd>
+    <dd></dd>
     <dt><code>name</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
-    <dd><p>Processor name.</p>
-</dd>
+    <dd></dd>
     <dt><code>description</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
-    <dd><p>Processor description.</p>
-</dd>
+    <dd></dd>
     <dt><code>extensions</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a>[]</dt>
-    <dd><p>Processor extensions.</p>
-</dd>
+    <dd></dd>
   </dl>
 
 
   <h4 class="section">Type Parameters</h4>
   <dl class="parameters">
-    <dt><code>TProcessor</code></dt>
-    <dd><p>Processor type.</p>
-</dd>
+    <dt><code>T</code></dt>
+    <dd></dd>
   </dl>
 
 
@@ -1876,7 +1926,7 @@ Class FsFormatSingleProcessor&lt;T&gt;  <a class="header-action link-secondary" 
 </article>
 
         <div class="contribution d-print-none">
-          <a href="https://github.com/collectioneering/Fp/blob/main/src/Fp.Fs/FsFormatSingleProcessor.cs/#L30" class="edit-link">Edit this page</a>
+          <a href="https://github.com/collectioneering/Fp/blob/main/src/Fp.Fs/FsFormatSingleProcessor.cs/#L22" class="edit-link">Edit this page</a>
         </div>
 
 

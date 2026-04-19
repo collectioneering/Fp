@@ -656,6 +656,24 @@ references:
   fullName.vb: Fp.CircleBuffer(Of T).Insert
   nameWithType: CircleBuffer<T>.Insert
   nameWithType.vb: CircleBuffer(Of T).Insert
+- uid: Fp.CircleBuffer`1.InsertRange(System.Int32,System.ReadOnlySpan{`0})
+  name: InsertRange(int, ReadOnlySpan<T>)
+  href: api/Fp/Fp.CircleBuffer-1.html#Fp_CircleBuffer_1_InsertRange_System_Int32_System_ReadOnlySpan__0__
+  commentId: M:Fp.CircleBuffer`1.InsertRange(System.Int32,System.ReadOnlySpan{`0})
+  name.vb: InsertRange(Integer, ReadOnlySpan(Of T))
+  fullName: Fp.CircleBuffer<T>.InsertRange(int, System.ReadOnlySpan<T>)
+  fullName.vb: Fp.CircleBuffer(Of T).InsertRange(Integer, System.ReadOnlySpan(Of T))
+  nameWithType: CircleBuffer<T>.InsertRange(int, ReadOnlySpan<T>)
+  nameWithType.vb: CircleBuffer(Of T).InsertRange(Integer, ReadOnlySpan(Of T))
+- uid: Fp.CircleBuffer`1.InsertRange*
+  name: InsertRange
+  href: api/Fp/Fp.CircleBuffer-1.html#Fp_CircleBuffer_1_InsertRange_
+  commentId: Overload:Fp.CircleBuffer`1.InsertRange
+  isSpec: "True"
+  fullName: Fp.CircleBuffer<T>.InsertRange
+  fullName.vb: Fp.CircleBuffer(Of T).InsertRange
+  nameWithType: CircleBuffer<T>.InsertRange
+  nameWithType.vb: CircleBuffer(Of T).InsertRange
 - uid: Fp.CircleBuffer`1.IsReadOnly
   name: IsReadOnly
   href: api/Fp/Fp.CircleBuffer-1.html#Fp_CircleBuffer_1_IsReadOnly
@@ -727,6 +745,24 @@ references:
   fullName.vb: Fp.CircleBuffer(Of T).RemoveAt
   nameWithType: CircleBuffer<T>.RemoveAt
   nameWithType.vb: CircleBuffer(Of T).RemoveAt
+- uid: Fp.CircleBuffer`1.RemoveRange(System.Int32,System.Int32)
+  name: RemoveRange(int, int)
+  href: api/Fp/Fp.CircleBuffer-1.html#Fp_CircleBuffer_1_RemoveRange_System_Int32_System_Int32_
+  commentId: M:Fp.CircleBuffer`1.RemoveRange(System.Int32,System.Int32)
+  name.vb: RemoveRange(Integer, Integer)
+  fullName: Fp.CircleBuffer<T>.RemoveRange(int, int)
+  fullName.vb: Fp.CircleBuffer(Of T).RemoveRange(Integer, Integer)
+  nameWithType: CircleBuffer<T>.RemoveRange(int, int)
+  nameWithType.vb: CircleBuffer(Of T).RemoveRange(Integer, Integer)
+- uid: Fp.CircleBuffer`1.RemoveRange*
+  name: RemoveRange
+  href: api/Fp/Fp.CircleBuffer-1.html#Fp_CircleBuffer_1_RemoveRange_
+  commentId: Overload:Fp.CircleBuffer`1.RemoveRange
+  isSpec: "True"
+  fullName: Fp.CircleBuffer<T>.RemoveRange
+  fullName.vb: Fp.CircleBuffer(Of T).RemoveRange
+  nameWithType: CircleBuffer<T>.RemoveRange
+  nameWithType.vb: CircleBuffer(Of T).RemoveRange
 - uid: Fp.ConsoleLog
   name: ConsoleLog
   href: api/Fp/Fp.ConsoleLog.html
@@ -2355,6 +2391,186 @@ references:
   commentId: N:Fp.Fs
   fullName: Fp.Fs
   nameWithType: Fp.Fs
+- uid: Fp.Fs.CommandLine
+  name: Fp.Fs.CommandLine
+  href: api/Fp.Fs.CommandLine/Fp.Fs.CommandLine.html
+  commentId: N:Fp.Fs.CommandLine
+  fullName: Fp.Fs.CommandLine
+  nameWithType: Fp.Fs.CommandLine
+- uid: Fp.Fs.CommandLine.CommandLineFsFormatMultiProcessor
+  name: CommandLineFsFormatMultiProcessor
+  href: api/Fp.Fs.CommandLine/Fp.Fs.CommandLine.CommandLineFsFormatMultiProcessor.html
+  commentId: T:Fp.Fs.CommandLine.CommandLineFsFormatMultiProcessor
+  fullName: Fp.Fs.CommandLine.CommandLineFsFormatMultiProcessor
+  nameWithType: CommandLineFsFormatMultiProcessor
+- uid: Fp.Fs.CommandLine.CommandLineFsFormatMultiProcessor.Run*
+  name: Run
+  href: api/Fp.Fs.CommandLine/Fp.Fs.CommandLine.CommandLineFsFormatMultiProcessor.html#Fp_Fs_CommandLine_CommandLineFsFormatMultiProcessor_Run_
+  commentId: Overload:Fp.Fs.CommandLine.CommandLineFsFormatMultiProcessor.Run
+  isSpec: "True"
+  fullName: Fp.Fs.CommandLine.CommandLineFsFormatMultiProcessor.Run
+  nameWithType: CommandLineFsFormatMultiProcessor.Run
+- uid: Fp.Fs.CommandLine.CommandLineFsFormatMultiProcessor.Run``1(System.Collections.Generic.IList{System.String},Fp.FileProcessorInfo)
+  name: Run<T>(IList<string>?, FileProcessorInfo?)
+  href: api/Fp.Fs.CommandLine/Fp.Fs.CommandLine.CommandLineFsFormatMultiProcessor.html#Fp_Fs_CommandLine_CommandLineFsFormatMultiProcessor_Run__1_System_Collections_Generic_IList_System_String__Fp_FileProcessorInfo_
+  commentId: M:Fp.Fs.CommandLine.CommandLineFsFormatMultiProcessor.Run``1(System.Collections.Generic.IList{System.String},Fp.FileProcessorInfo)
+  name.vb: Run(Of T)(IList(Of String), FileProcessorInfo)
+  fullName: Fp.Fs.CommandLine.CommandLineFsFormatMultiProcessor.Run<T>(System.Collections.Generic.IList<string>?, Fp.FileProcessorInfo?)
+  fullName.vb: Fp.Fs.CommandLine.CommandLineFsFormatMultiProcessor.Run(Of T)(System.Collections.Generic.IList(Of String), Fp.FileProcessorInfo)
+  nameWithType: CommandLineFsFormatMultiProcessor.Run<T>(IList<string>?, FileProcessorInfo?)
+  nameWithType.vb: CommandLineFsFormatMultiProcessor.Run(Of T)(IList(Of String), FileProcessorInfo)
+- uid: Fp.Fs.CommandLine.CommandLineFsFormatMultiProcessor.Run``1(System.Collections.Generic.IList{System.String},System.String,System.String,System.String[])
+  name: Run<T>(IList<string>?, string, string, params string?[])
+  href: api/Fp.Fs.CommandLine/Fp.Fs.CommandLine.CommandLineFsFormatMultiProcessor.html#Fp_Fs_CommandLine_CommandLineFsFormatMultiProcessor_Run__1_System_Collections_Generic_IList_System_String__System_String_System_String_System_String___
+  commentId: M:Fp.Fs.CommandLine.CommandLineFsFormatMultiProcessor.Run``1(System.Collections.Generic.IList{System.String},System.String,System.String,System.String[])
+  name.vb: Run(Of T)(IList(Of String), String, String, ParamArray String())
+  fullName: Fp.Fs.CommandLine.CommandLineFsFormatMultiProcessor.Run<T>(System.Collections.Generic.IList<string>?, string, string, params string?[])
+  fullName.vb: Fp.Fs.CommandLine.CommandLineFsFormatMultiProcessor.Run(Of T)(System.Collections.Generic.IList(Of String), String, String, ParamArray String())
+  nameWithType: CommandLineFsFormatMultiProcessor.Run<T>(IList<string>?, string, string, params string?[])
+  nameWithType.vb: CommandLineFsFormatMultiProcessor.Run(Of T)(IList(Of String), String, String, ParamArray String())
+- uid: Fp.Fs.CommandLine.CommandLineFsFormatSingleProcessor
+  name: CommandLineFsFormatSingleProcessor
+  href: api/Fp.Fs.CommandLine/Fp.Fs.CommandLine.CommandLineFsFormatSingleProcessor.html
+  commentId: T:Fp.Fs.CommandLine.CommandLineFsFormatSingleProcessor
+  fullName: Fp.Fs.CommandLine.CommandLineFsFormatSingleProcessor
+  nameWithType: CommandLineFsFormatSingleProcessor
+- uid: Fp.Fs.CommandLine.CommandLineFsFormatSingleProcessor.Run*
+  name: Run
+  href: api/Fp.Fs.CommandLine/Fp.Fs.CommandLine.CommandLineFsFormatSingleProcessor.html#Fp_Fs_CommandLine_CommandLineFsFormatSingleProcessor_Run_
+  commentId: Overload:Fp.Fs.CommandLine.CommandLineFsFormatSingleProcessor.Run
+  isSpec: "True"
+  fullName: Fp.Fs.CommandLine.CommandLineFsFormatSingleProcessor.Run
+  nameWithType: CommandLineFsFormatSingleProcessor.Run
+- uid: Fp.Fs.CommandLine.CommandLineFsFormatSingleProcessor.Run``1(System.Collections.Generic.IList{System.String},Fp.FileProcessorInfo)
+  name: Run<T>(IList<string>?, FileProcessorInfo?)
+  href: api/Fp.Fs.CommandLine/Fp.Fs.CommandLine.CommandLineFsFormatSingleProcessor.html#Fp_Fs_CommandLine_CommandLineFsFormatSingleProcessor_Run__1_System_Collections_Generic_IList_System_String__Fp_FileProcessorInfo_
+  commentId: M:Fp.Fs.CommandLine.CommandLineFsFormatSingleProcessor.Run``1(System.Collections.Generic.IList{System.String},Fp.FileProcessorInfo)
+  name.vb: Run(Of T)(IList(Of String), FileProcessorInfo)
+  fullName: Fp.Fs.CommandLine.CommandLineFsFormatSingleProcessor.Run<T>(System.Collections.Generic.IList<string>?, Fp.FileProcessorInfo?)
+  fullName.vb: Fp.Fs.CommandLine.CommandLineFsFormatSingleProcessor.Run(Of T)(System.Collections.Generic.IList(Of String), Fp.FileProcessorInfo)
+  nameWithType: CommandLineFsFormatSingleProcessor.Run<T>(IList<string>?, FileProcessorInfo?)
+  nameWithType.vb: CommandLineFsFormatSingleProcessor.Run(Of T)(IList(Of String), FileProcessorInfo)
+- uid: Fp.Fs.CommandLine.CommandLineFsFormatSingleProcessor.Run``1(System.Collections.Generic.IList{System.String},System.String,System.String,System.String[])
+  name: Run<T>(IList<string>?, string, string, params string?[])
+  href: api/Fp.Fs.CommandLine/Fp.Fs.CommandLine.CommandLineFsFormatSingleProcessor.html#Fp_Fs_CommandLine_CommandLineFsFormatSingleProcessor_Run__1_System_Collections_Generic_IList_System_String__System_String_System_String_System_String___
+  commentId: M:Fp.Fs.CommandLine.CommandLineFsFormatSingleProcessor.Run``1(System.Collections.Generic.IList{System.String},System.String,System.String,System.String[])
+  name.vb: Run(Of T)(IList(Of String), String, String, ParamArray String())
+  fullName: Fp.Fs.CommandLine.CommandLineFsFormatSingleProcessor.Run<T>(System.Collections.Generic.IList<string>?, string, string, params string?[])
+  fullName.vb: Fp.Fs.CommandLine.CommandLineFsFormatSingleProcessor.Run(Of T)(System.Collections.Generic.IList(Of String), String, String, ParamArray String())
+  nameWithType: CommandLineFsFormatSingleProcessor.Run<T>(IList<string>?, string, string, params string?[])
+  nameWithType.vb: CommandLineFsFormatSingleProcessor.Run(Of T)(IList(Of String), String, String, ParamArray String())
+- uid: Fp.Fs.CommandLine.CommandLineFsFormatSingleProcessor`1
+  name: CommandLineFsFormatSingleProcessor<TData>
+  href: api/Fp.Fs.CommandLine/Fp.Fs.CommandLine.CommandLineFsFormatSingleProcessor-1.html
+  commentId: T:Fp.Fs.CommandLine.CommandLineFsFormatSingleProcessor`1
+  name.vb: CommandLineFsFormatSingleProcessor(Of TData)
+  fullName: Fp.Fs.CommandLine.CommandLineFsFormatSingleProcessor<TData>
+  fullName.vb: Fp.Fs.CommandLine.CommandLineFsFormatSingleProcessor(Of TData)
+  nameWithType: CommandLineFsFormatSingleProcessor<TData>
+  nameWithType.vb: CommandLineFsFormatSingleProcessor(Of TData)
+- uid: Fp.Fs.CommandLine.CommandLineFsFormatSingleProcessor`1.Run*
+  name: Run
+  href: api/Fp.Fs.CommandLine/Fp.Fs.CommandLine.CommandLineFsFormatSingleProcessor-1.html#Fp_Fs_CommandLine_CommandLineFsFormatSingleProcessor_1_Run_
+  commentId: Overload:Fp.Fs.CommandLine.CommandLineFsFormatSingleProcessor`1.Run
+  isSpec: "True"
+  fullName: Fp.Fs.CommandLine.CommandLineFsFormatSingleProcessor<TData>.Run
+  fullName.vb: Fp.Fs.CommandLine.CommandLineFsFormatSingleProcessor(Of TData).Run
+  nameWithType: CommandLineFsFormatSingleProcessor<TData>.Run
+  nameWithType.vb: CommandLineFsFormatSingleProcessor(Of TData).Run
+- uid: Fp.Fs.CommandLine.CommandLineFsFormatSingleProcessor`1.Run``1(System.Collections.Generic.IList{System.String},Fp.FileProcessorInfo)
+  name: Run<T>(IList<string>?, FileProcessorInfo?)
+  href: api/Fp.Fs.CommandLine/Fp.Fs.CommandLine.CommandLineFsFormatSingleProcessor-1.html#Fp_Fs_CommandLine_CommandLineFsFormatSingleProcessor_1_Run__1_System_Collections_Generic_IList_System_String__Fp_FileProcessorInfo_
+  commentId: M:Fp.Fs.CommandLine.CommandLineFsFormatSingleProcessor`1.Run``1(System.Collections.Generic.IList{System.String},Fp.FileProcessorInfo)
+  name.vb: Run(Of T)(IList(Of String), FileProcessorInfo)
+  fullName: Fp.Fs.CommandLine.CommandLineFsFormatSingleProcessor<TData>.Run<T>(System.Collections.Generic.IList<string>?, Fp.FileProcessorInfo?)
+  fullName.vb: Fp.Fs.CommandLine.CommandLineFsFormatSingleProcessor(Of TData).Run(Of T)(System.Collections.Generic.IList(Of String), Fp.FileProcessorInfo)
+  nameWithType: CommandLineFsFormatSingleProcessor<TData>.Run<T>(IList<string>?, FileProcessorInfo?)
+  nameWithType.vb: CommandLineFsFormatSingleProcessor(Of TData).Run(Of T)(IList(Of String), FileProcessorInfo)
+- uid: Fp.Fs.CommandLine.CommandLineFsFormatSingleProcessor`1.Run``1(System.Collections.Generic.IList{System.String},System.String,System.String,System.String[])
+  name: Run<T>(IList<string>?, string, string, params string?[])
+  href: api/Fp.Fs.CommandLine/Fp.Fs.CommandLine.CommandLineFsFormatSingleProcessor-1.html#Fp_Fs_CommandLine_CommandLineFsFormatSingleProcessor_1_Run__1_System_Collections_Generic_IList_System_String__System_String_System_String_System_String___
+  commentId: M:Fp.Fs.CommandLine.CommandLineFsFormatSingleProcessor`1.Run``1(System.Collections.Generic.IList{System.String},System.String,System.String,System.String[])
+  name.vb: Run(Of T)(IList(Of String), String, String, ParamArray String())
+  fullName: Fp.Fs.CommandLine.CommandLineFsFormatSingleProcessor<TData>.Run<T>(System.Collections.Generic.IList<string>?, string, string, params string?[])
+  fullName.vb: Fp.Fs.CommandLine.CommandLineFsFormatSingleProcessor(Of TData).Run(Of T)(System.Collections.Generic.IList(Of String), String, String, ParamArray String())
+  nameWithType: CommandLineFsFormatSingleProcessor<TData>.Run<T>(IList<string>?, string, string, params string?[])
+  nameWithType.vb: CommandLineFsFormatSingleProcessor(Of TData).Run(Of T)(IList(Of String), String, String, ParamArray String())
+- uid: Fp.Fs.CommandLine.CommandLineFsProcessor
+  name: CommandLineFsProcessor
+  href: api/Fp.Fs.CommandLine/Fp.Fs.CommandLine.CommandLineFsProcessor.html
+  commentId: T:Fp.Fs.CommandLine.CommandLineFsProcessor
+  fullName: Fp.Fs.CommandLine.CommandLineFsProcessor
+  nameWithType: CommandLineFsProcessor
+- uid: Fp.Fs.CommandLine.CommandLineFsProcessor.Run(Fp.Fs.FileSystemSource,System.Collections.Generic.IList{System.String},Fp.Fs.FsProcessorFactory[])
+  name: Run(FileSystemSource?, IList<string>?, params FsProcessorFactory[])
+  href: api/Fp.Fs.CommandLine/Fp.Fs.CommandLine.CommandLineFsProcessor.html#Fp_Fs_CommandLine_CommandLineFsProcessor_Run_Fp_Fs_FileSystemSource_System_Collections_Generic_IList_System_String__Fp_Fs_FsProcessorFactory___
+  commentId: M:Fp.Fs.CommandLine.CommandLineFsProcessor.Run(Fp.Fs.FileSystemSource,System.Collections.Generic.IList{System.String},Fp.Fs.FsProcessorFactory[])
+  name.vb: Run(FileSystemSource, IList(Of String), ParamArray FsProcessorFactory())
+  fullName: Fp.Fs.CommandLine.CommandLineFsProcessor.Run(Fp.Fs.FileSystemSource?, System.Collections.Generic.IList<string>?, params Fp.Fs.FsProcessorFactory[])
+  fullName.vb: Fp.Fs.CommandLine.CommandLineFsProcessor.Run(Fp.Fs.FileSystemSource, System.Collections.Generic.IList(Of String), ParamArray Fp.Fs.FsProcessorFactory())
+  nameWithType: CommandLineFsProcessor.Run(FileSystemSource?, IList<string>?, params FsProcessorFactory[])
+  nameWithType.vb: CommandLineFsProcessor.Run(FileSystemSource, IList(Of String), ParamArray FsProcessorFactory())
+- uid: Fp.Fs.CommandLine.CommandLineFsProcessor.Run(System.Action,System.Collections.Generic.IList{System.String},Fp.FileProcessorInfo)
+  name: Run(Action, IList<string>?, FileProcessorInfo?)
+  href: api/Fp.Fs.CommandLine/Fp.Fs.CommandLine.CommandLineFsProcessor.html#Fp_Fs_CommandLine_CommandLineFsProcessor_Run_System_Action_System_Collections_Generic_IList_System_String__Fp_FileProcessorInfo_
+  commentId: M:Fp.Fs.CommandLine.CommandLineFsProcessor.Run(System.Action,System.Collections.Generic.IList{System.String},Fp.FileProcessorInfo)
+  name.vb: Run(Action, IList(Of String), FileProcessorInfo)
+  fullName: Fp.Fs.CommandLine.CommandLineFsProcessor.Run(System.Action, System.Collections.Generic.IList<string>?, Fp.FileProcessorInfo?)
+  fullName.vb: Fp.Fs.CommandLine.CommandLineFsProcessor.Run(System.Action, System.Collections.Generic.IList(Of String), Fp.FileProcessorInfo)
+  nameWithType: CommandLineFsProcessor.Run(Action, IList<string>?, FileProcessorInfo?)
+  nameWithType.vb: CommandLineFsProcessor.Run(Action, IList(Of String), FileProcessorInfo)
+- uid: Fp.Fs.CommandLine.CommandLineFsProcessor.Run(System.Action,System.Collections.Generic.IList{System.String},System.String,System.String,System.String[])
+  name: Run(Action, IList<string>?, string, string, params string?[])
+  href: api/Fp.Fs.CommandLine/Fp.Fs.CommandLine.CommandLineFsProcessor.html#Fp_Fs_CommandLine_CommandLineFsProcessor_Run_System_Action_System_Collections_Generic_IList_System_String__System_String_System_String_System_String___
+  commentId: M:Fp.Fs.CommandLine.CommandLineFsProcessor.Run(System.Action,System.Collections.Generic.IList{System.String},System.String,System.String,System.String[])
+  name.vb: Run(Action, IList(Of String), String, String, ParamArray String())
+  fullName: Fp.Fs.CommandLine.CommandLineFsProcessor.Run(System.Action, System.Collections.Generic.IList<string>?, string, string, params string?[])
+  fullName.vb: Fp.Fs.CommandLine.CommandLineFsProcessor.Run(System.Action, System.Collections.Generic.IList(Of String), String, String, ParamArray String())
+  nameWithType: CommandLineFsProcessor.Run(Action, IList<string>?, string, string, params string?[])
+  nameWithType.vb: CommandLineFsProcessor.Run(Action, IList(Of String), String, String, ParamArray String())
+- uid: Fp.Fs.CommandLine.CommandLineFsProcessor.Run(System.Func{System.Collections.Generic.IEnumerable{Fp.Data}},System.Collections.Generic.IList{System.String},Fp.FileProcessorInfo)
+  name: Run(Func<IEnumerable<Data>>, IList<string>?, FileProcessorInfo?)
+  href: api/Fp.Fs.CommandLine/Fp.Fs.CommandLine.CommandLineFsProcessor.html#Fp_Fs_CommandLine_CommandLineFsProcessor_Run_System_Func_System_Collections_Generic_IEnumerable_Fp_Data___System_Collections_Generic_IList_System_String__Fp_FileProcessorInfo_
+  commentId: M:Fp.Fs.CommandLine.CommandLineFsProcessor.Run(System.Func{System.Collections.Generic.IEnumerable{Fp.Data}},System.Collections.Generic.IList{System.String},Fp.FileProcessorInfo)
+  name.vb: Run(Func(Of IEnumerable(Of Data)), IList(Of String), FileProcessorInfo)
+  fullName: Fp.Fs.CommandLine.CommandLineFsProcessor.Run(System.Func<System.Collections.Generic.IEnumerable<Fp.Data>>, System.Collections.Generic.IList<string>?, Fp.FileProcessorInfo?)
+  fullName.vb: Fp.Fs.CommandLine.CommandLineFsProcessor.Run(System.Func(Of System.Collections.Generic.IEnumerable(Of Fp.Data)), System.Collections.Generic.IList(Of String), Fp.FileProcessorInfo)
+  nameWithType: CommandLineFsProcessor.Run(Func<IEnumerable<Data>>, IList<string>?, FileProcessorInfo?)
+  nameWithType.vb: CommandLineFsProcessor.Run(Func(Of IEnumerable(Of Data)), IList(Of String), FileProcessorInfo)
+- uid: Fp.Fs.CommandLine.CommandLineFsProcessor.Run(System.Func{System.Collections.Generic.IEnumerable{Fp.Data}},System.Collections.Generic.IList{System.String},System.String,System.String,System.String[])
+  name: Run(Func<IEnumerable<Data>>, IList<string>?, string, string, params string?[])
+  href: api/Fp.Fs.CommandLine/Fp.Fs.CommandLine.CommandLineFsProcessor.html#Fp_Fs_CommandLine_CommandLineFsProcessor_Run_System_Func_System_Collections_Generic_IEnumerable_Fp_Data___System_Collections_Generic_IList_System_String__System_String_System_String_System_String___
+  commentId: M:Fp.Fs.CommandLine.CommandLineFsProcessor.Run(System.Func{System.Collections.Generic.IEnumerable{Fp.Data}},System.Collections.Generic.IList{System.String},System.String,System.String,System.String[])
+  name.vb: Run(Func(Of IEnumerable(Of Data)), IList(Of String), String, String, ParamArray String())
+  fullName: Fp.Fs.CommandLine.CommandLineFsProcessor.Run(System.Func<System.Collections.Generic.IEnumerable<Fp.Data>>, System.Collections.Generic.IList<string>?, string, string, params string?[])
+  fullName.vb: Fp.Fs.CommandLine.CommandLineFsProcessor.Run(System.Func(Of System.Collections.Generic.IEnumerable(Of Fp.Data)), System.Collections.Generic.IList(Of String), String, String, ParamArray String())
+  nameWithType: CommandLineFsProcessor.Run(Func<IEnumerable<Data>>, IList<string>?, string, string, params string?[])
+  nameWithType.vb: CommandLineFsProcessor.Run(Func(Of IEnumerable(Of Data)), IList(Of String), String, String, ParamArray String())
+- uid: Fp.Fs.CommandLine.CommandLineFsProcessor.Run*
+  name: Run
+  href: api/Fp.Fs.CommandLine/Fp.Fs.CommandLine.CommandLineFsProcessor.html#Fp_Fs_CommandLine_CommandLineFsProcessor_Run_
+  commentId: Overload:Fp.Fs.CommandLine.CommandLineFsProcessor.Run
+  isSpec: "True"
+  fullName: Fp.Fs.CommandLine.CommandLineFsProcessor.Run
+  nameWithType: CommandLineFsProcessor.Run
+- uid: Fp.Fs.CommandLine.CommandLineFsProcessor.Run``1(System.Collections.Generic.IList{System.String},Fp.FileProcessorInfo)
+  name: Run<T>(IList<string>?, FileProcessorInfo?)
+  href: api/Fp.Fs.CommandLine/Fp.Fs.CommandLine.CommandLineFsProcessor.html#Fp_Fs_CommandLine_CommandLineFsProcessor_Run__1_System_Collections_Generic_IList_System_String__Fp_FileProcessorInfo_
+  commentId: M:Fp.Fs.CommandLine.CommandLineFsProcessor.Run``1(System.Collections.Generic.IList{System.String},Fp.FileProcessorInfo)
+  name.vb: Run(Of T)(IList(Of String), FileProcessorInfo)
+  fullName: Fp.Fs.CommandLine.CommandLineFsProcessor.Run<T>(System.Collections.Generic.IList<string>?, Fp.FileProcessorInfo?)
+  fullName.vb: Fp.Fs.CommandLine.CommandLineFsProcessor.Run(Of T)(System.Collections.Generic.IList(Of String), Fp.FileProcessorInfo)
+  nameWithType: CommandLineFsProcessor.Run<T>(IList<string>?, FileProcessorInfo?)
+  nameWithType.vb: CommandLineFsProcessor.Run(Of T)(IList(Of String), FileProcessorInfo)
+- uid: Fp.Fs.CommandLine.CommandLineFsProcessor.Run``1(System.Collections.Generic.IList{System.String},System.String,System.String,System.String[])
+  name: Run<T>(IList<string>?, string, string, params string?[])
+  href: api/Fp.Fs.CommandLine/Fp.Fs.CommandLine.CommandLineFsProcessor.html#Fp_Fs_CommandLine_CommandLineFsProcessor_Run__1_System_Collections_Generic_IList_System_String__System_String_System_String_System_String___
+  commentId: M:Fp.Fs.CommandLine.CommandLineFsProcessor.Run``1(System.Collections.Generic.IList{System.String},System.String,System.String,System.String[])
+  name.vb: Run(Of T)(IList(Of String), String, String, ParamArray String())
+  fullName: Fp.Fs.CommandLine.CommandLineFsProcessor.Run<T>(System.Collections.Generic.IList<string>?, string, string, params string?[])
+  fullName.vb: Fp.Fs.CommandLine.CommandLineFsProcessor.Run(Of T)(System.Collections.Generic.IList(Of String), String, String, ParamArray String())
+  nameWithType: CommandLineFsProcessor.Run<T>(IList<string>?, string, string, params string?[])
+  nameWithType.vb: CommandLineFsProcessor.Run(Of T)(IList(Of String), String, String, ParamArray String())
 - uid: Fp.Fs.Coordinator
   name: Coordinator
   href: api/Fp.Fs/Fp.Fs.Coordinator.html
@@ -2377,15 +2593,24 @@ references:
   isSpec: "True"
   fullName: Fp.Fs.Coordinator.CliGetConfiguration
   nameWithType: Coordinator.CliGetConfiguration
-- uid: Fp.Fs.Coordinator.CliRunFilesystem(System.String[],System.Collections.Generic.IList{System.String},Fp.ILogWriter,Fp.Fs.FileSystemSource,Fp.Fs.FsProcessorFactory[])
-  name: CliRunFilesystem(string[], IList<string>?, ILogWriter?, FileSystemSource?, params FsProcessorFactory[])
-  href: api/Fp.Fs/Fp.Fs.Coordinator.html#Fp_Fs_Coordinator_CliRunFilesystem_System_String___System_Collections_Generic_IList_System_String__Fp_ILogWriter_Fp_Fs_FileSystemSource_Fp_Fs_FsProcessorFactory___
-  commentId: M:Fp.Fs.Coordinator.CliRunFilesystem(System.String[],System.Collections.Generic.IList{System.String},Fp.ILogWriter,Fp.Fs.FileSystemSource,Fp.Fs.FsProcessorFactory[])
-  name.vb: CliRunFilesystem(String(), IList(Of String), ILogWriter, FileSystemSource, ParamArray FsProcessorFactory())
-  fullName: Fp.Fs.Coordinator.CliRunFilesystem(string[], System.Collections.Generic.IList<string>?, Fp.ILogWriter?, Fp.Fs.FileSystemSource?, params Fp.Fs.FsProcessorFactory[])
-  fullName.vb: Fp.Fs.Coordinator.CliRunFilesystem(String(), System.Collections.Generic.IList(Of String), Fp.ILogWriter, Fp.Fs.FileSystemSource, ParamArray Fp.Fs.FsProcessorFactory())
-  nameWithType: Coordinator.CliRunFilesystem(string[], IList<string>?, ILogWriter?, FileSystemSource?, params FsProcessorFactory[])
-  nameWithType.vb: Coordinator.CliRunFilesystem(String(), IList(Of String), ILogWriter, FileSystemSource, ParamArray FsProcessorFactory())
+- uid: Fp.Fs.Coordinator.CliRunFilesystem(Fp.ProcessorConfiguration,Fp.Fs.Coordinator.ExecutionSettings,System.Collections.Generic.IReadOnlyList{Fp.Fs.Coordinator.FpInput},Fp.Fs.FileSystemSource,System.Collections.Generic.IReadOnlyList{Fp.Fs.FsProcessorFactory})
+  name: CliRunFilesystem(ProcessorConfiguration, ExecutionSettings, IReadOnlyList<FpInput>, FileSystemSource?, IReadOnlyList<FsProcessorFactory>)
+  href: api/Fp.Fs/Fp.Fs.Coordinator.html#Fp_Fs_Coordinator_CliRunFilesystem_Fp_ProcessorConfiguration_Fp_Fs_Coordinator_ExecutionSettings_System_Collections_Generic_IReadOnlyList_Fp_Fs_Coordinator_FpInput__Fp_Fs_FileSystemSource_System_Collections_Generic_IReadOnlyList_Fp_Fs_FsProcessorFactory__
+  commentId: M:Fp.Fs.Coordinator.CliRunFilesystem(Fp.ProcessorConfiguration,Fp.Fs.Coordinator.ExecutionSettings,System.Collections.Generic.IReadOnlyList{Fp.Fs.Coordinator.FpInput},Fp.Fs.FileSystemSource,System.Collections.Generic.IReadOnlyList{Fp.Fs.FsProcessorFactory})
+  name.vb: CliRunFilesystem(ProcessorConfiguration, ExecutionSettings, IReadOnlyList(Of FpInput), FileSystemSource, IReadOnlyList(Of FsProcessorFactory))
+  fullName: Fp.Fs.Coordinator.CliRunFilesystem(Fp.ProcessorConfiguration, Fp.Fs.Coordinator.ExecutionSettings, System.Collections.Generic.IReadOnlyList<Fp.Fs.Coordinator.FpInput>, Fp.Fs.FileSystemSource?, System.Collections.Generic.IReadOnlyList<Fp.Fs.FsProcessorFactory>)
+  fullName.vb: Fp.Fs.Coordinator.CliRunFilesystem(Fp.ProcessorConfiguration, Fp.Fs.Coordinator.ExecutionSettings, System.Collections.Generic.IReadOnlyList(Of Fp.Fs.Coordinator.FpInput), Fp.Fs.FileSystemSource, System.Collections.Generic.IReadOnlyList(Of Fp.Fs.FsProcessorFactory))
+  nameWithType: Coordinator.CliRunFilesystem(ProcessorConfiguration, Coordinator.ExecutionSettings, IReadOnlyList<Coordinator.FpInput>, FileSystemSource?, IReadOnlyList<FsProcessorFactory>)
+  nameWithType.vb: Coordinator.CliRunFilesystem(ProcessorConfiguration, Coordinator.ExecutionSettings, IReadOnlyList(Of Coordinator.FpInput), FileSystemSource, IReadOnlyList(Of FsProcessorFactory))
+- uid: Fp.Fs.Coordinator.CliRunFilesystem(System.String[],System.Collections.Generic.IList{System.String},Fp.ILogWriter,Fp.Fs.FileSystemSource,System.Collections.Generic.IReadOnlyList{Fp.Fs.FsProcessorFactory})
+  name: CliRunFilesystem(string[], IList<string>?, ILogWriter?, FileSystemSource?, IReadOnlyList<FsProcessorFactory>)
+  href: api/Fp.Fs/Fp.Fs.Coordinator.html#Fp_Fs_Coordinator_CliRunFilesystem_System_String___System_Collections_Generic_IList_System_String__Fp_ILogWriter_Fp_Fs_FileSystemSource_System_Collections_Generic_IReadOnlyList_Fp_Fs_FsProcessorFactory__
+  commentId: M:Fp.Fs.Coordinator.CliRunFilesystem(System.String[],System.Collections.Generic.IList{System.String},Fp.ILogWriter,Fp.Fs.FileSystemSource,System.Collections.Generic.IReadOnlyList{Fp.Fs.FsProcessorFactory})
+  name.vb: CliRunFilesystem(String(), IList(Of String), ILogWriter, FileSystemSource, IReadOnlyList(Of FsProcessorFactory))
+  fullName: Fp.Fs.Coordinator.CliRunFilesystem(string[], System.Collections.Generic.IList<string>?, Fp.ILogWriter?, Fp.Fs.FileSystemSource?, System.Collections.Generic.IReadOnlyList<Fp.Fs.FsProcessorFactory>)
+  fullName.vb: Fp.Fs.Coordinator.CliRunFilesystem(String(), System.Collections.Generic.IList(Of String), Fp.ILogWriter, Fp.Fs.FileSystemSource, System.Collections.Generic.IReadOnlyList(Of Fp.Fs.FsProcessorFactory))
+  nameWithType: Coordinator.CliRunFilesystem(string[], IList<string>?, ILogWriter?, FileSystemSource?, IReadOnlyList<FsProcessorFactory>)
+  nameWithType.vb: Coordinator.CliRunFilesystem(String(), IList(Of String), ILogWriter, FileSystemSource, IReadOnlyList(Of FsProcessorFactory))
 - uid: Fp.Fs.Coordinator.CliRunFilesystem*
   name: CliRunFilesystem
   href: api/Fp.Fs/Fp.Fs.Coordinator.html#Fp_Fs_Coordinator_CliRunFilesystem_
@@ -2393,15 +2618,24 @@ references:
   isSpec: "True"
   fullName: Fp.Fs.Coordinator.CliRunFilesystem
   nameWithType: Coordinator.CliRunFilesystem
-- uid: Fp.Fs.Coordinator.CliRunFilesystemAsync(System.String[],System.Collections.Generic.IList{System.String},Fp.ILogWriter,Fp.Fs.FileSystemSource,Fp.Fs.FsProcessorFactory[])
-  name: CliRunFilesystemAsync(string[], IList<string>?, ILogWriter?, FileSystemSource?, params FsProcessorFactory[])
-  href: api/Fp.Fs/Fp.Fs.Coordinator.html#Fp_Fs_Coordinator_CliRunFilesystemAsync_System_String___System_Collections_Generic_IList_System_String__Fp_ILogWriter_Fp_Fs_FileSystemSource_Fp_Fs_FsProcessorFactory___
-  commentId: M:Fp.Fs.Coordinator.CliRunFilesystemAsync(System.String[],System.Collections.Generic.IList{System.String},Fp.ILogWriter,Fp.Fs.FileSystemSource,Fp.Fs.FsProcessorFactory[])
-  name.vb: CliRunFilesystemAsync(String(), IList(Of String), ILogWriter, FileSystemSource, ParamArray FsProcessorFactory())
-  fullName: Fp.Fs.Coordinator.CliRunFilesystemAsync(string[], System.Collections.Generic.IList<string>?, Fp.ILogWriter?, Fp.Fs.FileSystemSource?, params Fp.Fs.FsProcessorFactory[])
-  fullName.vb: Fp.Fs.Coordinator.CliRunFilesystemAsync(String(), System.Collections.Generic.IList(Of String), Fp.ILogWriter, Fp.Fs.FileSystemSource, ParamArray Fp.Fs.FsProcessorFactory())
-  nameWithType: Coordinator.CliRunFilesystemAsync(string[], IList<string>?, ILogWriter?, FileSystemSource?, params FsProcessorFactory[])
-  nameWithType.vb: Coordinator.CliRunFilesystemAsync(String(), IList(Of String), ILogWriter, FileSystemSource, ParamArray FsProcessorFactory())
+- uid: Fp.Fs.Coordinator.CliRunFilesystemAsync(Fp.ProcessorConfiguration,Fp.Fs.Coordinator.ExecutionSettings,System.Collections.Generic.IReadOnlyList{Fp.Fs.Coordinator.FpInput},Fp.Fs.FileSystemSource,System.Collections.Generic.IReadOnlyList{Fp.Fs.FsProcessorFactory})
+  name: CliRunFilesystemAsync(ProcessorConfiguration, ExecutionSettings, IReadOnlyList<FpInput>, FileSystemSource?, IReadOnlyList<FsProcessorFactory>)
+  href: api/Fp.Fs/Fp.Fs.Coordinator.html#Fp_Fs_Coordinator_CliRunFilesystemAsync_Fp_ProcessorConfiguration_Fp_Fs_Coordinator_ExecutionSettings_System_Collections_Generic_IReadOnlyList_Fp_Fs_Coordinator_FpInput__Fp_Fs_FileSystemSource_System_Collections_Generic_IReadOnlyList_Fp_Fs_FsProcessorFactory__
+  commentId: M:Fp.Fs.Coordinator.CliRunFilesystemAsync(Fp.ProcessorConfiguration,Fp.Fs.Coordinator.ExecutionSettings,System.Collections.Generic.IReadOnlyList{Fp.Fs.Coordinator.FpInput},Fp.Fs.FileSystemSource,System.Collections.Generic.IReadOnlyList{Fp.Fs.FsProcessorFactory})
+  name.vb: CliRunFilesystemAsync(ProcessorConfiguration, ExecutionSettings, IReadOnlyList(Of FpInput), FileSystemSource, IReadOnlyList(Of FsProcessorFactory))
+  fullName: Fp.Fs.Coordinator.CliRunFilesystemAsync(Fp.ProcessorConfiguration, Fp.Fs.Coordinator.ExecutionSettings, System.Collections.Generic.IReadOnlyList<Fp.Fs.Coordinator.FpInput>, Fp.Fs.FileSystemSource?, System.Collections.Generic.IReadOnlyList<Fp.Fs.FsProcessorFactory>)
+  fullName.vb: Fp.Fs.Coordinator.CliRunFilesystemAsync(Fp.ProcessorConfiguration, Fp.Fs.Coordinator.ExecutionSettings, System.Collections.Generic.IReadOnlyList(Of Fp.Fs.Coordinator.FpInput), Fp.Fs.FileSystemSource, System.Collections.Generic.IReadOnlyList(Of Fp.Fs.FsProcessorFactory))
+  nameWithType: Coordinator.CliRunFilesystemAsync(ProcessorConfiguration, Coordinator.ExecutionSettings, IReadOnlyList<Coordinator.FpInput>, FileSystemSource?, IReadOnlyList<FsProcessorFactory>)
+  nameWithType.vb: Coordinator.CliRunFilesystemAsync(ProcessorConfiguration, Coordinator.ExecutionSettings, IReadOnlyList(Of Coordinator.FpInput), FileSystemSource, IReadOnlyList(Of FsProcessorFactory))
+- uid: Fp.Fs.Coordinator.CliRunFilesystemAsync(System.String[],System.Collections.Generic.IList{System.String},Fp.ILogWriter,Fp.Fs.FileSystemSource,System.Collections.Generic.IReadOnlyList{Fp.Fs.FsProcessorFactory})
+  name: CliRunFilesystemAsync(string[], IList<string>?, ILogWriter?, FileSystemSource?, IReadOnlyList<FsProcessorFactory>)
+  href: api/Fp.Fs/Fp.Fs.Coordinator.html#Fp_Fs_Coordinator_CliRunFilesystemAsync_System_String___System_Collections_Generic_IList_System_String__Fp_ILogWriter_Fp_Fs_FileSystemSource_System_Collections_Generic_IReadOnlyList_Fp_Fs_FsProcessorFactory__
+  commentId: M:Fp.Fs.Coordinator.CliRunFilesystemAsync(System.String[],System.Collections.Generic.IList{System.String},Fp.ILogWriter,Fp.Fs.FileSystemSource,System.Collections.Generic.IReadOnlyList{Fp.Fs.FsProcessorFactory})
+  name.vb: CliRunFilesystemAsync(String(), IList(Of String), ILogWriter, FileSystemSource, IReadOnlyList(Of FsProcessorFactory))
+  fullName: Fp.Fs.Coordinator.CliRunFilesystemAsync(string[], System.Collections.Generic.IList<string>?, Fp.ILogWriter?, Fp.Fs.FileSystemSource?, System.Collections.Generic.IReadOnlyList<Fp.Fs.FsProcessorFactory>)
+  fullName.vb: Fp.Fs.Coordinator.CliRunFilesystemAsync(String(), System.Collections.Generic.IList(Of String), Fp.ILogWriter, Fp.Fs.FileSystemSource, System.Collections.Generic.IReadOnlyList(Of Fp.Fs.FsProcessorFactory))
+  nameWithType: Coordinator.CliRunFilesystemAsync(string[], IList<string>?, ILogWriter?, FileSystemSource?, IReadOnlyList<FsProcessorFactory>)
+  nameWithType.vb: Coordinator.CliRunFilesystemAsync(String(), IList(Of String), ILogWriter, FileSystemSource, IReadOnlyList(Of FsProcessorFactory))
 - uid: Fp.Fs.Coordinator.CliRunFilesystemAsync*
   name: CliRunFilesystemAsync
   href: api/Fp.Fs/Fp.Fs.Coordinator.html#Fp_Fs_Coordinator_CliRunFilesystemAsync_
@@ -2692,15 +2926,15 @@ references:
   isSpec: "True"
   fullName: Fp.Fs.Coordinator.GuessExe
   nameWithType: Coordinator.GuessExe
-- uid: Fp.Fs.Coordinator.Recurse(System.Collections.Generic.IReadOnlyList{Fp.Fs.Coordinator.FpInput},Fp.Fs.Coordinator.ExecutionSource,Fp.Fs.FsProcessorFactory[])
-  name: Recurse(IReadOnlyList<FpInput>, ExecutionSource, params FsProcessorFactory[])
-  href: api/Fp.Fs/Fp.Fs.Coordinator.html#Fp_Fs_Coordinator_Recurse_System_Collections_Generic_IReadOnlyList_Fp_Fs_Coordinator_FpInput__Fp_Fs_Coordinator_ExecutionSource_Fp_Fs_FsProcessorFactory___
-  commentId: M:Fp.Fs.Coordinator.Recurse(System.Collections.Generic.IReadOnlyList{Fp.Fs.Coordinator.FpInput},Fp.Fs.Coordinator.ExecutionSource,Fp.Fs.FsProcessorFactory[])
-  name.vb: Recurse(IReadOnlyList(Of FpInput), ExecutionSource, ParamArray FsProcessorFactory())
-  fullName: Fp.Fs.Coordinator.Recurse(System.Collections.Generic.IReadOnlyList<Fp.Fs.Coordinator.FpInput>, Fp.Fs.Coordinator.ExecutionSource, params Fp.Fs.FsProcessorFactory[])
-  fullName.vb: Fp.Fs.Coordinator.Recurse(System.Collections.Generic.IReadOnlyList(Of Fp.Fs.Coordinator.FpInput), Fp.Fs.Coordinator.ExecutionSource, ParamArray Fp.Fs.FsProcessorFactory())
-  nameWithType: Coordinator.Recurse(IReadOnlyList<Coordinator.FpInput>, Coordinator.ExecutionSource, params FsProcessorFactory[])
-  nameWithType.vb: Coordinator.Recurse(IReadOnlyList(Of Coordinator.FpInput), Coordinator.ExecutionSource, ParamArray FsProcessorFactory())
+- uid: Fp.Fs.Coordinator.Recurse(System.Collections.Generic.IReadOnlyList{Fp.Fs.Coordinator.FpInput},Fp.Fs.Coordinator.ExecutionSource,System.Collections.Generic.IReadOnlyList{Fp.Fs.FsProcessorFactory})
+  name: Recurse(IReadOnlyList<FpInput>, ExecutionSource, IReadOnlyList<FsProcessorFactory>)
+  href: api/Fp.Fs/Fp.Fs.Coordinator.html#Fp_Fs_Coordinator_Recurse_System_Collections_Generic_IReadOnlyList_Fp_Fs_Coordinator_FpInput__Fp_Fs_Coordinator_ExecutionSource_System_Collections_Generic_IReadOnlyList_Fp_Fs_FsProcessorFactory__
+  commentId: M:Fp.Fs.Coordinator.Recurse(System.Collections.Generic.IReadOnlyList{Fp.Fs.Coordinator.FpInput},Fp.Fs.Coordinator.ExecutionSource,System.Collections.Generic.IReadOnlyList{Fp.Fs.FsProcessorFactory})
+  name.vb: Recurse(IReadOnlyList(Of FpInput), ExecutionSource, IReadOnlyList(Of FsProcessorFactory))
+  fullName: Fp.Fs.Coordinator.Recurse(System.Collections.Generic.IReadOnlyList<Fp.Fs.Coordinator.FpInput>, Fp.Fs.Coordinator.ExecutionSource, System.Collections.Generic.IReadOnlyList<Fp.Fs.FsProcessorFactory>)
+  fullName.vb: Fp.Fs.Coordinator.Recurse(System.Collections.Generic.IReadOnlyList(Of Fp.Fs.Coordinator.FpInput), Fp.Fs.Coordinator.ExecutionSource, System.Collections.Generic.IReadOnlyList(Of Fp.Fs.FsProcessorFactory))
+  nameWithType: Coordinator.Recurse(IReadOnlyList<Coordinator.FpInput>, Coordinator.ExecutionSource, IReadOnlyList<FsProcessorFactory>)
+  nameWithType.vb: Coordinator.Recurse(IReadOnlyList(Of Coordinator.FpInput), Coordinator.ExecutionSource, IReadOnlyList(Of FsProcessorFactory))
 - uid: Fp.Fs.Coordinator.Recurse*
   name: Recurse
   href: api/Fp.Fs/Fp.Fs.Coordinator.html#Fp_Fs_Coordinator_Recurse_
@@ -2708,15 +2942,15 @@ references:
   isSpec: "True"
   fullName: Fp.Fs.Coordinator.Recurse
   nameWithType: Coordinator.Recurse
-- uid: Fp.Fs.Coordinator.RecurseAsync(System.Collections.Generic.IReadOnlyList{Fp.Fs.Coordinator.FpInput},Fp.Fs.Coordinator.ExecutionSource,Fp.Fs.FsProcessorFactory[])
-  name: RecurseAsync(IReadOnlyList<FpInput>, ExecutionSource, params FsProcessorFactory[])
-  href: api/Fp.Fs/Fp.Fs.Coordinator.html#Fp_Fs_Coordinator_RecurseAsync_System_Collections_Generic_IReadOnlyList_Fp_Fs_Coordinator_FpInput__Fp_Fs_Coordinator_ExecutionSource_Fp_Fs_FsProcessorFactory___
-  commentId: M:Fp.Fs.Coordinator.RecurseAsync(System.Collections.Generic.IReadOnlyList{Fp.Fs.Coordinator.FpInput},Fp.Fs.Coordinator.ExecutionSource,Fp.Fs.FsProcessorFactory[])
-  name.vb: RecurseAsync(IReadOnlyList(Of FpInput), ExecutionSource, ParamArray FsProcessorFactory())
-  fullName: Fp.Fs.Coordinator.RecurseAsync(System.Collections.Generic.IReadOnlyList<Fp.Fs.Coordinator.FpInput>, Fp.Fs.Coordinator.ExecutionSource, params Fp.Fs.FsProcessorFactory[])
-  fullName.vb: Fp.Fs.Coordinator.RecurseAsync(System.Collections.Generic.IReadOnlyList(Of Fp.Fs.Coordinator.FpInput), Fp.Fs.Coordinator.ExecutionSource, ParamArray Fp.Fs.FsProcessorFactory())
-  nameWithType: Coordinator.RecurseAsync(IReadOnlyList<Coordinator.FpInput>, Coordinator.ExecutionSource, params FsProcessorFactory[])
-  nameWithType.vb: Coordinator.RecurseAsync(IReadOnlyList(Of Coordinator.FpInput), Coordinator.ExecutionSource, ParamArray FsProcessorFactory())
+- uid: Fp.Fs.Coordinator.RecurseAsync(System.Collections.Generic.IReadOnlyList{Fp.Fs.Coordinator.FpInput},Fp.Fs.Coordinator.ExecutionSource,System.Collections.Generic.IReadOnlyList{Fp.Fs.FsProcessorFactory})
+  name: RecurseAsync(IReadOnlyList<FpInput>, ExecutionSource, IReadOnlyList<FsProcessorFactory>)
+  href: api/Fp.Fs/Fp.Fs.Coordinator.html#Fp_Fs_Coordinator_RecurseAsync_System_Collections_Generic_IReadOnlyList_Fp_Fs_Coordinator_FpInput__Fp_Fs_Coordinator_ExecutionSource_System_Collections_Generic_IReadOnlyList_Fp_Fs_FsProcessorFactory__
+  commentId: M:Fp.Fs.Coordinator.RecurseAsync(System.Collections.Generic.IReadOnlyList{Fp.Fs.Coordinator.FpInput},Fp.Fs.Coordinator.ExecutionSource,System.Collections.Generic.IReadOnlyList{Fp.Fs.FsProcessorFactory})
+  name.vb: RecurseAsync(IReadOnlyList(Of FpInput), ExecutionSource, IReadOnlyList(Of FsProcessorFactory))
+  fullName: Fp.Fs.Coordinator.RecurseAsync(System.Collections.Generic.IReadOnlyList<Fp.Fs.Coordinator.FpInput>, Fp.Fs.Coordinator.ExecutionSource, System.Collections.Generic.IReadOnlyList<Fp.Fs.FsProcessorFactory>)
+  fullName.vb: Fp.Fs.Coordinator.RecurseAsync(System.Collections.Generic.IReadOnlyList(Of Fp.Fs.Coordinator.FpInput), Fp.Fs.Coordinator.ExecutionSource, System.Collections.Generic.IReadOnlyList(Of Fp.Fs.FsProcessorFactory))
+  nameWithType: Coordinator.RecurseAsync(IReadOnlyList<Coordinator.FpInput>, Coordinator.ExecutionSource, IReadOnlyList<FsProcessorFactory>)
+  nameWithType.vb: Coordinator.RecurseAsync(IReadOnlyList(Of Coordinator.FpInput), Coordinator.ExecutionSource, IReadOnlyList(Of FsProcessorFactory))
 - uid: Fp.Fs.Coordinator.RecurseAsync*
   name: RecurseAsync
   href: api/Fp.Fs/Fp.Fs.Coordinator.html#Fp_Fs_Coordinator_RecurseAsync_
@@ -3196,41 +3430,41 @@ references:
   nameWithType: FsFormatSingleProcessor.Run<T>(IList<string>?, string, string, params string?[])
   nameWithType.vb: FsFormatSingleProcessor.Run(Of T)(IList(Of String), String, String, ParamArray String())
 - uid: Fp.Fs.FsFormatSingleProcessor`1
-  name: FsFormatSingleProcessor<T>
+  name: FsFormatSingleProcessor<TData>
   href: api/Fp.Fs/Fp.Fs.FsFormatSingleProcessor-1.html
   commentId: T:Fp.Fs.FsFormatSingleProcessor`1
-  name.vb: FsFormatSingleProcessor(Of T)
-  fullName: Fp.Fs.FsFormatSingleProcessor<T>
-  fullName.vb: Fp.Fs.FsFormatSingleProcessor(Of T)
-  nameWithType: FsFormatSingleProcessor<T>
-  nameWithType.vb: FsFormatSingleProcessor(Of T)
+  name.vb: FsFormatSingleProcessor(Of TData)
+  fullName: Fp.Fs.FsFormatSingleProcessor<TData>
+  fullName.vb: Fp.Fs.FsFormatSingleProcessor(Of TData)
+  nameWithType: FsFormatSingleProcessor<TData>
+  nameWithType.vb: FsFormatSingleProcessor(Of TData)
 - uid: Fp.Fs.FsFormatSingleProcessor`1.Run*
   name: Run
   href: api/Fp.Fs/Fp.Fs.FsFormatSingleProcessor-1.html#Fp_Fs_FsFormatSingleProcessor_1_Run_
   commentId: Overload:Fp.Fs.FsFormatSingleProcessor`1.Run
   isSpec: "True"
-  fullName: Fp.Fs.FsFormatSingleProcessor<T>.Run
-  fullName.vb: Fp.Fs.FsFormatSingleProcessor(Of T).Run
-  nameWithType: FsFormatSingleProcessor<T>.Run
-  nameWithType.vb: FsFormatSingleProcessor(Of T).Run
+  fullName: Fp.Fs.FsFormatSingleProcessor<TData>.Run
+  fullName.vb: Fp.Fs.FsFormatSingleProcessor(Of TData).Run
+  nameWithType: FsFormatSingleProcessor<TData>.Run
+  nameWithType.vb: FsFormatSingleProcessor(Of TData).Run
 - uid: Fp.Fs.FsFormatSingleProcessor`1.Run``1(System.Collections.Generic.IList{System.String},Fp.FileProcessorInfo)
-  name: Run<TProcessor>(IList<string>?, FileProcessorInfo?)
+  name: Run<T>(IList<string>?, FileProcessorInfo?)
   href: api/Fp.Fs/Fp.Fs.FsFormatSingleProcessor-1.html#Fp_Fs_FsFormatSingleProcessor_1_Run__1_System_Collections_Generic_IList_System_String__Fp_FileProcessorInfo_
   commentId: M:Fp.Fs.FsFormatSingleProcessor`1.Run``1(System.Collections.Generic.IList{System.String},Fp.FileProcessorInfo)
-  name.vb: Run(Of TProcessor)(IList(Of String), FileProcessorInfo)
-  fullName: Fp.Fs.FsFormatSingleProcessor<T>.Run<TProcessor>(System.Collections.Generic.IList<string>?, Fp.FileProcessorInfo?)
-  fullName.vb: Fp.Fs.FsFormatSingleProcessor(Of T).Run(Of TProcessor)(System.Collections.Generic.IList(Of String), Fp.FileProcessorInfo)
-  nameWithType: FsFormatSingleProcessor<T>.Run<TProcessor>(IList<string>?, FileProcessorInfo?)
-  nameWithType.vb: FsFormatSingleProcessor(Of T).Run(Of TProcessor)(IList(Of String), FileProcessorInfo)
+  name.vb: Run(Of T)(IList(Of String), FileProcessorInfo)
+  fullName: Fp.Fs.FsFormatSingleProcessor<TData>.Run<T>(System.Collections.Generic.IList<string>?, Fp.FileProcessorInfo?)
+  fullName.vb: Fp.Fs.FsFormatSingleProcessor(Of TData).Run(Of T)(System.Collections.Generic.IList(Of String), Fp.FileProcessorInfo)
+  nameWithType: FsFormatSingleProcessor<TData>.Run<T>(IList<string>?, FileProcessorInfo?)
+  nameWithType.vb: FsFormatSingleProcessor(Of TData).Run(Of T)(IList(Of String), FileProcessorInfo)
 - uid: Fp.Fs.FsFormatSingleProcessor`1.Run``1(System.Collections.Generic.IList{System.String},System.String,System.String,System.String[])
-  name: Run<TProcessor>(IList<string>?, string, string, params string?[])
+  name: Run<T>(IList<string>?, string, string, params string?[])
   href: api/Fp.Fs/Fp.Fs.FsFormatSingleProcessor-1.html#Fp_Fs_FsFormatSingleProcessor_1_Run__1_System_Collections_Generic_IList_System_String__System_String_System_String_System_String___
   commentId: M:Fp.Fs.FsFormatSingleProcessor`1.Run``1(System.Collections.Generic.IList{System.String},System.String,System.String,System.String[])
-  name.vb: Run(Of TProcessor)(IList(Of String), String, String, ParamArray String())
-  fullName: Fp.Fs.FsFormatSingleProcessor<T>.Run<TProcessor>(System.Collections.Generic.IList<string>?, string, string, params string?[])
-  fullName.vb: Fp.Fs.FsFormatSingleProcessor(Of T).Run(Of TProcessor)(System.Collections.Generic.IList(Of String), String, String, ParamArray String())
-  nameWithType: FsFormatSingleProcessor<T>.Run<TProcessor>(IList<string>?, string, string, params string?[])
-  nameWithType.vb: FsFormatSingleProcessor(Of T).Run(Of TProcessor)(IList(Of String), String, String, ParamArray String())
+  name.vb: Run(Of T)(IList(Of String), String, String, ParamArray String())
+  fullName: Fp.Fs.FsFormatSingleProcessor<TData>.Run<T>(System.Collections.Generic.IList<string>?, string, string, params string?[])
+  fullName.vb: Fp.Fs.FsFormatSingleProcessor(Of TData).Run(Of T)(System.Collections.Generic.IList(Of String), String, String, ParamArray String())
+  nameWithType: FsFormatSingleProcessor<TData>.Run<T>(IList<string>?, string, string, params string?[])
+  nameWithType.vb: FsFormatSingleProcessor(Of TData).Run(Of T)(IList(Of String), String, String, ParamArray String())
 - uid: Fp.Fs.FsProcessor
   name: FsProcessor
   href: api/Fp.Fs/Fp.Fs.FsProcessor.html
@@ -4172,6 +4406,144 @@ references:
   fullName.vb: Fp.Fs.GenericNewFsProcessorFactory(Of T).CreateProcessor
   nameWithType: GenericNewFsProcessorFactory<T>.CreateProcessor
   nameWithType.vb: GenericNewFsProcessorFactory(Of T).CreateProcessor
+- uid: Fp.Fs.IFsFormatMultiRunnerType
+  name: IFsFormatMultiRunnerType
+  href: api/Fp.Fs/Fp.Fs.IFsFormatMultiRunnerType.html
+  commentId: T:Fp.Fs.IFsFormatMultiRunnerType
+  fullName: Fp.Fs.IFsFormatMultiRunnerType
+  nameWithType: IFsFormatMultiRunnerType
+- uid: Fp.Fs.IFsFormatMultiRunnerType.Run*
+  name: Run
+  href: api/Fp.Fs/Fp.Fs.IFsFormatMultiRunnerType.html#Fp_Fs_IFsFormatMultiRunnerType_Run_
+  commentId: Overload:Fp.Fs.IFsFormatMultiRunnerType.Run
+  isSpec: "True"
+  fullName: Fp.Fs.IFsFormatMultiRunnerType.Run
+  nameWithType: IFsFormatMultiRunnerType.Run
+- uid: Fp.Fs.IFsFormatMultiRunnerType.Run``1(System.Collections.Generic.IList{System.String},Fp.FileProcessorInfo)
+  name: Run<T>(IList<string>?, FileProcessorInfo?)
+  href: api/Fp.Fs/Fp.Fs.IFsFormatMultiRunnerType.html#Fp_Fs_IFsFormatMultiRunnerType_Run__1_System_Collections_Generic_IList_System_String__Fp_FileProcessorInfo_
+  commentId: M:Fp.Fs.IFsFormatMultiRunnerType.Run``1(System.Collections.Generic.IList{System.String},Fp.FileProcessorInfo)
+  name.vb: Run(Of T)(IList(Of String), FileProcessorInfo)
+  fullName: Fp.Fs.IFsFormatMultiRunnerType.Run<T>(System.Collections.Generic.IList<string>?, Fp.FileProcessorInfo?)
+  fullName.vb: Fp.Fs.IFsFormatMultiRunnerType.Run(Of T)(System.Collections.Generic.IList(Of String), Fp.FileProcessorInfo)
+  nameWithType: IFsFormatMultiRunnerType.Run<T>(IList<string>?, FileProcessorInfo?)
+  nameWithType.vb: IFsFormatMultiRunnerType.Run(Of T)(IList(Of String), FileProcessorInfo)
+- uid: Fp.Fs.IFsFormatMultiRunnerType.Run``1(System.Collections.Generic.IList{System.String},System.String,System.String,System.String[])
+  name: Run<T>(IList<string>?, string, string, params string?[])
+  href: api/Fp.Fs/Fp.Fs.IFsFormatMultiRunnerType.html#Fp_Fs_IFsFormatMultiRunnerType_Run__1_System_Collections_Generic_IList_System_String__System_String_System_String_System_String___
+  commentId: M:Fp.Fs.IFsFormatMultiRunnerType.Run``1(System.Collections.Generic.IList{System.String},System.String,System.String,System.String[])
+  name.vb: Run(Of T)(IList(Of String), String, String, ParamArray String())
+  fullName: Fp.Fs.IFsFormatMultiRunnerType.Run<T>(System.Collections.Generic.IList<string>?, string, string, params string?[])
+  fullName.vb: Fp.Fs.IFsFormatMultiRunnerType.Run(Of T)(System.Collections.Generic.IList(Of String), String, String, ParamArray String())
+  nameWithType: IFsFormatMultiRunnerType.Run<T>(IList<string>?, string, string, params string?[])
+  nameWithType.vb: IFsFormatMultiRunnerType.Run(Of T)(IList(Of String), String, String, ParamArray String())
+- uid: Fp.Fs.IFsFormatSingleRunnerType
+  name: IFsFormatSingleRunnerType
+  href: api/Fp.Fs/Fp.Fs.IFsFormatSingleRunnerType.html
+  commentId: T:Fp.Fs.IFsFormatSingleRunnerType
+  fullName: Fp.Fs.IFsFormatSingleRunnerType
+  nameWithType: IFsFormatSingleRunnerType
+- uid: Fp.Fs.IFsFormatSingleRunnerType.Run*
+  name: Run
+  href: api/Fp.Fs/Fp.Fs.IFsFormatSingleRunnerType.html#Fp_Fs_IFsFormatSingleRunnerType_Run_
+  commentId: Overload:Fp.Fs.IFsFormatSingleRunnerType.Run
+  isSpec: "True"
+  fullName: Fp.Fs.IFsFormatSingleRunnerType.Run
+  nameWithType: IFsFormatSingleRunnerType.Run
+- uid: Fp.Fs.IFsFormatSingleRunnerType.Run``1(System.Collections.Generic.IList{System.String},Fp.FileProcessorInfo)
+  name: Run<T>(IList<string>?, FileProcessorInfo?)
+  href: api/Fp.Fs/Fp.Fs.IFsFormatSingleRunnerType.html#Fp_Fs_IFsFormatSingleRunnerType_Run__1_System_Collections_Generic_IList_System_String__Fp_FileProcessorInfo_
+  commentId: M:Fp.Fs.IFsFormatSingleRunnerType.Run``1(System.Collections.Generic.IList{System.String},Fp.FileProcessorInfo)
+  name.vb: Run(Of T)(IList(Of String), FileProcessorInfo)
+  fullName: Fp.Fs.IFsFormatSingleRunnerType.Run<T>(System.Collections.Generic.IList<string>?, Fp.FileProcessorInfo?)
+  fullName.vb: Fp.Fs.IFsFormatSingleRunnerType.Run(Of T)(System.Collections.Generic.IList(Of String), Fp.FileProcessorInfo)
+  nameWithType: IFsFormatSingleRunnerType.Run<T>(IList<string>?, FileProcessorInfo?)
+  nameWithType.vb: IFsFormatSingleRunnerType.Run(Of T)(IList(Of String), FileProcessorInfo)
+- uid: Fp.Fs.IFsFormatSingleRunnerType.Run``1(System.Collections.Generic.IList{System.String},System.String,System.String,System.String[])
+  name: Run<T>(IList<string>?, string, string, params string?[])
+  href: api/Fp.Fs/Fp.Fs.IFsFormatSingleRunnerType.html#Fp_Fs_IFsFormatSingleRunnerType_Run__1_System_Collections_Generic_IList_System_String__System_String_System_String_System_String___
+  commentId: M:Fp.Fs.IFsFormatSingleRunnerType.Run``1(System.Collections.Generic.IList{System.String},System.String,System.String,System.String[])
+  name.vb: Run(Of T)(IList(Of String), String, String, ParamArray String())
+  fullName: Fp.Fs.IFsFormatSingleRunnerType.Run<T>(System.Collections.Generic.IList<string>?, string, string, params string?[])
+  fullName.vb: Fp.Fs.IFsFormatSingleRunnerType.Run(Of T)(System.Collections.Generic.IList(Of String), String, String, ParamArray String())
+  nameWithType: IFsFormatSingleRunnerType.Run<T>(IList<string>?, string, string, params string?[])
+  nameWithType.vb: IFsFormatSingleRunnerType.Run(Of T)(IList(Of String), String, String, ParamArray String())
+- uid: Fp.Fs.IFsRunnerType
+  name: IFsRunnerType
+  href: api/Fp.Fs/Fp.Fs.IFsRunnerType.html
+  commentId: T:Fp.Fs.IFsRunnerType
+  fullName: Fp.Fs.IFsRunnerType
+  nameWithType: IFsRunnerType
+- uid: Fp.Fs.IFsRunnerType.Run(Fp.Fs.FileSystemSource,System.Collections.Generic.IList{System.String},Fp.Fs.FsProcessorFactory[])
+  name: Run(FileSystemSource?, IList<string>?, params FsProcessorFactory[])
+  href: api/Fp.Fs/Fp.Fs.IFsRunnerType.html#Fp_Fs_IFsRunnerType_Run_Fp_Fs_FileSystemSource_System_Collections_Generic_IList_System_String__Fp_Fs_FsProcessorFactory___
+  commentId: M:Fp.Fs.IFsRunnerType.Run(Fp.Fs.FileSystemSource,System.Collections.Generic.IList{System.String},Fp.Fs.FsProcessorFactory[])
+  name.vb: Run(FileSystemSource, IList(Of String), ParamArray FsProcessorFactory())
+  fullName: Fp.Fs.IFsRunnerType.Run(Fp.Fs.FileSystemSource?, System.Collections.Generic.IList<string>?, params Fp.Fs.FsProcessorFactory[])
+  fullName.vb: Fp.Fs.IFsRunnerType.Run(Fp.Fs.FileSystemSource, System.Collections.Generic.IList(Of String), ParamArray Fp.Fs.FsProcessorFactory())
+  nameWithType: IFsRunnerType.Run(FileSystemSource?, IList<string>?, params FsProcessorFactory[])
+  nameWithType.vb: IFsRunnerType.Run(FileSystemSource, IList(Of String), ParamArray FsProcessorFactory())
+- uid: Fp.Fs.IFsRunnerType.Run(System.Action,System.Collections.Generic.IList{System.String},Fp.FileProcessorInfo)
+  name: Run(Action, IList<string>?, FileProcessorInfo?)
+  href: api/Fp.Fs/Fp.Fs.IFsRunnerType.html#Fp_Fs_IFsRunnerType_Run_System_Action_System_Collections_Generic_IList_System_String__Fp_FileProcessorInfo_
+  commentId: M:Fp.Fs.IFsRunnerType.Run(System.Action,System.Collections.Generic.IList{System.String},Fp.FileProcessorInfo)
+  name.vb: Run(Action, IList(Of String), FileProcessorInfo)
+  fullName: Fp.Fs.IFsRunnerType.Run(System.Action, System.Collections.Generic.IList<string>?, Fp.FileProcessorInfo?)
+  fullName.vb: Fp.Fs.IFsRunnerType.Run(System.Action, System.Collections.Generic.IList(Of String), Fp.FileProcessorInfo)
+  nameWithType: IFsRunnerType.Run(Action, IList<string>?, FileProcessorInfo?)
+  nameWithType.vb: IFsRunnerType.Run(Action, IList(Of String), FileProcessorInfo)
+- uid: Fp.Fs.IFsRunnerType.Run(System.Action,System.Collections.Generic.IList{System.String},System.String,System.String,System.String[])
+  name: Run(Action, IList<string>?, string, string, params string?[])
+  href: api/Fp.Fs/Fp.Fs.IFsRunnerType.html#Fp_Fs_IFsRunnerType_Run_System_Action_System_Collections_Generic_IList_System_String__System_String_System_String_System_String___
+  commentId: M:Fp.Fs.IFsRunnerType.Run(System.Action,System.Collections.Generic.IList{System.String},System.String,System.String,System.String[])
+  name.vb: Run(Action, IList(Of String), String, String, ParamArray String())
+  fullName: Fp.Fs.IFsRunnerType.Run(System.Action, System.Collections.Generic.IList<string>?, string, string, params string?[])
+  fullName.vb: Fp.Fs.IFsRunnerType.Run(System.Action, System.Collections.Generic.IList(Of String), String, String, ParamArray String())
+  nameWithType: IFsRunnerType.Run(Action, IList<string>?, string, string, params string?[])
+  nameWithType.vb: IFsRunnerType.Run(Action, IList(Of String), String, String, ParamArray String())
+- uid: Fp.Fs.IFsRunnerType.Run(System.Func{System.Collections.Generic.IEnumerable{Fp.Data}},System.Collections.Generic.IList{System.String},Fp.FileProcessorInfo)
+  name: Run(Func<IEnumerable<Data>>, IList<string>?, FileProcessorInfo?)
+  href: api/Fp.Fs/Fp.Fs.IFsRunnerType.html#Fp_Fs_IFsRunnerType_Run_System_Func_System_Collections_Generic_IEnumerable_Fp_Data___System_Collections_Generic_IList_System_String__Fp_FileProcessorInfo_
+  commentId: M:Fp.Fs.IFsRunnerType.Run(System.Func{System.Collections.Generic.IEnumerable{Fp.Data}},System.Collections.Generic.IList{System.String},Fp.FileProcessorInfo)
+  name.vb: Run(Func(Of IEnumerable(Of Data)), IList(Of String), FileProcessorInfo)
+  fullName: Fp.Fs.IFsRunnerType.Run(System.Func<System.Collections.Generic.IEnumerable<Fp.Data>>, System.Collections.Generic.IList<string>?, Fp.FileProcessorInfo?)
+  fullName.vb: Fp.Fs.IFsRunnerType.Run(System.Func(Of System.Collections.Generic.IEnumerable(Of Fp.Data)), System.Collections.Generic.IList(Of String), Fp.FileProcessorInfo)
+  nameWithType: IFsRunnerType.Run(Func<IEnumerable<Data>>, IList<string>?, FileProcessorInfo?)
+  nameWithType.vb: IFsRunnerType.Run(Func(Of IEnumerable(Of Data)), IList(Of String), FileProcessorInfo)
+- uid: Fp.Fs.IFsRunnerType.Run(System.Func{System.Collections.Generic.IEnumerable{Fp.Data}},System.Collections.Generic.IList{System.String},System.String,System.String,System.String[])
+  name: Run(Func<IEnumerable<Data>>, IList<string>?, string, string, params string?[])
+  href: api/Fp.Fs/Fp.Fs.IFsRunnerType.html#Fp_Fs_IFsRunnerType_Run_System_Func_System_Collections_Generic_IEnumerable_Fp_Data___System_Collections_Generic_IList_System_String__System_String_System_String_System_String___
+  commentId: M:Fp.Fs.IFsRunnerType.Run(System.Func{System.Collections.Generic.IEnumerable{Fp.Data}},System.Collections.Generic.IList{System.String},System.String,System.String,System.String[])
+  name.vb: Run(Func(Of IEnumerable(Of Data)), IList(Of String), String, String, ParamArray String())
+  fullName: Fp.Fs.IFsRunnerType.Run(System.Func<System.Collections.Generic.IEnumerable<Fp.Data>>, System.Collections.Generic.IList<string>?, string, string, params string?[])
+  fullName.vb: Fp.Fs.IFsRunnerType.Run(System.Func(Of System.Collections.Generic.IEnumerable(Of Fp.Data)), System.Collections.Generic.IList(Of String), String, String, ParamArray String())
+  nameWithType: IFsRunnerType.Run(Func<IEnumerable<Data>>, IList<string>?, string, string, params string?[])
+  nameWithType.vb: IFsRunnerType.Run(Func(Of IEnumerable(Of Data)), IList(Of String), String, String, ParamArray String())
+- uid: Fp.Fs.IFsRunnerType.Run*
+  name: Run
+  href: api/Fp.Fs/Fp.Fs.IFsRunnerType.html#Fp_Fs_IFsRunnerType_Run_
+  commentId: Overload:Fp.Fs.IFsRunnerType.Run
+  isSpec: "True"
+  fullName: Fp.Fs.IFsRunnerType.Run
+  nameWithType: IFsRunnerType.Run
+- uid: Fp.Fs.IFsRunnerType.Run``1(System.Collections.Generic.IList{System.String},Fp.FileProcessorInfo)
+  name: Run<T>(IList<string>?, FileProcessorInfo?)
+  href: api/Fp.Fs/Fp.Fs.IFsRunnerType.html#Fp_Fs_IFsRunnerType_Run__1_System_Collections_Generic_IList_System_String__Fp_FileProcessorInfo_
+  commentId: M:Fp.Fs.IFsRunnerType.Run``1(System.Collections.Generic.IList{System.String},Fp.FileProcessorInfo)
+  name.vb: Run(Of T)(IList(Of String), FileProcessorInfo)
+  fullName: Fp.Fs.IFsRunnerType.Run<T>(System.Collections.Generic.IList<string>?, Fp.FileProcessorInfo?)
+  fullName.vb: Fp.Fs.IFsRunnerType.Run(Of T)(System.Collections.Generic.IList(Of String), Fp.FileProcessorInfo)
+  nameWithType: IFsRunnerType.Run<T>(IList<string>?, FileProcessorInfo?)
+  nameWithType.vb: IFsRunnerType.Run(Of T)(IList(Of String), FileProcessorInfo)
+- uid: Fp.Fs.IFsRunnerType.Run``1(System.Collections.Generic.IList{System.String},System.String,System.String,System.String[])
+  name: Run<T>(IList<string>?, string, string, params string?[])
+  href: api/Fp.Fs/Fp.Fs.IFsRunnerType.html#Fp_Fs_IFsRunnerType_Run__1_System_Collections_Generic_IList_System_String__System_String_System_String_System_String___
+  commentId: M:Fp.Fs.IFsRunnerType.Run``1(System.Collections.Generic.IList{System.String},System.String,System.String,System.String[])
+  name.vb: Run(Of T)(IList(Of String), String, String, ParamArray String())
+  fullName: Fp.Fs.IFsRunnerType.Run<T>(System.Collections.Generic.IList<string>?, string, string, params string?[])
+  fullName.vb: Fp.Fs.IFsRunnerType.Run(Of T)(System.Collections.Generic.IList(Of String), String, String, ParamArray String())
+  nameWithType: IFsRunnerType.Run<T>(IList<string>?, string, string, params string?[])
+  nameWithType.vb: IFsRunnerType.Run(Of T)(IList(Of String), String, String, ParamArray String())
 - uid: Fp.Fs.RealFileSystemSource
   name: RealFileSystemSource
   href: api/Fp.Fs/Fp.Fs.RealFileSystemSource.html
@@ -4638,6 +5010,15 @@ references:
   fullName.vb: Fp.Helpers.BaseStringHelper.this[](Byte(), Integer, Integer)
   nameWithType: BaseStringHelper.this[byte[], int, int]
   nameWithType.vb: BaseStringHelper.this[](Byte(), Integer, Integer)
+- uid: Fp.Helpers.BaseStringHelper.Item(System.Byte[],System.Range)
+  name: this[byte[], Range]
+  href: api/Fp/Fp.Helpers.BaseStringHelper.html#Fp_Helpers_BaseStringHelper_Item_System_Byte___System_Range_
+  commentId: P:Fp.Helpers.BaseStringHelper.Item(System.Byte[],System.Range)
+  name.vb: this[](Byte(), Range)
+  fullName: Fp.Helpers.BaseStringHelper.this[byte[], System.Range]
+  fullName.vb: Fp.Helpers.BaseStringHelper.this[](Byte(), System.Range)
+  nameWithType: BaseStringHelper.this[byte[], Range]
+  nameWithType.vb: BaseStringHelper.this[](Byte(), Range)
 - uid: Fp.Helpers.BaseStringHelper.Item(System.Int64)
   name: this[long]
   href: api/Fp/Fp.Helpers.BaseStringHelper.html#Fp_Helpers_BaseStringHelper_Item_System_Int64_
@@ -4701,6 +5082,33 @@ references:
   fullName.vb: Fp.Helpers.BaseStringHelper.this[](System.Memory(Of Byte), Integer, Integer)
   nameWithType: BaseStringHelper.this[Memory<byte>, int, int]
   nameWithType.vb: BaseStringHelper.this[](Memory(Of Byte), Integer, Integer)
+- uid: Fp.Helpers.BaseStringHelper.Item(System.Memory{System.Byte},System.Range)
+  name: this[Memory<byte>, Range]
+  href: api/Fp/Fp.Helpers.BaseStringHelper.html#Fp_Helpers_BaseStringHelper_Item_System_Memory_System_Byte__System_Range_
+  commentId: P:Fp.Helpers.BaseStringHelper.Item(System.Memory{System.Byte},System.Range)
+  name.vb: this[](Memory(Of Byte), Range)
+  fullName: Fp.Helpers.BaseStringHelper.this[System.Memory<byte>, System.Range]
+  fullName.vb: Fp.Helpers.BaseStringHelper.this[](System.Memory(Of Byte), System.Range)
+  nameWithType: BaseStringHelper.this[Memory<byte>, Range]
+  nameWithType.vb: BaseStringHelper.this[](Memory(Of Byte), Range)
+- uid: Fp.Helpers.BaseStringHelper.Item(System.Range)
+  name: this[Range]
+  href: api/Fp/Fp.Helpers.BaseStringHelper.html#Fp_Helpers_BaseStringHelper_Item_System_Range_
+  commentId: P:Fp.Helpers.BaseStringHelper.Item(System.Range)
+  name.vb: this[](Range)
+  fullName: Fp.Helpers.BaseStringHelper.this[System.Range]
+  fullName.vb: Fp.Helpers.BaseStringHelper.this[](System.Range)
+  nameWithType: BaseStringHelper.this[Range]
+  nameWithType.vb: BaseStringHelper.this[](Range)
+- uid: Fp.Helpers.BaseStringHelper.Item(System.Range,System.IO.Stream)
+  name: this[Range, Stream]
+  href: api/Fp/Fp.Helpers.BaseStringHelper.html#Fp_Helpers_BaseStringHelper_Item_System_Range_System_IO_Stream_
+  commentId: P:Fp.Helpers.BaseStringHelper.Item(System.Range,System.IO.Stream)
+  name.vb: this[](Range, Stream)
+  fullName: Fp.Helpers.BaseStringHelper.this[System.Range, System.IO.Stream]
+  fullName.vb: Fp.Helpers.BaseStringHelper.this[](System.Range, System.IO.Stream)
+  nameWithType: BaseStringHelper.this[Range, Stream]
+  nameWithType.vb: BaseStringHelper.this[](Range, Stream)
 - uid: Fp.Helpers.BaseStringHelper.Item(System.ReadOnlyMemory{System.Byte},System.Int32)
   name: this[ReadOnlyMemory<byte>, int]
   href: api/Fp/Fp.Helpers.BaseStringHelper.html#Fp_Helpers_BaseStringHelper_Item_System_ReadOnlyMemory_System_Byte__System_Int32_
@@ -4719,6 +5127,15 @@ references:
   fullName.vb: Fp.Helpers.BaseStringHelper.this[](System.ReadOnlyMemory(Of Byte), Integer, Integer)
   nameWithType: BaseStringHelper.this[ReadOnlyMemory<byte>, int, int]
   nameWithType.vb: BaseStringHelper.this[](ReadOnlyMemory(Of Byte), Integer, Integer)
+- uid: Fp.Helpers.BaseStringHelper.Item(System.ReadOnlyMemory{System.Byte},System.Range)
+  name: this[ReadOnlyMemory<byte>, Range]
+  href: api/Fp/Fp.Helpers.BaseStringHelper.html#Fp_Helpers_BaseStringHelper_Item_System_ReadOnlyMemory_System_Byte__System_Range_
+  commentId: P:Fp.Helpers.BaseStringHelper.Item(System.ReadOnlyMemory{System.Byte},System.Range)
+  name.vb: this[](ReadOnlyMemory(Of Byte), Range)
+  fullName: Fp.Helpers.BaseStringHelper.this[System.ReadOnlyMemory<byte>, System.Range]
+  fullName.vb: Fp.Helpers.BaseStringHelper.this[](System.ReadOnlyMemory(Of Byte), System.Range)
+  nameWithType: BaseStringHelper.this[ReadOnlyMemory<byte>, Range]
+  nameWithType.vb: BaseStringHelper.this[](ReadOnlyMemory(Of Byte), Range)
 - uid: Fp.Helpers.BaseStringHelper.Item(System.ReadOnlySpan{System.Byte})
   name: this[ReadOnlySpan<byte>]
   href: api/Fp/Fp.Helpers.BaseStringHelper.html#Fp_Helpers_BaseStringHelper_Item_System_ReadOnlySpan_System_Byte__
@@ -4746,6 +5163,15 @@ references:
   fullName.vb: Fp.Helpers.BaseStringHelper.this[](System.ReadOnlySpan(Of Byte), Integer, Integer)
   nameWithType: BaseStringHelper.this[ReadOnlySpan<byte>, int, int]
   nameWithType.vb: BaseStringHelper.this[](ReadOnlySpan(Of Byte), Integer, Integer)
+- uid: Fp.Helpers.BaseStringHelper.Item(System.ReadOnlySpan{System.Byte},System.Range)
+  name: this[ReadOnlySpan<byte>, Range]
+  href: api/Fp/Fp.Helpers.BaseStringHelper.html#Fp_Helpers_BaseStringHelper_Item_System_ReadOnlySpan_System_Byte__System_Range_
+  commentId: P:Fp.Helpers.BaseStringHelper.Item(System.ReadOnlySpan{System.Byte},System.Range)
+  name.vb: this[](ReadOnlySpan(Of Byte), Range)
+  fullName: Fp.Helpers.BaseStringHelper.this[System.ReadOnlySpan<byte>, System.Range]
+  fullName.vb: Fp.Helpers.BaseStringHelper.this[](System.ReadOnlySpan(Of Byte), System.Range)
+  nameWithType: BaseStringHelper.this[ReadOnlySpan<byte>, Range]
+  nameWithType.vb: BaseStringHelper.this[](ReadOnlySpan(Of Byte), Range)
 - uid: Fp.Helpers.BaseStringHelper.Item(System.Span{System.Byte})
   name: this[Span<byte>]
   href: api/Fp/Fp.Helpers.BaseStringHelper.html#Fp_Helpers_BaseStringHelper_Item_System_Span_System_Byte__
@@ -4773,6 +5199,15 @@ references:
   fullName.vb: Fp.Helpers.BaseStringHelper.this[](System.Span(Of Byte), Integer, Integer)
   nameWithType: BaseStringHelper.this[Span<byte>, int, int]
   nameWithType.vb: BaseStringHelper.this[](Span(Of Byte), Integer, Integer)
+- uid: Fp.Helpers.BaseStringHelper.Item(System.Span{System.Byte},System.Range)
+  name: this[Span<byte>, Range]
+  href: api/Fp/Fp.Helpers.BaseStringHelper.html#Fp_Helpers_BaseStringHelper_Item_System_Span_System_Byte__System_Range_
+  commentId: P:Fp.Helpers.BaseStringHelper.Item(System.Span{System.Byte},System.Range)
+  name.vb: this[](Span(Of Byte), Range)
+  fullName: Fp.Helpers.BaseStringHelper.this[System.Span<byte>, System.Range]
+  fullName.vb: Fp.Helpers.BaseStringHelper.this[](System.Span(Of Byte), System.Range)
+  nameWithType: BaseStringHelper.this[Span<byte>, Range]
+  nameWithType.vb: BaseStringHelper.this[](Span(Of Byte), Range)
 - uid: Fp.Helpers.BaseStringHelper.Item*
   name: this
   href: api/Fp/Fp.Helpers.BaseStringHelper.html#Fp_Helpers_BaseStringHelper_Item_
@@ -5621,6 +6056,116 @@ references:
   fullName.vb: Fp.Helpers.BaseUnmanagedIntegerHelper(Of T).SkipWhile
   nameWithType: BaseUnmanagedIntegerHelper<T>.SkipWhile
   nameWithType.vb: BaseUnmanagedIntegerHelper(Of T).SkipWhile
+- uid: Fp.Helpers.BaseUnmanagedMultiByteIntegerArrayHelper`1
+  name: BaseUnmanagedMultiByteIntegerArrayHelper<T>
+  href: api/Fp/Fp.Helpers.BaseUnmanagedMultiByteIntegerArrayHelper-1.html
+  commentId: T:Fp.Helpers.BaseUnmanagedMultiByteIntegerArrayHelper`1
+  name.vb: BaseUnmanagedMultiByteIntegerArrayHelper(Of T)
+  fullName: Fp.Helpers.BaseUnmanagedMultiByteIntegerArrayHelper<T>
+  fullName.vb: Fp.Helpers.BaseUnmanagedMultiByteIntegerArrayHelper(Of T)
+  nameWithType: BaseUnmanagedMultiByteIntegerArrayHelper<T>
+  nameWithType.vb: BaseUnmanagedMultiByteIntegerArrayHelper(Of T)
+- uid: Fp.Helpers.BaseUnmanagedMultiByteIntegerArrayHelper`1.#ctor(System.Boolean)
+  name: BaseUnmanagedMultiByteIntegerArrayHelper(bool)
+  href: api/Fp/Fp.Helpers.BaseUnmanagedMultiByteIntegerArrayHelper-1.html#Fp_Helpers_BaseUnmanagedMultiByteIntegerArrayHelper_1__ctor_System_Boolean_
+  commentId: M:Fp.Helpers.BaseUnmanagedMultiByteIntegerArrayHelper`1.#ctor(System.Boolean)
+  name.vb: New(Boolean)
+  fullName: Fp.Helpers.BaseUnmanagedMultiByteIntegerArrayHelper<T>.BaseUnmanagedMultiByteIntegerArrayHelper(bool)
+  fullName.vb: Fp.Helpers.BaseUnmanagedMultiByteIntegerArrayHelper(Of T).New(Boolean)
+  nameWithType: BaseUnmanagedMultiByteIntegerArrayHelper<T>.BaseUnmanagedMultiByteIntegerArrayHelper(bool)
+  nameWithType.vb: BaseUnmanagedMultiByteIntegerArrayHelper(Of T).New(Boolean)
+- uid: Fp.Helpers.BaseUnmanagedMultiByteIntegerArrayHelper`1.#ctor*
+  name: BaseUnmanagedMultiByteIntegerArrayHelper
+  href: api/Fp/Fp.Helpers.BaseUnmanagedMultiByteIntegerArrayHelper-1.html#Fp_Helpers_BaseUnmanagedMultiByteIntegerArrayHelper_1__ctor_
+  commentId: Overload:Fp.Helpers.BaseUnmanagedMultiByteIntegerArrayHelper`1.#ctor
+  isSpec: "True"
+  name.vb: New
+  fullName: Fp.Helpers.BaseUnmanagedMultiByteIntegerArrayHelper<T>.BaseUnmanagedMultiByteIntegerArrayHelper
+  fullName.vb: Fp.Helpers.BaseUnmanagedMultiByteIntegerArrayHelper(Of T).New
+  nameWithType: BaseUnmanagedMultiByteIntegerArrayHelper<T>.BaseUnmanagedMultiByteIntegerArrayHelper
+  nameWithType.vb: BaseUnmanagedMultiByteIntegerArrayHelper(Of T).New
+- uid: Fp.Helpers.BaseUnmanagedMultiByteIntegerArrayHelper`1.Item(System.ReadOnlySpan{System.Byte})
+  name: this[ReadOnlySpan<byte>]
+  href: api/Fp/Fp.Helpers.BaseUnmanagedMultiByteIntegerArrayHelper-1.html#Fp_Helpers_BaseUnmanagedMultiByteIntegerArrayHelper_1_Item_System_ReadOnlySpan_System_Byte__
+  commentId: P:Fp.Helpers.BaseUnmanagedMultiByteIntegerArrayHelper`1.Item(System.ReadOnlySpan{System.Byte})
+  name.vb: this[](ReadOnlySpan(Of Byte))
+  fullName: Fp.Helpers.BaseUnmanagedMultiByteIntegerArrayHelper<T>.this[System.ReadOnlySpan<byte>]
+  fullName.vb: Fp.Helpers.BaseUnmanagedMultiByteIntegerArrayHelper(Of T).this[](System.ReadOnlySpan(Of Byte))
+  nameWithType: BaseUnmanagedMultiByteIntegerArrayHelper<T>.this[ReadOnlySpan<byte>]
+  nameWithType.vb: BaseUnmanagedMultiByteIntegerArrayHelper(Of T).this[](ReadOnlySpan(Of Byte))
+- uid: Fp.Helpers.BaseUnmanagedMultiByteIntegerArrayHelper`1.Item(System.Span{System.Byte})
+  name: this[Span<byte>]
+  href: api/Fp/Fp.Helpers.BaseUnmanagedMultiByteIntegerArrayHelper-1.html#Fp_Helpers_BaseUnmanagedMultiByteIntegerArrayHelper_1_Item_System_Span_System_Byte__
+  commentId: P:Fp.Helpers.BaseUnmanagedMultiByteIntegerArrayHelper`1.Item(System.Span{System.Byte})
+  name.vb: this[](Span(Of Byte))
+  fullName: Fp.Helpers.BaseUnmanagedMultiByteIntegerArrayHelper<T>.this[System.Span<byte>]
+  fullName.vb: Fp.Helpers.BaseUnmanagedMultiByteIntegerArrayHelper(Of T).this[](System.Span(Of Byte))
+  nameWithType: BaseUnmanagedMultiByteIntegerArrayHelper<T>.this[Span<byte>]
+  nameWithType.vb: BaseUnmanagedMultiByteIntegerArrayHelper(Of T).this[](Span(Of Byte))
+- uid: Fp.Helpers.BaseUnmanagedMultiByteIntegerArrayHelper`1.Item*
+  name: this
+  href: api/Fp/Fp.Helpers.BaseUnmanagedMultiByteIntegerArrayHelper-1.html#Fp_Helpers_BaseUnmanagedMultiByteIntegerArrayHelper_1_Item_
+  commentId: Overload:Fp.Helpers.BaseUnmanagedMultiByteIntegerArrayHelper`1.Item
+  isSpec: "True"
+  name.vb: this[]
+  fullName: Fp.Helpers.BaseUnmanagedMultiByteIntegerArrayHelper<T>.this
+  fullName.vb: Fp.Helpers.BaseUnmanagedMultiByteIntegerArrayHelper(Of T).this[]
+  nameWithType: BaseUnmanagedMultiByteIntegerArrayHelper<T>.this
+  nameWithType.vb: BaseUnmanagedMultiByteIntegerArrayHelper(Of T).this[]
+- uid: Fp.Helpers.BaseUnmanagedMultiByteIntegerArrayHelper`1.LittleEndian
+  name: LittleEndian
+  href: api/Fp/Fp.Helpers.BaseUnmanagedMultiByteIntegerArrayHelper-1.html#Fp_Helpers_BaseUnmanagedMultiByteIntegerArrayHelper_1_LittleEndian
+  commentId: P:Fp.Helpers.BaseUnmanagedMultiByteIntegerArrayHelper`1.LittleEndian
+  fullName: Fp.Helpers.BaseUnmanagedMultiByteIntegerArrayHelper<T>.LittleEndian
+  fullName.vb: Fp.Helpers.BaseUnmanagedMultiByteIntegerArrayHelper(Of T).LittleEndian
+  nameWithType: BaseUnmanagedMultiByteIntegerArrayHelper<T>.LittleEndian
+  nameWithType.vb: BaseUnmanagedMultiByteIntegerArrayHelper(Of T).LittleEndian
+- uid: Fp.Helpers.BaseUnmanagedMultiByteIntegerArrayHelper`1.LittleEndian*
+  name: LittleEndian
+  href: api/Fp/Fp.Helpers.BaseUnmanagedMultiByteIntegerArrayHelper-1.html#Fp_Helpers_BaseUnmanagedMultiByteIntegerArrayHelper_1_LittleEndian_
+  commentId: Overload:Fp.Helpers.BaseUnmanagedMultiByteIntegerArrayHelper`1.LittleEndian
+  isSpec: "True"
+  fullName: Fp.Helpers.BaseUnmanagedMultiByteIntegerArrayHelper<T>.LittleEndian
+  fullName.vb: Fp.Helpers.BaseUnmanagedMultiByteIntegerArrayHelper(Of T).LittleEndian
+  nameWithType: BaseUnmanagedMultiByteIntegerArrayHelper<T>.LittleEndian
+  nameWithType.vb: BaseUnmanagedMultiByteIntegerArrayHelper(Of T).LittleEndian
+- uid: Fp.Helpers.BaseUnmanagedSingleByteIntegerArrayHelper`1
+  name: BaseUnmanagedSingleByteIntegerArrayHelper<T>
+  href: api/Fp/Fp.Helpers.BaseUnmanagedSingleByteIntegerArrayHelper-1.html
+  commentId: T:Fp.Helpers.BaseUnmanagedSingleByteIntegerArrayHelper`1
+  name.vb: BaseUnmanagedSingleByteIntegerArrayHelper(Of T)
+  fullName: Fp.Helpers.BaseUnmanagedSingleByteIntegerArrayHelper<T>
+  fullName.vb: Fp.Helpers.BaseUnmanagedSingleByteIntegerArrayHelper(Of T)
+  nameWithType: BaseUnmanagedSingleByteIntegerArrayHelper<T>
+  nameWithType.vb: BaseUnmanagedSingleByteIntegerArrayHelper(Of T)
+- uid: Fp.Helpers.BaseUnmanagedSingleByteIntegerArrayHelper`1.Item(System.ReadOnlySpan{System.Byte})
+  name: this[ReadOnlySpan<byte>]
+  href: api/Fp/Fp.Helpers.BaseUnmanagedSingleByteIntegerArrayHelper-1.html#Fp_Helpers_BaseUnmanagedSingleByteIntegerArrayHelper_1_Item_System_ReadOnlySpan_System_Byte__
+  commentId: P:Fp.Helpers.BaseUnmanagedSingleByteIntegerArrayHelper`1.Item(System.ReadOnlySpan{System.Byte})
+  name.vb: this[](ReadOnlySpan(Of Byte))
+  fullName: Fp.Helpers.BaseUnmanagedSingleByteIntegerArrayHelper<T>.this[System.ReadOnlySpan<byte>]
+  fullName.vb: Fp.Helpers.BaseUnmanagedSingleByteIntegerArrayHelper(Of T).this[](System.ReadOnlySpan(Of Byte))
+  nameWithType: BaseUnmanagedSingleByteIntegerArrayHelper<T>.this[ReadOnlySpan<byte>]
+  nameWithType.vb: BaseUnmanagedSingleByteIntegerArrayHelper(Of T).this[](ReadOnlySpan(Of Byte))
+- uid: Fp.Helpers.BaseUnmanagedSingleByteIntegerArrayHelper`1.Item(System.Span{System.Byte})
+  name: this[Span<byte>]
+  href: api/Fp/Fp.Helpers.BaseUnmanagedSingleByteIntegerArrayHelper-1.html#Fp_Helpers_BaseUnmanagedSingleByteIntegerArrayHelper_1_Item_System_Span_System_Byte__
+  commentId: P:Fp.Helpers.BaseUnmanagedSingleByteIntegerArrayHelper`1.Item(System.Span{System.Byte})
+  name.vb: this[](Span(Of Byte))
+  fullName: Fp.Helpers.BaseUnmanagedSingleByteIntegerArrayHelper<T>.this[System.Span<byte>]
+  fullName.vb: Fp.Helpers.BaseUnmanagedSingleByteIntegerArrayHelper(Of T).this[](System.Span(Of Byte))
+  nameWithType: BaseUnmanagedSingleByteIntegerArrayHelper<T>.this[Span<byte>]
+  nameWithType.vb: BaseUnmanagedSingleByteIntegerArrayHelper(Of T).this[](Span(Of Byte))
+- uid: Fp.Helpers.BaseUnmanagedSingleByteIntegerArrayHelper`1.Item*
+  name: this
+  href: api/Fp/Fp.Helpers.BaseUnmanagedSingleByteIntegerArrayHelper-1.html#Fp_Helpers_BaseUnmanagedSingleByteIntegerArrayHelper_1_Item_
+  commentId: Overload:Fp.Helpers.BaseUnmanagedSingleByteIntegerArrayHelper`1.Item
+  isSpec: "True"
+  name.vb: this[]
+  fullName: Fp.Helpers.BaseUnmanagedSingleByteIntegerArrayHelper<T>.this
+  fullName.vb: Fp.Helpers.BaseUnmanagedSingleByteIntegerArrayHelper(Of T).this[]
+  nameWithType: BaseUnmanagedSingleByteIntegerArrayHelper<T>.this
+  nameWithType.vb: BaseUnmanagedSingleByteIntegerArrayHelper(Of T).this[]
 - uid: Fp.Helpers.F16ArrayHelper
   name: F16ArrayHelper
   href: api/Fp/Fp.Helpers.F16ArrayHelper.html
@@ -7704,6 +8249,51 @@ references:
   isSpec: "True"
   fullName: Fp.Helpers.U8ArrayHelper.InputStream
   nameWithType: U8ArrayHelper.InputStream
+- uid: Fp.Helpers.U8ArrayHelper.Item(System.Byte[],System.Range)
+  name: this[byte[], Range]
+  href: api/Fp/Fp.Helpers.U8ArrayHelper.html#Fp_Helpers_U8ArrayHelper_Item_System_Byte___System_Range_
+  commentId: P:Fp.Helpers.U8ArrayHelper.Item(System.Byte[],System.Range)
+  name.vb: this[](Byte(), Range)
+  fullName: Fp.Helpers.U8ArrayHelper.this[byte[], System.Range]
+  fullName.vb: Fp.Helpers.U8ArrayHelper.this[](Byte(), System.Range)
+  nameWithType: U8ArrayHelper.this[byte[], Range]
+  nameWithType.vb: U8ArrayHelper.this[](Byte(), Range)
+- uid: Fp.Helpers.U8ArrayHelper.Item(System.Memory{System.Byte},System.Range)
+  name: this[Memory<byte>, Range]
+  href: api/Fp/Fp.Helpers.U8ArrayHelper.html#Fp_Helpers_U8ArrayHelper_Item_System_Memory_System_Byte__System_Range_
+  commentId: P:Fp.Helpers.U8ArrayHelper.Item(System.Memory{System.Byte},System.Range)
+  name.vb: this[](Memory(Of Byte), Range)
+  fullName: Fp.Helpers.U8ArrayHelper.this[System.Memory<byte>, System.Range]
+  fullName.vb: Fp.Helpers.U8ArrayHelper.this[](System.Memory(Of Byte), System.Range)
+  nameWithType: U8ArrayHelper.this[Memory<byte>, Range]
+  nameWithType.vb: U8ArrayHelper.this[](Memory(Of Byte), Range)
+- uid: Fp.Helpers.U8ArrayHelper.Item(System.Range)
+  name: this[Range]
+  href: api/Fp/Fp.Helpers.U8ArrayHelper.html#Fp_Helpers_U8ArrayHelper_Item_System_Range_
+  commentId: P:Fp.Helpers.U8ArrayHelper.Item(System.Range)
+  name.vb: this[](Range)
+  fullName: Fp.Helpers.U8ArrayHelper.this[System.Range]
+  fullName.vb: Fp.Helpers.U8ArrayHelper.this[](System.Range)
+  nameWithType: U8ArrayHelper.this[Range]
+  nameWithType.vb: U8ArrayHelper.this[](Range)
+- uid: Fp.Helpers.U8ArrayHelper.Item(System.Range,System.IO.Stream)
+  name: this[Range, Stream]
+  href: api/Fp/Fp.Helpers.U8ArrayHelper.html#Fp_Helpers_U8ArrayHelper_Item_System_Range_System_IO_Stream_
+  commentId: P:Fp.Helpers.U8ArrayHelper.Item(System.Range,System.IO.Stream)
+  name.vb: this[](Range, Stream)
+  fullName: Fp.Helpers.U8ArrayHelper.this[System.Range, System.IO.Stream]
+  fullName.vb: Fp.Helpers.U8ArrayHelper.this[](System.Range, System.IO.Stream)
+  nameWithType: U8ArrayHelper.this[Range, Stream]
+  nameWithType.vb: U8ArrayHelper.this[](Range, Stream)
+- uid: Fp.Helpers.U8ArrayHelper.Item(System.ReadOnlyMemory{System.Byte},System.Range)
+  name: this[ReadOnlyMemory<byte>, Range]
+  href: api/Fp/Fp.Helpers.U8ArrayHelper.html#Fp_Helpers_U8ArrayHelper_Item_System_ReadOnlyMemory_System_Byte__System_Range_
+  commentId: P:Fp.Helpers.U8ArrayHelper.Item(System.ReadOnlyMemory{System.Byte},System.Range)
+  name.vb: this[](ReadOnlyMemory(Of Byte), Range)
+  fullName: Fp.Helpers.U8ArrayHelper.this[System.ReadOnlyMemory<byte>, System.Range]
+  fullName.vb: Fp.Helpers.U8ArrayHelper.this[](System.ReadOnlyMemory(Of Byte), System.Range)
+  nameWithType: U8ArrayHelper.this[ReadOnlyMemory<byte>, Range]
+  nameWithType.vb: U8ArrayHelper.this[](ReadOnlyMemory(Of Byte), Range)
 - uid: Fp.Helpers.U8ArrayHelper.Item(System.ReadOnlySpan{System.Byte})
   name: this[ReadOnlySpan<byte>]
   href: api/Fp/Fp.Helpers.U8ArrayHelper.html#Fp_Helpers_U8ArrayHelper_Item_System_ReadOnlySpan_System_Byte__
@@ -7713,6 +8303,15 @@ references:
   fullName.vb: Fp.Helpers.U8ArrayHelper.this[](System.ReadOnlySpan(Of Byte))
   nameWithType: U8ArrayHelper.this[ReadOnlySpan<byte>]
   nameWithType.vb: U8ArrayHelper.this[](ReadOnlySpan(Of Byte))
+- uid: Fp.Helpers.U8ArrayHelper.Item(System.ReadOnlySpan{System.Byte},System.Range)
+  name: this[ReadOnlySpan<byte>, Range]
+  href: api/Fp/Fp.Helpers.U8ArrayHelper.html#Fp_Helpers_U8ArrayHelper_Item_System_ReadOnlySpan_System_Byte__System_Range_
+  commentId: P:Fp.Helpers.U8ArrayHelper.Item(System.ReadOnlySpan{System.Byte},System.Range)
+  name.vb: this[](ReadOnlySpan(Of Byte), Range)
+  fullName: Fp.Helpers.U8ArrayHelper.this[System.ReadOnlySpan<byte>, System.Range]
+  fullName.vb: Fp.Helpers.U8ArrayHelper.this[](System.ReadOnlySpan(Of Byte), System.Range)
+  nameWithType: U8ArrayHelper.this[ReadOnlySpan<byte>, Range]
+  nameWithType.vb: U8ArrayHelper.this[](ReadOnlySpan(Of Byte), Range)
 - uid: Fp.Helpers.U8ArrayHelper.Item(System.Span{System.Byte})
   name: this[Span<byte>]
   href: api/Fp/Fp.Helpers.U8ArrayHelper.html#Fp_Helpers_U8ArrayHelper_Item_System_Span_System_Byte__
@@ -7722,6 +8321,15 @@ references:
   fullName.vb: Fp.Helpers.U8ArrayHelper.this[](System.Span(Of Byte))
   nameWithType: U8ArrayHelper.this[Span<byte>]
   nameWithType.vb: U8ArrayHelper.this[](Span(Of Byte))
+- uid: Fp.Helpers.U8ArrayHelper.Item(System.Span{System.Byte},System.Range)
+  name: this[Span<byte>, Range]
+  href: api/Fp/Fp.Helpers.U8ArrayHelper.html#Fp_Helpers_U8ArrayHelper_Item_System_Span_System_Byte__System_Range_
+  commentId: P:Fp.Helpers.U8ArrayHelper.Item(System.Span{System.Byte},System.Range)
+  name.vb: this[](Span(Of Byte), Range)
+  fullName: Fp.Helpers.U8ArrayHelper.this[System.Span<byte>, System.Range]
+  fullName.vb: Fp.Helpers.U8ArrayHelper.this[](System.Span(Of Byte), System.Range)
+  nameWithType: U8ArrayHelper.this[Span<byte>, Range]
+  nameWithType.vb: U8ArrayHelper.this[](Span(Of Byte), Range)
 - uid: Fp.Helpers.U8ArrayHelper.Item*
   name: this
   href: api/Fp/Fp.Helpers.U8ArrayHelper.html#Fp_Helpers_U8ArrayHelper_Item_
@@ -8180,6 +8788,28 @@ references:
   isSpec: "True"
   fullName: Fp.ILogWriter.WriteWarning
   nameWithType: ILogWriter.WriteWarning
+- uid: Fp.IndexUtility
+  name: IndexUtility
+  href: api/Fp/Fp.IndexUtility.html
+  commentId: T:Fp.IndexUtility
+  fullName: Fp.IndexUtility
+  nameWithType: IndexUtility
+- uid: Fp.IndexUtility.WithOffset(System.Index,System.Int32)
+  name: WithOffset(Index, int)
+  href: api/Fp/Fp.IndexUtility.html#Fp_IndexUtility_WithOffset_System_Index_System_Int32_
+  commentId: M:Fp.IndexUtility.WithOffset(System.Index,System.Int32)
+  name.vb: WithOffset(Index, Integer)
+  fullName: Fp.IndexUtility.WithOffset(System.Index, int)
+  fullName.vb: Fp.IndexUtility.WithOffset(System.Index, Integer)
+  nameWithType: IndexUtility.WithOffset(Index, int)
+  nameWithType.vb: IndexUtility.WithOffset(Index, Integer)
+- uid: Fp.IndexUtility.WithOffset*
+  name: WithOffset
+  href: api/Fp/Fp.IndexUtility.html#Fp_IndexUtility_WithOffset_
+  commentId: Overload:Fp.IndexUtility.WithOffset
+  isSpec: "True"
+  fullName: Fp.IndexUtility.WithOffset
+  nameWithType: IndexUtility.WithOffset
 - uid: Fp.LogLevel
   name: LogLevel
   href: api/Fp/Fp.LogLevel.html
@@ -12079,6 +12709,63 @@ references:
   isSpec: "True"
   fullName: Fp.Processor.ConvertHalfArrayToFloat
   nameWithType: Processor.ConvertHalfArrayToFloat
+- uid: Fp.Processor.ConvertNumberArray*
+  name: ConvertNumberArray
+  href: api/Fp/Fp.Processor.html#Fp_Processor_ConvertNumberArray_
+  commentId: Overload:Fp.Processor.ConvertNumberArray
+  isSpec: "True"
+  fullName: Fp.Processor.ConvertNumberArray
+  nameWithType: Processor.ConvertNumberArray
+- uid: Fp.Processor.ConvertNumberArrayAligned*
+  name: ConvertNumberArrayAligned
+  href: api/Fp/Fp.Processor.html#Fp_Processor_ConvertNumberArrayAligned_
+  commentId: Overload:Fp.Processor.ConvertNumberArrayAligned
+  isSpec: "True"
+  fullName: Fp.Processor.ConvertNumberArrayAligned
+  nameWithType: Processor.ConvertNumberArrayAligned
+- uid: Fp.Processor.ConvertNumberArrayAligned``1(System.Span{System.Byte},System.Boolean)
+  name: ConvertNumberArrayAligned<T>(Span<byte>, bool)
+  href: api/Fp/Fp.Processor.html#Fp_Processor_ConvertNumberArrayAligned__1_System_Span_System_Byte__System_Boolean_
+  commentId: M:Fp.Processor.ConvertNumberArrayAligned``1(System.Span{System.Byte},System.Boolean)
+  name.vb: ConvertNumberArrayAligned(Of T)(Span(Of Byte), Boolean)
+  fullName: Fp.Processor.ConvertNumberArrayAligned<T>(System.Span<byte>, bool)
+  fullName.vb: Fp.Processor.ConvertNumberArrayAligned(Of T)(System.Span(Of Byte), Boolean)
+  nameWithType: Processor.ConvertNumberArrayAligned<T>(Span<byte>, bool)
+  nameWithType.vb: Processor.ConvertNumberArrayAligned(Of T)(Span(Of Byte), Boolean)
+- uid: Fp.Processor.ConvertNumberArrayUnaligned*
+  name: ConvertNumberArrayUnaligned
+  href: api/Fp/Fp.Processor.html#Fp_Processor_ConvertNumberArrayUnaligned_
+  commentId: Overload:Fp.Processor.ConvertNumberArrayUnaligned
+  isSpec: "True"
+  fullName: Fp.Processor.ConvertNumberArrayUnaligned
+  nameWithType: Processor.ConvertNumberArrayUnaligned
+- uid: Fp.Processor.ConvertNumberArrayUnaligned``1(System.Span{System.Byte},System.Boolean)
+  name: ConvertNumberArrayUnaligned<T>(Span<byte>, bool)
+  href: api/Fp/Fp.Processor.html#Fp_Processor_ConvertNumberArrayUnaligned__1_System_Span_System_Byte__System_Boolean_
+  commentId: M:Fp.Processor.ConvertNumberArrayUnaligned``1(System.Span{System.Byte},System.Boolean)
+  name.vb: ConvertNumberArrayUnaligned(Of T)(Span(Of Byte), Boolean)
+  fullName: Fp.Processor.ConvertNumberArrayUnaligned<T>(System.Span<byte>, bool)
+  fullName.vb: Fp.Processor.ConvertNumberArrayUnaligned(Of T)(System.Span(Of Byte), Boolean)
+  nameWithType: Processor.ConvertNumberArrayUnaligned<T>(Span<byte>, bool)
+  nameWithType.vb: Processor.ConvertNumberArrayUnaligned(Of T)(Span(Of Byte), Boolean)
+- uid: Fp.Processor.ConvertNumberArray``1(System.Span{System.Byte},System.Boolean)
+  name: ConvertNumberArray<T>(Span<byte>, bool)
+  href: api/Fp/Fp.Processor.html#Fp_Processor_ConvertNumberArray__1_System_Span_System_Byte__System_Boolean_
+  commentId: M:Fp.Processor.ConvertNumberArray``1(System.Span{System.Byte},System.Boolean)
+  name.vb: ConvertNumberArray(Of T)(Span(Of Byte), Boolean)
+  fullName: Fp.Processor.ConvertNumberArray<T>(System.Span<byte>, bool)
+  fullName.vb: Fp.Processor.ConvertNumberArray(Of T)(System.Span(Of Byte), Boolean)
+  nameWithType: Processor.ConvertNumberArray<T>(Span<byte>, bool)
+  nameWithType.vb: Processor.ConvertNumberArray(Of T)(Span(Of Byte), Boolean)
+- uid: Fp.Processor.ConvertNumberArray``1(System.Span{``0},System.Boolean)
+  name: ConvertNumberArray<T>(Span<T>, bool)
+  href: api/Fp/Fp.Processor.html#Fp_Processor_ConvertNumberArray__1_System_Span___0__System_Boolean_
+  commentId: M:Fp.Processor.ConvertNumberArray``1(System.Span{``0},System.Boolean)
+  name.vb: ConvertNumberArray(Of T)(Span(Of T), Boolean)
+  fullName: Fp.Processor.ConvertNumberArray<T>(System.Span<T>, bool)
+  fullName.vb: Fp.Processor.ConvertNumberArray(Of T)(System.Span(Of T), Boolean)
+  nameWithType: Processor.ConvertNumberArray<T>(Span<T>, bool)
+  nameWithType.vb: Processor.ConvertNumberArray(Of T)(Span(Of T), Boolean)
 - uid: Fp.Processor.ConvertS16Array(System.Span{System.Byte})
   name: ConvertS16Array(Span<byte>)
   href: api/Fp/Fp.Processor.html#Fp_Processor_ConvertS16Array_System_Span_System_Byte__
@@ -12122,6 +12809,38 @@ references:
   isSpec: "True"
   fullName: Fp.Processor.ConvertS16Array
   nameWithType: Processor.ConvertS16Array
+- uid: Fp.Processor.ConvertS16ArrayAligned(System.Span{System.Byte},System.Boolean)
+  name: ConvertS16ArrayAligned(Span<byte>, bool)
+  href: api/Fp/Fp.Processor.html#Fp_Processor_ConvertS16ArrayAligned_System_Span_System_Byte__System_Boolean_
+  commentId: M:Fp.Processor.ConvertS16ArrayAligned(System.Span{System.Byte},System.Boolean)
+  name.vb: ConvertS16ArrayAligned(Span(Of Byte), Boolean)
+  fullName: Fp.Processor.ConvertS16ArrayAligned(System.Span<byte>, bool)
+  fullName.vb: Fp.Processor.ConvertS16ArrayAligned(System.Span(Of Byte), Boolean)
+  nameWithType: Processor.ConvertS16ArrayAligned(Span<byte>, bool)
+  nameWithType.vb: Processor.ConvertS16ArrayAligned(Span(Of Byte), Boolean)
+- uid: Fp.Processor.ConvertS16ArrayAligned*
+  name: ConvertS16ArrayAligned
+  href: api/Fp/Fp.Processor.html#Fp_Processor_ConvertS16ArrayAligned_
+  commentId: Overload:Fp.Processor.ConvertS16ArrayAligned
+  isSpec: "True"
+  fullName: Fp.Processor.ConvertS16ArrayAligned
+  nameWithType: Processor.ConvertS16ArrayAligned
+- uid: Fp.Processor.ConvertS16ArrayUnaligned(System.Span{System.Byte},System.Boolean)
+  name: ConvertS16ArrayUnaligned(Span<byte>, bool)
+  href: api/Fp/Fp.Processor.html#Fp_Processor_ConvertS16ArrayUnaligned_System_Span_System_Byte__System_Boolean_
+  commentId: M:Fp.Processor.ConvertS16ArrayUnaligned(System.Span{System.Byte},System.Boolean)
+  name.vb: ConvertS16ArrayUnaligned(Span(Of Byte), Boolean)
+  fullName: Fp.Processor.ConvertS16ArrayUnaligned(System.Span<byte>, bool)
+  fullName.vb: Fp.Processor.ConvertS16ArrayUnaligned(System.Span(Of Byte), Boolean)
+  nameWithType: Processor.ConvertS16ArrayUnaligned(Span<byte>, bool)
+  nameWithType.vb: Processor.ConvertS16ArrayUnaligned(Span(Of Byte), Boolean)
+- uid: Fp.Processor.ConvertS16ArrayUnaligned*
+  name: ConvertS16ArrayUnaligned
+  href: api/Fp/Fp.Processor.html#Fp_Processor_ConvertS16ArrayUnaligned_
+  commentId: Overload:Fp.Processor.ConvertS16ArrayUnaligned
+  isSpec: "True"
+  fullName: Fp.Processor.ConvertS16ArrayUnaligned
+  nameWithType: Processor.ConvertS16ArrayUnaligned
 - uid: Fp.Processor.ConvertS32Array(System.Span{System.Byte})
   name: ConvertS32Array(Span<byte>)
   href: api/Fp/Fp.Processor.html#Fp_Processor_ConvertS32Array_System_Span_System_Byte__
@@ -12165,6 +12884,38 @@ references:
   isSpec: "True"
   fullName: Fp.Processor.ConvertS32Array
   nameWithType: Processor.ConvertS32Array
+- uid: Fp.Processor.ConvertS32ArrayAligned(System.Span{System.Byte},System.Boolean)
+  name: ConvertS32ArrayAligned(Span<byte>, bool)
+  href: api/Fp/Fp.Processor.html#Fp_Processor_ConvertS32ArrayAligned_System_Span_System_Byte__System_Boolean_
+  commentId: M:Fp.Processor.ConvertS32ArrayAligned(System.Span{System.Byte},System.Boolean)
+  name.vb: ConvertS32ArrayAligned(Span(Of Byte), Boolean)
+  fullName: Fp.Processor.ConvertS32ArrayAligned(System.Span<byte>, bool)
+  fullName.vb: Fp.Processor.ConvertS32ArrayAligned(System.Span(Of Byte), Boolean)
+  nameWithType: Processor.ConvertS32ArrayAligned(Span<byte>, bool)
+  nameWithType.vb: Processor.ConvertS32ArrayAligned(Span(Of Byte), Boolean)
+- uid: Fp.Processor.ConvertS32ArrayAligned*
+  name: ConvertS32ArrayAligned
+  href: api/Fp/Fp.Processor.html#Fp_Processor_ConvertS32ArrayAligned_
+  commentId: Overload:Fp.Processor.ConvertS32ArrayAligned
+  isSpec: "True"
+  fullName: Fp.Processor.ConvertS32ArrayAligned
+  nameWithType: Processor.ConvertS32ArrayAligned
+- uid: Fp.Processor.ConvertS32ArrayUnaligned(System.Span{System.Byte},System.Boolean)
+  name: ConvertS32ArrayUnaligned(Span<byte>, bool)
+  href: api/Fp/Fp.Processor.html#Fp_Processor_ConvertS32ArrayUnaligned_System_Span_System_Byte__System_Boolean_
+  commentId: M:Fp.Processor.ConvertS32ArrayUnaligned(System.Span{System.Byte},System.Boolean)
+  name.vb: ConvertS32ArrayUnaligned(Span(Of Byte), Boolean)
+  fullName: Fp.Processor.ConvertS32ArrayUnaligned(System.Span<byte>, bool)
+  fullName.vb: Fp.Processor.ConvertS32ArrayUnaligned(System.Span(Of Byte), Boolean)
+  nameWithType: Processor.ConvertS32ArrayUnaligned(Span<byte>, bool)
+  nameWithType.vb: Processor.ConvertS32ArrayUnaligned(Span(Of Byte), Boolean)
+- uid: Fp.Processor.ConvertS32ArrayUnaligned*
+  name: ConvertS32ArrayUnaligned
+  href: api/Fp/Fp.Processor.html#Fp_Processor_ConvertS32ArrayUnaligned_
+  commentId: Overload:Fp.Processor.ConvertS32ArrayUnaligned
+  isSpec: "True"
+  fullName: Fp.Processor.ConvertS32ArrayUnaligned
+  nameWithType: Processor.ConvertS32ArrayUnaligned
 - uid: Fp.Processor.ConvertS64Array(System.Span{System.Byte})
   name: ConvertS64Array(Span<byte>)
   href: api/Fp/Fp.Processor.html#Fp_Processor_ConvertS64Array_System_Span_System_Byte__
@@ -12208,6 +12959,38 @@ references:
   isSpec: "True"
   fullName: Fp.Processor.ConvertS64Array
   nameWithType: Processor.ConvertS64Array
+- uid: Fp.Processor.ConvertS64ArrayAligned(System.Span{System.Byte},System.Boolean)
+  name: ConvertS64ArrayAligned(Span<byte>, bool)
+  href: api/Fp/Fp.Processor.html#Fp_Processor_ConvertS64ArrayAligned_System_Span_System_Byte__System_Boolean_
+  commentId: M:Fp.Processor.ConvertS64ArrayAligned(System.Span{System.Byte},System.Boolean)
+  name.vb: ConvertS64ArrayAligned(Span(Of Byte), Boolean)
+  fullName: Fp.Processor.ConvertS64ArrayAligned(System.Span<byte>, bool)
+  fullName.vb: Fp.Processor.ConvertS64ArrayAligned(System.Span(Of Byte), Boolean)
+  nameWithType: Processor.ConvertS64ArrayAligned(Span<byte>, bool)
+  nameWithType.vb: Processor.ConvertS64ArrayAligned(Span(Of Byte), Boolean)
+- uid: Fp.Processor.ConvertS64ArrayAligned*
+  name: ConvertS64ArrayAligned
+  href: api/Fp/Fp.Processor.html#Fp_Processor_ConvertS64ArrayAligned_
+  commentId: Overload:Fp.Processor.ConvertS64ArrayAligned
+  isSpec: "True"
+  fullName: Fp.Processor.ConvertS64ArrayAligned
+  nameWithType: Processor.ConvertS64ArrayAligned
+- uid: Fp.Processor.ConvertS64ArrayUnaligned(System.Span{System.Byte},System.Boolean)
+  name: ConvertS64ArrayUnaligned(Span<byte>, bool)
+  href: api/Fp/Fp.Processor.html#Fp_Processor_ConvertS64ArrayUnaligned_System_Span_System_Byte__System_Boolean_
+  commentId: M:Fp.Processor.ConvertS64ArrayUnaligned(System.Span{System.Byte},System.Boolean)
+  name.vb: ConvertS64ArrayUnaligned(Span(Of Byte), Boolean)
+  fullName: Fp.Processor.ConvertS64ArrayUnaligned(System.Span<byte>, bool)
+  fullName.vb: Fp.Processor.ConvertS64ArrayUnaligned(System.Span(Of Byte), Boolean)
+  nameWithType: Processor.ConvertS64ArrayUnaligned(Span<byte>, bool)
+  nameWithType.vb: Processor.ConvertS64ArrayUnaligned(Span(Of Byte), Boolean)
+- uid: Fp.Processor.ConvertS64ArrayUnaligned*
+  name: ConvertS64ArrayUnaligned
+  href: api/Fp/Fp.Processor.html#Fp_Processor_ConvertS64ArrayUnaligned_
+  commentId: Overload:Fp.Processor.ConvertS64ArrayUnaligned
+  isSpec: "True"
+  fullName: Fp.Processor.ConvertS64ArrayUnaligned
+  nameWithType: Processor.ConvertS64ArrayUnaligned
 - uid: Fp.Processor.ConvertU16Array(System.Span{System.Byte})
   name: ConvertU16Array(Span<byte>)
   href: api/Fp/Fp.Processor.html#Fp_Processor_ConvertU16Array_System_Span_System_Byte__
@@ -12251,6 +13034,38 @@ references:
   isSpec: "True"
   fullName: Fp.Processor.ConvertU16Array
   nameWithType: Processor.ConvertU16Array
+- uid: Fp.Processor.ConvertU16ArrayAligned(System.Span{System.Byte},System.Boolean)
+  name: ConvertU16ArrayAligned(Span<byte>, bool)
+  href: api/Fp/Fp.Processor.html#Fp_Processor_ConvertU16ArrayAligned_System_Span_System_Byte__System_Boolean_
+  commentId: M:Fp.Processor.ConvertU16ArrayAligned(System.Span{System.Byte},System.Boolean)
+  name.vb: ConvertU16ArrayAligned(Span(Of Byte), Boolean)
+  fullName: Fp.Processor.ConvertU16ArrayAligned(System.Span<byte>, bool)
+  fullName.vb: Fp.Processor.ConvertU16ArrayAligned(System.Span(Of Byte), Boolean)
+  nameWithType: Processor.ConvertU16ArrayAligned(Span<byte>, bool)
+  nameWithType.vb: Processor.ConvertU16ArrayAligned(Span(Of Byte), Boolean)
+- uid: Fp.Processor.ConvertU16ArrayAligned*
+  name: ConvertU16ArrayAligned
+  href: api/Fp/Fp.Processor.html#Fp_Processor_ConvertU16ArrayAligned_
+  commentId: Overload:Fp.Processor.ConvertU16ArrayAligned
+  isSpec: "True"
+  fullName: Fp.Processor.ConvertU16ArrayAligned
+  nameWithType: Processor.ConvertU16ArrayAligned
+- uid: Fp.Processor.ConvertU16ArrayUnaligned(System.Span{System.Byte},System.Boolean)
+  name: ConvertU16ArrayUnaligned(Span<byte>, bool)
+  href: api/Fp/Fp.Processor.html#Fp_Processor_ConvertU16ArrayUnaligned_System_Span_System_Byte__System_Boolean_
+  commentId: M:Fp.Processor.ConvertU16ArrayUnaligned(System.Span{System.Byte},System.Boolean)
+  name.vb: ConvertU16ArrayUnaligned(Span(Of Byte), Boolean)
+  fullName: Fp.Processor.ConvertU16ArrayUnaligned(System.Span<byte>, bool)
+  fullName.vb: Fp.Processor.ConvertU16ArrayUnaligned(System.Span(Of Byte), Boolean)
+  nameWithType: Processor.ConvertU16ArrayUnaligned(Span<byte>, bool)
+  nameWithType.vb: Processor.ConvertU16ArrayUnaligned(Span(Of Byte), Boolean)
+- uid: Fp.Processor.ConvertU16ArrayUnaligned*
+  name: ConvertU16ArrayUnaligned
+  href: api/Fp/Fp.Processor.html#Fp_Processor_ConvertU16ArrayUnaligned_
+  commentId: Overload:Fp.Processor.ConvertU16ArrayUnaligned
+  isSpec: "True"
+  fullName: Fp.Processor.ConvertU16ArrayUnaligned
+  nameWithType: Processor.ConvertU16ArrayUnaligned
 - uid: Fp.Processor.ConvertU32Array(System.Span{System.Byte})
   name: ConvertU32Array(Span<byte>)
   href: api/Fp/Fp.Processor.html#Fp_Processor_ConvertU32Array_System_Span_System_Byte__
@@ -12294,6 +13109,38 @@ references:
   isSpec: "True"
   fullName: Fp.Processor.ConvertU32Array
   nameWithType: Processor.ConvertU32Array
+- uid: Fp.Processor.ConvertU32ArrayAligned(System.Span{System.Byte},System.Boolean)
+  name: ConvertU32ArrayAligned(Span<byte>, bool)
+  href: api/Fp/Fp.Processor.html#Fp_Processor_ConvertU32ArrayAligned_System_Span_System_Byte__System_Boolean_
+  commentId: M:Fp.Processor.ConvertU32ArrayAligned(System.Span{System.Byte},System.Boolean)
+  name.vb: ConvertU32ArrayAligned(Span(Of Byte), Boolean)
+  fullName: Fp.Processor.ConvertU32ArrayAligned(System.Span<byte>, bool)
+  fullName.vb: Fp.Processor.ConvertU32ArrayAligned(System.Span(Of Byte), Boolean)
+  nameWithType: Processor.ConvertU32ArrayAligned(Span<byte>, bool)
+  nameWithType.vb: Processor.ConvertU32ArrayAligned(Span(Of Byte), Boolean)
+- uid: Fp.Processor.ConvertU32ArrayAligned*
+  name: ConvertU32ArrayAligned
+  href: api/Fp/Fp.Processor.html#Fp_Processor_ConvertU32ArrayAligned_
+  commentId: Overload:Fp.Processor.ConvertU32ArrayAligned
+  isSpec: "True"
+  fullName: Fp.Processor.ConvertU32ArrayAligned
+  nameWithType: Processor.ConvertU32ArrayAligned
+- uid: Fp.Processor.ConvertU32ArrayUnaligned(System.Span{System.Byte},System.Boolean)
+  name: ConvertU32ArrayUnaligned(Span<byte>, bool)
+  href: api/Fp/Fp.Processor.html#Fp_Processor_ConvertU32ArrayUnaligned_System_Span_System_Byte__System_Boolean_
+  commentId: M:Fp.Processor.ConvertU32ArrayUnaligned(System.Span{System.Byte},System.Boolean)
+  name.vb: ConvertU32ArrayUnaligned(Span(Of Byte), Boolean)
+  fullName: Fp.Processor.ConvertU32ArrayUnaligned(System.Span<byte>, bool)
+  fullName.vb: Fp.Processor.ConvertU32ArrayUnaligned(System.Span(Of Byte), Boolean)
+  nameWithType: Processor.ConvertU32ArrayUnaligned(Span<byte>, bool)
+  nameWithType.vb: Processor.ConvertU32ArrayUnaligned(Span(Of Byte), Boolean)
+- uid: Fp.Processor.ConvertU32ArrayUnaligned*
+  name: ConvertU32ArrayUnaligned
+  href: api/Fp/Fp.Processor.html#Fp_Processor_ConvertU32ArrayUnaligned_
+  commentId: Overload:Fp.Processor.ConvertU32ArrayUnaligned
+  isSpec: "True"
+  fullName: Fp.Processor.ConvertU32ArrayUnaligned
+  nameWithType: Processor.ConvertU32ArrayUnaligned
 - uid: Fp.Processor.ConvertU64Array(System.Span{System.Byte})
   name: ConvertU64Array(Span<byte>)
   href: api/Fp/Fp.Processor.html#Fp_Processor_ConvertU64Array_System_Span_System_Byte__
@@ -12337,6 +13184,38 @@ references:
   isSpec: "True"
   fullName: Fp.Processor.ConvertU64Array
   nameWithType: Processor.ConvertU64Array
+- uid: Fp.Processor.ConvertU64ArrayAligned(System.Span{System.Byte},System.Boolean)
+  name: ConvertU64ArrayAligned(Span<byte>, bool)
+  href: api/Fp/Fp.Processor.html#Fp_Processor_ConvertU64ArrayAligned_System_Span_System_Byte__System_Boolean_
+  commentId: M:Fp.Processor.ConvertU64ArrayAligned(System.Span{System.Byte},System.Boolean)
+  name.vb: ConvertU64ArrayAligned(Span(Of Byte), Boolean)
+  fullName: Fp.Processor.ConvertU64ArrayAligned(System.Span<byte>, bool)
+  fullName.vb: Fp.Processor.ConvertU64ArrayAligned(System.Span(Of Byte), Boolean)
+  nameWithType: Processor.ConvertU64ArrayAligned(Span<byte>, bool)
+  nameWithType.vb: Processor.ConvertU64ArrayAligned(Span(Of Byte), Boolean)
+- uid: Fp.Processor.ConvertU64ArrayAligned*
+  name: ConvertU64ArrayAligned
+  href: api/Fp/Fp.Processor.html#Fp_Processor_ConvertU64ArrayAligned_
+  commentId: Overload:Fp.Processor.ConvertU64ArrayAligned
+  isSpec: "True"
+  fullName: Fp.Processor.ConvertU64ArrayAligned
+  nameWithType: Processor.ConvertU64ArrayAligned
+- uid: Fp.Processor.ConvertU64ArrayUnaligned(System.Span{System.Byte},System.Boolean)
+  name: ConvertU64ArrayUnaligned(Span<byte>, bool)
+  href: api/Fp/Fp.Processor.html#Fp_Processor_ConvertU64ArrayUnaligned_System_Span_System_Byte__System_Boolean_
+  commentId: M:Fp.Processor.ConvertU64ArrayUnaligned(System.Span{System.Byte},System.Boolean)
+  name.vb: ConvertU64ArrayUnaligned(Span(Of Byte), Boolean)
+  fullName: Fp.Processor.ConvertU64ArrayUnaligned(System.Span<byte>, bool)
+  fullName.vb: Fp.Processor.ConvertU64ArrayUnaligned(System.Span(Of Byte), Boolean)
+  nameWithType: Processor.ConvertU64ArrayUnaligned(Span<byte>, bool)
+  nameWithType.vb: Processor.ConvertU64ArrayUnaligned(Span(Of Byte), Boolean)
+- uid: Fp.Processor.ConvertU64ArrayUnaligned*
+  name: ConvertU64ArrayUnaligned
+  href: api/Fp/Fp.Processor.html#Fp_Processor_ConvertU64ArrayUnaligned_
+  commentId: Overload:Fp.Processor.ConvertU64ArrayUnaligned
+  isSpec: "True"
+  fullName: Fp.Processor.ConvertU64ArrayUnaligned
+  nameWithType: Processor.ConvertU64ArrayUnaligned
 - uid: Fp.Processor.Debug
   name: Debug
   href: api/Fp/Fp.Processor.html#Fp_Processor_Debug
@@ -12942,6 +13821,31 @@ references:
   isSpec: "True"
   fullName: Fp.Processor.GetMemory
   nameWithType: Processor.GetMemory
+- uid: Fp.Processor.GetNumberArray*
+  name: GetNumberArray
+  href: api/Fp/Fp.Processor.html#Fp_Processor_GetNumberArray_
+  commentId: Overload:Fp.Processor.GetNumberArray
+  isSpec: "True"
+  fullName: Fp.Processor.GetNumberArray
+  nameWithType: Processor.GetNumberArray
+- uid: Fp.Processor.GetNumberArray``1(System.ReadOnlySpan{System.Byte})
+  name: GetNumberArray<T>(ReadOnlySpan<byte>)
+  href: api/Fp/Fp.Processor.html#Fp_Processor_GetNumberArray__1_System_ReadOnlySpan_System_Byte__
+  commentId: M:Fp.Processor.GetNumberArray``1(System.ReadOnlySpan{System.Byte})
+  name.vb: GetNumberArray(Of T)(ReadOnlySpan(Of Byte))
+  fullName: Fp.Processor.GetNumberArray<T>(System.ReadOnlySpan<byte>)
+  fullName.vb: Fp.Processor.GetNumberArray(Of T)(System.ReadOnlySpan(Of Byte))
+  nameWithType: Processor.GetNumberArray<T>(ReadOnlySpan<byte>)
+  nameWithType.vb: Processor.GetNumberArray(Of T)(ReadOnlySpan(Of Byte))
+- uid: Fp.Processor.GetNumberArray``1(System.ReadOnlySpan{System.Byte},System.Boolean)
+  name: GetNumberArray<T>(ReadOnlySpan<byte>, bool)
+  href: api/Fp/Fp.Processor.html#Fp_Processor_GetNumberArray__1_System_ReadOnlySpan_System_Byte__System_Boolean_
+  commentId: M:Fp.Processor.GetNumberArray``1(System.ReadOnlySpan{System.Byte},System.Boolean)
+  name.vb: GetNumberArray(Of T)(ReadOnlySpan(Of Byte), Boolean)
+  fullName: Fp.Processor.GetNumberArray<T>(System.ReadOnlySpan<byte>, bool)
+  fullName.vb: Fp.Processor.GetNumberArray(Of T)(System.ReadOnlySpan(Of Byte), Boolean)
+  nameWithType: Processor.GetNumberArray<T>(ReadOnlySpan<byte>, bool)
+  nameWithType.vb: Processor.GetNumberArray(Of T)(ReadOnlySpan(Of Byte), Boolean)
 - uid: Fp.Processor.GetPaddedLength(System.Int32,Fp.CipherPaddingMode,System.Int32)
   name: GetPaddedLength(int, CipherPaddingMode, int)
   href: api/Fp/Fp.Processor.html#Fp_Processor_GetPaddedLength_System_Int32_Fp_CipherPaddingMode_System_Int32_
@@ -15949,6 +16853,31 @@ references:
   isSpec: "True"
   fullName: Fp.Processor.SetHalf
   nameWithType: Processor.SetHalf
+- uid: Fp.Processor.SetNumberArray*
+  name: SetNumberArray
+  href: api/Fp/Fp.Processor.html#Fp_Processor_SetNumberArray_
+  commentId: Overload:Fp.Processor.SetNumberArray
+  isSpec: "True"
+  fullName: Fp.Processor.SetNumberArray
+  nameWithType: Processor.SetNumberArray
+- uid: Fp.Processor.SetNumberArray``1(System.Span{System.Byte},System.ReadOnlySpan{``0},System.Boolean)
+  name: SetNumberArray<T>(Span<byte>, ReadOnlySpan<T>, bool)
+  href: api/Fp/Fp.Processor.html#Fp_Processor_SetNumberArray__1_System_Span_System_Byte__System_ReadOnlySpan___0__System_Boolean_
+  commentId: M:Fp.Processor.SetNumberArray``1(System.Span{System.Byte},System.ReadOnlySpan{``0},System.Boolean)
+  name.vb: SetNumberArray(Of T)(Span(Of Byte), ReadOnlySpan(Of T), Boolean)
+  fullName: Fp.Processor.SetNumberArray<T>(System.Span<byte>, System.ReadOnlySpan<T>, bool)
+  fullName.vb: Fp.Processor.SetNumberArray(Of T)(System.Span(Of Byte), System.ReadOnlySpan(Of T), Boolean)
+  nameWithType: Processor.SetNumberArray<T>(Span<byte>, ReadOnlySpan<T>, bool)
+  nameWithType.vb: Processor.SetNumberArray(Of T)(Span(Of Byte), ReadOnlySpan(Of T), Boolean)
+- uid: Fp.Processor.SetNumberArray``1(System.Span{System.Byte},``0[])
+  name: SetNumberArray<T>(Span<byte>, T[])
+  href: api/Fp/Fp.Processor.html#Fp_Processor_SetNumberArray__1_System_Span_System_Byte____0___
+  commentId: M:Fp.Processor.SetNumberArray``1(System.Span{System.Byte},``0[])
+  name.vb: SetNumberArray(Of T)(Span(Of Byte), T())
+  fullName: Fp.Processor.SetNumberArray<T>(System.Span<byte>, T[])
+  fullName.vb: Fp.Processor.SetNumberArray(Of T)(System.Span(Of Byte), T())
+  nameWithType: Processor.SetNumberArray<T>(Span<byte>, T[])
+  nameWithType.vb: Processor.SetNumberArray(Of T)(Span(Of Byte), T())
 - uid: Fp.Processor.SetS16(System.Span{System.Byte},System.Int16,System.Boolean,System.Int32)
   name: SetS16(Span<byte>, short, bool, int)
   href: api/Fp/Fp.Processor.html#Fp_Processor_SetS16_System_Span_System_Byte__System_Int16_System_Boolean_System_Int32_
@@ -17177,6 +18106,28 @@ references:
   isSpec: "True"
   fullName: Fp.ProcessorConfiguration.Preload
   nameWithType: ProcessorConfiguration.Preload
+- uid: Fp.RangeUtility
+  name: RangeUtility
+  href: api/Fp/Fp.RangeUtility.html
+  commentId: T:Fp.RangeUtility
+  fullName: Fp.RangeUtility
+  nameWithType: RangeUtility
+- uid: Fp.RangeUtility.WithOffset(System.Range,System.Int32)
+  name: WithOffset(Range, int)
+  href: api/Fp/Fp.RangeUtility.html#Fp_RangeUtility_WithOffset_System_Range_System_Int32_
+  commentId: M:Fp.RangeUtility.WithOffset(System.Range,System.Int32)
+  name.vb: WithOffset(Range, Integer)
+  fullName: Fp.RangeUtility.WithOffset(System.Range, int)
+  fullName.vb: Fp.RangeUtility.WithOffset(System.Range, Integer)
+  nameWithType: RangeUtility.WithOffset(Range, int)
+  nameWithType.vb: RangeUtility.WithOffset(Range, Integer)
+- uid: Fp.RangeUtility.WithOffset*
+  name: WithOffset
+  href: api/Fp/Fp.RangeUtility.html#Fp_RangeUtility_WithOffset_
+  commentId: Overload:Fp.RangeUtility.WithOffset
+  isSpec: "True"
+  fullName: Fp.RangeUtility.WithOffset
+  nameWithType: RangeUtility.WithOffset
 - uid: Fp.RasterIndexContext
   name: RasterIndexContext
   href: api/Fp/Fp.RasterIndexContext.html

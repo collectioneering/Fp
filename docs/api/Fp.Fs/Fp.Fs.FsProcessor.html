@@ -114,7 +114,7 @@ Class FsProcessor  <a class="header-action link-secondary" title="View source" h
 [SuppressMessage(&quot;ReSharper&quot;, &quot;MemberCanBePrivate.Global&quot;)]
 [SuppressMessage(&quot;ReSharper&quot;, &quot;UnusedMember.Global&quot;)]
 [SuppressMessage(&quot;ReSharper&quot;, &quot;UnusedMethodReturnValue.Global&quot;)]
-public class FsProcessor : FileProcessor, IDisposable</code></pre>
+public class FsProcessor : FileProcessor, IDisposable, IFsRunnerType</code></pre>
   </div>
 
 
@@ -134,6 +134,7 @@ public class FsProcessor : FileProcessor, IDisposable</code></pre>
     <dt>Implements</dt>
     <dd>
       <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.idisposable">IDisposable</a></div>
+      <div><a class="xref" href="Fp.Fs.IFsRunnerType.html">IFsRunnerType</a></div>
     </dd>
   </dl>
 
@@ -1100,10 +1101,22 @@ public class FsProcessor : FileProcessor, IDisposable</code></pre>
       <a class="xref" href="../Fp/Fp.Processor.html#Fp_Processor_ConvertS16Array_System_Span_System_Byte__System_Boolean_">Processor.ConvertS16Array(Span&lt;byte&gt;, bool)</a>
     </div>
     <div>
+      <a class="xref" href="../Fp/Fp.Processor.html#Fp_Processor_ConvertS16ArrayAligned_System_Span_System_Byte__System_Boolean_">Processor.ConvertS16ArrayAligned(Span&lt;byte&gt;, bool)</a>
+    </div>
+    <div>
+      <a class="xref" href="../Fp/Fp.Processor.html#Fp_Processor_ConvertS16ArrayUnaligned_System_Span_System_Byte__System_Boolean_">Processor.ConvertS16ArrayUnaligned(Span&lt;byte&gt;, bool)</a>
+    </div>
+    <div>
       <a class="xref" href="../Fp/Fp.Processor.html#Fp_Processor_ConvertU16Array_System_Span_System_UInt16__System_Boolean_">Processor.ConvertU16Array(Span&lt;ushort&gt;, bool)</a>
     </div>
     <div>
       <a class="xref" href="../Fp/Fp.Processor.html#Fp_Processor_ConvertU16Array_System_Span_System_Byte__System_Boolean_">Processor.ConvertU16Array(Span&lt;byte&gt;, bool)</a>
+    </div>
+    <div>
+      <a class="xref" href="../Fp/Fp.Processor.html#Fp_Processor_ConvertU16ArrayAligned_System_Span_System_Byte__System_Boolean_">Processor.ConvertU16ArrayAligned(Span&lt;byte&gt;, bool)</a>
+    </div>
+    <div>
+      <a class="xref" href="../Fp/Fp.Processor.html#Fp_Processor_ConvertU16ArrayUnaligned_System_Span_System_Byte__System_Boolean_">Processor.ConvertU16ArrayUnaligned(Span&lt;byte&gt;, bool)</a>
     </div>
     <div>
       <a class="xref" href="../Fp/Fp.Processor.html#Fp_Processor_ConvertS32Array_System_Span_System_Int32__System_Boolean_">Processor.ConvertS32Array(Span&lt;int&gt;, bool)</a>
@@ -1112,10 +1125,22 @@ public class FsProcessor : FileProcessor, IDisposable</code></pre>
       <a class="xref" href="../Fp/Fp.Processor.html#Fp_Processor_ConvertS32Array_System_Span_System_Byte__System_Boolean_">Processor.ConvertS32Array(Span&lt;byte&gt;, bool)</a>
     </div>
     <div>
+      <a class="xref" href="../Fp/Fp.Processor.html#Fp_Processor_ConvertS32ArrayAligned_System_Span_System_Byte__System_Boolean_">Processor.ConvertS32ArrayAligned(Span&lt;byte&gt;, bool)</a>
+    </div>
+    <div>
+      <a class="xref" href="../Fp/Fp.Processor.html#Fp_Processor_ConvertS32ArrayUnaligned_System_Span_System_Byte__System_Boolean_">Processor.ConvertS32ArrayUnaligned(Span&lt;byte&gt;, bool)</a>
+    </div>
+    <div>
       <a class="xref" href="../Fp/Fp.Processor.html#Fp_Processor_ConvertU32Array_System_Span_System_UInt32__System_Boolean_">Processor.ConvertU32Array(Span&lt;uint&gt;, bool)</a>
     </div>
     <div>
       <a class="xref" href="../Fp/Fp.Processor.html#Fp_Processor_ConvertU32Array_System_Span_System_Byte__System_Boolean_">Processor.ConvertU32Array(Span&lt;byte&gt;, bool)</a>
+    </div>
+    <div>
+      <a class="xref" href="../Fp/Fp.Processor.html#Fp_Processor_ConvertU32ArrayAligned_System_Span_System_Byte__System_Boolean_">Processor.ConvertU32ArrayAligned(Span&lt;byte&gt;, bool)</a>
+    </div>
+    <div>
+      <a class="xref" href="../Fp/Fp.Processor.html#Fp_Processor_ConvertU32ArrayUnaligned_System_Span_System_Byte__System_Boolean_">Processor.ConvertU32ArrayUnaligned(Span&lt;byte&gt;, bool)</a>
     </div>
     <div>
       <a class="xref" href="../Fp/Fp.Processor.html#Fp_Processor_ConvertS64Array_System_Span_System_Int64__System_Boolean_">Processor.ConvertS64Array(Span&lt;long&gt;, bool)</a>
@@ -1124,10 +1149,34 @@ public class FsProcessor : FileProcessor, IDisposable</code></pre>
       <a class="xref" href="../Fp/Fp.Processor.html#Fp_Processor_ConvertS64Array_System_Span_System_Byte__System_Boolean_">Processor.ConvertS64Array(Span&lt;byte&gt;, bool)</a>
     </div>
     <div>
+      <a class="xref" href="../Fp/Fp.Processor.html#Fp_Processor_ConvertS64ArrayAligned_System_Span_System_Byte__System_Boolean_">Processor.ConvertS64ArrayAligned(Span&lt;byte&gt;, bool)</a>
+    </div>
+    <div>
+      <a class="xref" href="../Fp/Fp.Processor.html#Fp_Processor_ConvertS64ArrayUnaligned_System_Span_System_Byte__System_Boolean_">Processor.ConvertS64ArrayUnaligned(Span&lt;byte&gt;, bool)</a>
+    </div>
+    <div>
       <a class="xref" href="../Fp/Fp.Processor.html#Fp_Processor_ConvertU64Array_System_Span_System_UInt64__System_Boolean_">Processor.ConvertU64Array(Span&lt;ulong&gt;, bool)</a>
     </div>
     <div>
       <a class="xref" href="../Fp/Fp.Processor.html#Fp_Processor_ConvertU64Array_System_Span_System_Byte__System_Boolean_">Processor.ConvertU64Array(Span&lt;byte&gt;, bool)</a>
+    </div>
+    <div>
+      <a class="xref" href="../Fp/Fp.Processor.html#Fp_Processor_ConvertU64ArrayAligned_System_Span_System_Byte__System_Boolean_">Processor.ConvertU64ArrayAligned(Span&lt;byte&gt;, bool)</a>
+    </div>
+    <div>
+      <a class="xref" href="../Fp/Fp.Processor.html#Fp_Processor_ConvertU64ArrayUnaligned_System_Span_System_Byte__System_Boolean_">Processor.ConvertU64ArrayUnaligned(Span&lt;byte&gt;, bool)</a>
+    </div>
+    <div>
+      <a class="xref" href="../Fp/Fp.Processor.html#Fp_Processor_ConvertNumberArray__1_System_Span___0__System_Boolean_">Processor.ConvertNumberArray&lt;T&gt;(Span&lt;T&gt;, bool)</a>
+    </div>
+    <div>
+      <a class="xref" href="../Fp/Fp.Processor.html#Fp_Processor_ConvertNumberArray__1_System_Span_System_Byte__System_Boolean_">Processor.ConvertNumberArray&lt;T&gt;(Span&lt;byte&gt;, bool)</a>
+    </div>
+    <div>
+      <a class="xref" href="../Fp/Fp.Processor.html#Fp_Processor_ConvertNumberArrayAligned__1_System_Span_System_Byte__System_Boolean_">Processor.ConvertNumberArrayAligned&lt;T&gt;(Span&lt;byte&gt;, bool)</a>
+    </div>
+    <div>
+      <a class="xref" href="../Fp/Fp.Processor.html#Fp_Processor_ConvertNumberArrayUnaligned__1_System_Span_System_Byte__System_Boolean_">Processor.ConvertNumberArrayUnaligned&lt;T&gt;(Span&lt;byte&gt;, bool)</a>
     </div>
     <div>
       <a class="xref" href="../Fp/Fp.Processor.html#Fp_Processor_ReadS16_System_IO_Stream_">Processor.ReadS16(Stream)</a>
@@ -1598,6 +1647,12 @@ public class FsProcessor : FileProcessor, IDisposable</code></pre>
       <a class="xref" href="../Fp/Fp.Processor.html#Fp_Processor_SetU64Array_System_Span_System_Byte__System_UInt64___">Processor.SetU64Array(Span&lt;byte&gt;, ulong[])</a>
     </div>
     <div>
+      <a class="xref" href="../Fp/Fp.Processor.html#Fp_Processor_GetNumberArray__1_System_ReadOnlySpan_System_Byte__">Processor.GetNumberArray&lt;T&gt;(ReadOnlySpan&lt;byte&gt;)</a>
+    </div>
+    <div>
+      <a class="xref" href="../Fp/Fp.Processor.html#Fp_Processor_SetNumberArray__1_System_Span_System_Byte____0___">Processor.SetNumberArray&lt;T&gt;(Span&lt;byte&gt;, T[])</a>
+    </div>
+    <div>
       <a class="xref" href="../Fp/Fp.Processor.html#Fp_Processor_SetS8Array_System_Span_System_Byte__System_ReadOnlySpan_System_SByte__">Processor.SetS8Array(Span&lt;byte&gt;, ReadOnlySpan&lt;sbyte&gt;)</a>
     </div>
     <div>
@@ -1647,6 +1702,12 @@ public class FsProcessor : FileProcessor, IDisposable</code></pre>
     </div>
     <div>
       <a class="xref" href="../Fp/Fp.Processor.html#Fp_Processor_SetTArray__1_System_Span_System_Byte__System_ReadOnlySpan___0__">Processor.SetTArray&lt;T&gt;(Span&lt;byte&gt;, ReadOnlySpan&lt;T&gt;)</a>
+    </div>
+    <div>
+      <a class="xref" href="../Fp/Fp.Processor.html#Fp_Processor_GetNumberArray__1_System_ReadOnlySpan_System_Byte__System_Boolean_">Processor.GetNumberArray&lt;T&gt;(ReadOnlySpan&lt;byte&gt;, bool)</a>
+    </div>
+    <div>
+      <a class="xref" href="../Fp/Fp.Processor.html#Fp_Processor_SetNumberArray__1_System_Span_System_Byte__System_ReadOnlySpan___0__System_Boolean_">Processor.SetNumberArray&lt;T&gt;(Span&lt;byte&gt;, ReadOnlySpan&lt;T&gt;, bool)</a>
     </div>
     <div>
       <a class="xref" href="../Fp/Fp.Processor.html#Fp_Processor_Ascii_System_String_System_Byte___">Processor.Ascii(string, byte[])</a>
@@ -1858,7 +1919,7 @@ public class FsProcessor : FileProcessor, IDisposable</code></pre>
 
   <h3 id="Fp_Fs_FsProcessor_Lock" data-uid="Fp.Fs.FsProcessor.Lock">
   Lock
-  <a class="header-action link-secondary" title="View source" href="https://github.com/collectioneering/Fp/blob/main/src/Fp.Fs/FsProcessor.cs/#L89"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/collectioneering/Fp/blob/main/src/Fp.Fs/FsProcessor.cs/#L88"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Set by subclasses to indicate if no more processors
@@ -1867,8 +1928,7 @@ should be run on the current input file.</p>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">[SuppressMessage(&quot;ReSharper&quot;, &quot;UnassignedField.Global&quot;)]
-public bool Lock</code></pre>
+    <pre><code class="lang-csharp hljs">public bool Lock</code></pre>
   </div>
 
 
@@ -2117,7 +2177,7 @@ public bool Lock</code></pre>
 
   <h3 id="Fp_Fs_FsProcessor_FilePath" data-uid="Fp.Fs.FsProcessor.FilePath">
   FilePath
-  <a class="header-action link-secondary" title="View source" href="https://github.com/collectioneering/Fp/blob/main/src/Fp.Fs/FsProcessor.cs/#L94"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/collectioneering/Fp/blob/main/src/Fp.Fs/FsProcessor.cs/#L93"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Current file path.</p>
@@ -2149,7 +2209,7 @@ public bool Lock</code></pre>
 
   <h3 id="Fp_Fs_FsProcessor_FilePathNoExt" data-uid="Fp.Fs.FsProcessor.FilePathNoExt">
   FilePathNoExt
-  <a class="header-action link-secondary" title="View source" href="https://github.com/collectioneering/Fp/blob/main/src/Fp.Fs/FsProcessor.cs/#L99"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/collectioneering/Fp/blob/main/src/Fp.Fs/FsProcessor.cs/#L98"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Current file path without extension.</p>
@@ -2348,7 +2408,7 @@ public bool Lock</code></pre>
 
   <h3 id="Fp_Fs_FsProcessor_GetFsFactory__1" data-uid="Fp.Fs.FsProcessor.GetFsFactory``1">
   GetFsFactory&lt;T&gt;()
-  <a class="header-action link-secondary" title="View source" href="https://github.com/collectioneering/Fp/blob/main/src/Fp.Fs/FsProcessor.cs/#L283"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/collectioneering/Fp/blob/main/src/Fp.Fs/FsProcessor.cs/#L278"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Creates a factory for the specified type, obtaining information from applied <a class="xref" href="Fp.Fs.FsProcessorInfoAttribute.html">FsProcessorInfoAttribute</a> if possible.</p>
@@ -2465,7 +2525,7 @@ public bool Lock</code></pre>
 
   <h3 id="Fp_Fs_FsProcessor_Initialize__1_Fp_BufferData_System_Byte__System_String___System_Collections_Generic_IEnumerable_Fp_BufferData_System_Byte___" data-uid="Fp.Fs.FsProcessor.Initialize``1(Fp.BufferData{System.Byte},System.String[],System.Collections.Generic.IEnumerable{Fp.BufferData{System.Byte}})">
   Initialize&lt;T&gt;(BufferData&lt;byte&gt;, string[]?, IEnumerable&lt;BufferData&lt;byte&gt;&gt;?)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/collectioneering/Fp/blob/main/src/Fp.Fs/FsProcessor.cs/#L141"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/collectioneering/Fp/blob/main/src/Fp.Fs/FsProcessor.cs/#L140"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Initializes a new file processor with an isolated filesystem containing the specified binary files.</p>
@@ -3905,7 +3965,7 @@ public bool Lock</code></pre>
 
   <h3 id="Fp_Fs_FsProcessor_Prepare_Fp_Fs_FileSystemSource_System_String_System_String_System_String_Fp_ProcessorConfiguration_System_Int32_" data-uid="Fp.Fs.FsProcessor.Prepare(Fp.Fs.FileSystemSource,System.String,System.String,System.String,Fp.ProcessorConfiguration,System.Int32)">
   Prepare(FileSystemSource, string, string, string, ProcessorConfiguration?, int)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/collectioneering/Fp/blob/main/src/Fp.Fs/FsProcessor.cs/#L117"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/collectioneering/Fp/blob/main/src/Fp.Fs/FsProcessor.cs/#L116"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Prepares critical state for operation.</p>
@@ -3953,7 +4013,7 @@ public bool Lock</code></pre>
 
   <h3 id="Fp_Fs_FsProcessor_Process" data-uid="Fp.Fs.FsProcessor.Process">
   Process()
-  <a class="header-action link-secondary" title="View source" href="https://github.com/collectioneering/Fp/blob/main/src/Fp.Fs/FsProcessor.cs/#L171"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/collectioneering/Fp/blob/main/src/Fp.Fs/FsProcessor.cs/#L170"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Processes current file.</p>
@@ -3980,7 +4040,7 @@ public bool Lock</code></pre>
 
   <h3 id="Fp_Fs_FsProcessor_ProcessImpl" data-uid="Fp.Fs.FsProcessor.ProcessImpl">
   ProcessImpl()
-  <a class="header-action link-secondary" title="View source" href="https://github.com/collectioneering/Fp/blob/main/src/Fp.Fs/FsProcessor.cs/#L156"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/collectioneering/Fp/blob/main/src/Fp.Fs/FsProcessor.cs/#L155"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Processes current file.</p>
@@ -4007,7 +4067,7 @@ public bool Lock</code></pre>
 
   <h3 id="Fp_Fs_FsProcessor_ProcessSegmented" data-uid="Fp.Fs.FsProcessor.ProcessSegmented">
   ProcessSegmented()
-  <a class="header-action link-secondary" title="View source" href="https://github.com/collectioneering/Fp/blob/main/src/Fp.Fs/FsProcessor.cs/#L190"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/collectioneering/Fp/blob/main/src/Fp.Fs/FsProcessor.cs/#L189"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Processes current file in parts.</p>
@@ -4040,7 +4100,7 @@ public bool Lock</code></pre>
 
   <h3 id="Fp_Fs_FsProcessor_ProcessSegmentedImpl" data-uid="Fp.Fs.FsProcessor.ProcessSegmentedImpl">
   ProcessSegmentedImpl()
-  <a class="header-action link-secondary" title="View source" href="https://github.com/collectioneering/Fp/blob/main/src/Fp.Fs/FsProcessor.cs/#L162"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/collectioneering/Fp/blob/main/src/Fp.Fs/FsProcessor.cs/#L161"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Processes current file in parts.</p>
@@ -4073,7 +4133,7 @@ public bool Lock</code></pre>
 
   <h3 id="Fp_Fs_FsProcessor_Run_Fp_Fs_FileSystemSource_System_Collections_Generic_IList_System_String__Fp_Fs_FsProcessorFactory___" data-uid="Fp.Fs.FsProcessor.Run(Fp.Fs.FileSystemSource,System.Collections.Generic.IList{System.String},Fp.Fs.FsProcessorFactory[])">
   Run(FileSystemSource?, IList&lt;string&gt;?, params FsProcessorFactory[])
-  <a class="header-action link-secondary" title="View source" href="https://github.com/collectioneering/Fp/blob/main/src/Fp.Fs/FsProcessor.Run.cs/#L26"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/collectioneering/Fp/blob/main/src/Fp.Fs/FsProcessor.Run.cs/#L21"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Processes using processor factory.</p>
@@ -4112,7 +4172,7 @@ public bool Lock</code></pre>
 
   <h3 id="Fp_Fs_FsProcessor_Run_System_Action_System_Collections_Generic_IList_System_String__Fp_FileProcessorInfo_" data-uid="Fp.Fs.FsProcessor.Run(System.Action,System.Collections.Generic.IList{System.String},Fp.FileProcessorInfo)">
   Run(Action, IList&lt;string&gt;?, FileProcessorInfo?)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/collectioneering/Fp/blob/main/src/Fp.Fs/FsProcessor.Run.cs/#L39"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/collectioneering/Fp/blob/main/src/Fp.Fs/FsProcessor.Run.cs/#L29"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Processes using direct function.</p>
@@ -4151,7 +4211,7 @@ public bool Lock</code></pre>
 
   <h3 id="Fp_Fs_FsProcessor_Run_System_Action_System_Collections_Generic_IList_System_String__System_String_System_String_System_String___" data-uid="Fp.Fs.FsProcessor.Run(System.Action,System.Collections.Generic.IList{System.String},System.String,System.String,System.String[])">
   Run(Action, IList&lt;string&gt;?, string, string, params string?[])
-  <a class="header-action link-secondary" title="View source" href="https://github.com/collectioneering/Fp/blob/main/src/Fp.Fs/FsProcessor.Run.cs/#L50"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/collectioneering/Fp/blob/main/src/Fp.Fs/FsProcessor.Run.cs/#L35"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Processes using direct function.</p>
@@ -4196,7 +4256,7 @@ public bool Lock</code></pre>
 
   <h3 id="Fp_Fs_FsProcessor_Run_System_Func_System_Collections_Generic_IEnumerable_Fp_Data___System_Collections_Generic_IList_System_String__Fp_FileProcessorInfo_" data-uid="Fp.Fs.FsProcessor.Run(System.Func{System.Collections.Generic.IEnumerable{Fp.Data}},System.Collections.Generic.IList{System.String},Fp.FileProcessorInfo)">
   Run(Func&lt;IEnumerable&lt;Data&gt;&gt;, IList&lt;string&gt;?, FileProcessorInfo?)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/collectioneering/Fp/blob/main/src/Fp.Fs/FsProcessor.Run.cs/#L59"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/collectioneering/Fp/blob/main/src/Fp.Fs/FsProcessor.Run.cs/#L41"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Processes using segmented function.</p>
@@ -4235,7 +4295,7 @@ public bool Lock</code></pre>
 
   <h3 id="Fp_Fs_FsProcessor_Run_System_Func_System_Collections_Generic_IEnumerable_Fp_Data___System_Collections_Generic_IList_System_String__System_String_System_String_System_String___" data-uid="Fp.Fs.FsProcessor.Run(System.Func{System.Collections.Generic.IEnumerable{Fp.Data}},System.Collections.Generic.IList{System.String},System.String,System.String,System.String[])">
   Run(Func&lt;IEnumerable&lt;Data&gt;&gt;, IList&lt;string&gt;?, string, string, params string?[])
-  <a class="header-action link-secondary" title="View source" href="https://github.com/collectioneering/Fp/blob/main/src/Fp.Fs/FsProcessor.Run.cs/#L70"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/collectioneering/Fp/blob/main/src/Fp.Fs/FsProcessor.Run.cs/#L47"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Processes using segmented function.</p>
@@ -4280,7 +4340,7 @@ public bool Lock</code></pre>
 
   <h3 id="Fp_Fs_FsProcessor_Run__1_System_Collections_Generic_IList_System_String__Fp_FileProcessorInfo_" data-uid="Fp.Fs.FsProcessor.Run``1(System.Collections.Generic.IList{System.String},Fp.FileProcessorInfo)">
   Run&lt;T&gt;(IList&lt;string&gt;?, FileProcessorInfo?)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/collectioneering/Fp/blob/main/src/Fp.Fs/FsProcessor.Run.cs/#L79"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/collectioneering/Fp/blob/main/src/Fp.Fs/FsProcessor.Run.cs/#L53"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Processes using segmented function.</p>
@@ -4322,7 +4382,7 @@ public bool Lock</code></pre>
 
   <h3 id="Fp_Fs_FsProcessor_Run__1_System_Collections_Generic_IList_System_String__System_String_System_String_System_String___" data-uid="Fp.Fs.FsProcessor.Run``1(System.Collections.Generic.IList{System.String},System.String,System.String,System.String[])">
   Run&lt;T&gt;(IList&lt;string&gt;?, string, string, params string?[])
-  <a class="header-action link-secondary" title="View source" href="https://github.com/collectioneering/Fp/blob/main/src/Fp.Fs/FsProcessor.Run.cs/#L90"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/collectioneering/Fp/blob/main/src/Fp.Fs/FsProcessor.Run.cs/#L59"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Processes using segmented function.</p>
@@ -4370,7 +4430,7 @@ public bool Lock</code></pre>
 
   <h3 id="Fp_Fs_FsProcessor_ShieldDown" data-uid="Fp.Fs.FsProcessor.ShieldDown">
   ShieldDown()
-  <a class="header-action link-secondary" title="View source" href="https://github.com/collectioneering/Fp/blob/main/src/Fp.Fs/FsProcessor.cs/#L217"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/collectioneering/Fp/blob/main/src/Fp.Fs/FsProcessor.cs/#L216"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Unsets <a class="xref" href="Fp.Fs.FsProcessor.html#Fp_Fs_FsProcessor_Current">Current</a>.</p>
@@ -4397,7 +4457,7 @@ public bool Lock</code></pre>
 
   <h3 id="Fp_Fs_FsProcessor_ShieldProcess" data-uid="Fp.Fs.FsProcessor.ShieldProcess">
   ShieldProcess()
-  <a class="header-action link-secondary" title="View source" href="https://github.com/collectioneering/Fp/blob/main/src/Fp.Fs/FsProcessor.cs/#L222"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/collectioneering/Fp/blob/main/src/Fp.Fs/FsProcessor.cs/#L221"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Processes current file.</p>
@@ -4424,7 +4484,7 @@ public bool Lock</code></pre>
 
   <h3 id="Fp_Fs_FsProcessor_ShieldProcessSegmented" data-uid="Fp.Fs.FsProcessor.ShieldProcessSegmented">
   ShieldProcessSegmented()
-  <a class="header-action link-secondary" title="View source" href="https://github.com/collectioneering/Fp/blob/main/src/Fp.Fs/FsProcessor.cs/#L239"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/collectioneering/Fp/blob/main/src/Fp.Fs/FsProcessor.cs/#L238"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Processes current file in parts.</p>
@@ -4457,7 +4517,7 @@ public bool Lock</code></pre>
 
   <h3 id="Fp_Fs_FsProcessor_ShieldUp" data-uid="Fp.Fs.FsProcessor.ShieldUp">
   ShieldUp()
-  <a class="header-action link-secondary" title="View source" href="https://github.com/collectioneering/Fp/blob/main/src/Fp.Fs/FsProcessor.cs/#L212"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/collectioneering/Fp/blob/main/src/Fp.Fs/FsProcessor.cs/#L211"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Sets <a class="xref" href="Fp.Fs.FsProcessor.html#Fp_Fs_FsProcessor_Current">Current</a>.</p>
