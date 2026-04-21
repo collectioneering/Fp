@@ -6,11 +6,10 @@
              xmlns:vm="using:Dereliction.ViewModels"
              xmlns:local="clr-namespace:Dereliction.Views"
              mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="450"
-             x:Class="Dereliction.Views.EditorView">
+             x:Class="Dereliction.Views.EditorView"
+             x:DataType="vm:EditorViewModel"
+             x:CompileBindings="True">
 
-    <Design.DataContext>
-        <vm:EditorViewModel />
-    </Design.DataContext>
     <DockPanel LastChildFill="True">
 
         <Menu DockPanel.Dock="Top" IsVisible="{x:Static local:MainWindow.EnableInlineMenu}">

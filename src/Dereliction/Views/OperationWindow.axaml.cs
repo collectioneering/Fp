@@ -1,6 +1,3 @@
-#if DEBUG
-using Avalonia;
-#endif
 using System;
 using System.Runtime.InteropServices;
 using System.Threading.Tasks;
@@ -20,9 +17,6 @@ public partial class OperationWindow : Window
     public OperationWindow()
     {
         InitializeComponent();
-#if DEBUG
-            this.AttachDevTools();
-#endif
     }
 
     private void InitializeComponent()

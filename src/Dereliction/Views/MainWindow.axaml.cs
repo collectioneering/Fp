@@ -1,6 +1,3 @@
-#if DEBUG
-using Avalonia;
-#endif
 using System;
 using System.Runtime.InteropServices;
 using System.Threading.Tasks;
@@ -24,9 +21,6 @@ public partial class MainWindow : Window
     public MainWindow()
     {
         InitializeComponent();
-#if DEBUG
-            this.AttachDevTools();
-#endif
 
         _operationWindow = new OperationWindow { Main = this, DataContext = new OperationWindowViewModel() };
         _operationWindow.Closing += (s, e) =>

@@ -6,13 +6,11 @@
         xmlns:local="clr-namespace:Dereliction.Views"
         mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="450"
         x:Class="Dereliction.Views.MainWindow"
+        x:DataType="vm:MainWindowViewModel"
+        x:CompileBindings="True"
         Icon="/Assets/icon_win.ico"
         Title="Dereliction"
         Content="{Binding Editor}">
-
-    <Design.DataContext>
-        <vm:MainWindowViewModel />
-    </Design.DataContext>
 
     <NativeMenu.Menu>
         <NativeMenu>

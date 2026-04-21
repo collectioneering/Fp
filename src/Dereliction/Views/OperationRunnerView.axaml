@@ -6,11 +6,10 @@
              xmlns:models="clr-namespace:Dereliction.Models"
              xmlns:local="clr-namespace:Dereliction.Views"
              mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="450"
-             x:Class="Dereliction.Views.OperationRunnerView">
+             x:Class="Dereliction.Views.OperationRunnerView"
+             x:DataType="vm:OperationRunnerViewModel"
+             x:CompileBindings="True">
 
-    <Design.DataContext>
-        <vm:OperationRunnerViewModel />
-    </Design.DataContext>
     <DockPanel LastChildFill="True">
         <Menu DockPanel.Dock="Top" IsVisible="{x:Static local:MainWindow.EnableInlineMenu}">
             <MenuItem Header="_File">
