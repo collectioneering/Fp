@@ -17,7 +17,7 @@
     <PackageReference Include="Avalonia.AvaloniaEdit" />
     <PackageReference Include="Avalonia.Desktop" />
     <PackageReference Include="AvaloniaUI.DiagnosticsSupport" />
-    <PackageReference Include="Avalonia.ReactiveUI" />
+    <PackageReference Include="ReactiveUI.Avalonia" />
     <PackageReference Include="Avalonia.Themes.Fluent" />
     <PackageReference Include="MessageBox.Avalonia" />
   </ItemGroup>

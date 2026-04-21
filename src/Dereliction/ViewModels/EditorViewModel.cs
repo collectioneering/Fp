@@ -213,6 +213,7 @@ public class EditorViewModel : ViewModelBase
     }
 
     public void ShowOperationView(MainWindow mainWindow) => mainWindow.ShowOperationView();
+
     public async Task RunScriptAsync(MainWindow mainWindow) => await mainWindow.RunScriptAsync();
 
     public void Quit(MainWindow mw) => mw.OnQuitClicked(mw, EventArgs.Empty);

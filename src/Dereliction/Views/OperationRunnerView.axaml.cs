@@ -37,5 +37,6 @@ public partial class OperationRunnerView : UserControl
     public void AddInput(string path) => RunnerModel.AddInput(path);
 
     public void ClearInputs() => RunnerModel.ClearInputs();
+
     public async Task RunScriptAsync(MainWindow mainWindow) => await RunnerModel.RunScriptVisualAsync(mainWindow);
 }

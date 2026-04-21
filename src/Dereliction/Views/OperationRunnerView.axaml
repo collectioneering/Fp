@@ -17,14 +17,14 @@
                           CommandParameter="{Binding $parent[Window]}" />
                 <MenuItem Header="Add _Directory..." Command="{Binding AddDirectory}"
                           CommandParameter="{Binding $parent[Window]}" />
-                <MenuItem Header="_Clear Inputs" Command="{Binding AddDirectory}"
+                <MenuItem Header="_Clear Inputs" Command="{Binding ClearInputs}"
                           CommandParameter="{Binding $parent[Window]}" />
                 <MenuItem Header="E_xit" Command="{Binding Quit}"
                           CommandParameter="{Binding $parent[local:OperationWindow]}" />
             </MenuItem>
             <MenuItem Header="_Run">
-                <MenuItem Header="_Run Script" Command="{Binding RunScriptVisualAsync}"
-                          CommandParameter="{Binding $parent[local:OperationWindow].Main}" />
+                <MenuItem Header="_Run Script" Command="{Binding RunScriptFromRunnerAsync}"
+                          CommandParameter="{Binding $parent[local:OperationWindow]}" />
             </MenuItem>
         </Menu>
         <ProgressBar Name="Progress" IsVisible="{Binding State.Busy, Mode=OneWay}"
@@ -67,6 +67,9 @@
                             <TextBlock Text="{Binding Value}" />
                         </TreeDataTemplate>
                         <TreeDataTemplate DataType="models:RealFsElement" ItemsSource="{Binding Infos}">
+                            <TextBlock Text="{Binding Name}" />
+                        </TreeDataTemplate>
+                        <TreeDataTemplate DataType="models:DataFsElement" ItemsSource="{Binding Infos}">
                             <TextBlock Text="{Binding Name}" />
                         </TreeDataTemplate>
                     </TreeView.DataTemplates>

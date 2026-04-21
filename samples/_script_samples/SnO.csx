@@ -1,15 +1,16 @@
 #r "Fp.dll"
 #r "Fp.Plus.dll"
 #r "Fp.Fs.dll"
+#r "Fp.Fs.CommandLine.dll"
 
 using System.Runtime.InteropServices;
 using System.Text;
 using Fp;
-using Fp.Fs;
+using Fp.Fs.CommandLine;
+using Fp.Plus;
 using Fp.Plus.Images;
 
-// This call registers the processor type. Dereliction will pass --no-execute-cli to avoid directly processing the content.
-FsFormatMultiProcessor.Run<SnOProcessor>(Args, SnOProcessor.s_info);
+CommandLineFsFormatMultiProcessor.Run<SnOProcessor>(Args, SnOProcessor.s_info);
 
 public class SnOProcessor : FormatMultiProcessor
 {
@@ -20,7 +21,7 @@ public class SnOProcessor : FormatMultiProcessor
 
     public SnOProcessor() => Info = s_info;
 
-    private static void Main(string[] args) => FsFormatMultiProcessor.Run<SnOProcessor>(args, s_info);
+    private static void Main(string[] args) => CommandLineFsFormatMultiProcessor.Run<SnOProcessor>(args, s_info);
 
     public override IEnumerable<Data> Process()
     {
@@ -91,9 +92,9 @@ public class SnOProcessor : FormatMultiProcessor
                     // looks like width 1440 bytes, 360 pixels
                     // looks like 360*420 starting at 3207
                     /*for (int i = 3143; i < 3183; i += 4)
-                    {
-                        LogInfo(i4l[i].ToString());
-                    }*/
+                {
+                    LogInfo(i4l[i].ToString());
+                }*/
                     // width @ 3068,
                     //int post3 = 4319; // btlch.pyre
                     //int dpos = 4560;

@@ -9,8 +9,7 @@
         x:DataType="vm:MainWindowViewModel"
         x:CompileBindings="True"
         Icon="/Assets/icon_win.ico"
-        Title="Dereliction"
-        Content="{Binding Editor}">
+        Title="Dereliction">
 
     <NativeMenu.Menu>
         <NativeMenu>
@@ -23,7 +22,7 @@
                                         Gesture="{x:Static local:MainWindow.OpenGesture}" Click="OnOpenClicked" />
                         <NativeMenuItem Header="{x:Static local:MainWindow.SaveHeader}"
                                         Gesture="{x:Static local:MainWindow.SaveGesture}" Click="OnSaveClicked" />
-                        <!--<NativeMenuItemSeperator/>
+                        <!--<NativeMenuItemSeparator/>
             <NativeMenuItem Header="Recent">
               <NativeMenuItem.Menu>
                 <NativeMenu/>
@@ -63,4 +62,5 @@
         </NativeMenu>
     </NativeMenu.Menu>
 
+    <local:EditorView DataContext="{Binding Editor}" />
 </Window>

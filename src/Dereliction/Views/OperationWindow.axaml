@@ -9,8 +9,7 @@
         x:DataType="vm:OperationWindowViewModel"
         x:CompileBindings="True"
         Icon="/Assets/icon_win.ico"
-        Title="Script Execution"
-        Content="{Binding OperationRunner}">
+        Title="Script Execution">
 
     <NativeMenu.Menu>
         <NativeMenu>
@@ -24,7 +23,8 @@
                                         Gesture="{x:Static local:OperationWindow.AddDirectoryGesture}"
                                         Click="OnAddDirectoryClicked" />
                         <NativeMenuItem Header="{x:Static local:OperationWindow.ClearHeader}"
-                                        Gesture="{x:Static local:OperationWindow.ClearGesture}" Click="OnClearClicked" />
+                                        Gesture="{x:Static local:OperationWindow.ClearGesture}"
+                                        Click="OnClearClicked" />
                         <NativeMenuItemSeparator />
                         <NativeMenuItem Header="{x:Static local:OperationWindow.QuitHeader}"
                                         Gesture="{x:Static local:OperationWindow.QuitGesture}"
@@ -43,4 +43,6 @@
             </NativeMenuItem>
         </NativeMenu>
     </NativeMenu.Menu>
+
+    <local:OperationRunnerView DataContext="{Binding OperationRunner}" />
 </Window>

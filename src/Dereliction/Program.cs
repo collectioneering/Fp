@@ -1,8 +1,8 @@
 ﻿using System;
 using System.IO;
 using Avalonia;
-using Avalonia.ReactiveUI;
 using Fp;
+using ReactiveUI.Avalonia;
 
 namespace Dereliction;
 
@@ -65,5 +65,9 @@ internal static class Program
 #endif
             .UsePlatformDetect()
             .LogToTrace()
-            .UseReactiveUI();
+            .UseReactiveUI(rxui =>
+            {
+                // ...
+            })
+            .RegisterReactiveUIViewsFromEntryAssembly();
 }

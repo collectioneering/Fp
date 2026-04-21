@@ -98,6 +98,11 @@ public class OperationRunnerViewModel : ViewModelBase
 
     public void Quit(OperationWindow mw) => mw.OnQuitClicked(mw, EventArgs.Empty);
 
+    public Task RunScriptFromRunnerAsync(OperationWindow w)
+    {
+        return RunScriptVisualAsync(w.Main);
+    }
+
     public Task RunScriptVisualAsync(MainWindow w)
     {
         var view = w.FindDescendantOfType<EditorView>()!;
