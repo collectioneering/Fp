@@ -12,6 +12,7 @@
   <ItemGroup>
     <ProjectReference Include="..\Fp\Fp.csproj" />
     <ProjectReference Include="..\Fp.Fs\Fp.Fs.csproj" />
+    <ProjectReference Include="..\Fp.Fs.CommandLine\Fp.Fs.CommandLine.csproj" />
     <ProjectReference Include="..\Fp.Plus\Fp.Plus.csproj" />
   </ItemGroup>
 

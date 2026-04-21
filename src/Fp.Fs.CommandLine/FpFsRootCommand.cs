@@ -11,10 +11,14 @@ namespace Fp.Fs.CommandLine;
 
 internal class FpFsRootCommand : RootCommand
 {
-    public const string NoExecuteCliOption = "--no-execute-cli";
+    /// <summary>
+    /// Default output folder name.
+    /// </summary>
+    public const string DefaultOutputFolderName = "fp_output";
 
     private readonly FileSystemSource? _fileSystemSource;
     private readonly FsProcessorFactory[] _factories;
+    private readonly Option<bool> _registerProcessorsOption;
     private readonly Option<bool> _noExecuteCliOption;
     private readonly Option<bool> _debugOption;
     private readonly Option<int> _multithreadOption;
@@ -28,8 +32,10 @@ internal class FpFsRootCommand : RootCommand
     {
         _fileSystemSource = fileSystemSource;
         _factories = factories.ToArray();
-        _noExecuteCliOption = new Option<bool>(NoExecuteCliOption) { Description = "If enabled, exit invocation without processing" };
+        _noExecuteCliOption = new Option<bool>(CommandLineFsProcessor.NO_EXECUTE_CLI) { Description = "If enabled, exit invocation without processing" };
         Add(_noExecuteCliOption);
+        _registerProcessorsOption = new Option<bool>(CommandLineFsProcessor.REGISTER_PROCESSORS) { Description = "Register processors for scripting consumption" };
+        Add(_registerProcessorsOption);
         _debugOption = new Option<bool>("-d", "--debug") { Description = "Enable debug" };
         Add(_debugOption);
         _multithreadOption = new Option<int>("-m", "--multithread") { HelpName = "worker-count", Description = "Use specified # of workers", DefaultValueFactory = static _ => 0 };
@@ -48,19 +54,24 @@ internal class FpFsRootCommand : RootCommand
         SetAction(ExecuteAsync);
         var descriptionSb = new StringBuilder();
         descriptionSb.AppendLine("Execute processors (automatically or specific by name) from the following:");
-        Coordinator.AppendProcessorInfos(descriptionSb, factories.Select(static v => v.Info), "    ");
+        AppendProcessorInfos(descriptionSb, factories.Select(static v => v.Info), "    ");
         Description = descriptionSb.ToString();
     }
 
     private Task<int> ExecuteAsync(ParseResult parseResult)
     {
+        bool registerProcessors = parseResult.GetValue(_registerProcessorsOption);
+        if (registerProcessors)
+        {
+            FsProcessor.Registered.Factories.UnionWith(_factories);
+        }
         bool noExecuteCli = parseResult.GetValue(_noExecuteCliOption);
         if (noExecuteCli)
         {
             return Task.FromResult(0);
         }
         // respect behaviour inherited from direct parse version; args prior to double dash are inputs, args after double dash are processor arguments
-        List<Coordinator.FpInput> fileInputs = [];
+        List<FpInput> fileInputs = [];
         List<string> processorArguments = [];
         bool preDoubleDash = true;
         foreach (var token in parseResult.Tokens)
@@ -70,7 +81,7 @@ internal class FpFsRootCommand : RootCommand
                 case TokenType.Argument:
                     if (preDoubleDash)
                     {
-                        fileInputs.Add(Coordinator.ResolveFpInputForPath(token.Value));
+                        fileInputs.Add(ResolveFpInputForPath(token.Value));
                     }
                     else
                     {
@@ -107,7 +118,7 @@ internal class FpFsRootCommand : RootCommand
                 fileInputs.Any(input => commonInput != input.DirectoryPath || commonInput == input.Path)
                     ? Path.GetFullPath(".")
                     : commonInput,
-                Coordinator.DefaultOutputFolderName));
+                DefaultOutputFolderName));
         }
         string? processor = parseResult.GetValue(_processorOption);
         IReadOnlyList<FsProcessorFactory> factories = _factories;
@@ -121,16 +132,43 @@ internal class FpFsRootCommand : RootCommand
             }
         }
         var configuration = new ProcessorConfiguration(processorArguments, preload, debug, noop, ConsoleLog.Default);
-        var executionSettings = new Coordinator.ExecutionSettings(outputRootDirectory.FullName, parallel);
+        var executionSettings = new FsExecutionSettings(outputRootDirectory.FullName, parallel);
         return ExecuteInternalAsync(configuration, executionSettings, fileInputs, factories);
     }
 
     private Task<int> ExecuteInternalAsync(
         ProcessorConfiguration processorConfiguration,
-        Coordinator.ExecutionSettings executionSettings,
-        IReadOnlyList<Coordinator.FpInput> inputs,
+        FsExecutionSettings executionSettings,
+        IReadOnlyList<FpInput> inputs,
         IReadOnlyList<FsProcessorFactory> factories)
     {
-        return Coordinator.CliRunFilesystemAsync(processorConfiguration, executionSettings, inputs, _fileSystemSource, factories).ContinueWith(static _ => 0);
+        return FsExecutor.ExecuteOnFilesystemAsync(processorConfiguration, executionSettings, inputs, _fileSystemSource, factories).ContinueWith(static _ => 0);
+    }
+
+    private static FpInput ResolveFpInputForPath(string str)
+    {
+        string full = Path.GetFullPath(str);
+        return new FpInput(
+            File.Exists(str),
+            Path.GetDirectoryName(full) ?? Path.GetPathRoot(full) ?? throw new ArgumentException($"Failed to resolve path root for [{str}] (full: [{full}])"),
+            full);
+    }
+
+    private static void AppendProcessorInfos(
+        StringBuilder stringBuilder,
+        IEnumerable<FileProcessorInfo> infos,
+        string linePrefix = "")
+    {
+        foreach (var i in infos)
+        {
+            stringBuilder.Append(i.Name).AppendLine()
+                .Append(linePrefix).Append("    Extensions:");
+            if (i.Extensions.Length == 0) stringBuilder.Append(" <all>");
+            else stringBuilder.Append(' ').Append(i.Extensions[0] ?? "<empty>");
+            foreach (string? ext in i.Extensions.Skip(1))
+                stringBuilder.Append(", ").Append(ext ?? "<empty>");
+            stringBuilder.AppendLine()
+                .Append(linePrefix).Append("    ").Append(i.ExtendedDescription.Replace("\n", "\n    ")).AppendLine();
+        }
     }
 }

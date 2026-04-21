@@ -9,6 +9,7 @@ using Dotnet.Script.Core;
 using Dotnet.Script.Core.Commands;
 using Dotnet.Script.DependencyModel.Logging;
 using Fp.Fs;
+using Fp.Fs.CommandLine;
 using Microsoft.CodeAnalysis;
 
 namespace fpx
@@ -59,7 +60,7 @@ namespace fpx
             var options = new ExecuteCodeCommandOptions(
                 code: text,
                 workingDirectory: directory,
-                arguments: args?.ToArray() ?? [FsProcessor.NO_EXECUTE_CLI],
+                arguments: args?.ToArray() ?? [CommandLineFsProcessor.REGISTER_PROCESSORS, CommandLineFsProcessor.NO_EXECUTE_CLI],
                 optimizationLevel: OptimizationLevel.Debug,
                 cachePath: null,
                 noCache: true,

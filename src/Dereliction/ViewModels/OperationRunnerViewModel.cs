@@ -14,6 +14,7 @@ using Dereliction.Models;
 using Dereliction.Views;
 using Fp;
 using Fp.Fs;
+using Fp.Fs.CommandLine;
 using ReactiveUI;
 
 namespace Dereliction.ViewModels;
@@ -165,12 +166,12 @@ public class OperationRunnerViewModel : ViewModelBase
                     float idx = 0, count = inputModel.Inputs.Count * processors.Length;
                     foreach ((string fakeRoot, string fake) input in inputModel.Inputs)
                     {
-                        var src = new Coordinator.ExecutionSource(configuration, new Coordinator.ExecutionSettings(input.fakeRoot, 1), inputFilesystem);
+                        var src = new FsExecutionSource(configuration, new FsExecutionSettings(input.fakeRoot, 1), inputFilesystem);
                         foreach (var processor in processors)
                         {
                             if (!processor.processor.AcceptFile(input.fake)) continue;
                             Log($"{input.fake} <{processor.name}>");
-                            foreach (var data in Coordinator.RunSegmented(processor.processor, input, src, 0))
+                            foreach (var data in FsExecutor.RunSegmented(processor.processor, input, src, 0))
                             {
                                 Log($" > {data}");
                                 if (DirectOutput)
