@@ -5,14 +5,13 @@
     <Platform Name="x86" />
   </Configurations>
   <Project Path="../src/Fp.Fs/Fp.Fs.csproj" />
+  <Project Path="../src/Fp.Fs.CommandLine/Fp.Fs.CommandLine.csproj" />
   <Project Path="../src/Fp.Platforms.Nitro/Fp.Platforms.Nitro.csproj" />
   <Project Path="../src/Fp.Plus/Fp.Plus.csproj" />
   <Project Path="../src/Fp/Fp.csproj" />
   <Project Path="BrewBar/BrewBar.csproj" />
   <Project Path="EdelweissTgp/EdelweissTgp.csproj" />
-  <Project Path="Fewss/Fewss.csproj">
-    <Platform Solution="Debug|x86" Project="x86" />
-  </Project>
+  <Project Path="Fewss/Fewss.csproj" />
   <Project Path="LinkDataAbc/LinkDataAbc.csproj" />
   <Project Path="RnR/RnR.csproj" />
   <Project Path="SnO/SnO.csproj" />

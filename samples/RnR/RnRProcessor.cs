@@ -1,7 +1,8 @@
 using Fp;
-using Fp.Fs;
+using Fp.Fs.CommandLine;
 using Fp.Platforms.Nitro;
 
+namespace RnR;
 
 public class RnRProcessor : FormatMultiProcessor
 {
@@ -13,7 +14,7 @@ public class RnRProcessor : FormatMultiProcessor
 
     public RnRProcessor() => Info = s_info;
 
-    private static void Main(string[] args) => FsFormatMultiProcessor.Run<RnRProcessor>(args, s_info);
+    private static void Main(string[] args) => CommandLineFsFormatMultiProcessor.Run<RnRProcessor>(args, s_info);
 
     public override IEnumerable<Data> Process()
     {

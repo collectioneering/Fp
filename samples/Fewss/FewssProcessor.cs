@@ -1,5 +1,7 @@
 using Fp;
-using Fp.Fs;
+using Fp.Fs.CommandLine;
+
+namespace Fewss;
 
 public class FewssProcessor : FormatMultiProcessor
 {
@@ -11,7 +13,7 @@ public class FewssProcessor : FormatMultiProcessor
 
     public FewssProcessor() => Info = s_info;
 
-    private static void Main(string[] args) => FsFormatMultiProcessor.Run<FewssProcessor>(args, s_info);
+    private static void Main(string[] args) => CommandLineFsFormatMultiProcessor.Run<FewssProcessor>(args, s_info);
 
     public override IEnumerable<Data> Process() => SelectedExtension switch
     {

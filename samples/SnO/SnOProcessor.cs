@@ -1,10 +1,11 @@
 using System.Runtime.InteropServices;
 using System.Text;
 using Fp;
-using Fp.Fs;
+using Fp.Fs.CommandLine;
 using Fp.Plus;
 using Fp.Plus.Images;
 
+namespace SnO;
 
 public class SnOProcessor : FormatMultiProcessor
 {
@@ -15,7 +16,7 @@ public class SnOProcessor : FormatMultiProcessor
 
     public SnOProcessor() => Info = s_info;
 
-    private static void Main(string[] args) => FsFormatMultiProcessor.Run<SnOProcessor>(args, s_info);
+    private static void Main(string[] args) => CommandLineFsFormatMultiProcessor.Run<SnOProcessor>(args, s_info);
 
     public override IEnumerable<Data> Process()
     {
@@ -86,9 +87,9 @@ public class SnOProcessor : FormatMultiProcessor
                     // looks like width 1440 bytes, 360 pixels
                     // looks like 360*420 starting at 3207
                     /*for (int i = 3143; i < 3183; i += 4)
-                    {
-                        LogInfo(i4l[i].ToString());
-                    }*/
+                {
+                    LogInfo(i4l[i].ToString());
+                }*/
                     // width @ 3068,
                     //int post3 = 4319; // btlch.pyre
                     //int dpos = 4560;

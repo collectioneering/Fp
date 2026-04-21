@@ -1,7 +1,8 @@
 using Fp;
-using Fp.Fs;
+using Fp.Fs.CommandLine;
 using Fp.Plus;
 
+namespace BrewBar;
 
 public class BrewBarProcessor : FormatMultiProcessor
 {
@@ -13,7 +14,7 @@ public class BrewBarProcessor : FormatMultiProcessor
 
     public BrewBarProcessor() => Info = s_info;
 
-    private static void Main(string[] args) => FsFormatMultiProcessor.Run<BrewBarProcessor>(args, s_info);
+    private static void Main(string[] args) => CommandLineFsFormatMultiProcessor.Run<BrewBarProcessor>(args, s_info);
 
     public override IEnumerable<Data> Process()
     {
@@ -28,7 +29,7 @@ public class BrewBarProcessor : FormatMultiProcessor
                 ._BMP() // BMP image
                 ._WAV() // WAV audio
                 .__("cmid", ".cmf") // CMF seq sound (Qualcomm Compact Media Format)
-                .__("«JSR184»\r\n\x1A\n", ".m3g") // M3G model (Java Mobile 3D Graphics API scene graph, JSR-184)
+                .__("«JSR184»\r\n\u001a\n", ".m3g") // M3G model (Java Mobile 3D Graphics API scene graph, JSR-184)
                 .___(".bin");
             LogInfo($"{i}: {utf8[(2..hLength).WithOffset(offset)].String}");
             yield return Buffer(NamePathNoExt / $"{i}{ext}", buffer);

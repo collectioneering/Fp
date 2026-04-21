@@ -1,8 +1,9 @@
 using System.IO.Compression;
 using Esper.Zstandard;
 using Fp;
-using Fp.Fs;
+using Fp.Fs.CommandLine;
 
+namespace EdelweissTgp;
 
 public class EdelweissTgpProcessor : FormatMultiProcessor
 {
@@ -14,7 +15,7 @@ public class EdelweissTgpProcessor : FormatMultiProcessor
 
     public EdelweissTgpProcessor() => Info = s_info;
 
-    private static void Main(string[] args) => FsFormatMultiProcessor.Run<EdelweissTgpProcessor>(args, s_info);
+    private static void Main(string[] args) => CommandLineFsFormatMultiProcessor.Run<EdelweissTgpProcessor>(args, s_info);
 
     public override IEnumerable<Data> Process()
     {

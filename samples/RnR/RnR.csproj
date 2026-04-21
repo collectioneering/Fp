@@ -10,8 +10,11 @@
 
   <ItemGroup>
     <ProjectReference Include="../../src/Fp.Fs/Fp.Fs.csproj"/>
-    <!--<PackageReference Include="Fp.Fs" Version="0.29.0" />-->
-    <PackageReference Include="Fp.Platforms.Nitro" Version="0.29.0" />
+    <!--<PackageReference Include="Fp.Fs" Version="0.31.0"/>-->
+    <ProjectReference Include="../../src/Fp.Fs.CommandLine/Fp.Fs.CommandLine.csproj"/>
+    <!--<PackageReference Include="Fp.Fs.CommandLine" Version="0.31.0"/>-->
+    <ProjectReference Include="../../src/Fp.Platforms.Nitro/Fp.Platforms.Nitro.csproj"/>
+    <!--<PackageReference Include="Fp.Platforms.Nitro" Version="0.31.0" />-->
   </ItemGroup>
 
 </Project>

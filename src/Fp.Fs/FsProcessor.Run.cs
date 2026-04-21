@@ -18,6 +18,7 @@ public partial class FsProcessor : IFsRunnerType
     public static readonly FsProcessorSource Registered = new();
 
     /// <inheritdoc />
+    [Obsolete("Install the Fp.Fs.CommandLine package for command-line parsing")]
     public static void Run(FileSystemSource? fileSystemSource, IList<string>? args, params FsProcessorFactory[] factories)
     {
         Registered.Factories.UnionWith(factories);
@@ -26,36 +27,42 @@ public partial class FsProcessor : IFsRunnerType
     }
 
     /// <inheritdoc />
+    [Obsolete("Install the Fp.Fs.CommandLine package for command-line parsing")]
     public static void Run(Action func, IList<string>? args, FileProcessorInfo? info = null)
     {
         Run(null, args, new DelegateFsProcessorFactory(info, () => new ScriptingDirectProcessor(func)));
     }
 
     /// <inheritdoc />
+    [Obsolete("Install the Fp.Fs.CommandLine package for command-line parsing")]
     public static void Run(Action func, IList<string>? args, string name, string description, params string?[] extensions)
     {
         Run(func, args, new FileProcessorInfo(name, description, description, extensions));
     }
 
     /// <inheritdoc />
+    [Obsolete("Install the Fp.Fs.CommandLine package for command-line parsing")]
     public static void Run(Func<IEnumerable<Data>> func, IList<string>? args, FileProcessorInfo? info = null)
     {
         Run(null, args, new DelegateFsProcessorFactory(info, () => new ScriptingSegmentedProcessor(func)));
     }
 
     /// <inheritdoc />
+    [Obsolete("Install the Fp.Fs.CommandLine package for command-line parsing")]
     public static void Run(Func<IEnumerable<Data>> func, IList<string>? args, string name, string description, params string?[] extensions)
     {
         Run(func, args, new FileProcessorInfo(name, description, description, extensions));
     }
 
     /// <inheritdoc />
+    [Obsolete("Install the Fp.Fs.CommandLine package for command-line parsing")]
     public static void Run<T>(IList<string>? args, FileProcessorInfo? info = null) where T : FsProcessor, new()
     {
         Run(null, args, new GenericNewFsProcessorFactory<T>(info));
     }
 
     /// <inheritdoc />
+    [Obsolete("Install the Fp.Fs.CommandLine package for command-line parsing")]
     public static void Run<T>(IList<string>? args, string name, string description, params string?[] extensions) where T : FsProcessor, new()
     {
         Run(null, args, new GenericNewFsProcessorFactory<T>(new FileProcessorInfo(name, description, description, extensions)));

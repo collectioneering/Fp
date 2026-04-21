@@ -1,7 +1,8 @@
 using Fp;
-using Fp.Fs;
+using Fp.Fs.CommandLine;
 using Fp.Plus;
 
+namespace LinkDataAbc;
 
 public class LinkDataAbcProcessor : FormatMultiProcessor
 {
@@ -13,7 +14,7 @@ public class LinkDataAbcProcessor : FormatMultiProcessor
 
     public LinkDataAbcProcessor() => Info = s_info;
 
-    private static void Main(string[] args) => FsFormatMultiProcessor.Run<LinkDataAbcProcessor>(args, s_info);
+    private static void Main(string[] args) => CommandLineFsFormatMultiProcessor.Run<LinkDataAbcProcessor>(args, s_info);
 
     public override IEnumerable<Data> Process()
     {

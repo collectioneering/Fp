@@ -89,7 +89,9 @@ public static class Coordinator
     /// <param name="executionSettings">Generated execution settings.</param>
     /// <param name="inputs">Generated input sources.</param>
     /// <returns>True if parsing succeeded.</returns>
-    public static bool CliGetConfiguration(IList<string> exeName,
+    [Obsolete("Install the Fp.Fs.CommandLine package for command-line parsing")]
+    public static bool CliGetConfiguration(
+        IList<string> exeName,
         IReadOnlyList<string> args,
         ILogWriter? logWriter,
         bool enableParallel,
@@ -236,7 +238,9 @@ Flags:
     /// <param name="logWriter">Log output target.</param>
     /// <returns>A task that will execute recursively.</returns>
     /// <exception cref="ArgumentException">Thrown if an invalid number of arguments is provided.</exception>
-    public static void CliRunFilesystem<T>(string[] args,
+    [Obsolete("Install the Fp.Fs.CommandLine package for command-line parsing")]
+    public static void CliRunFilesystem<T>(
+        string[] args,
         IList<string>? exeName = null,
         ILogWriter? logWriter = null,
         FileSystemSource? fileSystem = null) where T : FsProcessor, new() =>
@@ -252,6 +256,7 @@ Flags:
     /// <param name="logWriter">Log output target.</param>
     /// <returns>A task that will execute recursively.</returns>
     /// <exception cref="ArgumentException">Thrown if an invalid number of arguments is provided.</exception>
+    [Obsolete("Install the Fp.Fs.CommandLine package for command-line parsing")]
     public static void CliRunFilesystem(
         string[] args,
         IList<string>? exeName,
@@ -304,6 +309,7 @@ Flags:
     /// <param name="logWriter">Log output target.</param>
     /// <returns>A task that will execute recursively.</returns>
     /// <exception cref="ArgumentException">Thrown if an invalid number of arguments is provided.</exception>
+    [Obsolete("Install the Fp.Fs.CommandLine package for command-line parsing")]
     public static async Task CliRunFilesystemAsync<T>(string[] args,
         IList<string>? exeName = null,
         ILogWriter? logWriter = null,
@@ -320,6 +326,7 @@ Flags:
     /// <param name="logWriter">Log output target.</param>
     /// <returns>A task that will execute recursively.</returns>
     /// <exception cref="ArgumentException">Thrown if an invalid number of arguments is provided.</exception>
+    [Obsolete("Install the Fp.Fs.CommandLine package for command-line parsing")]
     public static Task CliRunFilesystemAsync(string[] args,
         IList<string>? exeName,
         ILogWriter? logWriter,
@@ -372,7 +379,8 @@ Flags:
     /// <remarks>
     /// Just matches up the tail and sends the rest, fallback on argv[0].
     /// </remarks>
-    public static IList<string> GuessExe(IList<string>? args,
+    public static IList<string> GuessExe(
+        IList<string>? args,
         bool prependDotNetIfDll = true)
     {
         var list = GuessExeCore(args);
